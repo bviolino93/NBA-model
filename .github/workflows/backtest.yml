@@ -47,11 +47,18 @@ jobs:
             --half-life ${{ inputs.half_life }} --out games.csv \
             ${{ inputs.injuries && '--injuries' || '' }} | tee out.txt
           { echo '```'; cat data.txt; echo; cat out.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+      - name: Props projections vs naive baselines
+        if: inputs.injuries
+        run: |
+          python nba_props.py --first ${{ inputs.first }} --split ${{ inputs.split }} \
+            --out props.csv | tee props.txt
+          { echo '```'; cat props.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: backtest
           path: |
             games.csv
+            props.txt
             out.txt
             data.txt
