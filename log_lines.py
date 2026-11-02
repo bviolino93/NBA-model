@@ -38,6 +38,10 @@ FIELDS = ["snapshot_utc", "event_id", "commence_time", "home_team",
 
 def _get(url, params):
     r = requests.get(url, params=params, timeout=30)
+    if r.status_code >= 400:
+        # The Odds API says why in the body: a bad key and an exhausted
+        # monthly quota are both 401s.
+        print(f"  HTTP {r.status_code}: {r.text[:300]}")
     r.raise_for_status()
     left = r.headers.get("x-requests-remaining")
     if left is not None:
