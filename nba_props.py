@@ -50,7 +50,7 @@ def league_rates(p: pd.DataFrame) -> pd.DataFrame:
 def project(p: pd.DataFrame, ab: pd.DataFrame | None = None,
             games: pd.DataFrame | None = None,
             half_life: float = HALF_LIFE, prior_min: float = PRIOR_MIN,
-            use_absences: bool = True) -> pd.DataFrame:
+            use_absences: bool = True, boost: float = 1.0) -> pd.DataFrame:
     """One row per player-game PLAYED with projections and baselines.
 
     p      box rows (nba_players.load_box)
@@ -95,8 +95,11 @@ def project(p: pd.DataFrame, ab: pd.DataFrame | None = None,
         a = ab[["game_id", "team", "lost_min"]]
         pl = pl.merge(a, on=["game_id", "team"], how="left")
         pl["lost_min"] = pl["lost_min"].fillna(0.0)
-        pl["proj_min"] = (pl["base_min"] * 240.0
-                          / (240.0 - pl["lost_min"].clip(upper=120)))
+        # boost=1 hands out every missing minute in proportion to minutes;
+        # in practice coaches spread them thinner (deep bench, two-way
+        # players), so the share is fitted on tuning seasons.
+        lost = pl["lost_min"].clip(upper=120)
+        pl["proj_min"] = pl["base_min"] * (1.0 + boost * lost / (240.0 - lost))
     pl["proj_min"] = pl["proj_min"].clip(upper=MAX_MIN)
 
     # Pace from the game's closing total vs the season's average so far.
@@ -130,6 +133,27 @@ def mae_table(fr: pd.DataFrame, min_prev: int = 5,
     return pd.DataFrame(rows).set_index("stat")
 
 
+def sweep(box, ab, g, split: int) -> dict:
+    """Pick half-life, prior minutes and boost on TUNING seasons only."""
+    best, rows = None, []
+    for hl in (8.0, 20.0):
+        for pm in (100.0, 250.0):
+            for b in (0.3, 0.5, 0.7):
+                fr = project(box, ab, g, half_life=hl, prior_min=pm, boost=b)
+                t = mae_table(fr[fr["season"] < split])
+                h = mae_table(fr[fr["season"] >= split])
+                rows.append((hl, pm, b, t.loc["pts", "model"],
+                             h.loc["pts", "model"]))
+                if best is None or t.loc["pts", "model"] < best[3]:
+                    best = rows[-1]
+    print("half_life prior_min boost  pts MAE tuning / held out")
+    for r in rows:
+        print(f"{r[0]:9.0f} {r[1]:9.0f} {r[2]:5.1f}  {r[3]:.3f} / {r[4]:.3f}")
+    print(f"chosen on tuning: half_life {best[0]:g}, prior_min {best[1]:g}, "
+          f"boost {best[2]:g}\n")
+    return {"half_life": best[0], "prior_min": best[1], "boost": best[2]}
+
+
 def main():
     from nba_data import load_games
     from nba_players import absences, load_box
@@ -141,8 +165,10 @@ def main():
     g = load_games(a.first)
     box = load_box(g)
     ab = absences(box)
-    fr = project(box, ab, g)
-    flat = project(box, ab, g, use_absences=False)
+    cfg = sweep(box, ab, g, a.split)
+    fr = project(box, ab, g, **cfg)
+    flat = project(box, ab, g, use_absences=False, half_life=cfg["half_life"],
+                   prior_min=cfg["prior_min"])
     fr["proj_noinj_pts"] = flat["proj_pts"].to_numpy()
     for lab, part in (("tuning", fr[fr["season"] < a.split]),
                       ("held out", fr[fr["season"] >= a.split])):
