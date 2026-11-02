@@ -30,12 +30,14 @@ def test_fit_and_predict_with_injury():
     assert f.n > 100 and 0.3 < f.margin["model_margin"] < 1.5
     box = pd.DataFrame({"season": 2027, "commence": "2027-01-01", "game_id": "x",
                         "team": "T0", "player_id": "7", "player": "Star",
-                        "min": 34.0, "pm": 200.0}, index=[0])
+                        "min": 34.0, "pm": 20.0, "pts": 30.0, "reb": 8.0,
+                        "ast": 6.0}, index=[0])
     vals = nba_model.player_values(box)
     rep = pd.DataFrame({"team": ["T0"], "player_id": ["7"], "player": ["Star"],
                         "status": ["Out"], "detail": [""]})
     miss = nba_model.tonight_missing(rep, vals)
-    assert miss["T0"][0] > 1 and miss["T0"][1] == ["Star out"]
+    assert miss["T0"][0]["min"] == 34.0 and miss["T0"][0]["prod"] > 0
+    assert miss["T0"][1] == ["Star out"]
     now = pd.Timestamp(g["game_date"].max()) + pd.Timedelta(days=1, hours=17)
     now = now.tz_localize("UTC")
     fair = {"k": Fair("T0", "T1", (now + pd.Timedelta(hours=7)).isoformat(),

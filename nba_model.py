@@ -3,16 +3,20 @@ Our own line for each game: ratings plus rest plus tonight's injuries.
 
     home margin = a * ratings margin + b * back-to-back diff
                   + c * rest diff + d * road back-to-back
-                  + e * missing value (home minus away) + const
-    total       = a * ratings total + b * missing value (both teams)
-                  + c * back-to-backs (both teams) + const
+                  + e * minutes missing + f * production missing
+                  (home minus away) + const
+    total       = a * ratings total + b * minutes and c * production
+                  missing (both teams) + d * back-to-backs + const
 
 ratings   nba_ratings: opponent-adjusted margin and total from scores,
           recency-weighted, home court
 rest      days off, back-to-backs, second night of a road back-to-back
-injuries  value of missing rotation players: expected minutes x their
-          plus-minus per 36 (shrunk) plus a replacement drop (as in
-          nba_players.absences). Historically from who actually sat;
+injuries  missing rotation players' expected minutes, and their box
+          production above a fill-in's (points + 0.5 rebounds + 0.7
+          assists per 36, shrunk; nba_players.absences) over those
+          minutes. tools/injury_value.py: these are what the market's
+          line moves price (t -16 and -14); plus-minus value isn't
+          (t +1.6), so it was dropped. Historically from who actually sat;
           tonight from ESPN's report, weighted by status (out 1,
           doubtful 0.8, questionable or day-to-day 0.4)
 
@@ -38,8 +42,10 @@ STATUS_WEIGHT = {"out": 1.0, "doubtful": 0.8, "questionable": 0.4,
 # let the fit trust them less until both teams have EARLY games in.
 EARLY = 15
 MARGIN_X = ["model_margin", "mm_early", "b2b_diff", "rest_diff", "away_b2b_road",
-            "inj_val_diff"]
-TOTAL_X = ["model_total", "mt_early", "early", "inj_val_sum", "b2b_sum"]
+            "inj_min_diff", "inj_prod_diff"]
+TOTAL_X = ["model_total", "mt_early", "early", "inj_min_sum", "inj_prod_sum",
+           "b2b_sum"]
+INJ = ("min", "prod")
 
 
 @dataclass
@@ -64,9 +70,11 @@ def history(games: pd.DataFrame, box: pd.DataFrame | None,
     if box is not None and len(box):
         from nba_players import absences, game_absences
         g = game_absences(g, absences(box))
+        g["inj_min_sum"] = g["home_lost_min"] + g["away_lost_min"]
     else:
-        g["inj_val_diff"] = 0.0
-        g["inj_val_sum"] = 0.0
+        for c in ("inj_min_diff", "inj_prod_diff", "inj_min_sum",
+                  "inj_prod_sum"):
+            g[c] = 0.0
     g = walk_forward(g, cfg)
     t = team_games(g).sort_values("commence")
     t["n_before"] = t.groupby(["team", "season"]).cumcount()
@@ -97,32 +105,37 @@ def fit_weights(h: pd.DataFrame) -> Fitted:
 
 def player_values(box: pd.DataFrame, last: int = 10,
                   prior_min: float = 300.0) -> pd.DataFrame:
-    """Each current player's value if he sits tonight (same formula as
-    nba_players.absences): exp_min/36 * max(pm36, 0) + exp_min/48."""
+    """Each current player's minutes and production value if he sits
+    tonight (as nba_players.absences). Production per 36 uses this season
+    and last together, so a star six games in isn't shrunk to a bench
+    player's level."""
+    from nba_players import PROD_PRIOR, PROD_REPL
+    cols = ["player_id", "player", "team", "exp_min", "prod_val"]
     if box is None or box.empty:
-        return pd.DataFrame(columns=["player_id", "player", "team", "value",
-                                     "exp_min"])
+        return pd.DataFrame(columns=cols)
     season = box["season"].max()
     b = box[box["season"] == season].sort_values("commence")
     tg = (b.drop_duplicates(["team", "game_id"]).groupby("team").tail(last)
             [["team", "game_id"]])
     n = tg.groupby("team").size().rename("n")
-    recent = (b.merge(tg, on=["team", "game_id"])
-                .groupby(["team", "player_id", "player"])["min"].sum()
-                .reset_index().merge(n, on="team"))
-    recent["exp_min"] = recent["min"] / recent["n"]
-    tot = b.groupby(["team", "player_id"])[["pm", "min"]].sum().reset_index()
-    tot["pm36"] = 36.0 * tot["pm"] / (tot["min"] + prior_min)
-    v = recent.merge(tot[["team", "player_id", "pm36"]],
-                     on=["team", "player_id"], how="left")
-    v["value"] = (v["exp_min"] / 36.0 * v["pm36"].fillna(0).clip(lower=0)
-                  + v["exp_min"] / 48.0)
-    return v[["player_id", "player", "team", "value", "exp_min"]]
+    v = (b.merge(tg, on=["team", "game_id"])
+           .groupby(["team", "player_id", "player"])["min"].sum()
+           .reset_index().merge(n, on="team"))
+    v["exp_min"] = v["min"] / v["n"]
+    two = box[box["season"] >= season - 1]
+    two = two.assign(prod=two["pts"] + 0.5 * two["reb"] + 0.7 * two["ast"])
+    pr = two.groupby("player_id")[["prod", "min"]].sum()
+    prod36 = 36.0 * (pr["prod"] + PROD_PRIOR / 36.0 * prior_min) \
+        / (pr["min"] + prior_min)
+    v["prod36"] = v["player_id"].map(prod36).fillna(PROD_PRIOR)
+    v["prod_val"] = v["exp_min"] / 36.0 * (v["prod36"] - PROD_REPL).clip(lower=0)
+    return v[cols]
 
 
 def tonight_missing(report: pd.DataFrame | None, values: pd.DataFrame,
                     min_minutes: float = 15.0) -> dict:
-    """team -> (expected missing value, [player notes]) from the report."""
+    """team -> ({"min": minutes, "prod": production} expected missing,
+    [player notes]) from the report, weighted by status."""
     out: dict = {}
     if report is None or report.empty or values.empty:
         return out
@@ -138,8 +151,9 @@ def tonight_missing(report: pd.DataFrame | None, values: pd.DataFrame,
                else None)
         if row is None or row["exp_min"] < min_minutes:
             continue
-        val, notes = out.get(r.team, (0.0, []))
-        val += w * float(row["value"])
+        val, notes = out.get(r.team, ({"min": 0.0, "prod": 0.0}, []))
+        val["min"] += w * float(row["exp_min"])
+        val["prod"] += w * float(row["prod_val"])
         notes.append(f"{r.player} {st}")
         out[r.team] = (val, notes)
     return out
@@ -181,9 +195,12 @@ def predict(games: pd.DataFrame, fair: dict, fitted: Fitted,
             for c in ("b2b_diff", "rest_diff", "away_b2b_road"):
                 x[c] = 0.0 if pd.isna(row[c]) else float(row[c])
             x["b2b_sum"] = float(np.nansum([row["home_b2b"], row["away_b2b"]]))
-        hv, hn = missing.get(h, (0.0, []))
-        av, an = missing.get(a, (0.0, []))
-        x["inj_val_diff"], x["inj_val_sum"] = hv - av, hv + av
+        none = ({"min": 0.0, "prod": 0.0}, [])
+        hv, hn = missing.get(h, none)
+        av, an = missing.get(a, none)
+        for c in INJ:
+            x[f"inj_{c}_diff"] = hv[c] - av[c]
+            x[f"inj_{c}_sum"] = hv[c] + av[c]
         x["model_margin"] = float(hca + r[h] - r[a])
         x["model_total"] = float(mu + t.get(h, 0.0) + t.get(a, 0.0))
         _early_terms(x, float(min(played.get(h, 0), played.get(a, 0)) < EARLY))
@@ -192,7 +209,7 @@ def predict(games: pd.DataFrame, fair: dict, fitted: Fitted,
                        + M["mm_early"] * x["mm_early"] + M["const"])
             rest = sum(M[c] * x[c] for c in ("b2b_diff", "rest_diff",
                                              "away_b2b_road"))
-            inj = M["inj_val_diff"] * x["inj_val_diff"]
+            inj = sum(M[f"inj_{c}_diff"] * x[f"inj_{c}_diff"] for c in INJ)
             tot = sum(T[c] * x[c] for c in TOTAL_X) + T["const"]
         else:                                   # no history: ratings only
             ratings, rest, inj, tot = x["model_margin"], 0.0, 0.0, x["model_total"]
