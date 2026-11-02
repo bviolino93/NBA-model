@@ -18,8 +18,9 @@ def show(label, obj, n=1500):
     print(json.dumps(obj, indent=1)[:n])
 
 
-for day in [a for a in sys.argv[1:] if not a.startswith("--")] or (
-        [] if "--box" in sys.argv else ["20240115", "20181115", "20261030"]):
+for day in ([] if "--box" in sys.argv else
+            [a for a in sys.argv[1:] if not a.startswith("--")]
+            or ["20240115", "20181115", "20261030"]):
     js = requests.get(SB, params={"dates": day}, timeout=30).json()
     ev = js["events"][0]
     comp = ev["competitions"][0]
@@ -49,7 +50,9 @@ def box(day="20240115"):
                 print("  ", {k: v for k, v in a.items() if k != "athlete"},
                       a.get("athlete", {}).get("id"),
                       a.get("athlete", {}).get("displayName"))
-    show("summary injuries", s.get("injuries"), 1500)
+    inj = s.get("injuries") or []
+    print("summary injuries: teams", len(inj), "first entry keys",
+          sorted((inj[0].get("injuries") or [{}])[0]) if inj else None)
 
 
 def open_close_coverage(days=("20171115", "20200115", "20220115",
@@ -70,4 +73,3 @@ def open_close_coverage(days=("20171115", "20200115", "20220115",
 
 if __name__ == "__main__" and "--box" in sys.argv:
     box()
-    open_close_coverage()
