@@ -160,6 +160,10 @@ def team_minutes(p: pd.DataFrame) -> pd.DataFrame:
     return p
 
 
+PROD_PRIOR = 18.0     # per 36: about a replacement-level rotation player
+PROD_REPL = 18.0      # production per 36 a fill-in gives back
+
+
 def roles(p: pd.DataFrame, window: int = 10, recent: int = 5,
           prior_min: float = 300.0) -> pd.DataFrame:
     """Every player's expected role going INTO each of his team's games.
@@ -171,6 +175,8 @@ def roles(p: pd.DataFrame, window: int = 10, recent: int = 5,
       recent    played in at least one of the team's last `recent` games
                 (drops players who were traded or are out long term)
       pm36      season-to-date plus-minus per 36, shrunk with `prior_min`
+      prod36    season-to-date box production per 36 (points + 0.5
+                rebounds + 0.7 assists), shrunk toward PROD_PRIOR
       min_now   minutes in THIS game (0 = did not play)
     """
     p = team_minutes(p)
@@ -186,10 +192,16 @@ def roles(p: pd.DataFrame, window: int = 10, recent: int = 5,
         exp_min = m.rolling(window, min_periods=1).mean().shift(1)
         rec = (m > 0).rolling(recent, min_periods=1).max().shift(1).fillna(0) > 0
         pm36 = 36.0 * pmm.cumsum().shift(1) / (m.cumsum().shift(1) + prior_min)
+        prd = (t.assign(prod=t["pts"] + 0.5 * t["reb"] + 0.7 * t["ast"])
+                .pivot_table(index="n", columns="player_id", values="prod",
+                             aggfunc="sum").reindex(mat.index).fillna(0.0))
+        prod36 = 36.0 * (prd.cumsum().shift(1) + PROD_PRIOR / 36.0 * prior_min) \
+            / (m.cumsum().shift(1) + prior_min)
         stacked = pd.DataFrame({
             "exp_min": exp_min.stack(future_stack=True),
             "recent": rec.stack(future_stack=True),
             "pm36": pm36.stack(future_stack=True),
+            "prod36": prod36.stack(future_stack=True),
             "min_now": m.stack(future_stack=True),
             "seen": seen.stack(future_stack=True),
         }).reset_index()
@@ -221,10 +233,14 @@ def absences(p: pd.DataFrame, min_minutes: float = 15.0) -> pd.DataFrame:
         lost_val=miss["exp_min"] / 36.0 * miss["pm36"].fillna(0).clip(lower=0)
                  + miss["exp_min"] / 48.0,
         lost_star=(miss["exp_min"] >= 30).astype(int),
+        # Production above a fill-in's, over the minutes he'd have played
+        lost_prod=miss["exp_min"] / 36.0
+                  * (miss["prod36"].fillna(PROD_REPL) - PROD_REPL).clip(lower=0),
     )
     out = (miss.groupby(["game_id", "team"])
                .agg(lost_min=("lost_min", "sum"), lost_val=("lost_val", "sum"),
                     lost_star=("lost_star", "sum"),
+                    lost_prod=("lost_prod", "sum"),
                     missing=("player", lambda s: ", ".join(map(str, s))))
                .reset_index())
     return out
@@ -234,12 +250,17 @@ def game_absences(games: pd.DataFrame, ab: pd.DataFrame) -> pd.DataFrame:
     """Home-minus-away absence features on each game row."""
     g = games.copy()
     g["game_id"] = g["game_id"].astype(str)
+    ab = ab.copy()
+    for c in ("lost_min", "lost_val", "lost_star", "lost_prod"):
+        if c not in ab:
+            ab[c] = 0.0
     for side in ("home", "away"):
         a = ab.rename(columns={c: f"{side}_{c}" for c in
-                               ("lost_min", "lost_val", "lost_star", "missing")})
+                               ("lost_min", "lost_val", "lost_star",
+                                "lost_prod", "missing")})
         g = g.merge(a.rename(columns={"team": f"{side}_team"}),
                     on=["game_id", f"{side}_team"], how="left")
-    for c in ("lost_min", "lost_val", "lost_star"):
+    for c in ("lost_min", "lost_val", "lost_star", "lost_prod"):
         g[f"home_{c}"] = g[f"home_{c}"].fillna(0)
         g[f"away_{c}"] = g[f"away_{c}"].fillna(0)
     # Positive = the HOME side is more depleted.
@@ -247,6 +268,8 @@ def game_absences(games: pd.DataFrame, ab: pd.DataFrame) -> pd.DataFrame:
     g["inj_min_diff"] = g["home_lost_min"] - g["away_lost_min"]
     g["inj_val_sum"] = g["home_lost_val"] + g["away_lost_val"]
     g["inj_star_diff"] = g["home_lost_star"] - g["away_lost_star"]
+    g["inj_prod_diff"] = g["home_lost_prod"] - g["away_lost_prod"]
+    g["inj_prod_sum"] = g["home_lost_prod"] + g["away_lost_prod"]
     return g
 
 
