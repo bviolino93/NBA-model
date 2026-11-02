@@ -28,9 +28,10 @@ import pandas as pd
 import requests
 
 import ledger
+import nba_injuries as inj_mod
 import selector as sel
 from log_lines import _rows
-from nba_data import load_games
+from nba_data import current_season, load_games
 
 ODDS_URL = "https://api.the-odds-api.com/v4/sports/basketball_nba/odds"
 MY_BOOKS = "draftkings,fanduel"
@@ -82,8 +83,13 @@ def explain(p) -> str:
 
 def build_picks(rows: pd.DataFrame, games: pd.DataFrame, my_books,
                 bankroll: float = 1000.0, min_ev: float = 0.02,
-                now: datetime | None = None):
-    """(picks, fair, priced) for upcoming games."""
+                now: datetime | None = None,
+                injuries: pd.DataFrame | None = None):
+    """(picks, fair, priced) for upcoming games.
+
+    injuries: nba_injuries.with_roles output. Rotation players ruled out
+    are listed on the pick; ones questionable or day-to-day mark it
+    "wait for news", since the line can still jump before tip."""
     rows = upcoming(rows, now)
     if rows.empty:
         return pd.DataFrame(), {}, pd.DataFrame()
@@ -103,6 +109,10 @@ def build_picks(rows: pd.DataFrame, games: pd.DataFrame, my_books,
     if len(picks):
         picks["win_chance"] = picks["p_win"] / (1 - picks["p_push"])
         picks["why"] = [explain(p) for p in picks.itertuples()]
+        notes = [inj_mod.game_notes(injuries, p.home, p.away)
+                 for p in picks.itertuples()]
+        picks["out"] = ["; ".join(n["out"]) for n in notes]
+        picks["watch"] = ["; ".join(n["watch"]) for n in notes]
         picks["book"] = picks["book"].map(lambda b: BOOK_NAME.get(b, b))
     return picks, fair, priced
 
@@ -117,6 +127,17 @@ def _tip(commence) -> str:
             .strftime("%a %-I:%M %p ET"))
 
 
+def _injury_md(p) -> str:
+    out, watch = getattr(p, "out", ""), getattr(p, "watch", "")
+    lines = []
+    if watch:
+        lines.append(f"⚠️ **Wait for news:** {watch}. The line can still "
+                     f"move either way; the evening run re-checks it.")
+    if out:
+        lines.append(f"Already out (priced in): {out}.")
+    return "\n".join(lines) + ("\n" if lines else "")
+
+
 def render_md(picks: pd.DataFrame, made: str, history: list[dict]) -> str:
     out = [f"# NBA picks\n\n_Updated {made}_\n"]
     if picks.empty:
@@ -126,7 +147,8 @@ def render_md(picks: pd.DataFrame, made: str, history: list[dict]) -> str:
         out.append(f"### {_label(p)} at {p.book}\n\n"
                    f"**Stake ${p.stake:,.2f}** · win chance "
                    f"{p.win_chance * 100:.1f}% · EV {p.ev * 100:.1f}%  \n"
-                   f"{p.away} @ {p.home} · {_tip(p.commence)}\n\n{p.why}\n")
+                   f"{p.away} @ {p.home} · {_tip(p.commence)}\n\n{p.why}\n"
+                   + _injury_md(p))
     s = ledger.summary(history)
     graded = s["wins"] + s["losses"] + s["pushes"]
     if graded:
@@ -147,7 +169,9 @@ def render_alert(bets: list[dict]) -> str:
         p = pd.Series(b)
         out.append(f"- **{_label(p)}** at {p.book}, ${p.stake:,.2f} "
                    f"({p.win_chance * 100:.0f}% to win) · {p.away} @ "
-                   f"{p.home}, {_tip(p.commence)}")
+                   f"{p.home}, {_tip(p.commence)}"
+                   + (f"\n  ⚠️ wait for news: {p.watch}"
+                      if p.get("watch") else ""))
     out.append("\nPicks: https://github.com/bviolino93/nba-model/tree/picks")
     return "\n".join(out) + "\n"
 
@@ -164,6 +188,21 @@ def render_dropped(bets: list[dict]) -> str:
     out.append("\nThe book caught up with the market. If you already bet it, "
                "it still counts in the record at the alerted price.")
     return "\n".join(out) + "\n"
+
+
+def load_injuries(games: pd.DataFrame) -> pd.DataFrame:
+    """ESPN's report with each player's recent minutes; empty on failure."""
+    rep = inj_mod.fetch_injuries()
+    if rep.empty:
+        return inj_mod.with_roles(rep, inj_mod.recent_minutes(None))
+    try:
+        from nba_players import load_box
+        box = load_box(games[games["season"] == current_season()])
+        mins = inj_mod.recent_minutes(box)
+    except Exception as exc:
+        print(f"recent minutes unavailable: {exc}")
+        mins = inj_mod.recent_minutes(None)
+    return inj_mod.with_roles(rep, mins)
 
 
 def main():
@@ -188,13 +227,15 @@ def main():
     books = [b.strip() for b in a.books.split(",") if b.strip()]
     games = load_games()
     now = datetime.now(timezone.utc)
+    injuries = load_injuries(games)
     picks, fair, priced = build_picks(rows, games, books, a.bankroll,
-                                      a.min_ev, now)
+                                      a.min_ev, now, injuries)
     made = now.strftime("%a %b %-d, %H:%M UTC")
     for path in (a.md, a.json, a.history):
         os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
     cols = ["away", "home", "commence", "market", "pick", "point", "price",
-            "book", "stake", "win_chance", "ev", "fair_market", "why"]
+            "book", "stake", "win_chance", "ev", "fair_market", "why",
+            "out", "watch"]
     out = picks[cols].to_dict("records") if len(picks) else []
     out = json.loads(json.dumps(out, default=str))
     history = ledger.load(a.history)
@@ -222,6 +263,8 @@ def main():
     for p in out:
         print(f"  {p['pick']} {p['point']} ({p['price']}) at {p['book']}: "
               f"${p['stake']} | {p['win_chance']:.1%} | {p['why']}")
+        if p.get("out") or p.get("watch"):
+            print(f"    out: {p.get('out') or '-'} | watch: {p.get('watch') or '-'}")
 
 
 if __name__ == "__main__":
