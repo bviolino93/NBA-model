@@ -1,0 +1,31 @@
+name: Tune ratings
+# Grid over the ratings' half-life, offseason carry-over and ridge,
+# scored on past seasons (tools/tune_ratings.py). Actions -> Run workflow.
+on:
+  workflow_dispatch:
+    inputs:
+      first:
+        description: "First season (end year)"
+        default: "2016"
+      split:
+        description: "First held-out season"
+        default: "2022"
+jobs:
+  tune:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Cache ESPN days
+        uses: actions/cache@v4
+        with:
+          path: .cache_nba
+          key: espn-tune-${{ github.run_id }}
+          restore-keys: espn-
+      - run: pip install -r requirements.txt
+      - run: |
+          python tools/tune_ratings.py --first ${{ inputs.first }} --split ${{ inputs.split }} | tee tune.txt
+          { echo '```'; cat tune.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
