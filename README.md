@@ -12,6 +12,9 @@ the "NBA betting model: plan" doc in the project.
 | `backtest.py` | Scores the ratings and the schedule factors against the close: slope, ATS at an edge, MAE, split tuning / held out |
 | `nba_players.py` | Player box scores from ESPN summaries; each player's expected minutes and value going into a game; missing-player loads per team |
 | `selector.py` | Ported from the NFL repo: de-vig, sharp-weighted fair line, empirical outcome model, offer pricing, Kelly sizing, CLV |
+| `picks.py` | Daily picks: DraftKings/FanDuel lines that are stale against the sharp market, staked and explained; alerts and a graded record on the `picks` branch |
+| `ledger.py` | Every alerted bet, locked at its alerted price, graded from ESPN finals |
+| `nba_props.py` | Player prop projections (minutes x rate x pace), walk-forward vs naive baselines |
 | `log_lines.py` | Snapshots game lines (and props) from The Odds API into `data/lines/` |
 
 Seasons are labelled by the year they end (2026 = 2025-26), as ESPN does.
@@ -34,5 +37,5 @@ to add the nightly props snapshot).
 
 1. Timing of injury news (official injury report) to separate news before and after the opener
 2. `nba_combined.py`: ridge on result minus line, the NFL combined recipe
-3. `picks.py` + picks/ledger/review workflows, ported from the NFL repo
+3. Weekly review (record and CLV by market), ported from the NFL repo
 4. Props projections (minutes x per-minute rates x pace)

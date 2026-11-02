@@ -1,0 +1,87 @@
+name: NBA picks
+
+# Runs picks.py against live odds: DraftKings/FanDuel lines that are stale
+# against the sharp, de-vigged market. Publishes to the `picks` branch
+# (README.md renders on any phone:
+# https://github.com/bviolino93/nba-model/tree/picks), keeps history.json
+# there (every alerted bet, graded from ESPN finals), and comments on the
+# open "NBA picks alerts" issue when there are new bets, which GitHub
+# pushes to your phone.
+#
+# Needs secret ODDS_API_KEY. Optional variable MY_BOOKS (default
+# "draftkings,fanduel"). ~6 Odds API credits a run.
+#
+# Two runs a day at odd minutes (GitHub delays top-of-hour schedules):
+# early afternoon ET, and about 45 minutes before the first 7 PM ET tip.
+
+on:
+  schedule:
+    - cron: "23 17 * 10-12,1-6 *"
+    - cron: "13 23 * 10-12,1-6 *"
+  workflow_dispatch:
+    inputs:
+      bankroll:
+        description: "Bankroll for stake sizing"
+        default: "1000"
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: picks
+  cancel-in-progress: false
+
+jobs:
+  picks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Cache ESPN days
+        uses: actions/cache@v4
+        with:
+          path: .cache_nba
+          key: espn-${{ github.run_id }}
+          restore-keys: espn-
+      - run: pip install -r requirements.txt
+      - name: Restore bet history from the picks branch
+        run: |
+          mkdir -p site
+          git fetch -q --depth 1 origin picks && \
+            git show FETCH_HEAD:history.json > site/history.json || true
+      - name: Run picks
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          MY_BOOKS: ${{ vars.MY_BOOKS || 'draftkings,fanduel' }}
+        run: |
+          python picks.py --md site/README.md --json site/picks.json \
+            --history site/history.json --bankroll "${{ inputs.bankroll || '1000' }}"
+          cat site/README.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Publish to the picks branch
+        run: |
+          cd site
+          git init -q -b picks
+          git config user.name "picks-bot"
+          git config user.email "picks-bot@users.noreply.github.com"
+          git add -A
+          git commit -qm "NBA picks $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" picks
+      - name: Notify about new bets
+        if: hashFiles('alert.md') != ''
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          n=$(gh issue list --state open --search "NBA picks alerts in:title" \
+                --json number -q '.[0].number')
+          if [ -z "$n" ]; then
+            n=$(gh issue create --title "NBA picks alerts" --body \
+                  "Each NBA picks run comments here when it finds new bets." \
+                  | grep -o '[0-9]*$')
+          fi
+          { cat alert.md; echo; echo "@${{ github.repository_owner }}"; } > alert_body.md
+          gh issue comment "$n" --body-file alert_body.md
