@@ -30,7 +30,7 @@ from nba_ratings import RatingConfig, fit
 GAP = 3.0
 # Bump when the model changes in a way that makes earlier test bets
 # unrepresentative; bets logged by older versions are dropped on load.
-VERSION = 2
+VERSION = 3
 
 
 def load(path: str) -> list[dict]:

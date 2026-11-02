@@ -17,7 +17,7 @@ on:
         default: "2022"
       half_life:
         description: "Rating half-life in days"
-        default: "45"
+        default: "120"
       injuries:
         description: "Also load box scores and test missing players"
         type: boolean

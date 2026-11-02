@@ -27,8 +27,8 @@ import pandas as pd
 
 @dataclass
 class RatingConfig:
-    half_life: float = 45.0      # days
-    offseason_days: float = 60.0  # summer counts as this many extra days
+    half_life: float = 120.0     # days (tools/tune_ratings.py, 2026-11-02)
+    offseason_days: float = 150.0  # summer counts as this many extra days
     ridge_margin: float = 3.0
     ridge_total: float = 3.0
     min_games: int = 200          # need this many prior games to project
