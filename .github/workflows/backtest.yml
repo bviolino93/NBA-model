@@ -1,0 +1,52 @@
+name: Backtest vs closing lines
+
+# Walk-forward backtest of the score-based ratings and the schedule factors
+# (rest, back-to-backs, density) against ESPN's pregame lines. No secrets.
+# The first run fills the ESPN cache (~10 seasons x ~270 days, a few
+# minutes); later runs reuse it.
+# Actions tab -> "Backtest vs closing lines" -> Run workflow.
+
+on:
+  workflow_dispatch:
+    inputs:
+      first:
+        description: "First season (end year; 2016 = 2015-16)"
+        default: "2016"
+      split:
+        description: "First held-out season"
+        default: "2022"
+      half_life:
+        description: "Rating half-life in days"
+        default: "45"
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Cache ESPN days
+        uses: actions/cache@v4
+        with:
+          path: .cache_nba
+          key: espn-${{ github.run_id }}
+          restore-keys: espn-
+      - run: pip install -r requirements.txt
+      - name: Data check
+        run: python nba_data.py --first ${{ inputs.first }} | tee data.txt
+      - name: Backtest
+        run: |
+          python backtest.py --first ${{ inputs.first }} --split ${{ inputs.split }} \
+            --half-life ${{ inputs.half_life }} --out games.csv | tee out.txt
+          { echo '```'; cat data.txt; echo; cat out.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: backtest
+          path: |
+            games.csv
+            out.txt
+            data.txt

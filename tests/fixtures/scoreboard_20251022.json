@@ -1,0 +1,23 @@
+{"events": [
+ {"id": "401809001", "date": "2025-10-22T23:30Z", "season": {"year": 2026, "type": 2},
+  "competitions": [{"neutralSite": false,
+   "status": {"type": {"completed": true, "state": "post"}},
+   "competitors": [
+     {"homeAway": "home", "score": "117", "team": {"abbreviation": "BOS", "displayName": "Boston Celtics"}},
+     {"homeAway": "away", "score": "105", "team": {"abbreviation": "PHI", "displayName": "Philadelphia 76ers"}}],
+   "odds": [{"provider": {"name": "ESPN BET"}, "details": "BOS -7.5", "overUnder": 224.5, "spread": -7.5}]}]},
+ {"id": "401809002", "date": "2025-10-23T02:00Z", "season": {"year": 2026, "type": 2},
+  "competitions": [{"neutralSite": false,
+   "status": {"type": {"completed": true, "state": "post"}},
+   "competitors": [
+     {"homeAway": "home", "score": "109", "team": {"abbreviation": "LAC", "displayName": "LA Clippers"}},
+     {"homeAway": "away", "score": "112", "team": {"abbreviation": "DEN", "displayName": "Denver Nuggets"}}],
+   "odds": [{"details": "DEN -2", "overUnder": 228.0}]}]},
+ {"id": "401809003", "date": "2025-10-23T00:00Z", "season": {"year": 2026, "type": 2},
+  "competitions": [{"neutralSite": false,
+   "status": {"type": {"completed": false, "state": "pre"}},
+   "competitors": [
+     {"homeAway": "home", "score": "0", "team": {"abbreviation": "NY", "displayName": "New York Knicks"}},
+     {"homeAway": "away", "score": "0", "team": {"abbreviation": "MIA", "displayName": "Miami Heat"}}],
+   "odds": [{"details": "EVEN", "overUnder": 219.5}]}]}
+]}

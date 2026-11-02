@@ -1,0 +1,56 @@
+name: Log NBA lines
+
+# Snapshots NBA game lines (and props once a day) from The Odds API and
+# commits the CSVs under data/lines/. Needs repository secret ODDS_API_KEY.
+#
+# 15:13 UTC is mid-morning ET, near the opener for that night's games.
+# 22:41 UTC is about 20 minutes before the first 7 PM ET tip (an hour
+# before in daylight time), close to the close; props are taken then.
+# Odd minutes because GitHub drops and delays top-of-hour schedules.
+
+on:
+  schedule:
+    - cron: "13 15 * 10-12,1-6 *"
+    - cron: "41 22 * 10-12,1-6 *"
+  workflow_dispatch:
+    inputs:
+      props:
+        description: "Include player props"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: log-lines
+  cancel-in-progress: false
+
+jobs:
+  log:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests pandas
+      - name: Snapshot
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          # Repository variable LOG_PROPS=true turns on the nightly props
+          # snapshot (~1,000 credits a month; needs a paid Odds API plan).
+          LOG_PROPS: ${{ vars.LOG_PROPS || 'false' }}
+        run: |
+          flags=""
+          if [ "${{ inputs.props }}" = "true" ]; then flags="--props"; fi
+          if [ "$LOG_PROPS" = "true" ] && [ "${{ github.event.schedule }}" = "41 22 * 10-12,1-6 *" ]; then flags="--props"; fi
+          python log_lines.py --out-dir data/lines $flags
+      - name: Commit
+        run: |
+          git config user.name "line-logger"
+          git config user.email "line-logger@users.noreply.github.com"
+          git add data/lines
+          git diff --cached --quiet || git commit -m "Line snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push
