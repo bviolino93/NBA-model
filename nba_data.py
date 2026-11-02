@@ -47,7 +47,8 @@ ALIASES = {
 
 COLS = ["game_id", "season", "season_type", "game_date", "commence",
         "home_team", "away_team", "home_abbr", "away_abbr", "home_score",
-        "away_score", "spread_line", "total_line", "neutral", "completed"]
+        "away_score", "spread_line", "total_line", "neutral", "completed",
+        "line_books"]
 
 
 def canon(name: str) -> str:
@@ -196,10 +197,94 @@ def load_season(season: int, cache_dir: str = CACHE_DIR,
     return pd.DataFrame(rows, columns=COLS)
 
 
+# ----------------------------------------------------------------------
+# Lines for past games: ESPN's core odds API
+# ----------------------------------------------------------------------
+# The scoreboard drops its odds block once a game is final. The core API
+# keeps every book ESPN carried for the game (Caesars, DraftKings, ...;
+# newer seasons also have open and close). Probed 2026-11-02 on games
+# from 2018-19 and 2026-27 (tools/espn_probe.py).
+CORE_ODDS = ("https://sports.core.api.espn.com/v2/sports/basketball/leagues/"
+             "nba/events/{id}/competitions/{id}/odds")
+# Providers that are projections or in-game prices, not pregame lines.
+SKIP_PROVIDER = re.compile(r"live|numberfire|teamrankings|projection|"
+                           r"accuscore|predict", re.I)
+
+
+def parse_core_odds(js: dict, home_abbr: str, away_abbr: str
+                    ) -> tuple[float, float, int]:
+    """(home margin line, total, books used): medians across books."""
+    spreads, totals = [], []
+    for it in js.get("items", []):
+        name = str((it.get("provider") or {}).get("name", ""))
+        if SKIP_PROVIDER.search(name):
+            continue
+        sp = _home_spread(it, home_abbr, away_abbr)
+        if pd.notna(sp) and abs(sp) <= 30:
+            spreads.append(sp)
+        tt = _total(it)
+        if pd.notna(tt):
+            totals.append(tt)
+    med = lambda v: float(pd.Series(v).median()) if v else float("nan")
+    return med(spreads), med(totals), max(len(spreads), len(totals))
+
+
+def fetch_core_odds(game_id: str, cache_dir: str = CACHE_DIR) -> dict:
+    os.makedirs(os.path.join(cache_dir, "odds"), exist_ok=True)
+    path = os.path.join(cache_dir, "odds", f"{game_id}.json")
+    if os.path.exists(path):
+        with open(path) as fh:
+            return json.load(fh)
+    js = {}
+    for i in range(3):
+        try:
+            r = requests.get(CORE_ODDS.format(id=game_id), timeout=30)
+            if r.status_code == 200:
+                js = r.json()
+                break
+            if r.status_code == 404:
+                break
+        except requests.RequestException:
+            pass
+        time.sleep(2 ** i)
+    with open(path, "w") as fh:
+        json.dump(js, fh)
+    return js
+
+
+def fill_lines(g: pd.DataFrame, cache_dir: str = CACHE_DIR,
+               workers: int = 8) -> pd.DataFrame:
+    """Fill missing spread/total on completed games from the core API."""
+    from concurrent.futures import ThreadPoolExecutor
+    need = g[g["completed"] & (g["spread_line"].isna()
+                               | g["total_line"].isna())]
+    if need.empty:
+        return g
+    with ThreadPoolExecutor(workers) as ex:
+        docs = list(ex.map(lambda i: fetch_core_odds(i, cache_dir),
+                           need["game_id"]))
+    g = g.copy()
+    g["line_books"] = g.get("line_books", pd.Series(0, index=g.index))
+    for idx, js, ha, aa in zip(need.index, docs, need["home_abbr"],
+                               need["away_abbr"]):
+        sp, tt, n = parse_core_odds(js, ha, aa)
+        if pd.isna(g.at[idx, "spread_line"]):
+            g.at[idx, "spread_line"] = sp
+        if pd.isna(g.at[idx, "total_line"]):
+            g.at[idx, "total_line"] = tt
+        g.at[idx, "line_books"] = n
+    return g
+
+
 def load_games(first: int = 2016, last: int | None = None,
                cache_dir: str = CACHE_DIR, regular_only: bool = False,
-               lines_csv: str | None = None) -> pd.DataFrame:
-    """All games first..last (season end years), oldest first."""
+               lines_csv: str | None = None,
+               past_lines: bool = True) -> pd.DataFrame:
+    """All games first..last (season end years), oldest first.
+
+    past_lines fetches each completed game's lines from ESPN's core odds
+    API (one request per game, cached for good; ~45 minutes cold for ten
+    seasons)."""
     last = last or current_season()
     g = pd.concat([load_season(s, cache_dir) for s in range(first, last + 1)],
                   ignore_index=True)
@@ -207,6 +292,8 @@ def load_games(first: int = 2016, last: int | None = None,
     if regular_only:
         g = g[g["season_type"] == "REG"]
     g = g.drop_duplicates("game_id").sort_values("commence")
+    if past_lines:
+        g = fill_lines(g, cache_dir)
     if lines_csv:
         g = merge_lines(g, load_lines(lines_csv))
     return g.reset_index(drop=True)

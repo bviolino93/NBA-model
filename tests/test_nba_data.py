@@ -80,3 +80,18 @@ def test_merge_lines_prefers_archive(tmp_path):
     m = nba_data.merge_lines(g, nba_data.load_lines(str(p))).set_index("game_id")
     assert m.loc["401809001", "spread_line"] == 8.0
     assert m.loc["401809002", "spread_line"] == -2.0
+
+
+def test_core_odds_median_skips_projections_and_live():
+    fix = os.path.join(os.path.dirname(__file__), "fixtures",
+                       "core_odds_401070894.json")
+    with open(fix) as fh:
+        sp, tt, n = nba_data.parse_core_odds(json.load(fh), "HOU", "MIA")
+    assert n == 3
+    assert sp == 4.5          # HOU home favourite by 4.5 (median of 4.5, 4.5, 5)
+    assert tt == 217.0
+
+
+def test_core_odds_empty():
+    sp, tt, n = nba_data.parse_core_odds({}, "HOU", "MIA")
+    assert np.isnan(sp) and np.isnan(tt) and n == 0
