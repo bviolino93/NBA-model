@@ -80,8 +80,15 @@ footer{color:var(--mute);font-size:.75rem;margin-top:32px}
 <div class="chart" id="chart"><div class="tip" id="tip"></div></div>
 <div class="tablewrap"><table id="history"></table></div>
 
+<section id="paper-wrap">
+  <h2>Model test (no money)</h2>
+  <p class="sub" id="paper-sub"></p>
+  <section class="kpis" id="paper-kpis"></section>
+  <div class="tablewrap"><table id="paper"></table></div>
+</section>
+
 <details>
-  <summary>Fair lines this run</summary>
+  <summary>Market vs model, this run</summary>
   <div class="tablewrap"><table id="fair"></table></div>
 </details>
 
@@ -310,12 +317,60 @@ per bet and 8% a night. Win chances are estimates, not guarantees. 21+ where leg
     $("history").closest(".tablewrap").hidden = true;
   }
 
+  // ---- no-money model test
+  const P = D.paper;
+  const Q = P.summary;
+  $("paper-sub").textContent = "Our own line: team ratings from results (opponent-adjusted, home court), " +
+    "rest and back-to-backs, and tonight's injury report weighted by each missing player's minutes and impact, " +
+    `against the sharp line. When it disagrees by ${P.gap}+ points, a test bet is logged on its side. ` +
+    "Not staked: it earns real bets only if it beats the closing line over a few hundred games." +
+    (P.bets.length ? "" : " None logged yet.");
+  if (!P.bets.length) {
+    $("paper-kpis").hidden = true;
+    $("paper").closest(".tablewrap").hidden = true;
+  } else {
+    const pk = $("paper-kpis");
+    kpi(pk, String(Q.bets), "test bets logged");
+    kpi(pk, Q.wins + Q.losses ? `${Q.wins}-${Q.losses}${Q.pushes ? "-" + Q.pushes : ""}` : "—",
+        "record");
+    kpi(pk, Q.avg_clv == null ? "—" : (Q.avg_clv > 0 ? "+" : "") + Q.avg_clv.toFixed(2) + " pts",
+        "average line move our way", Q.avg_clv == null ? "" : (Q.avg_clv > 0 ? "win" : "loss"));
+    kpi(pk, Q.beat_close == null ? "—" : pct(Q.beat_close, 0), "beat the closing line");
+    const sp = (x) => (x > 0 ? "+" : "") + x;
+    table("paper", [["Date"], ["Game"], ["Test bet"], ["Market"], ["Model"], ["Gap", 1],
+                    ["Close", 1], ["Moved", 1], ["Final"], ["Result"]],
+      P.bets.slice().sort((a, b) => b.commence.localeCompare(a.commence)).map((b) => {
+        const spread = b.market === "spreads";
+        const fmt = (v) => spread ? (v >= 0 ? `${short(b.home)} by ${Math.abs(v)}`
+                                            : `${short(b.away)} by ${Math.abs(v)}`) : String(v);
+        return [
+          [new Date(b.commence).toLocaleDateString("en-US", {...ET, month: "short", day: "numeric"})],
+          [`${short(b.away)} @ ${short(b.home)}`],
+          [spread ? `${short(b.side)} ${sp(b.point)}` : `${b.side} ${b.point}`],
+          [fmt(b.line)], [fmt(b.model)],
+          [Math.abs(b.gap).toFixed(1), "r"],
+          [b.close == null ? "" : String(b.close), "r"],
+          [b.clv == null ? "" : sp(b.clv), "r " + (b.clv > 0 ? "win" : b.clv < 0 ? "loss" : "")],
+          [b.final || ""], [b.result || "open", b.result || "open"],
+        ];
+      }));
+  }
   if (D.fair.length) {
     const num = (v, sign) => v == null || isNaN(v) ? "—" : (sign && v > 0 ? "+" : "") + v.toFixed(1);
-    table("fair", [["Game"], ["Tip"], ["Home by (fair)", 1], ["Fair total", 1]],
+    const why = (f) => {
+      if (!f.parts) return "";
+      const p = f.parts, bits = [`ratings ${num(p.ratings, true)}`];
+      if (Math.abs(p.rest) >= 0.1) bits.push(`rest ${num(p.rest, true)}`);
+      if (Math.abs(p.injuries) >= 0.1) bits.push(`injuries ${num(p.injuries, true)}`);
+      const miss = [...(f.missing.home || []), ...(f.missing.away || [])];
+      return bits.join(", ") + (miss.length ? ` (missing: ${miss.join("; ")})` : "");
+    };
+    table("fair", [["Game"], ["Tip"], ["Home by (market)", 1], ["Home by (model)", 1],
+                   ["Market total", 1], ["Model total", 1], ["Model's margin, from"]],
       D.fair.slice().sort((a, b) => a.commence.localeCompare(b.commence)).map((f) => [
         [`${short(f.away)} @ ${short(f.home)}`], [kick(f.commence)],
-        [num(f.market_margin, true), "r"], [num(f.market_total), "r"]]));
+        [num(f.market_margin, true), "r"], [num(f.model_margin, true), "r"],
+        [num(f.market_total), "r"], [num(f.model_total), "r"], [why(f)]]));
   } else {
     $("fair").closest("details").hidden = true;
   }

@@ -29,6 +29,8 @@ import requests
 
 import ledger
 import nba_injuries as inj_mod
+import nba_model
+import paper
 import selector as sel
 from log_lines import _rows
 from nba_data import current_season, load_games
@@ -177,7 +179,8 @@ def _clean(x):
 
 
 def render_html(picks: list[dict], fair: dict, made: str, bankroll: float,
-                history: list[dict]) -> str:
+                history: list[dict], tests: list[dict] = (),
+                lines: dict | None = None) -> str:
     """The dashboard: dashboard.html with this run's data embedded, so the
     page works from GitHub Pages, the picks branch or a saved copy."""
     data = {
@@ -185,9 +188,15 @@ def render_html(picks: list[dict], fair: dict, made: str, bankroll: float,
         "fair": [{"away": f.away_team, "home": f.home_team,
                   "commence": str(f.commence),
                   "market_margin": f.market_margin,
-                  "market_total": f.market_total}
-                 for f in fair.values()],
+                  "market_total": f.market_total,
+                  "model_margin": (lines or {}).get(k, {}).get("margin"),
+                  "model_total": (lines or {}).get(k, {}).get("total"),
+                  "parts": (lines or {}).get(k, {}).get("parts"),
+                  "missing": (lines or {}).get(k, {}).get("missing")}
+                 for k, f in fair.items()],
         "history": {"summary": ledger.summary(history), "bets": history},
+        "paper": {"summary": paper.summary(list(tests)), "gap": paper.GAP,
+                  "bets": list(tests)},
     }
     blob = json.dumps(_clean(json.loads(json.dumps(data, default=str))),
                       allow_nan=False).replace("</", "<\\/")
@@ -223,19 +232,37 @@ def render_dropped(bets: list[dict]) -> str:
     return "\n".join(out) + "\n"
 
 
-def load_injuries(games: pd.DataFrame) -> pd.DataFrame:
-    """ESPN's report with each player's recent minutes; empty on failure."""
-    rep = inj_mod.fetch_injuries()
-    if rep.empty:
-        return inj_mod.with_roles(rep, inj_mod.recent_minutes(None))
+def load_box_recent(games: pd.DataFrame, seasons: int = 5):
+    """Box scores for the last few seasons (cached), or None."""
     try:
         from nba_players import load_box
-        box = load_box(games[games["season"] == current_season()])
-        mins = inj_mod.recent_minutes(box)
+        return load_box(games[games["season"] > current_season() - seasons])
     except Exception as exc:
-        print(f"recent minutes unavailable: {exc}")
-        mins = inj_mod.recent_minutes(None)
-    return inj_mod.with_roles(rep, mins)
+        print(f"box scores unavailable: {exc}")
+        return None
+
+
+def load_injuries(box) -> pd.DataFrame:
+    """ESPN's report with each player's recent minutes; empty on failure."""
+    rep = inj_mod.fetch_injuries()
+    cur = None if box is None else box[box["season"] == current_season()]
+    return inj_mod.with_roles(rep, inj_mod.recent_minutes(cur))
+
+
+def model_lines(games, fair, box, injuries, now) -> dict:
+    """Our own line per game (nba_model); ratings only if that fails."""
+    try:
+        recent = games[games["season"] > current_season() - 5]
+        fitted = nba_model.fit_weights(nba_model.history(recent, box))
+        print(f"model weights from {fitted.n} games: margin "
+              f"{ {k: round(v, 2) for k, v in fitted.margin.items()} }, total "
+              f"{ {k: round(v, 2) for k, v in fitted.total.items()} }")
+        missing = nba_model.tonight_missing(
+            injuries, nba_model.player_values(box))
+        return nba_model.predict(games, fair, fitted, missing, now)
+    except Exception as exc:
+        print(f"full model failed, ratings only: {exc}")
+        return paper.model_lines(games, fair, now)
 
 
 def main():
@@ -245,6 +272,7 @@ def main():
     ap.add_argument("--json", default="site/picks.json")
     ap.add_argument("--history", default="site/history.json")
     ap.add_argument("--alert", default="alert.md")
+    ap.add_argument("--paper", default="site/paper.json")
     ap.add_argument("--bankroll", type=float, default=1000.0)
     ap.add_argument("--min-ev", type=float, default=0.02)
     ap.add_argument("--books", default=os.environ.get("MY_BOOKS") or MY_BOOKS)
@@ -261,7 +289,8 @@ def main():
     books = [b.strip() for b in a.books.split(",") if b.strip()]
     games = load_games()
     now = datetime.now(timezone.utc)
-    injuries = load_injuries(games)
+    box = load_box_recent(games)
+    injuries = load_injuries(box)
     picks, fair, priced = build_picks(rows, games, books, a.bankroll,
                                       a.min_ev, now, injuries)
     made = now.strftime("%a %b %-d, %H:%M UTC")
@@ -282,10 +311,21 @@ def main():
     except Exception as exc:          # scores can wait for the next run
         print(f"grading skipped: {exc}")
     ledger.save(a.history, history)
+    tests, lines = paper.load(a.paper), {}
+    try:
+        lines = model_lines(games, fair, box, injuries, now)
+        tests = paper.log(tests, fair, lines, now.isoformat())
+        tests = paper.grade(tests, games)
+    except Exception as exc:          # the test never blocks real picks
+        print(f"model test skipped: {exc}")
+    paper.save(a.paper, tests)
+    print(f"model test: {len(lines)} games projected, {len(tests)} test bets "
+          f"logged, {paper.summary(tests)}")
     with open(a.md, "w") as fh:
         fh.write(render_md(picks, made, history))
     with open(a.out, "w") as fh:
-        fh.write(render_html(out, fair, made, a.bankroll, history))
+        fh.write(render_html(out, fair, made, a.bankroll, history, tests,
+                             lines))
     with open(a.json, "w") as fh:
         json.dump({"updated": made, "picks": out}, fh, indent=2, default=str)
     fresh = [p for p in out if ledger._key(p) not in seen]
