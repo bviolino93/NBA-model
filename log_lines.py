@@ -94,7 +94,7 @@ def main():
     ap.add_argument("--regions", default="us,eu")
     ap.add_argument("--prop-regions", default="us")
     a = ap.parse_args()
-    key = os.environ.get("ODDS_API_KEY")
+    key = (os.environ.get("ODDS_API_KEY") or "").strip()
     if not key:
         raise SystemExit("set ODDS_API_KEY")
 
