@@ -29,14 +29,17 @@ from dataclasses import dataclass, field
 import numpy as np
 import pandas as pd
 
-from nba_data import schedule_features
+from nba_data import schedule_features, team_games
 from nba_ratings import RatingConfig, fit, walk_forward
 
 STATUS_WEIGHT = {"out": 1.0, "doubtful": 0.8, "questionable": 0.4,
                  "day-to-day": 0.4, "game time decision": 0.4}
-MARGIN_X = ["model_margin", "b2b_diff", "rest_diff", "away_b2b_road",
+# Early in a season the ratings rest on a handful of games; these terms
+# let the fit trust them less until both teams have EARLY games in.
+EARLY = 15
+MARGIN_X = ["model_margin", "mm_early", "b2b_diff", "rest_diff", "away_b2b_road",
             "inj_val_diff"]
-TOTAL_X = ["model_total", "inj_val_sum", "b2b_sum"]
+TOTAL_X = ["model_total", "mt_early", "early", "inj_val_sum", "b2b_sum"]
 
 
 @dataclass
@@ -64,7 +67,21 @@ def history(games: pd.DataFrame, box: pd.DataFrame | None,
     else:
         g["inj_val_diff"] = 0.0
         g["inj_val_sum"] = 0.0
-    return walk_forward(g, cfg)
+    g = walk_forward(g, cfg)
+    t = team_games(g).sort_values("commence")
+    t["n_before"] = t.groupby(["team", "season"]).cumcount()
+    n = t.set_index(["game_id", "team"])["n_before"]
+    hn = n.reindex(list(zip(g["game_id"], g["home_team"]))).to_numpy()
+    an = n.reindex(list(zip(g["game_id"], g["away_team"]))).to_numpy()
+    _early_terms(g, (np.fmin(hn, an) < EARLY).astype(float))
+    return g
+
+
+def _early_terms(x, early) -> None:
+    """Interaction columns on a frame or a dict of features."""
+    x["early"] = early
+    x["mm_early"] = x["model_margin"] * early
+    x["mt_early"] = x["model_total"] * early
 
 
 def fit_weights(h: pd.DataFrame) -> Fitted:
@@ -147,6 +164,8 @@ def predict(games: pd.DataFrame, fair: dict, fitted: Fitted,
     teams = sorted(set(g["home_team"]) | set(g["away_team"]))
     hca, r, mu, t = fit(prior, today, season, cfg, teams)
     M, T = fitted.margin, fitted.total
+    cur = done[done["season"] == season]
+    played = pd.concat([cur["home_team"], cur["away_team"]]).value_counts()
     out = {}
     for k, f in fair.items():
         h, a = f.home_team, f.away_team
@@ -167,8 +186,10 @@ def predict(games: pd.DataFrame, fair: dict, fitted: Fitted,
         x["inj_val_diff"], x["inj_val_sum"] = hv - av, hv + av
         x["model_margin"] = float(hca + r[h] - r[a])
         x["model_total"] = float(mu + t.get(h, 0.0) + t.get(a, 0.0))
+        _early_terms(x, float(min(played.get(h, 0), played.get(a, 0)) < EARLY))
         if M:
-            ratings = M["model_margin"] * x["model_margin"] + M["const"]
+            ratings = (M["model_margin"] * x["model_margin"]
+                       + M["mm_early"] * x["mm_early"] + M["const"])
             rest = sum(M[c] * x[c] for c in ("b2b_diff", "rest_diff",
                                              "away_b2b_road"))
             inj = M["inj_val_diff"] * x["inj_val_diff"]

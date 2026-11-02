@@ -28,12 +28,16 @@ import pandas as pd
 from nba_ratings import RatingConfig, fit
 
 GAP = 3.0
+# Bump when the model changes in a way that makes earlier test bets
+# unrepresentative; bets logged by older versions are dropped on load.
+VERSION = 2
 
 
 def load(path: str) -> list[dict]:
     try:
         with open(path) as fh:
-            return json.load(fh).get("bets", [])
+            return [b for b in json.load(fh).get("bets", [])
+                    if b.get("v") == VERSION]
     except (OSError, ValueError):
         return []
 
@@ -97,7 +101,7 @@ def log(history: list[dict], fair: dict, lines: dict, run: str,
             else:
                 side, point = ("Over" if d > 0 else "Under"), line
             history.append({
-                "key": key, "market": market, "away": f.away_team,
+                "v": VERSION, "key": key, "market": market, "away": f.away_team,
                 "home": f.home_team, "commence": str(f.commence),
                 "logged": run, "side": side, "point": point,
                 "line": line, "model": round(model_pt, 1),
@@ -123,7 +127,8 @@ def grade(history: list[dict], games: pd.DataFrame) -> list[dict]:
         close = m["spread_line"] if spread else m["total_line"]
         # +1 when the model's side is the home team or the over
         sign = (1 if b["side"] in (b["home"], "Over") else -1)
-        if pd.notna(close):
+        # Before tip ESPN's line is the current one, not the close.
+        if bool(m["completed"]) and pd.notna(close):
             b["close"] = float(close)
             b["clv"] = round(sign * (float(close) - b["line"]), 1)
         if bool(m["completed"]) and pd.notna(m["home_score"]):
