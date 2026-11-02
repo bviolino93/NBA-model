@@ -8,6 +8,10 @@ name: NBA picks
 # open "NBA picks alerts" issue when there are new bets, which GitHub
 # pushes to your phone.
 #
+# The dashboard (index.html, same layout as the NFL page) deploys to GitHub
+# Pages once Pages is enabled (Settings -> Pages -> Source: GitHub
+# Actions): https://bviolino93.github.io/NBA-model/
+#
 # Needs secret ODDS_API_KEY. Optional variable MY_BOOKS (default
 # "draftkings,fanduel"). ~6 Odds API credits a run.
 #
@@ -27,6 +31,8 @@ on:
 permissions:
   contents: write
   issues: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: picks
@@ -58,7 +64,7 @@ jobs:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
           MY_BOOKS: ${{ vars.MY_BOOKS || 'draftkings,fanduel' }}
         run: |
-          python picks.py --md site/README.md --json site/picks.json \
+          python picks.py --out site/index.html --md site/README.md --json site/picks.json \
             --history site/history.json --bankroll "${{ inputs.bankroll || '1000' }}"
           cat site/README.md >> "$GITHUB_STEP_SUMMARY"
       - name: Publish to the picks branch
@@ -85,3 +91,9 @@ jobs:
           fi
           { cat alert.md; echo; echo "@${{ github.repository_owner }}"; } > alert_body.md
           gh issue comment "$n" --body-file alert_body.md
+      - uses: actions/upload-pages-artifact@v3
+        continue-on-error: true
+        with:
+          path: site
+      - uses: actions/deploy-pages@v4
+        continue-on-error: true

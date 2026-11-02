@@ -39,6 +39,7 @@ BOOK_NAME = {"draftkings": "DraftKings", "fanduel": "FanDuel",
              "betmgm": "BetMGM", "williamhill_us": "Caesars",
              "espnbet": "ESPN BET", "betrivers": "BetRivers",
              "fanatics": "Fanatics"}
+DASHBOARD = "https://bviolino93.github.io/NBA-model/"
 STAKE_SCALE = 0.5          # half stakes until the record says otherwise
 HOURS_AHEAD = 30.0         # tonight's slate (and an early look at tomorrow's)
 MARKETS = ("spreads", "totals")
@@ -139,7 +140,8 @@ def _injury_md(p) -> str:
 
 
 def render_md(picks: pd.DataFrame, made: str, history: list[dict]) -> str:
-    out = [f"# NBA picks\n\n_Updated {made}_\n"]
+    out = [f"# NBA picks\n\n_Updated {made}_ · "
+           f"[Dashboard]({DASHBOARD})\n"]
     if picks.empty:
         out.append("**No bets right now.** No DraftKings or FanDuel line is "
                    "far enough off the sharp market. That is the usual answer.\n")
@@ -163,6 +165,37 @@ def render_md(picks: pd.DataFrame, made: str, history: list[dict]) -> str:
     return "\n".join(out)
 
 
+def _clean(x):
+    """NaN -> None, so the page's JSON.parse accepts the blob."""
+    if isinstance(x, float) and not np.isfinite(x):
+        return None
+    if isinstance(x, dict):
+        return {k: _clean(v) for k, v in x.items()}
+    if isinstance(x, (list, tuple)):
+        return [_clean(v) for v in x]
+    return x
+
+
+def render_html(picks: list[dict], fair: dict, made: str, bankroll: float,
+                history: list[dict]) -> str:
+    """The dashboard: dashboard.html with this run's data embedded, so the
+    page works from GitHub Pages, the picks branch or a saved copy."""
+    data = {
+        "updated": made, "bankroll": bankroll, "picks": picks,
+        "fair": [{"away": f.away_team, "home": f.home_team,
+                  "commence": str(f.commence),
+                  "market_margin": f.market_margin,
+                  "market_total": f.market_total}
+                 for f in fair.values()],
+        "history": {"summary": ledger.summary(history), "bets": history},
+    }
+    blob = json.dumps(_clean(json.loads(json.dumps(data, default=str))),
+                      allow_nan=False).replace("</", "<\\/")
+    with open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                           "dashboard.html")) as fh:
+        return fh.read().replace("/*DATA*/", blob)
+
+
 def render_alert(bets: list[dict]) -> str:
     out = [f"**{len(bets)} new NBA bet{'s' if len(bets) != 1 else ''}**\n"]
     for b in bets:
@@ -172,7 +205,7 @@ def render_alert(bets: list[dict]) -> str:
                    f"{p.home}, {_tip(p.commence)}"
                    + (f"\n  ⚠️ wait for news: {p.watch}"
                       if p.get("watch") else ""))
-    out.append("\nPicks: https://github.com/bviolino93/nba-model/tree/picks")
+    out.append(f"\nPicks: {DASHBOARD}")
     return "\n".join(out) + "\n"
 
 
@@ -207,6 +240,7 @@ def load_injuries(games: pd.DataFrame) -> pd.DataFrame:
 
 def main():
     ap = argparse.ArgumentParser()
+    ap.add_argument("--out", default="site/index.html")
     ap.add_argument("--md", default="site/README.md")
     ap.add_argument("--json", default="site/picks.json")
     ap.add_argument("--history", default="site/history.json")
@@ -231,7 +265,7 @@ def main():
     picks, fair, priced = build_picks(rows, games, books, a.bankroll,
                                       a.min_ev, now, injuries)
     made = now.strftime("%a %b %-d, %H:%M UTC")
-    for path in (a.md, a.json, a.history):
+    for path in (a.out, a.md, a.json, a.history):
         os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
     cols = ["away", "home", "commence", "market", "pick", "point", "price",
             "book", "stake", "win_chance", "ev", "fair_market", "why",
@@ -250,6 +284,8 @@ def main():
     ledger.save(a.history, history)
     with open(a.md, "w") as fh:
         fh.write(render_md(picks, made, history))
+    with open(a.out, "w") as fh:
+        fh.write(render_html(out, fair, made, a.bankroll, history))
     with open(a.json, "w") as fh:
         json.dump({"updated": made, "picks": out}, fh, indent=2, default=str)
     fresh = [p for p in out if ledger._key(p) not in seen]

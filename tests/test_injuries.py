@@ -57,3 +57,20 @@ def test_watch_shows_on_page_and_alert():
     md = render_md(pd.DataFrame([bet]), "now", [])
     assert "Wait for news" in md and "Already out" in md
     assert "wait for news: Wing Two" in render_alert([bet])
+
+
+def test_dashboard_embeds_data_without_nan():
+    import json, re
+    from picks import render_html
+    from selector import Fair
+    bet = {"away": "A", "home": "B", "commence": "2026-11-03T00:40:00Z",
+           "market": "spreads", "pick": "A", "point": 5.5, "price": -110,
+           "book": "DraftKings", "stake": 3.0, "win_chance": 0.53, "ev": 0.02,
+           "fair_market": float("nan"), "why": "x", "out": "", "watch": "w"}
+    fair = {"g": Fair("B", "A", "2026-11-03T00:40:00Z", market_margin=-4.8,
+                      market_total=float("nan"))}
+    html = render_html([bet], fair, "now", 1000, [])
+    blob = re.search(r'<script id="data" type="application/json">(.*?)</script>',
+                     html, re.S).group(1)
+    d = json.loads(blob)
+    assert d["picks"][0]["fair_market"] is None and d["fair"][0]["market_total"] is None
