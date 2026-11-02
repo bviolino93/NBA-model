@@ -39,9 +39,9 @@ jobs:
       - name: Snapshot
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
-          # Repository variable LOG_PROPS=true turns on the nightly props
-          # snapshot (~1,000 credits a month; needs a paid Odds API plan).
-          LOG_PROPS: ${{ vars.LOG_PROPS || 'false' }}
+          # Nightly props snapshot is on; repository variable LOG_PROPS=false turns it off
+          # (~1,000 credits a month of the paid plan's 20,000).
+          LOG_PROPS: ${{ vars.LOG_PROPS || 'true' }}
         run: |
           flags=""
           if [ "${{ inputs.props }}" = "true" ]; then flags="--props"; fi
