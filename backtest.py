@@ -68,7 +68,8 @@ def report(fr: pd.DataFrame, label: str, edge: float) -> list[str]:
     res_m = margin - sp
     res_t = points - tl
     for f in ("rest_diff", "b2b_diff", "away_b2b_road", "home_last5",
-              "away_last5"):
+              "away_last5", "inj_val_diff", "inj_min_diff", "inj_star_diff",
+              "inj_val_sum"):
         if f not in fr:
             continue
         x = fr[f].to_numpy(float)
@@ -76,6 +77,41 @@ def report(fr: pd.DataFrame, label: str, edge: float) -> list[str]:
         bt, tt, _ = slope(x, res_t)
         out.append(f"  {f:14s} vs spread resid {b:+.3f} (t {t:+.2f})   "
                    f"vs total resid {bt:+.3f} (t {tt:+.2f})")
+    if "spread_open" in fr and fr["spread_open"].notna().sum() >= 200:
+        out += open_report(fr)
+    return out
+
+
+def open_report(fr: pd.DataFrame) -> list[str]:
+    """Injury factors against the OPENING line, and the open-to-close move.
+
+    If a factor predicts (result - open) but not (result - close), the
+    market prices it between open and close: the edge is in betting early,
+    once the news is out, before the line moves.
+    """
+    f = fr[fr["spread_open"].notna() & fr["total_open"].notna()]
+    margin = (f["home_score"] - f["away_score"]).to_numpy(float)
+    points = (f["home_score"] + f["away_score"]).to_numpy(float)
+    so, sc = f["spread_open"].to_numpy(float), f["spread_line"].to_numpy(float)
+    to, tc = f["total_open"].to_numpy(float), f["total_line"].to_numpy(float)
+    out = [f"  -- {len(f)} games with opening lines --"]
+    b, t, n = slope(sc - so, margin - so)
+    out.append(f"  open->close move predicts result-open: {b:+.3f} (t {t:+.2f})")
+    for c in ("inj_val_diff", "inj_min_diff", "inj_star_diff", "rest_diff",
+              "b2b_diff"):
+        if c not in f:
+            continue
+        x = f[c].to_numpy(float)
+        bo, tto, _ = slope(x, margin - so)
+        bm, tm, _ = slope(x, sc - so)
+        out.append(f"  {c:14s} vs result-open {bo:+.3f} (t {tto:+.2f})   "
+                   f"vs line move {bm:+.3f} (t {tm:+.2f})")
+    if "inj_val_sum" in f:
+        x = f["inj_val_sum"].to_numpy(float)
+        bo, tto, _ = slope(x, points - to)
+        bm, tm, _ = slope(x, tc - to)
+        out.append(f"  inj_val_sum    vs total-open  {bo:+.3f} (t {tto:+.2f})   "
+                   f"vs total move {bm:+.3f} (t {tm:+.2f})")
     return out
 
 
@@ -87,11 +123,21 @@ def main():
     ap.add_argument("--edge", type=float, default=3.0)
     ap.add_argument("--half-life", type=float, default=RatingConfig.half_life)
     ap.add_argument("--lines", default="", help="closing-line archive CSV")
+    ap.add_argument("--injuries", action="store_true",
+                    help="load box scores and test missing-player loads")
     ap.add_argument("--out", default="")
     a = ap.parse_args()
 
     g = load_games(a.first, a.last, lines_csv=a.lines or None)
     g = schedule_features(g)
+    if a.injuries:
+        from nba_players import absences, game_absences, load_box
+        box = load_box(g)
+        print(f"{len(box)} player-game rows from {box['game_id'].nunique()} box scores")
+        g = game_absences(g, absences(box))
+        # Sign so that positive = the HOME side is better off.
+        for c in ("inj_val_diff", "inj_min_diff", "inj_star_diff"):
+            g[c] = -g[c]
     cfg = RatingConfig(half_life=a.half_life)
     fr = walk_forward(g, cfg, first_season=a.first + 1)
     fr = fr[fr["completed"] & (fr["season_type"] == "REG")]

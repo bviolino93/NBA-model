@@ -1,7 +1,68 @@
-{"count": 4, "items": [
- {"provider": {"id": "28", "name": "Caesar's"}, "details": "HOU -4.5", "overUnder": 217.0, "spread": -4.5},
- {"provider": {"id": "38", "name": "Caesars"}, "details": "HOU -4.5", "overUnder": 217.0, "spread": -4.5},
- {"provider": {"id": "100", "name": "DraftKings"}, "details": "HOU -5", "overUnder": 218.0, "spread": -5.0},
- {"provider": {"id": "1003", "name": "numberfire"}, "details": "HOU -3.5", "overUnder": 212.0, "spread": -3.5},
- {"provider": {"id": "59", "name": "ESPN Bet - Live Odds"}, "details": "MIA -9.5", "overUnder": 240.5}
-]}
+{
+ "count": 4,
+ "items": [
+  {
+   "provider": {
+    "id": "28",
+    "name": "Caesar's"
+   },
+   "details": "HOU -4.5",
+   "overUnder": 217.0,
+   "spread": -4.5,
+   "homeTeamOdds": {
+    "open": {
+     "pointSpread": {
+      "alternateDisplayValue": "-5"
+     }
+    }
+   }
+  },
+  {
+   "provider": {
+    "id": "38",
+    "name": "Caesars"
+   },
+   "details": "HOU -4.5",
+   "overUnder": 217.0,
+   "spread": -4.5
+  },
+  {
+   "provider": {
+    "id": "100",
+    "name": "DraftKings"
+   },
+   "details": "HOU -5",
+   "overUnder": 218.0,
+   "spread": -5.0,
+   "homeTeamOdds": {
+    "open": {
+     "pointSpread": {
+      "value": -6.0
+     }
+    }
+   },
+   "open": {
+    "total": {
+     "american": "221.5"
+    }
+   }
+  },
+  {
+   "provider": {
+    "id": "1003",
+    "name": "numberfire"
+   },
+   "details": "HOU -3.5",
+   "overUnder": 212.0,
+   "spread": -3.5
+  },
+  {
+   "provider": {
+    "id": "59",
+    "name": "ESPN Bet - Live Odds"
+   },
+   "details": "MIA -9.5",
+   "overUnder": 240.5
+  }
+ ]
+}

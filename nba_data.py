@@ -229,6 +229,40 @@ def parse_core_odds(js: dict, home_abbr: str, away_abbr: str
     return med(spreads), med(totals), max(len(spreads), len(totals))
 
 
+def _val(d) -> float:
+    """A core-odds number block ({'value': -7.5} or {'american': '-7.5'})."""
+    if not isinstance(d, dict):
+        return float("nan")
+    for k in ("value", "american", "alternateDisplayValue"):
+        try:
+            return float(str(d[k]).replace("+", ""))
+        except (KeyError, TypeError, ValueError):
+            continue
+    return float("nan")
+
+
+def parse_core_open(js: dict) -> tuple[float, float]:
+    """(home margin line, total) at the OPEN, medians across books.
+
+    ESPN carries open and close per book from about 2023-24 on; earlier
+    games return NaN. Home pointSpread -7 means home favoured by 7.
+    """
+    sp, tt = [], []
+    for it in js.get("items", []):
+        name = str((it.get("provider") or {}).get("name", ""))
+        if SKIP_PROVIDER.search(name) or "consensus" in name.lower():
+            continue
+        h = (it.get("homeTeamOdds") or {}).get("open") or {}
+        v = _val(h.get("pointSpread"))
+        if pd.notna(v) and abs(v) <= 30:
+            sp.append(-v)
+        t = _val((it.get("open") or {}).get("total"))
+        if pd.notna(t) and t > 100:
+            tt.append(t)
+    med = lambda v: float(pd.Series(v).median()) if v else float("nan")
+    return med(sp), med(tt)
+
+
 def fetch_core_odds(game_id: str, cache_dir: str = CACHE_DIR) -> dict:
     os.makedirs(os.path.join(cache_dir, "odds"), exist_ok=True)
     path = os.path.join(cache_dir, "odds", f"{game_id}.json")
@@ -265,9 +299,13 @@ def fill_lines(g: pd.DataFrame, cache_dir: str = CACHE_DIR,
                            need["game_id"]))
     g = g.copy()
     g["line_books"] = g.get("line_books", pd.Series(0, index=g.index))
+    for c in ("spread_open", "total_open"):
+        if c not in g:
+            g[c] = float("nan")
     for idx, js, ha, aa in zip(need.index, docs, need["home_abbr"],
                                need["away_abbr"]):
         sp, tt, n = parse_core_odds(js, ha, aa)
+        g.at[idx, "spread_open"], g.at[idx, "total_open"] = parse_core_open(js)
         if pd.isna(g.at[idx, "spread_line"]):
             g.at[idx, "spread_line"] = sp
         if pd.isna(g.at[idx, "total_line"]):

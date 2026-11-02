@@ -95,3 +95,12 @@ def test_core_odds_median_skips_projections_and_live():
 def test_core_odds_empty():
     sp, tt, n = nba_data.parse_core_odds({}, "HOU", "MIA")
     assert np.isnan(sp) and np.isnan(tt) and n == 0
+
+
+def test_core_open_lines():
+    fix = os.path.join(os.path.dirname(__file__), "fixtures",
+                       "core_odds_401070894.json")
+    with open(fix) as fh:
+        sp, tt = nba_data.parse_core_open(json.load(fh))
+    assert sp == 5.5            # median of home -5 and -6 at the open
+    assert tt == 221.5

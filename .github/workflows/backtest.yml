@@ -18,6 +18,10 @@ on:
       half_life:
         description: "Rating half-life in days"
         default: "45"
+      injuries:
+        description: "Also load box scores and test missing players"
+        type: boolean
+        default: true
 
 jobs:
   backtest:
@@ -40,7 +44,8 @@ jobs:
       - name: Backtest
         run: |
           python backtest.py --first ${{ inputs.first }} --split ${{ inputs.split }} \
-            --half-life ${{ inputs.half_life }} --out games.csv | tee out.txt
+            --half-life ${{ inputs.half_life }} --out games.csv \
+            ${{ inputs.injuries && '--injuries' || '' }} | tee out.txt
           { echo '```'; cat data.txt; echo; cat out.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@v4
         if: always()
