@@ -77,8 +77,30 @@ def report(fr: pd.DataFrame, label: str, edge: float) -> list[str]:
         bt, tt, _ = slope(x, res_t)
         out.append(f"  {f:14s} vs spread resid {b:+.3f} (t {t:+.2f})   "
                    f"vs total resid {bt:+.3f} (t {tt:+.2f})")
+    if "inj_val_sum" in fr:
+        out += overs_by_missing(fr)
     if "spread_open" in fr and fr["spread_open"].notna().sum() >= 200:
         out += open_report(fr)
+    return out
+
+
+def overs_by_missing(fr: pd.DataFrame, cuts=(2, 4, 6, 8)) -> list[str]:
+    """Over record at the closing total by how much value is missing.
+
+    The injury test found closing totals drop further than scores do when
+    rotation players sit. This is the bettable version: over at the
+    close, -110, by missing-value bucket (both teams together).
+    """
+    points = (fr["home_score"] + fr["away_score"]).to_numpy(float)
+    tl = fr["total_line"].to_numpy(float)
+    x = fr["inj_val_sum"].to_numpy(float)
+    out = ["  over at the close by missing value (both teams):"]
+    for c in cuts:
+        m = np.isfinite(points) & np.isfinite(tl) & (x >= c)
+        w = int((points[m] > tl[m]).sum())
+        l = int((points[m] < tl[m]).sum())
+        out.append(f"    missing value >= {c}: {w}-{l} ({w / max(1, w + l):.1%}), "
+                   f"avg {np.mean(points[m] - tl[m]) if m.any() else float('nan'):+.2f} pts")
     return out
 
 
