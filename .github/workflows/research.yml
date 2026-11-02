@@ -1,0 +1,31 @@
+name: Research script
+# Runs one script from tools/ on the cached ESPN data and puts its output
+# in the run summary. Actions -> Run workflow -> pick the script.
+on:
+  workflow_dispatch:
+    inputs:
+      script:
+        description: "Script in tools/"
+        default: "ats_trend.py"
+      args:
+        description: "Arguments"
+        default: "--first 2016 --split 2022"
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Cache ESPN days
+        uses: actions/cache@v4
+        with:
+          path: .cache_nba
+          key: espn-research-${{ github.run_id }}
+          restore-keys: espn-
+      - run: pip install -r requirements.txt
+      - run: |
+          python "tools/${{ inputs.script }}" ${{ inputs.args }} | tee out.txt
+          { echo '```'; cat out.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
