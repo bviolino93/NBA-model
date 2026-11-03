@@ -110,7 +110,8 @@ def log(history: list[dict], fair: dict, lines: dict, run: str,
                 "home": f.home_team, "commence": str(f.commence),
                 "logged": run, "side": side, "point": point,
                 "line": line, "model": round(model_pt, 1),
-                "parts": mine.get("parts") if market == "spreads" else None,
+                "parts": mine.get("parts") if market == "spreads"
+                else mine.get("total_parts"),
                 "gap": round(d, 1), "close": None, "clv": None,
                 "result": None, "final": None})
     return history

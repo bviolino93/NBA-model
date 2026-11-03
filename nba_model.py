@@ -226,15 +226,28 @@ def predict(games: pd.DataFrame, fair: dict, fitted: Fitted,
         if AM and mm is not None and mt is not None \
                 and not (np.isnan(mm) or np.isnan(mt)):
             x["mkt_margin"], x["mkt_total"] = float(mm), float(mt)
-            market = AM["mkt_margin"] * x["mkt_margin"] + AM["const"]
-            ratings = (AM["model_margin"] * x["model_margin"]
-                       + AM["mm_early"] * x["mm_early"])
+            e = x["early"]
+            # Parts as departures from the market: "ratings" is what our
+            # ratings say beyond the market's number, "market" the market
+            # line after the fit's small scaling of it.
+            w = AM["model_margin"] + AM["mm_early"] * e
+            ratings = w * (x["model_margin"] - x["mkt_margin"])
+            market = (AM["mkt_margin"] + w) * x["mkt_margin"] + AM["const"]
             rest = sum(AM[c] * x[c] for c in ("b2b_diff", "rest_diff",
                                               "away_b2b_road"))
             inj = sum(AM[f"inj_{c}_diff"] * x[f"inj_{c}_diff"] for c in INJ)
-            tot = sum(AT[c] * x[c] for c in ["mkt_total"] + TOTAL_X) + AT["const"]
+            wt = AT["model_total"] + AT["mt_early"] * e
+            t_parts = {
+                "market": (AT["mkt_total"] + wt) * x["mkt_total"]
+                + AT["const"] + AT["early"] * e,
+                "ratings": wt * (x["model_total"] - x["mkt_total"]),
+                "rest": AT["b2b_sum"] * x["b2b_sum"],
+                "injuries": sum(AT[f"inj_{c}_sum"] * x[f"inj_{c}_sum"]
+                                for c in INJ)}
+            tot = sum(t_parts.values())
             out[k] = {"margin": market + ratings + rest + inj, "total": tot,
                       "anchored": True,
+                      "total_parts": {n: round(v, 1) for n, v in t_parts.items()},
                       "parts": {"market": round(market, 1),
                                 "ratings": round(ratings, 1),
                                 "rest": round(rest, 1),

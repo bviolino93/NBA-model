@@ -318,6 +318,19 @@ per bet and 8% a night. Win chances are estimates, not guarantees. 21+ where leg
   }
 
   // ---- no-money model test
+  // Our line minus the market's, by input, in the bet side's favour.
+  const whyBet = (b) => {
+    const p = b.parts;
+    if (!p) return "";
+    const sign = b.side === b.home || b.side === "Over" ? 1 : -1;
+    const fmt = (v) => (v > 0 ? "+" : "") + v.toFixed(1);
+    const bits = [];
+    if (p.market != null) bits.push(["market adj.", sign * (p.market - b.line)]);
+    for (const k of ["ratings", "rest", "injuries"])
+      if (p[k] != null) bits.push([k === "ratings" ? "team form" : k, sign * p[k]]);
+    return bits.filter(([, v]) => Math.abs(v) >= 0.1)
+      .map(([k, v]) => `${k} ${fmt(v)}`).join(", ");
+  };
   const P = D.paper;
   const Q = P.summary;
   $("paper-sub").textContent = "Our own line starts from the sharp line and adjusts it for what history says " +
@@ -339,7 +352,7 @@ per bet and 8% a night. Win chances are estimates, not guarantees. 21+ where leg
     kpi(pk, Q.beat_close == null ? "—" : pct(Q.beat_close, 0), "beat the closing line");
     const sp = (x) => (x > 0 ? "+" : "") + x;
     table("paper", [["Date"], ["Game"], ["Test bet"], ["Market"], ["Model"], ["Gap", 1],
-                    ["Close", 1], ["Moved", 1], ["Final"], ["Result"]],
+                    ["Close", 1], ["Moved", 1], ["Final"], ["Result"], ["Why"]],
       P.bets.slice().sort((a, b) => b.commence.localeCompare(a.commence)).map((b) => {
         const spread = b.market === "spreads";
         const fmt = (v) => spread ? (v >= 0 ? `${short(b.home)} by ${Math.abs(v)}`
@@ -353,6 +366,7 @@ per bet and 8% a night. Win chances are estimates, not guarantees. 21+ where leg
           [b.close == null ? "" : String(b.close), "r"],
           [b.clv == null ? "" : sp(b.clv), "r " + (b.clv > 0 ? "win" : b.clv < 0 ? "loss" : "")],
           [b.final || ""], [b.result || "open", b.result || "open"],
+          [whyBet(b)],
         ];
       }));
   }

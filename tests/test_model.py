@@ -47,3 +47,19 @@ def test_fit_and_predict_with_injury():
     assert healthy["margin"] > 3
     assert set(hurt["parts"]) == {"ratings", "rest", "injuries"}
     assert hurt["missing"]["home"] == ["Star out"]
+
+
+def test_anchored_parts_add_up():
+    g = _games()
+    rng = np.random.default_rng(2)
+    g["spread_line"] = (g["home_score"] - g["away_score"]) * 0.3 + rng.normal(0, 3, len(g))
+    g["total_line"] = 224 + rng.normal(0, 5, len(g))
+    f = nba_model.fit_weights(nba_model.history(g, None))
+    assert f.anchor_margin and f.anchor_total
+    now = (pd.Timestamp(g["game_date"].max()) + pd.Timedelta(days=1, hours=17)).tz_localize("UTC")
+    fair = {"k": Fair("T0", "T1", (now + pd.Timedelta(hours=7)).isoformat(),
+                      market_margin=3.0, market_total=224.0)}
+    p = nba_model.predict(g, fair, f, {}, now)["k"]
+    assert p["anchored"]
+    assert abs(sum(p["parts"].values()) - p["margin"]) < 0.3
+    assert abs(sum(p["total_parts"].values()) - p["total"]) < 0.3
