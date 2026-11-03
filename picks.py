@@ -302,6 +302,12 @@ def main():
     out = picks[cols].to_dict("records") if len(picks) else []
     out = json.loads(json.dumps(out, default=str))
     history = ledger.load(a.history)
+    out = ledger.one_side(history, out)
+    if len(picks):
+        keep = {ledger._key(p) for p in out}
+        picks = picks[[ledger._key(r) in keep for r in
+                       json.loads(json.dumps(picks[cols].to_dict("records"),
+                                             default=str))]]
     seen = {ledger._key(b) for b in history}
     was = ledger.on_board(history)
     history = ledger.merge(history, out, now, now.isoformat())

@@ -27,6 +27,27 @@ def _key(b: dict) -> str:
                     for k in KEY)
 
 
+def _game(b: dict) -> str:
+    """Game and market, without the side."""
+    return "|".join(str(b[k])[:10] if k == "commence" else str(b[k])
+                    for k in KEY[:-1])
+
+
+def one_side(history: list[dict], picks: list[dict]) -> list[dict]:
+    """Drop picks on the other side of a game and market already bet.
+    After a line move both sides can look +EV at different books an hour
+    apart (Hawks -5.5 at one, Pacers +5.5 at the other); the first alert
+    is the bet, so the other side is never alerted or recorded. Within a
+    run, the first (highest EV) side wins."""
+    taken = {_game(b): b["pick"] for b in history if not b.get("pulled")}
+    out = []
+    for p in picks:
+        g = _game(p)
+        if taken.setdefault(g, p["pick"]) == p["pick"]:
+            out.append(p)
+    return out
+
+
 def load(path: str) -> list[dict]:
     try:
         with open(path) as fh:
@@ -52,8 +73,11 @@ def merge(history: list[dict], picks: list[dict], now: datetime,
         seen = pd.to_datetime(b.get("first_seen"), utc=True, errors="coerce")
         return pd.isna(seen) or seen < pd.Timestamp(b["commence"])
 
-    out = {_key(b): b for b in history
-           if not b.get("pulled") and pregame(b)}
+    kept = [b for b in history if not b.get("pulled") and pregame(b)]
+    # Older runs could record both sides of a game; keep the first alert.
+    kept.sort(key=lambda b: str(b.get("first_seen") or ""))
+    kept = one_side([], kept)
+    out = {_key(b): b for b in kept}
     for k, b in out.items():
         if pd.Timestamp(b["commence"]) <= now:
             continue
@@ -62,6 +86,8 @@ def merge(history: list[dict], picks: list[dict], now: datetime,
         if p is not None:
             b.update(last_seen=run, now_point=p["point"], now_price=p["price"])
     for k, p in current.items():
+        if k not in {_key(x) for x in one_side(list(out.values()), [p])}:
+            continue
         if k in out or pd.Timestamp(p["commence"]) <= now:
             continue
         out[k] = {**p, "first_seen": run, "first_point": p["point"],
