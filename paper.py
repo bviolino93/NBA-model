@@ -27,10 +27,14 @@ import pandas as pd
 
 from nba_ratings import RatingConfig, fit
 
-GAP = 3.0
+GAP = 3.0           # ratings-only fallback line
+# The anchored line (nba_model) starts from the market, so its gaps are
+# small; tools/market_anchor.py, held-out seasons against the close:
+# spreads 1+ won 54-56% on few bets, totals 2+ won 61%.
+ANCHORED_GAP = {"spreads": 1.0, "totals": 2.0}
 # Bump when the model changes in a way that makes earlier test bets
 # unrepresentative; bets logged by older versions are dropped on load.
-VERSION = 4
+VERSION = 5
 
 
 def load(path: str) -> list[dict]:
@@ -92,7 +96,8 @@ def log(history: list[dict], fair: dict, lines: dict, run: str,
             seen.add(key)
             line = round(fair_pt * 2) / 2              # bookable half point
             d = model_pt - line
-            if abs(d) < gap:
+            need = ANCHORED_GAP[market] if mine.get("anchored") else gap
+            if abs(d) < need:
                 continue
             if market == "spreads":
                 home = d > 0

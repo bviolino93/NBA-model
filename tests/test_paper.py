@@ -41,3 +41,10 @@ def test_model_lines_log_and_grade():
     assert sp["result"] == "win" and sp["clv"] == 3.0     # T0 +2, lost by 1; line moved -2 -> +1
     assert tot["result"] == "win" and tot["clv"] == 2.0   # under 260, 201 scored; closed 258
     assert paper.summary(t)["wins"] == 2
+
+
+def test_anchored_lines_use_smaller_gaps():
+    fair = {"x": Fair("T0", "T1", "2027-01-21T00:00:00Z", market_margin=-2.0, market_total=230.0)}
+    lines = {"x": {"margin": -0.8, "total": 231.5, "anchored": True}}
+    t = paper.log([], fair, lines, "r")
+    assert [(b["market"], b["side"]) for b in t] == [("spreads", "T0")]

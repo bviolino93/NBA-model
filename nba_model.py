@@ -22,8 +22,15 @@ injuries  missing rotation players' expected minutes, and their box
 
 The weights are fitted on completed games, each game's ratings built
 from earlier games only, so the fit sees what a live model would have.
-The backtest says this doesn't beat closing lines, so it runs as a
-no-money test (paper.py) until it does.
+
+Fitted on scores alone, the line is pulled toward the league average and
+"disagrees" with every extreme market number (tools/market_anchor.py:
+80% of 3+ point total gaps were toward the average; 47-49% against the
+close). So the line we test is anchored: the same fit with the market's
+own line as one more input (ESPN closing lines in history, tonight's
+sharp fair line live). A gap then only appears where rest, injuries or
+ratings say something the market line doesn't. It runs as a no-money
+test (paper.py) until it beats closing lines live.
 """
 
 from __future__ import annotations
@@ -53,6 +60,8 @@ class Fitted:
     margin: dict = field(default_factory=dict)     # name -> weight, "const"
     total: dict = field(default_factory=dict)
     n: int = 0
+    anchor_margin: dict = field(default_factory=dict)   # with "mkt_margin"
+    anchor_total: dict = field(default_factory=dict)    # with "mkt_total"
 
 
 def _ols(df: pd.DataFrame, y: pd.Series, cols: list[str]) -> dict:
@@ -100,7 +109,14 @@ def fit_weights(h: pd.DataFrame) -> Fitted:
         return Fitted(n=len(d))
     margin = d["home_score"] - d["away_score"]
     total = d["home_score"] + d["away_score"]
-    return Fitted(_ols(d, margin, MARGIN_X), _ols(d, total, TOTAL_X), len(d))
+    f = Fitted(_ols(d, margin, MARGIN_X), _ols(d, total, TOTAL_X), len(d))
+    if {"spread_line", "total_line"} <= set(d.columns):
+        m = d[d["spread_line"].notna() & d["total_line"].notna()].copy()
+        if len(m) >= 200:
+            m["mkt_margin"], m["mkt_total"] = m["spread_line"], m["total_line"]
+            f.anchor_margin = _ols(m, margin[m.index], ["mkt_margin"] + MARGIN_X)
+            f.anchor_total = _ols(m, total[m.index], ["mkt_total"] + TOTAL_X)
+    return f
 
 
 def player_values(box: pd.DataFrame, last: int = 10,
@@ -204,6 +220,27 @@ def predict(games: pd.DataFrame, fair: dict, fitted: Fitted,
         x["model_margin"] = float(hca + r[h] - r[a])
         x["model_total"] = float(mu + t.get(h, 0.0) + t.get(a, 0.0))
         _early_terms(x, float(min(played.get(h, 0), played.get(a, 0)) < EARLY))
+        mm = getattr(f, "market_margin", None)
+        mt = getattr(f, "market_total", None)
+        AM, AT = fitted.anchor_margin, fitted.anchor_total
+        if AM and mm is not None and mt is not None \
+                and not (np.isnan(mm) or np.isnan(mt)):
+            x["mkt_margin"], x["mkt_total"] = float(mm), float(mt)
+            market = AM["mkt_margin"] * x["mkt_margin"] + AM["const"]
+            ratings = (AM["model_margin"] * x["model_margin"]
+                       + AM["mm_early"] * x["mm_early"])
+            rest = sum(AM[c] * x[c] for c in ("b2b_diff", "rest_diff",
+                                              "away_b2b_road"))
+            inj = sum(AM[f"inj_{c}_diff"] * x[f"inj_{c}_diff"] for c in INJ)
+            tot = sum(AT[c] * x[c] for c in ["mkt_total"] + TOTAL_X) + AT["const"]
+            out[k] = {"margin": market + ratings + rest + inj, "total": tot,
+                      "anchored": True,
+                      "parts": {"market": round(market, 1),
+                                "ratings": round(ratings, 1),
+                                "rest": round(rest, 1),
+                                "injuries": round(inj, 1)},
+                      "missing": {"home": hn, "away": an}}
+            continue
         if M:
             ratings = (M["model_margin"] * x["model_margin"]
                        + M["mm_early"] * x["mm_early"] + M["const"])

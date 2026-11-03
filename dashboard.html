@@ -320,9 +320,10 @@ per bet and 8% a night. Win chances are estimates, not guarantees. 21+ where leg
   // ---- no-money model test
   const P = D.paper;
   const Q = P.summary;
-  $("paper-sub").textContent = "Our own line: team ratings from results (opponent-adjusted, home court), " +
-    "rest and back-to-backs, and tonight's injury report weighted by each missing player's minutes and impact, " +
-    `against the sharp line. When it disagrees by ${P.gap}+ points, a test bet is logged on its side. ` +
+  $("paper-sub").textContent = "Our own line starts from the sharp line and adjusts it for what history says " +
+    "the market under-weights: team ratings from results, rest and back-to-backs, and tonight's injury report " +
+    "weighted by each missing player's minutes and impact. When it moves the spread 1+ point or the total 2+, " +
+    "a test bet is logged on its side. " +
     "Not staked: it earns real bets only if it beats the closing line over a few hundred games." +
     (P.bets.length ? "" : " None logged yet.");
   if (!P.bets.length) {
@@ -359,7 +360,9 @@ per bet and 8% a night. Win chances are estimates, not guarantees. 21+ where leg
     const num = (v, sign) => v == null || isNaN(v) ? "—" : (sign && v > 0 ? "+" : "") + v.toFixed(1);
     const why = (f) => {
       if (!f.parts) return "";
-      const p = f.parts, bits = [`ratings ${num(p.ratings, true)}`];
+      const p = f.parts, bits = [];
+      if (p.market != null) bits.push(`market ${num(p.market, true)}`);
+      bits.push(`ratings ${num(p.ratings, true)}`);
       if (Math.abs(p.rest) >= 0.1) bits.push(`rest ${num(p.rest, true)}`);
       if (Math.abs(p.injuries) >= 0.1) bits.push(`injuries ${num(p.injuries, true)}`);
       const miss = [...(f.missing.home || []), ...(f.missing.away || [])];
