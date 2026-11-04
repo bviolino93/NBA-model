@@ -29,9 +29,11 @@ from nba_ratings import RatingConfig, fit
 
 GAP = 3.0           # ratings-only fallback line
 # The anchored line (nba_model) starts from the market, so its gaps are
-# small; tools/market_anchor.py, held-out seasons against the close:
-# spreads 1+ won 54-56% on few bets, totals 2+ won 61%.
-ANCHORED_GAP = {"spreads": 1.0, "totals": 2.0}
+# small. tools/market_anchor.py, five held-out seasons against the close:
+# spreads 0.5+ went 51.6, 49.0, 47.7, 53.9% (about 1 to 2 a night; mostly
+# back-to-backs); totals 2+ went 66.7, 47.1, 42.3, 74.3%. Neither clears
+# the 52.4% break-even reliably; this is a test, not a staking rule.
+ANCHORED_GAP = {"spreads": 0.5, "totals": 2.0}
 # Bump when the model changes in a way that makes earlier test bets
 # unrepresentative; bets logged by older versions are dropped on load.
 VERSION = 6
