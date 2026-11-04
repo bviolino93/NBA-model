@@ -46,7 +46,7 @@ def report(name, p, line, actual, other=None):
     gap = p - line
     res = np.sign(gap) * (actual - line)
     print(f"  {name}: mean |gap| {np.abs(gap).mean():.2f}")
-    for t in (1, 2, 3, 4):
+    for t in (0.25, 0.5, 0.75, 1, 2, 3):
         m = (np.abs(gap) >= t) & (res != 0)
         if not m.sum():
             continue
@@ -59,7 +59,7 @@ def report(name, p, line, actual, other=None):
             mid = np.median(line)
             toward = ((gap < 0) & (line > mid)) | ((gap > 0) & (line < mid))
             extra = f" | toward average {toward[m].mean():.0%}"
-        print(f"    gap {t}+: {m.sum():5d} bets, win {win:.1%}{extra}")
+        print(f"    gap {t:g}+: {m.sum():5d} bets, win {win:.1%}{extra}")
 
 
 def main():
