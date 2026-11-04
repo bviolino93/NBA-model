@@ -53,6 +53,20 @@ MARGIN_X = ["model_margin", "mm_early", "b2b_diff", "rest_diff", "away_b2b_road"
 TOTAL_X = ["model_total", "mt_early", "early", "inj_min_sum", "inj_prod_sum",
            "b2b_sum"]
 INJ = ("min", "prod")
+# The anchored line is the market's number plus what these say beyond it.
+# The market's own weight is fixed at 1: fitted freely it drifted (0.99 to
+# 1.10 early season), which turned every big line into a test bet on the
+# favourite. Fitted on (final - market) with an intercept, but intercept
+# and feature means are left out of the line, so no input is a standing
+# lean toward home teams, favourites, overs or unders.
+ANCHOR_M = ["d_margin", "d_margin_early", "b2b_diff", "rest_diff",
+            "away_b2b_road", "inj_min_diff", "inj_prod_diff"]
+ANCHOR_T = ["d_total", "d_total_early", "inj_min_sum", "inj_prod_sum",
+            "b2b_sum"]
+PARTS = {"ratings": ("d_margin", "d_margin_early", "d_total", "d_total_early"),
+         "rest": ("b2b_diff", "rest_diff", "away_b2b_road", "b2b_sum"),
+         "injuries": ("inj_min_diff", "inj_prod_diff", "inj_min_sum",
+                      "inj_prod_sum")}
 
 
 @dataclass
@@ -113,10 +127,42 @@ def fit_weights(h: pd.DataFrame) -> Fitted:
     if {"spread_line", "total_line"} <= set(d.columns):
         m = d[d["spread_line"].notna() & d["total_line"].notna()].copy()
         if len(m) >= 200:
-            m["mkt_margin"], m["mkt_total"] = m["spread_line"], m["total_line"]
-            f.anchor_margin = _ols(m, margin[m.index], ["mkt_margin"] + MARGIN_X)
-            f.anchor_total = _ols(m, total[m.index], ["mkt_total"] + TOTAL_X)
+            f.anchor_margin, f.anchor_total = fit_anchor(m)
     return f
+
+
+def anchor_cols(x, mkt_margin, mkt_total) -> None:
+    """Add the anchored features to a frame or a dict."""
+    x["d_margin"] = x["model_margin"] - mkt_margin
+    x["d_margin_early"] = x["d_margin"] * x["early"]
+    x["d_total"] = x["model_total"] - mkt_total
+    x["d_total_early"] = x["d_total"] * x["early"]
+
+
+def fit_anchor(m: pd.DataFrame) -> tuple[dict, dict]:
+    """Weights on (final - market line); each also carries the training
+    mean of its feature under "mean:<name>"."""
+    m = m.copy()
+    anchor_cols(m, m["spread_line"], m["total_line"])
+    out = []
+    for cols, y in ((ANCHOR_M, m["home_score"] - m["away_score"]
+                     - m["spread_line"]),
+                    (ANCHOR_T, m["home_score"] + m["away_score"]
+                     - m["total_line"])):
+        w = _ols(m, y, cols)
+        w.update({f"mean:{c}": float(m[c].mean()) for c in cols})
+        out.append(w)
+    return out[0], out[1]
+
+
+def anchor_parts(w: dict, x, cols: list[str]) -> dict:
+    """{"ratings", "rest", "injuries"}: points each moves the line off the
+    market's, features centred on their training means."""
+    parts = {}
+    for name, members in PARTS.items():
+        parts[name] = sum(w[c] * (x[c] - w[f"mean:{c}"])
+                          for c in cols if c in members)
+    return parts
 
 
 def player_values(box: pd.DataFrame, last: int = 10,
@@ -225,33 +271,16 @@ def predict(games: pd.DataFrame, fair: dict, fitted: Fitted,
         AM, AT = fitted.anchor_margin, fitted.anchor_total
         if AM and mm is not None and mt is not None \
                 and not (np.isnan(mm) or np.isnan(mt)):
-            x["mkt_margin"], x["mkt_total"] = float(mm), float(mt)
-            e = x["early"]
-            # Parts as departures from the market: "ratings" is what our
-            # ratings say beyond the market's number, "market" the market
-            # line after the fit's small scaling of it.
-            w = AM["model_margin"] + AM["mm_early"] * e
-            ratings = w * (x["model_margin"] - x["mkt_margin"])
-            market = (AM["mkt_margin"] + w) * x["mkt_margin"] + AM["const"]
-            rest = sum(AM[c] * x[c] for c in ("b2b_diff", "rest_diff",
-                                              "away_b2b_road"))
-            inj = sum(AM[f"inj_{c}_diff"] * x[f"inj_{c}_diff"] for c in INJ)
-            wt = AT["model_total"] + AT["mt_early"] * e
-            t_parts = {
-                "market": (AT["mkt_total"] + wt) * x["mkt_total"]
-                + AT["const"] + AT["early"] * e,
-                "ratings": wt * (x["model_total"] - x["mkt_total"]),
-                "rest": AT["b2b_sum"] * x["b2b_sum"],
-                "injuries": sum(AT[f"inj_{c}_sum"] * x[f"inj_{c}_sum"]
-                                for c in INJ)}
-            tot = sum(t_parts.values())
-            out[k] = {"margin": market + ratings + rest + inj, "total": tot,
+            anchor_cols(x, float(mm), float(mt))
+            mp = anchor_parts(AM, x, ANCHOR_M)
+            tp = anchor_parts(AT, x, ANCHOR_T)
+            out[k] = {"margin": float(mm) + sum(mp.values()),
+                      "total": float(mt) + sum(tp.values()),
+                      "total_parts": {"market": round(float(mt), 1),
+                                      **{n: round(v, 1) for n, v in tp.items()}},
+                      "parts": {"market": round(float(mm), 1),
+                                **{n: round(v, 1) for n, v in mp.items()}},
                       "anchored": True,
-                      "total_parts": {n: round(v, 1) for n, v in t_parts.items()},
-                      "parts": {"market": round(market, 1),
-                                "ratings": round(ratings, 1),
-                                "rest": round(rest, 1),
-                                "injuries": round(inj, 1)},
                       "missing": {"home": hn, "away": an}}
             continue
         if M:

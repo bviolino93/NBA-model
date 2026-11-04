@@ -25,12 +25,21 @@ import pandas as pd
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from nba_data import load_games  # noqa: E402
-from nba_model import MARGIN_X, TOTAL_X, _ols, fit_weights, history  # noqa: E402
+from nba_model import (ANCHOR_M, ANCHOR_T, MARGIN_X, TOTAL_X, anchor_cols,  # noqa: E402
+                       anchor_parts, fit_anchor, fit_weights, history)
 from nba_players import load_box  # noqa: E402
 
 
 def pred(d, w, cols):
     return sum(w[c] * d[c].fillna(0.0) for c in cols) + w["const"]
+
+
+def anchored(te, w, cols, line):
+    x = te.copy()
+    anchor_cols(x, x["spread_line"], x["total_line"])
+    for c in cols:
+        x[c] = x[c].fillna(0.0)
+    return (line + sum(anchor_parts(w, x, cols).values())).to_numpy(float)
 
 
 def report(name, p, line, actual, other=None):
@@ -43,7 +52,10 @@ def report(name, p, line, actual, other=None):
             continue
         win = (res[m] > 0).mean()
         extra = ""
-        if other is not None:
+        if other is None:                  # spreads: share on the favourite
+            fav = np.sign(gap) == np.sign(line)
+            extra = f" | on favourite {fav[m].mean():.0%}"
+        else:
             mid = np.median(line)
             toward = ((gap < 0) & (line > mid)) | ((gap > 0) & (line < mid))
             extra = f" | toward average {toward[m].mean():.0%}"
@@ -68,26 +80,21 @@ def main():
         for c in set(MARGIN_X + TOTAL_X):
             trm[c] = trm[c].fillna(0.0)
         f = fit_weights(tr)
-        am = _ols(trm, trm["home_score"] - trm["away_score"],
-                  ["mkt_margin"] + MARGIN_X)
-        at = _ols(trm, trm["home_score"] + trm["away_score"],
-                  ["mkt_total"] + TOTAL_X)
+        am, at = fit_anchor(trm)
         margin = (te["home_score"] - te["away_score"]).to_numpy(float)
         total = (te["home_score"] + te["away_score"]).to_numpy(float)
         sl, tl = te["spread_line"].to_numpy(float), te["total_line"].to_numpy(float)
         print(f"\n{s}: {len(te)} games (fit on {len(trm)})")
         print("  anchored margin weights: "
-              + ", ".join(f"{k} {v:+.2f}" for k, v in am.items()))
+              + ", ".join(f"{k} {v:+.2f}" for k, v in am.items() if ":" not in k))
         print("  anchored total weights:  "
-              + ", ".join(f"{k} {v:+.2f}" for k, v in at.items()))
+              + ", ".join(f"{k} {v:+.2f}" for k, v in at.items() if ":" not in k))
         print(" SPREADS")
         report("raw", pred(te, f.margin, MARGIN_X).to_numpy(float), sl, margin)
-        report("anchored", pred(te, am, ["mkt_margin"] + MARGIN_X)
-               .to_numpy(float), sl, margin)
+        report("anchored", anchored(te, am, ANCHOR_M, sl), sl, margin)
         print(" TOTALS")
         report("raw", pred(te, f.total, TOTAL_X).to_numpy(float), tl, total, 1)
-        report("anchored", pred(te, at, ["mkt_total"] + TOTAL_X)
-               .to_numpy(float), tl, total, 1)
+        report("anchored", anchored(te, at, ANCHOR_T, tl), tl, total, 1)
 
 
 if __name__ == "__main__":
