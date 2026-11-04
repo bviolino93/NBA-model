@@ -34,7 +34,7 @@ GAP = 3.0           # ratings-only fallback line
 ANCHORED_GAP = {"spreads": 1.0, "totals": 2.0}
 # Bump when the model changes in a way that makes earlier test bets
 # unrepresentative; bets logged by older versions are dropped on load.
-VERSION = 5
+VERSION = 6
 
 
 def load(path: str) -> list[dict]:
