@@ -63,3 +63,14 @@ def test_anchored_parts_add_up():
     assert p["anchored"]
     assert abs(sum(p["parts"].values()) - p["margin"]) < 0.3
     assert abs(sum(p["total_parts"].values()) - p["total"]) < 0.3
+
+
+def test_slate_lean_removed():
+    fair = {str(i): Fair("A", "B", "2027-01-01T00:00:00Z", market_margin=0.0,
+                         market_total=220.0) for i in range(8)}
+    out = {k: {"anchored": True, "margin": 0.0, "total": 219.0,
+               "parts": {}, "total_parts": {}} for k in fair}
+    out["0"]["total"] = 216.0
+    out = nba_model.remove_slate_lean(out, fair)
+    assert out["1"]["total"] == 220.0 and out["0"]["total"] == 217.0
+    assert out["0"]["total_parts"]["slate"] == 1.0

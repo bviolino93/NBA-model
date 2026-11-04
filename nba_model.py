@@ -221,6 +221,32 @@ def tonight_missing(report: pd.DataFrame | None, values: pd.DataFrame,
     return out
 
 
+def remove_slate_lean(out: dict, fair: dict, min_games: int = 6) -> dict:
+    """Take out the night's common lean from anchored lines.
+
+    Tonight's injuries come from the report (status-weighted) while the
+    fit learned from who actually sat, and early-season ratings drift, so
+    the inputs can push every game the same way (Nov 4: 13 of 14 totals
+    under the market, by about a point). The market prices any real
+    league-wide shift, so a game only counts as a disagreement by how far
+    it stands out from the rest of the slate: the median gap is removed
+    and shown as the "slate" part."""
+    for kind, mkt_attr, parts_key in (("margin", "market_margin", "parts"),
+                                      ("total", "market_total", "total_parts")):
+        keys = [k for k, v in out.items() if v.get("anchored")
+                and getattr(fair[k], mkt_attr, None) is not None
+                and not np.isnan(getattr(fair[k], mkt_attr))]
+        if len(keys) < min_games:
+            continue
+        lean = float(np.median([out[k][kind] - getattr(fair[k], mkt_attr)
+                                for k in keys]))
+        for k in keys:
+            out[k][kind] -= lean
+            if out[k].get(parts_key) is not None:
+                out[k][parts_key]["slate"] = round(-lean, 1)
+    return out
+
+
 def predict(games: pd.DataFrame, fair: dict, fitted: Fitted,
             missing: dict, now=None,
             cfg: RatingConfig | None = None) -> dict[str, dict]:

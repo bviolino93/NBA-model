@@ -326,8 +326,8 @@ per bet and 8% a night. Win chances are estimates, not guarantees. 21+ where leg
     const fmt = (v) => (v > 0 ? "+" : "") + v.toFixed(1);
     const bits = [];
     if (p.market != null) bits.push(["market adj.", sign * (p.market - b.line)]);
-    for (const k of ["ratings", "rest", "injuries"])
-      if (p[k] != null) bits.push([k === "ratings" ? "team form" : k, sign * p[k]]);
+    for (const k of ["ratings", "rest", "injuries", "slate"])
+      if (p[k] != null) bits.push([k === "ratings" ? "team form" : k === "slate" ? "night's lean removed" : k, sign * p[k]]);
     return bits.filter(([, v]) => Math.abs(v) >= 0.1)
       .map(([k, v]) => `${k} ${fmt(v)}`).join(", ");
   };
@@ -379,6 +379,7 @@ per bet and 8% a night. Win chances are estimates, not guarantees. 21+ where leg
       bits.push(`ratings ${num(p.ratings, true)}`);
       if (Math.abs(p.rest) >= 0.1) bits.push(`rest ${num(p.rest, true)}`);
       if (Math.abs(p.injuries) >= 0.1) bits.push(`injuries ${num(p.injuries, true)}`);
+      if (p.slate != null && Math.abs(p.slate) >= 0.1) bits.push(`night's lean ${num(p.slate, true)}`);
       const miss = [...(f.missing.home || []), ...(f.missing.away || [])];
       return bits.join(", ") + (miss.length ? ` (missing: ${miss.join("; ")})` : "");
     };

@@ -263,7 +263,8 @@ def model_lines(games, fair, box, injuries, now) -> dict:
               f"{ {k: round(v, 2) for k, v in fitted.total.items()} }")
         missing = nba_model.tonight_missing(
             injuries, nba_model.player_values(box))
-        return nba_model.predict(games, fair, fitted, missing, now)
+        return nba_model.remove_slate_lean(
+            nba_model.predict(games, fair, fitted, missing, now), fair)
     except Exception as exc:
         print(f"full model failed, ratings only: {exc}")
         return paper.model_lines(games, fair, now)
