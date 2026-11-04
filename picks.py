@@ -252,8 +252,12 @@ def load_injuries(box) -> pd.DataFrame:
 def model_lines(games, fair, box, injuries, now) -> dict:
     """Our own line per game (nba_model); ratings only if that fails."""
     try:
-        recent = games[games["season"] > current_season() - 5]
+        recent = games[(games["season"] > current_season() - 5)
+                       & games["season_type"].isin(["REG", "PLAYIN"])]
         fitted = nba_model.fit_weights(nba_model.history(recent, box))
+        print("MODEL anchored weights: margin "
+              f"{ {k: round(v, 3) for k, v in fitted.anchor_margin.items()} }"
+              f", total { {k: round(v, 3) for k, v in fitted.anchor_total.items()} }")
         print(f"model weights from {fitted.n} games: margin "
               f"{ {k: round(v, 2) for k, v in fitted.margin.items()} }, total "
               f"{ {k: round(v, 2) for k, v in fitted.total.items()} }")
