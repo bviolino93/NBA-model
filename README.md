@@ -15,7 +15,9 @@ the "NBA betting model: plan" doc in the project.
 | `picks.py` | Daily picks: DraftKings/FanDuel lines that are stale against the sharp market, staked and explained; alerts and a graded record on the `picks` branch |
 | `ledger.py` | Every alerted bet, locked at its alerted price, graded from ESPN finals |
 | `nba_props.py` | Player prop projections (minutes x rate x pace), walk-forward vs naive baselines |
-| `log_lines.py` | Snapshots game lines (and props) from The Odds API into `data/lines/` |
+| `log_lines.py` | Snapshots game lines (and props) from The Odds API into `data/lines/`, pregame only; `--close` takes the closing line in the half hour before each tip |
+| `clv.py` | Closing-line value for every alerted bet and model-test bet, against the sharp close in `data/lines/` |
+| `tools/replay.py` | Replays the selector over every logged snapshot and scores what it would have flagged against the close |
 
 Seasons are labelled by the year they end (2026 = 2025-26), as ESPN does.
 `spread_line` is the expected home margin (positive = home favoured).
@@ -31,7 +33,13 @@ Seasons are labelled by the year they end (2026 = 2025-26), as ESPN does.
 
 On GitHub: Actions -> "Backtest vs closing lines" (no secrets), and
 "Log NBA lines" (needs secret `ODDS_API_KEY`; set variable `LOG_PROPS=true`
-to add the nightly props snapshot).
+to add the nightly props snapshot). "Log closing lines" runs every 10
+minutes in the evening and spends credits only when ESPN shows a tip in
+the next 30 minutes. "Research script" with `replay.py` scores the
+selector against the close over everything logged so far.
+
+GitHub starts scheduled runs 3 to 5 hours late in practice, so the cron
+times are set early; see the comments in each workflow.
 
 ## Not built yet
 

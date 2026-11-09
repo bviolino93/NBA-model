@@ -17,6 +17,8 @@ from datetime import datetime, timezone
 
 import pandas as pd
 
+import clv as clv_mod
+
 KEY = ("away", "home", "commence", "market", "pick")
 
 
@@ -160,6 +162,7 @@ def summary(bets: list[dict]) -> dict:
         "pushes": sum(b["result"] == "push" for b in graded),
         "staked": round(staked, 2), "profit": round(profit, 2),
         "roi": round(profit / staked, 4) if staked else None,
+        **clv_mod.summary(bets),
     }
 
 

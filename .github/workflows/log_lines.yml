@@ -3,15 +3,16 @@ name: Log NBA lines
 # Snapshots NBA game lines (and props once a day) from The Odds API and
 # commits the CSVs under data/lines/. Needs repository secret ODDS_API_KEY.
 #
-# 15:13 UTC is mid-morning ET, near the opener for that night's games.
-# 22:41 UTC is about 20 minutes before the first 7 PM ET tip (an hour
-# before in daylight time), close to the close; props are taken then.
-# Odd minutes because GitHub drops and delays top-of-hour schedules.
+# GitHub starts these 3 to 5 hours late in practice (Nov 2026: 15:13 and
+# 22:41 UTC landed 19:25-21:28 and 01:50-03:42), so they are set early:
+# 13:13 UTC usually lands early afternoon ET, 18:41 UTC late afternoon,
+# before the first 7 PM ET tip; props are taken then. The closing line
+# comes from close.yml. Games already tipped are skipped either way.
 
 on:
   schedule:
-    - cron: "13 15 * 10-12,1-6 *"
-    - cron: "41 22 * 10-12,1-6 *"
+    - cron: "13 13 * 10-12,1-6 *"
+    - cron: "41 18 * 10-12,1-6 *"
   workflow_dispatch:
     inputs:
       props:
@@ -45,7 +46,7 @@ jobs:
         run: |
           flags=""
           if [ "${{ inputs.props }}" = "true" ]; then flags="--props"; fi
-          if [ "$LOG_PROPS" = "true" ] && [ "${{ github.event.schedule }}" = "41 22 * 10-12,1-6 *" ]; then flags="--props"; fi
+          if [ "$LOG_PROPS" = "true" ] && [ "${{ github.event.schedule }}" = "41 18 * 10-12,1-6 *" ]; then flags="--props"; fi
           python log_lines.py --out-dir data/lines $flags
       - name: Commit
         run: |
@@ -53,4 +54,7 @@ jobs:
           git config user.email "line-logger@users.noreply.github.com"
           git add data/lines
           git diff --cached --quiet || git commit -m "Line snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
-          git push
+          for i in 1 2 3 4; do
+            git pull -q --rebase origin main && git push && break
+            sleep $((2 ** i))
+          done

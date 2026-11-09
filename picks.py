@@ -6,14 +6,16 @@ NBA picks: bets at your books whose line is stale against the sharp market.
 The backtests (backtest.py, nba_props.py) found nothing that beats the
 NBA closing line yet, so no model moves these picks. What is left is the
 part of the NFL picks that needs no model: every book's spread and total
-is de-vigged into a sharp-weighted fair line (Pinnacle counts 4x), and a
+is de-vigged into a fair line from the sharp books alone (Pinnacle,
+Circa, exchanges; selector.SHARP_BOOKS), and a
 bet goes out only when DraftKings or FanDuel offers a number or price that
 fair line says is +EV by at least min_ev. That is a soft book that hasn't
 caught up with a move, the most reliable edge a non-syndicate bettor has.
 
 Stakes are quarter Kelly, halved while unproven, capped at 1% a bet and
-8% a night. The ledger grades every alerted bet against ESPN finals and
-review.py-style CLV will judge it.
+8% a night. The ledger grades every alerted bet against ESPN finals, and
+against the sharp closing line in data/lines/ (clv.py), which is the
+early read on whether the stale-line bets are real.
 """
 
 from __future__ import annotations
@@ -27,6 +29,7 @@ import numpy as np
 import pandas as pd
 import requests
 
+import clv
 import ledger
 import nba_injuries as inj_mod
 import nba_model
@@ -44,6 +47,12 @@ BOOK_NAME = {"draftkings": "DraftKings", "fanduel": "FanDuel",
 DASHBOARD = "https://bviolino93.github.io/NBA-model/"
 STAKE_SCALE = 0.5          # half stakes until the record says otherwise
 HOURS_AHEAD = 30.0         # tonight's slate (and an early look at tomorrow's)
+# Real bets only this close to tip. Overnight markets are thin and the
+# day's injury news is still to come: 3 of the first 5 alerts went out
+# about 21 hours early, two on one game whose lines then moved 3.5 and 5
+# points. Earlier games are still priced and shown, and the model test
+# still logs them.
+ALERT_HOURS = 8.0
 MARKETS = ("spreads", "totals")
 
 
@@ -102,9 +111,12 @@ def build_picks(rows: pd.DataFrame, games: pd.DataFrame, my_books,
     priced = sel.price_offers(rows, fair, mm, tm, pol)
     if priced.empty:
         return priced, fair, priced
+    tip = pd.to_datetime(priced["commence"], utc=True, errors="coerce")
+    soon = tip <= (pd.Timestamp(now or datetime.now(timezone.utc))
+                   .tz_convert("UTC") + pd.Timedelta(hours=ALERT_HOURS))
     bettable = priced[priced["market"].isin(MARKETS)
                       & priced["book"].isin(my_books)
-                      & (priced["ev_market"] >= min_ev)]
+                      & (priced["ev_market"] >= min_ev) & soon]
     picks = sel.select(bettable, bankroll, pol)
     if len(picks):
         picks["stake"] = (picks["stake"] * STAKE_SCALE).round(2)
@@ -160,6 +172,12 @@ def render_md(picks: pd.DataFrame, made: str, history: list[dict]) -> str:
         out.append(f"## Record\n\n{s['wins']}-{s['losses']}-{s['pushes']}, "
                    f"${s['profit']:+,.2f} on ${s['staked']:,.2f} staked "
                    f"(ROI {roi}).\n")
+    if s.get("clv_n"):
+        out.append(f"Against the sharp closing line ({s['clv_n']} bets): "
+                   f"{s['beat_close'] * 100:.0f}% beat it, average EV at the "
+                   f"close {s['avg_clv_ev'] * 100:+.1f}%, "
+                   f"{s['avg_clv_pts']:+.2f} points. This is the early read; "
+                   f"the record needs hundreds of bets.\n")
     out.append("---\nStale-line bets only: no NBA model has beaten the closing "
                "line yet. Quarter-Kelly, half stakes, on a $1,000 bankroll, "
                "capped at 1% a bet and 8% a night. 21+ where legal; "
@@ -283,6 +301,8 @@ def main():
     ap.add_argument("--books", default=os.environ.get("MY_BOOKS") or MY_BOOKS)
     ap.add_argument("--lines-csv", default="",
                     help="use a logged snapshot instead of the live feed")
+    ap.add_argument("--lines-dir", default=clv.LINES_DIR,
+                    help="logged snapshots, for closing-line value")
     a = ap.parse_args()
     if a.lines_csv:
         rows = sel.latest_snapshot(pd.read_csv(a.lines_csv))
@@ -321,12 +341,22 @@ def main():
         history = ledger.grade(history, games)
     except Exception as exc:          # scores can wait for the next run
         print(f"grading skipped: {exc}")
+    snaps, mm, tm = pd.DataFrame(), None, None
+    try:
+        snaps = clv.load_snapshots(a.lines_dir)
+        mm, tm = sel.build_outcome_models(games)
+        history = clv.grade(history, snaps, mm, tm, now)
+        print(f"CLV: {clv.summary(history)}")
+    except Exception as exc:          # CLV can wait for the next run
+        print(f"CLV skipped: {exc}")
     ledger.save(a.history, history)
     tests, lines = paper.load(a.paper), {}
     try:
         lines = model_lines(games, fair, box, injuries, now)
         tests = paper.log(tests, fair, lines, now.isoformat())
         tests = paper.grade(tests, games)
+        if mm is not None:
+            tests = paper.grade_sharp(tests, snaps, mm, tm, now)
     except Exception as exc:          # the test never blocks real picks
         print(f"model test skipped: {exc}")
     paper.save(a.paper, tests)

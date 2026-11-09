@@ -162,14 +162,33 @@ def _get(params: dict, tries: int = 4) -> dict:
     raise RuntimeError(f"ESPN scoreboard failed for {params}")
 
 
+_DONE = re.compile(r"postpon|cancel|suspend|forfeit", re.I)
+
+
+def day_final(js: dict) -> bool:
+    """Every game on the day is over (or called off), so the file can be
+    kept for good."""
+    for ev in js.get("events", []):
+        comp = (ev.get("competitions") or [{}])[0]
+        st = (comp.get("status") or ev.get("status") or {}).get("type", {})
+        if not (st.get("completed") or st.get("state") == "post"
+                or _DONE.search(str(st.get("name", "")))):
+            return False
+    return True
+
+
 def fetch_day(d: date, cache_dir: str = CACHE_DIR) -> list[dict]:
-    """A day's games. Days fully in the past are cached for good."""
+    """A day's games. A past day is cached for good once every game on it
+    is final; a file saved earlier (say, before tip by a run that looked a
+    week ahead) is fetched again until it is."""
     os.makedirs(os.path.join(cache_dir, "days"), exist_ok=True)
     path = os.path.join(cache_dir, "days", f"{d:%Y%m%d}.json")
     today = datetime.now(timezone.utc).date()
     if os.path.exists(path) and d < today - timedelta(days=1):
         with open(path) as fh:
-            return parse_scoreboard(json.load(fh))
+            js = json.load(fh)
+        if day_final(js):
+            return parse_scoreboard(js)
     js = _get({"dates": f"{d:%Y%m%d}", "limit": 100})
     with open(path, "w") as fh:
         json.dump(js, fh)
@@ -263,13 +282,27 @@ def parse_core_open(js: dict) -> tuple[float, float]:
     return med(sp), med(tt)
 
 
+NONE = {"_none": True}    # cached marker: the API has nothing for this game
+
+
+def cached_json(path: str):
+    """A cache file's JSON, or None when it is missing or holds an old
+    failure (an empty {} from before failures stopped being saved)."""
+    if not os.path.exists(path):
+        return None
+    with open(path) as fh:
+        js = json.load(fh)
+    return js or None
+
+
 def fetch_core_odds(game_id: str, cache_dir: str = CACHE_DIR) -> dict:
+    """A game's odds from the core API, cached for good. A 404 is cached as
+    NONE; other failures are not cached, so the next run tries again."""
     os.makedirs(os.path.join(cache_dir, "odds"), exist_ok=True)
     path = os.path.join(cache_dir, "odds", f"{game_id}.json")
-    if os.path.exists(path):
-        with open(path) as fh:
-            return json.load(fh)
-    js = {}
+    js = cached_json(path)
+    if js is not None:
+        return js
     for i in range(3):
         try:
             r = requests.get(CORE_ODDS.format(id=game_id), timeout=30)
@@ -277,10 +310,13 @@ def fetch_core_odds(game_id: str, cache_dir: str = CACHE_DIR) -> dict:
                 js = r.json()
                 break
             if r.status_code == 404:
+                js = NONE
                 break
         except requests.RequestException:
             pass
         time.sleep(2 ** i)
+    if js is None:
+        return {}
     with open(path, "w") as fh:
         json.dump(js, fh)
     return js

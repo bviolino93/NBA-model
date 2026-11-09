@@ -91,13 +91,14 @@ def parse_box(js: dict, game_id: str) -> list[dict]:
 
 
 def fetch_summary(game_id: str, cache_dir: str = CACHE_DIR) -> dict:
-    """A final game's summary; only the box score is kept on disk."""
+    """A final game's summary; only the box score is kept on disk. A 404 is
+    cached as empty; other failures are not cached (next run retries)."""
+    from nba_data import NONE, cached_json
     os.makedirs(os.path.join(cache_dir, "box"), exist_ok=True)
     path = os.path.join(cache_dir, "box", f"{game_id}.json")
-    if os.path.exists(path):
-        with open(path) as fh:
-            return json.load(fh)
-    js = {}
+    js = cached_json(path)
+    if js is not None:
+        return js
     for i in range(3):
         try:
             r = requests.get(SUMMARY, params={"event": game_id}, timeout=30)
@@ -106,10 +107,13 @@ def fetch_summary(game_id: str, cache_dir: str = CACHE_DIR) -> dict:
                                    .get("players", [])}}
                 break
             if r.status_code == 404:
+                js = NONE
                 break
         except requests.RequestException:
             pass
         time.sleep(2 ** i)
+    if js is None:
+        return {}
     with open(path, "w") as fh:
         json.dump(js, fh)
     return js

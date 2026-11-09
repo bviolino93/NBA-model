@@ -1,0 +1,51 @@
+name: Log closing lines
+
+# The closing line for CLV (clv.py): every 10 minutes from noon to
+# midnight ET, check ESPN's free scoreboard for a tip in the next 30
+# minutes, and only then pull sharp and DraftKings/FanDuel spreads and
+# totals (2 Odds API credits) into data/lines/close_<season>.csv. Runs
+# that find no game about to tip spend nothing. Needs secret ODDS_API_KEY.
+#
+# GitHub delays and drops some of these; any run that lands in a game's
+# last 30 minutes gives it a close, and clv.py falls back to the game's
+# last logged snapshot (and records how long before tip it was taken).
+
+on:
+  schedule:
+    - cron: "*/10 16-23,0-4 * 10-12,1-6 *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Its own group: sharing log-lines would let a queued close run cancel a
+# queued props snapshot. Pushes rebase onto whatever landed meanwhile.
+concurrency:
+  group: close-lines
+  cancel-in-progress: false
+
+jobs:
+  close:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests pandas
+      - name: Snapshot if a game tips soon
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python log_lines.py --out-dir data/lines --close 30
+      - name: Commit
+        run: |
+          git config user.name "line-logger"
+          git config user.email "line-logger@users.noreply.github.com"
+          git add data/lines
+          git diff --cached --quiet && exit 0
+          git commit -m "Closing lines $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3 4; do
+            git pull -q --rebase origin main && git push && break
+            sleep $((2 ** i))
+          done

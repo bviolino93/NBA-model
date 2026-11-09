@@ -7,7 +7,9 @@ The pipeline
 ------------
 1. FAIR LINE FROM THE MARKET. Every book's two-way price is de-vigged, then
    turned into an implied fair home margin (or fair total). Those are
-   combined as a weighted median, with sharp books weighted up. This is the
+   combined as a weighted median of the sharp books (Pinnacle, Circa,
+   exchanges...), falling back to every book only when no sharp book
+   quotes the market; such markets are priced but not bet. This is the
    best single estimate available, and it is the baseline everything else
    is measured against.
 
@@ -47,13 +49,23 @@ from dataclasses import dataclass, field
 import numpy as np
 import pandas as pd
 
-# Weight in the consensus. Offshore and market-making books move first and
-# take sharp action; the big US retail books mostly copy. Unknown books get 1.
-BOOK_WEIGHT = {
-    "pinnacle": 4.0, "circasports": 3.0, "betonlineag": 2.0, "lowvig": 2.0,
-    "bookmaker": 2.0, "betcris": 2.0, "matchbook": 2.0, "betfair_ex_us": 2.0,
-    "novig": 2.0, "prophetx": 1.5,
+# Books whose prices lead the market. The fair line is built from these
+# alone whenever any of them quotes the market; the rest (US retail books,
+# and the European and offshore recreational books the us,eu feed also
+# returns, 34 books in all) mostly copy them late and shade toward public
+# sides. Weighted in with everyone, Pinnacle carried about 4 of 37 votes
+# (review, 2026-11-09). Weights are within the sharp group.
+SHARP_BOOKS = {
+    "pinnacle": 4.0, "circasports": 3.0, "bookmaker": 2.0, "matchbook": 2.0,
+    "betfair_ex_eu": 2.0, "betfair_ex_us": 2.0, "novig": 2.0,
+    "betonlineag": 1.5, "lowvig": 1.5, "prophetx": 1.5,
 }
+# Used only when no sharp book quotes a market (that market is then not
+# bettable unless Policy.require_sharp is off). Unknown books get 1.
+BOOK_WEIGHT = dict(SHARP_BOOKS)
+# A quote the feed last refreshed this long before the snapshot is not
+# priced or used (the feed's own refresh is under 15 minutes for every book).
+STALE_MINUTES = 30.0
 
 # Sources that move picks. Everything else is INFO until it proves itself.
 # Only human overrides start active. "rest", "injury" and "ratings" stay
@@ -177,6 +189,10 @@ class Fair:
     # De-vigged moneyline chance the home team wins (ties aside), from
     # every book's moneyline; the fair price for moneyline bets.
     market_p_home: float = float("nan")
+    # Sharp-book quotes behind market_margin / market_total (0 = the fair
+    # number fell back to every book's, and the market is not bettable).
+    sharp_margin: int = 0
+    sharp_total: int = 0
     margin: float = float("nan")         # after active adjustments
     total: float = float("nan")
     adjustments: list = field(default_factory=list)
@@ -194,6 +210,18 @@ def _wmedian(values, weights):
     return float(v[np.searchsorted(c, c[-1] / 2.0)])
 
 
+def fresh(snap: pd.DataFrame, stale_minutes: float = STALE_MINUTES
+          ) -> pd.DataFrame:
+    """Drop quotes the feed last updated more than `stale_minutes` before
+    the snapshot. Frames without the timestamps are returned unchanged."""
+    if not {"snapshot_utc", "last_update"} <= set(snap.columns) or snap.empty:
+        return snap
+    at = pd.to_datetime(snap["snapshot_utc"], utc=True, errors="coerce")
+    lu = pd.to_datetime(snap["last_update"], utc=True, errors="coerce")
+    age = (at - lu).dt.total_seconds() / 60.0
+    return snap[~(age > stale_minutes)]
+
+
 def _pairs(snap: pd.DataFrame, market: str):
     """Yield (book, side_a_row, side_b_row) for two-way markets."""
     m = snap[snap["market"] == market]
@@ -205,11 +233,30 @@ def _pairs(snap: pd.DataFrame, market: str):
         yield ev, book, grp
 
 
+def _vote(book: str) -> tuple[float, bool]:
+    w = SHARP_BOOKS.get(book)
+    return (w, True) if w else (1.0, False)
+
+
+def _fair_value(votes: list, sharp_first: bool = True) -> tuple[float, int]:
+    """Weighted median of the sharp quotes when there are any, else of all
+    (sharp_first=False: of all, sharp books weighted up, as before the
+    review). Returns (value, number of sharp quotes)."""
+    sharp = [(v, w) for v, w, s in votes if s]
+    use = (sharp if sharp_first else []) or [(v, w) for v, w, s in votes]
+    v, w = zip(*use)
+    return _wmedian(v, w), len(sharp)
+
+
 def consensus(snap: pd.DataFrame, margin_model: OutcomeModel,
-              total_model: OutcomeModel) -> dict:
-    """Fair home margin and total per event from every book's prices."""
+              total_model: OutcomeModel,
+              stale_minutes: float = STALE_MINUTES,
+              sharp_first: bool = True) -> dict:
+    """Fair home margin and total per event, from the sharp books' prices
+    (every book's when no sharp book quotes the market)."""
     out = {}
     meta = snap.drop_duplicates("event_id").set_index("event_id")
+    snap = fresh(snap, stale_minutes)
     est = {}
     for ev, book, grp in _pairs(snap, "spreads"):
         home = meta.loc[ev, "home_team"]
@@ -222,7 +269,7 @@ def consensus(snap: pd.DataFrame, margin_model: OutcomeModel,
         # Home -3 covers when margin > 3; stated home point is -3.
         line = -float(h["point"].iloc[0])
         mu = margin_model.fair_centre(line, p_h)
-        est.setdefault((ev, "m"), []).append((mu, BOOK_WEIGHT.get(book, 1.0)))
+        est.setdefault((ev, "m"), []).append((mu, *_vote(book)))
     for ev, book, grp in _pairs(snap, "totals"):
         o = grp[grp["outcome"].str.lower() == "over"]
         u = grp[grp["outcome"].str.lower() == "under"]
@@ -231,7 +278,7 @@ def consensus(snap: pd.DataFrame, margin_model: OutcomeModel,
         p_o, _ = devig(american_to_prob(o["price"].iloc[0]),
                        american_to_prob(u["price"].iloc[0]))
         mu = total_model.fair_centre(float(o["point"].iloc[0]), p_o)
-        est.setdefault((ev, "t"), []).append((mu, BOOK_WEIGHT.get(book, 1.0)))
+        est.setdefault((ev, "t"), []).append((mu, *_vote(book)))
     ml = snap[snap["market"] == "h2h"]
     for (ev, book), grp in ml.groupby(["event_id", "book"]):
         home = meta.loc[ev, "home_team"]
@@ -242,18 +289,17 @@ def consensus(snap: pd.DataFrame, margin_model: OutcomeModel,
             continue
         p_h, _ = devig(american_to_prob(h["price"].iloc[0]),
                        american_to_prob(a["price"].iloc[0]))
-        est.setdefault((ev, "ml"), []).append((p_h, BOOK_WEIGHT.get(book, 1.0)))
+        est.setdefault((ev, "ml"), []).append((p_h, *_vote(book)))
     for ev, r in meta.iterrows():
         f = Fair(r["home_team"], r["away_team"], r["commence_time"])
         if (ev, "m") in est:
-            v, w = zip(*est[(ev, "m")])
-            f.market_margin = f.margin = _wmedian(v, w)
+            f.market_margin, f.sharp_margin = _fair_value(est[(ev, "m")], sharp_first)
+            f.margin = f.market_margin
         if (ev, "t") in est:
-            v, w = zip(*est[(ev, "t")])
-            f.market_total = f.total = _wmedian(v, w)
+            f.market_total, f.sharp_total = _fair_value(est[(ev, "t")], sharp_first)
+            f.total = f.market_total
         if (ev, "ml") in est:
-            v, w = zip(*est[(ev, "ml")])
-            f.market_p_home = _wmedian(v, w)
+            f.market_p_home, _ = _fair_value(est[(ev, "ml")], sharp_first)
         out[ev] = f
     return out
 
@@ -292,6 +338,7 @@ class Policy:
     max_bet: float = 0.01         # of bankroll, while unproven
     max_week: float = 0.08        # per slate (one night's games)
     min_books: int = 3            # need a real consensus to price against
+    require_sharp: bool = True    # only bet markets a sharp book is quoting
 
 
 def _win_push(r, f, margin, total, margin_model, total_model):
@@ -331,9 +378,12 @@ def price_offers(snap: pd.DataFrame, fair: dict, margin_model, total_model,
     policy = policy or Policy()
     rows = []
     nbooks = snap.groupby("event_id")["book"].nunique()
-    for r in snap.itertuples():
+    for r in fresh(snap).itertuples():
         f = fair.get(r.event_id)
         if f is None or nbooks.get(r.event_id, 0) < policy.min_books:
+            continue
+        sharp = f.sharp_total if r.market == "totals" else f.sharp_margin
+        if policy.require_sharp and not sharp:
             continue
         adj = _win_push(r, f, f.margin, f.total, margin_model, total_model)
         if adj is None:

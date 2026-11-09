@@ -13,8 +13,18 @@ Credit cost (The Odds API bills markets x regions; approximate):
     props        4 markets x 1 region  x ~8 games a night    = ~32 a run
 The schedule takes game lines twice a day and props once, before tip:
 about 360 + 1,000 credits a month in season. Props need a paid plan.
+Games that have already tipped are skipped: the feed returns in-play
+prices for them, which once made up 37% of the prop rows and 17% of the
+game-line rows.
+
+--close takes the closing line for clv.py: it runs every few minutes in
+the evening, checks ESPN's free scoreboard for a tip in the next
+`--close` minutes, and only then spends credits (2 a call: spreads and
+totals from CLOSE_BOOKS, which the API bills as one region). Rows go to
+data/lines/close_<season>.csv.
 
     ODDS_API_KEY=... python log_lines.py [--props] [--out-dir data/lines]
+    ODDS_API_KEY=... python log_lines.py --close 30
 """
 
 from __future__ import annotations
@@ -31,6 +41,10 @@ from nba_data import current_season
 API = "https://api.the-odds-api.com/v4/sports/basketball_nba"
 GAME_MARKETS = "spreads,totals,h2h"
 PROP_MARKETS = "player_points,player_rebounds,player_assists,player_threes"
+# Sharp books for the close, plus the books bet at (all seen in the us,eu
+# feed). Up to 10 bill as one region.
+CLOSE_BOOKS = ("pinnacle,betonlineag,lowvig,matchbook,betfair_ex_eu,"
+               "draftkings,fanduel,betmgm,williamhill_us")
 FIELDS = ["snapshot_utc", "event_id", "commence_time", "home_team",
           "away_team", "book", "market", "outcome", "player", "point",
           "price", "last_update"]
@@ -84,6 +98,48 @@ def _append(path, rows):
     return len(rows)
 
 
+def pregame(events, now):
+    """Events that haven't tipped (the feed also returns live ones)."""
+    out = []
+    for e in events:
+        try:
+            tip = datetime.fromisoformat(
+                str(e.get("commence_time")).replace("Z", "+00:00"))
+        except ValueError:
+            continue
+        if tip > now:
+            out.append(e)
+    return out
+
+
+def tips_soon(now, minutes: float) -> list:
+    """ESPN tip times in (now, now + minutes]. Free; no Odds API credits."""
+    from nba_data import _get, parse_scoreboard
+    from zoneinfo import ZoneInfo
+    day = now.astimezone(ZoneInfo("America/New_York")).date()
+    rows = parse_scoreboard(_get({"dates": f"{day:%Y%m%d}", "limit": 100}))
+    end = now + timedelta(minutes=minutes)
+    return [r for r in rows
+            if r["commence"] is not None and now < r["commence"] <= end]
+
+
+def log_close(key: str, out_dir: str, minutes: float, now) -> None:
+    soon = tips_soon(now, minutes)
+    if not soon:
+        print(f"no tip in the next {minutes:g} minutes; no credits spent")
+        return
+    print("tipping soon: " + ", ".join(f"{r['away_team']} @ {r['home_team']}"
+                                       for r in soon))
+    snap = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    until = (now + timedelta(hours=12)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    events = pregame(_get(f"{API}/odds", {
+        "apiKey": key, "bookmakers": CLOSE_BOOKS, "markets": "spreads,totals",
+        "oddsFormat": "american", "commenceTimeTo": until}), now)
+    n = _append(os.path.join(out_dir, f"close_{current_season(now.date())}.csv"),
+                (r for e in events for r in _rows(e, snap)))
+    print(f"  {len(events)} pregame events, {n} rows")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out-dir", default="data/lines")
@@ -93,20 +149,26 @@ def main():
                     help="only events tipping off within this window")
     ap.add_argument("--regions", default="us,eu")
     ap.add_argument("--prop-regions", default="us")
+    ap.add_argument("--close", type=float, default=0.0, metavar="MINUTES",
+                    help="closing-line mode: log only if a game tips within "
+                         "MINUTES (checked on ESPN first)")
     a = ap.parse_args()
     key = (os.environ.get("ODDS_API_KEY") or "").strip()
     if not key:
         raise SystemExit("set ODDS_API_KEY")
 
     now = datetime.now(timezone.utc)
+    if a.close:
+        log_close(key, a.out_dir, a.close, now)
+        return
     snap = now.strftime("%Y-%m-%dT%H:%M:%SZ")
     until = (now + timedelta(days=a.days_ahead)).strftime("%Y-%m-%dT%H:%M:%SZ")
     season = current_season(now.date())
 
     print("game lines")
-    events = _get(f"{API}/odds", {
+    events = pregame(_get(f"{API}/odds", {
         "apiKey": key, "regions": a.regions, "markets": GAME_MARKETS,
-        "oddsFormat": "american", "commenceTimeTo": until})
+        "oddsFormat": "american", "commenceTimeTo": until}), now)
     n = _append(os.path.join(a.out_dir, f"games_{season}.csv"),
                 (r for e in events for r in _rows(e, snap)))
     print(f"  {len(events)} events, {n} rows")
