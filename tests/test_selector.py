@@ -54,3 +54,23 @@ def test_stale_book_is_the_bet():
     assert sp.iloc[0]["book"] == "fanduel"
     assert sp.iloc[0]["pick"] == "Boston Celtics"
     assert sp.iloc[0]["stake"] <= 10.0     # 1% cap on $1,000
+
+
+def test_fair_line_ignores_soft_books_and_stale_quotes():
+    mm, tm = outcome_models()
+    s = snap()
+    soft = s[s["book"] == "draftkings"]
+    # Ten soft books all hanging -5.5 don't move the sharp -7.5
+    many = pd.concat([soft.assign(book=f"soft{i}",
+                                  point=soft["point"].where(
+                                      soft["market"] != "spreads",
+                                      soft["point"].clip(-5.5, 5.5)))
+                      for i in range(10)])
+    f = sel.consensus(pd.concat([s, many]), mm, tm)["e1"]
+    assert abs(f.market_margin - 7.5) < 0.6 and f.sharp_margin == 2
+    # A Pinnacle quote 2 hours old is dropped
+    s = s.assign(snapshot_utc="2025-10-22T20:00:00Z",
+                 last_update="2025-10-22T19:59:00Z")
+    s.loc[s["book"] == "pinnacle", "last_update"] = "2025-10-22T18:00:00Z"
+    f = sel.consensus(s, mm, tm)["e1"]
+    assert f.sharp_margin == 1               # Circa only

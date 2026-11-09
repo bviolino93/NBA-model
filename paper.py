@@ -36,6 +36,9 @@ GAP = 3.0           # ratings-only fallback line
 ANCHORED_GAP = {"spreads": 0.5, "totals": 2.0}
 # Bump when the model changes in a way that makes earlier test bets
 # unrepresentative; bets logged by older versions are dropped on load.
+# Frozen at 7 for the 2026-27 season (review, 2026-11-09): seven restarts
+# in eight days meant no version ever built a sample. Improvements go into
+# research scripts and wait for next season, or for a separate test.
 VERSION = 7
 
 
@@ -135,16 +138,34 @@ def grade(history: list[dict], games: pd.DataFrame) -> list[dict]:
         close = m["spread_line"] if spread else m["total_line"]
         # +1 when the model's side is the home team or the over
         sign = (1 if b["side"] in (b["home"], "Over") else -1)
-        # Before tip ESPN's line is the current one, not the close.
-        if bool(m["completed"]) and pd.notna(close):
+        # Before tip ESPN's line is the current one, not the close. The
+        # sharp close (grade_sharp) replaces ESPN's when there is one.
+        if (bool(m["completed"]) and pd.notna(close)
+                and b.get("clv_src") != "sharp"):
             b["close"] = float(close)
             b["clv"] = round(sign * (float(close) - b["line"]), 1)
+            b["clv_src"] = "espn"
         if bool(m["completed"]) and pd.notna(m["home_score"]):
             hs, as_ = float(m["home_score"]), float(m["away_score"])
             actual = hs - as_ if spread else hs + as_
             diff = sign * (actual - b["line"])
             b["result"] = "win" if diff > 0 else "loss" if diff < 0 else "push"
             b["final"] = f"{int(as_)}-{int(hs)}"
+    return history
+
+
+def grade_sharp(history: list[dict], snaps, margin_model, total_model,
+                now=None) -> list[dict]:
+    """CLV against the sharp close in the line logs (clv.grade, at -110),
+    which replaces ESPN's single-book line in `close` and `clv`."""
+    import clv as clv_mod
+    clv_mod.grade(history, snaps, margin_model, total_model, now,
+                  pick_key="side", seen_key="logged", price=-110)
+    for b in history:
+        if b.get("clv_pts") is not None and b.get("clv_src") != "sharp":
+            b["close"] = round(b["close_fair"], 1)
+            b["clv"] = round(b["clv_pts"], 1)
+            b["clv_src"] = "sharp"
     return history
 
 

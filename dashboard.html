@@ -221,6 +221,11 @@ per bet and 8% a night. Win chances are estimates, not guarantees. 21+ where leg
       graded.length ? (S.profit >= 0 ? "win" : "loss") : "");
   kpi(rec, S.roi == null ? "—" : (S.roi > 0 ? "+" : "") + pct(S.roi), "return on stakes");
   kpi(rec, String(H.filter((b) => !b.result).length), "bets waiting on a result");
+  kpi(rec, S.clv_n ? pct(S.beat_close, 0) : "—",
+      S.clv_n ? `beat the sharp close (${S.clv_n} bets)` : "beat the sharp close",
+      S.clv_n ? (S.beat_close > 0.5 ? "win" : "loss") : "");
+  kpi(rec, S.avg_clv_ev == null ? "—" : (S.avg_clv_ev > 0 ? "+" : "") + pct(S.avg_clv_ev),
+      "average EV at the close", S.avg_clv_ev == null ? "" : (S.avg_clv_ev > 0 ? "win" : "loss"));
 
   const chart = $("chart");
   function drawChart() {

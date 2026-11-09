@@ -23,7 +23,7 @@ def games_frame():
 
 def test_stale_fanduel_line_is_picked_with_half_stake():
     rows = snap()
-    now = datetime(2025, 10, 22, 12, tzinfo=timezone.utc)
+    now = datetime(2025, 10, 22, 18, tzinfo=timezone.utc)
     p, fair, priced = picks.build_picks(rows, games_frame(), ["fanduel"],
                                         1000.0, 0.02, now)
     assert len(p) == 1
@@ -31,6 +31,23 @@ def test_stale_fanduel_line_is_picked_with_half_stake():
     assert b["book"] == "FanDuel" and b["pick"] == "Boston Celtics"
     assert b["stake"] <= 5.0                 # 1% cap, halved
     assert "FanDuel has Boston Celtics at -6.5" in b["why"]
+
+
+def test_no_alerts_more_than_eight_hours_out():
+    early = datetime(2025, 10, 22, 12, tzinfo=timezone.utc)   # 11.5 h to tip
+    p, fair, priced = picks.build_picks(snap(), games_frame(), ["fanduel"],
+                                        1000.0, 0.02, early)
+    assert p.empty and len(fair) == 1
+
+
+def test_no_sharp_book_no_bet():
+    rows = snap()
+    rows = rows[~rows["book"].isin(["pinnacle", "circasports"])]
+    rows = pd.concat([rows, rows.assign(book="betmgm")])
+    now = datetime(2025, 10, 22, 18, tzinfo=timezone.utc)
+    p, fair, priced = picks.build_picks(rows, games_frame(), ["fanduel"],
+                                        1000.0, 0.02, now)
+    assert p.empty and fair["e1"].sharp_margin == 0
 
 
 def test_games_already_tipped_are_skipped():

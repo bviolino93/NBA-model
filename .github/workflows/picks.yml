@@ -13,15 +13,21 @@ name: NBA picks
 # Actions): https://bviolino93.github.io/NBA-model/
 #
 # Needs secret ODDS_API_KEY. Optional variable MY_BOOKS (default
-# "draftkings,fanduel"). ~6 Odds API credits a run.
+# "draftkings,fanduel").
 #
-# Two runs a day at odd minutes (GitHub delays top-of-hour schedules):
-# early afternoon ET, and about 45 minutes before the first 7 PM ET tip.
+# GitHub starts scheduled runs 3 to 5 hours late in practice (Nov 2026:
+# 17:23 and 23:13 UTC landed 20:56-22:41 and 02:24-03:55, after most
+# tips), so four runs are set early and spread out. With the usual delay
+# they land around 12:30, 3:30, 6:30 and 8:45 PM ET; on time they land in
+# the morning and afternoon. Bets only go out within 8 hours of tip
+# (picks.ALERT_HOURS). ~6 Odds API credits a run.
 
 on:
   schedule:
-    - cron: "23 17 * 10-12,1-6 *"
-    - cron: "13 23 * 10-12,1-6 *"
+    - cron: "23 13 * 10-12,1-6 *"
+    - cron: "23 16 * 10-12,1-6 *"
+    - cron: "23 19 * 10-12,1-6 *"
+    - cron: "43 21 * 10-12,1-6 *"
   workflow_dispatch:
     inputs:
       bankroll:
