@@ -6,6 +6,12 @@ name: Log closing lines
 # totals (2 Odds API credits) into data/lines/close_<season>.csv. Runs
 # that find no game about to tip spend nothing. Needs secret ODDS_API_KEY.
 #
+# Each run also logs changes to ESPN's injury report (free) to
+# data/injuries/changes_<season>.csv, and takes an extra snapshot when a
+# player on a team playing later today changes status (capped at 30 a day,
+# each with one follow-up on the next run): the record for measuring how
+# fast DraftKings and FanDuel follow the sharp books after news.
+#
 # GitHub delays and drops some of these; any run that lands in a game's
 # last 30 minutes gives it a close, and clv.py falls back to the game's
 # last logged snapshot (and records how long before tip it was taken).
@@ -34,17 +40,17 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install requests pandas
-      - name: Snapshot if a game tips soon
+      - name: Injury report, and a snapshot if a game tips soon or news hits
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
-        run: python log_lines.py --out-dir data/lines --close 30
+        run: python log_lines.py --out-dir data/lines --close 30 --injuries data/injuries
       - name: Commit
         run: |
           git config user.name "line-logger"
           git config user.email "line-logger@users.noreply.github.com"
-          git add data/lines
+          git add data/lines data/injuries
           git diff --cached --quiet && exit 0
-          git commit -m "Closing lines $(date -u +%Y-%m-%dT%H:%MZ)"
+          git commit -m "Lines and injury report $(date -u +%Y-%m-%dT%H:%MZ)"
           for i in 1 2 3 4; do
             git pull -q --rebase origin main && git push && break
             sleep $((2 ** i))

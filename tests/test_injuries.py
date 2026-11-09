@@ -74,3 +74,24 @@ def test_dashboard_embeds_data_without_nan():
                      html, re.S).group(1)
     d = json.loads(blob)
     assert d["picks"][0]["fair_market"] is None and d["fair"][0]["market_total"] is None
+
+
+def test_log_changes_records_only_changes(tmp_path):
+    path = str(tmp_path / "changes.csv")
+    rep = inj.parse_injuries(REPORT)
+    first = inj.log_changes(rep, path, "t1")
+    assert len(first) == 4                               # whole report
+    assert inj.log_changes(rep, path, "t2").empty        # nothing changed
+    rep2 = rep.copy()
+    rep2.loc[rep2.player == "Wing Two", "status"] = "Out"
+    rep2 = rep2[rep2.player != "Clip Big"]
+    ch = inj.log_changes(rep2, path, "t3")
+    assert sorted(zip(ch.player, ch.status)) == [("Clip Big", "Removed"),
+                                                 ("Wing Two", "Out")]
+    # A failed fetch logs nothing (doesn't clear the league)
+    assert inj.log_changes(inj.parse_injuries({}), path, "t4").empty
+    # Back on the report after being removed: logged again
+    ch = inj.log_changes(rep, path, "t5")
+    assert set(ch.player) == {"Clip Big", "Wing Two"}
+    log = pd.read_csv(path)
+    assert list(log.columns) == inj.LOG_COLS and len(log) == 8

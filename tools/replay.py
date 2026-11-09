@@ -110,7 +110,7 @@ def main():
     ap.add_argument("--min-ev", type=float, default=0.02)
     ap.add_argument("--books", default="draftkings,fanduel")
     ap.add_argument("--out", default="")
-    a = ap.parse_args()
+    a, _ = ap.parse_known_args()   # the Research workflow passes its default args too
     snaps = clv.load_snapshots()
     mm, tm = sel.build_outcome_models(load_games())
     print(f"{snaps['_at'].nunique()} pre-tip snapshots, "
