@@ -161,7 +161,7 @@ def render_md(picks: pd.DataFrame, made: str, history: list[dict],
     if picks.empty:
         out.append("**No regular bets right now.** No DraftKings or FanDuel "
                    "line is far enough off the sharp market. That is the "
-                   "usual answer; the daily pick is below.\n")
+                   "usual answer; the daily picks are below.\n")
     for p in picks.itertuples():
         out.append(f"### {_label(p)} at {p.book}\n\n"
                    f"**Stake ${p.stake:,.2f}** · win chance "

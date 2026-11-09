@@ -93,8 +93,8 @@ def _record(r, books_name: dict, run: str) -> dict:
                f"also likes ({r.lean:.1f} pts its way). The price is "
                f"{r.ev_market * 100:+.1f}% against the sharp line.")
     else:
-        why = (f"Daily pick: one of today's best-priced lines (the model's "
-               f"other sides aren't priced near fair today). The price is "
+        why = (f"Daily pick: one of today's best-priced lines (our model has no "
+               f"side priced near fair today). The price is "
                f"{r.ev_market * 100:+.1f}% against the sharp line.")
     return {
         "away": r.away, "home": r.home, "commence": str(r.commence),
