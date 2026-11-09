@@ -30,6 +30,7 @@ import pandas as pd
 import requests
 
 import clv
+import daily
 import ledger
 import nba_injuries as inj_mod
 import nba_model
@@ -153,18 +154,21 @@ def _injury_md(p) -> str:
     return "\n".join(lines) + ("\n" if lines else "")
 
 
-def render_md(picks: pd.DataFrame, made: str, history: list[dict]) -> str:
+def render_md(picks: pd.DataFrame, made: str, history: list[dict],
+              day_picks: list[dict] = ()) -> str:
     out = [f"# NBA picks\n\n_Updated {made}_ · "
            f"[Dashboard]({DASHBOARD})\n"]
     if picks.empty:
-        out.append("**No bets right now.** No DraftKings or FanDuel line is "
-                   "far enough off the sharp market. That is the usual answer.\n")
+        out.append("**No regular bets right now.** No DraftKings or FanDuel "
+                   "line is far enough off the sharp market. That is the "
+                   "usual answer; the daily picks are below.\n")
     for p in picks.itertuples():
         out.append(f"### {_label(p)} at {p.book}\n\n"
                    f"**Stake ${p.stake:,.2f}** · win chance "
                    f"{p.win_chance * 100:.1f}% · EV {p.ev * 100:.1f}%  \n"
                    f"{p.away} @ {p.home} · {_tip(p.commence)}\n\n{p.why}\n"
                    + _injury_md(p))
+    out.append(daily.render_md(list(day_picks)))
     s = ledger.summary(history)
     graded = s["wins"] + s["losses"] + s["pushes"]
     if graded:
@@ -198,7 +202,7 @@ def _clean(x):
 
 def render_html(picks: list[dict], fair: dict, made: str, bankroll: float,
                 history: list[dict], tests: list[dict] = (),
-                lines: dict | None = None) -> str:
+                lines: dict | None = None, day_picks: list[dict] = ()) -> str:
     """The dashboard: dashboard.html with this run's data embedded, so the
     page works from GitHub Pages, the picks branch or a saved copy."""
     data = {
@@ -213,6 +217,9 @@ def render_html(picks: list[dict], fair: dict, made: str, bankroll: float,
                   "missing": (lines or {}).get(k, {}).get("missing")}
                  for k, f in fair.items()],
         "history": {"summary": ledger.summary(history), "bets": history},
+        "daily": {"summary": ledger.summary(list(day_picks)),
+                  "stake": daily.DAILY_STAKE, "per_day": daily.DAILY_PICKS,
+                  "bets": list(day_picks)},
         "paper": {"summary": paper.summary(list(tests)), "gap": paper.GAP,
                   "bets": list(tests)},
     }
@@ -296,6 +303,7 @@ def main():
     ap.add_argument("--history", default="site/history.json")
     ap.add_argument("--alert", default="alert.md")
     ap.add_argument("--paper", default="site/paper.json")
+    ap.add_argument("--daily", default="site/daily.json")
     ap.add_argument("--bankroll", type=float, default=1000.0)
     ap.add_argument("--min-ev", type=float, default=0.02)
     ap.add_argument("--books", default=os.environ.get("MY_BOOKS") or MY_BOOKS)
@@ -360,17 +368,29 @@ def main():
     except Exception as exc:          # the test never blocks real picks
         print(f"model test skipped: {exc}")
     paper.save(a.paper, tests)
+    picks_day, new_day = ledger.load(a.daily), []
+    try:
+        new_day = daily.choose(picks_day, history, priced, fair, lines, books,
+                               now, ALERT_HOURS, BOOK_NAME)
+        picks_day = ledger.grade(picks_day + new_day, games)
+        if mm is not None:
+            picks_day = clv.grade(picks_day, snaps, mm, tm, now)
+    except Exception as exc:          # never blocks the regular picks
+        print(f"daily pick skipped: {exc}")
+    ledger.save(a.daily, picks_day)
+    print(f"daily pick: {len(new_day)} new, {ledger.summary(picks_day)}")
     print(f"model test: {len(lines)} games projected, {len(tests)} test bets "
           f"logged, {paper.summary(tests)}")
     with open(a.md, "w") as fh:
-        fh.write(render_md(picks, made, history))
+        fh.write(render_md(picks, made, history, picks_day))
     with open(a.out, "w") as fh:
         fh.write(render_html(out, fair, made, a.bankroll, history, tests,
-                             lines))
+                             lines, picks_day))
     with open(a.json, "w") as fh:
         json.dump({"updated": made, "picks": out}, fh, indent=2, default=str)
     fresh = [p for p in out if ledger._key(p) not in seen]
-    note = "\n".join(r(b) for b, r in ((fresh, render_alert),
+    note = "\n".join(r(b) for b, r in ((new_day, daily.render_alert),
+                                       (fresh, render_alert),
                                        (gone, render_dropped)) if b)
     if note:
         with open(a.alert, "w") as fh:

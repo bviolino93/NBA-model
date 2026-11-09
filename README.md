@@ -14,12 +14,14 @@ the "NBA betting model: plan" doc in the project.
 | `selector.py` | Ported from the NFL repo: de-vig, sharp-weighted fair line, empirical outcome model, offer pricing, Kelly sizing, CLV |
 | `picks.py` | Daily picks: DraftKings/FanDuel lines that are stale against the sharp market, staked and explained; alerts and a graded record on the `picks` branch |
 | `ledger.py` | Every alerted bet, locked at its alerted price, graded from ESPN finals |
+| `daily.py` | Daily picks: up to 3 flat $5 bets every game day, one per game (the best-priced lines our model also likes, else the best prices), with its own record and CLV in `daily.json` |
 | `nba_props.py` | Player prop projections (minutes x rate x pace), walk-forward vs naive baselines |
 | `log_lines.py` | Snapshots game lines (and props) from The Odds API into `data/lines/`, pregame only; `--close` takes the closing line in the half hour before each tip |
 | `nba_injuries.py` | ESPN's injury report: notes on each pick, and `log_changes`, the change log `close.yml` keeps in `data/injuries/` |
 | `clv.py` | Closing-line value for every alerted bet and model-test bet, against the sharp close in `data/lines/` |
 | `tools/props_vs_lines.py` | Prop projections against the logged prop lines: log loss, whether the model adds to the price, betting record and CLV by stat and book |
 | `tools/replay.py` | Replays the selector over every logged snapshot and scores what it would have flagged against the close |
+| `tools/pick_rate.py` | How often each betting rule (EV thresholds, top N a day) would have picked, and its CLV |
 
 Seasons are labelled by the year they end (2026 = 2025-26), as ESPN does.
 `spread_line` is the expected home margin (positive = home favoured).

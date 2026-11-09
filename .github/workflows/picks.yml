@@ -6,7 +6,8 @@ name: NBA picks
 # https://github.com/bviolino93/nba-model/tree/picks), keeps history.json
 # there (every alerted bet, graded from ESPN finals), and comments on the
 # open "NBA picks alerts" issue when there are new bets, which GitHub
-# pushes to your phone.
+# pushes to your phone. Also one small flat "daily pick" a day (daily.py,
+# its own ledger daily.json), so there is a real pick on every game day.
 #
 # The dashboard (index.html, same layout as the NFL page) deploys to GitHub
 # Pages once Pages is enabled (Settings -> Pages -> Source: GitHub
@@ -66,6 +67,7 @@ jobs:
           git fetch -q --depth 1 origin picks && \
             git show FETCH_HEAD:history.json > site/history.json || true
           git show FETCH_HEAD:paper.json > site/paper.json 2>/dev/null || true
+          git show FETCH_HEAD:daily.json > site/daily.json 2>/dev/null || true
       - name: Run picks
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
