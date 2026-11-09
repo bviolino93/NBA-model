@@ -1,4 +1,6 @@
 import json
+
+import pandas as pd
 from datetime import datetime, timezone
 
 
@@ -118,3 +120,36 @@ def test_replay_scores_flagged_offers(tmp_path):
     sharp = r[r["mode"] == "sharp"]
     assert len(sharp) == 1 and sharp.iloc[0]["clv_ev"] > 0
     assert (r["mode"] == "baseline").sum() == 8   # 2 books x 2 markets x 2 sides
+
+
+def test_close_mode_spends_credits_only_on_tips_or_news(tmp_path, monkeypatch):
+    import nba_injuries as inj
+    from test_injuries import REPORT
+    now = datetime(2025, 10, 22, 20, 0, tzinfo=timezone.utc)
+    game = {"commence": pd.Timestamp("2025-10-22T23:30:00Z"),
+            "home_team": "Atlanta Hawks", "away_team": "Boston Celtics"}
+    calls = []
+    monkeypatch.setattr(log_lines, "todays_games", lambda now: [game])
+    monkeypatch.setattr(log_lines, "_get",
+                        lambda url, p: calls.append(p) or [])
+    report = {"js": REPORT}
+    monkeypatch.setattr(inj, "fetch_injuries",
+                        lambda: inj.parse_injuries(report["js"]))
+    lines, injd = str(tmp_path / "lines"), str(tmp_path / "inj")
+    log_lines.log_close("k", lines, 30, now, injd)       # first run: baseline
+    assert calls == []
+    log_lines.log_close("k", lines, 30, now, injd)       # no change
+    assert calls == []
+    js = json.loads(json.dumps(REPORT))
+    js["injuries"][0]["injuries"][1]["status"] = "Out"   # Wing Two ruled out
+    report["js"] = js
+    log_lines.log_close("k", lines, 30, now, injd)       # news
+    assert len(calls) == 1 and calls[0]["bookmakers"] == log_lines.CLOSE_BOOKS
+    later = now + pd.Timedelta(minutes=10)
+    log_lines.log_close("k", lines, 30, later, injd)     # follow-up
+    assert len(calls) == 2
+    log_lines.log_close("k", lines, 30, later + pd.Timedelta(minutes=10), injd)
+    assert len(calls) == 2                               # quiet again
+    log_lines.log_close("k", lines, 30, datetime(2025, 10, 22, 23, 10,
+                                                 tzinfo=timezone.utc), injd)
+    assert len(calls) == 3                               # tip in 20 minutes

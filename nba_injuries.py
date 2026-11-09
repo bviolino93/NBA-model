@@ -26,7 +26,11 @@ URL = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/injuries"
 UNCERTAIN = ("questionable", "doubtful", "day-to-day", "game time decision",
              "gtd", "probable")
 KEY_MIN = 20.0          # minutes a game that make a player worth flagging
-COLS = ["team", "player_id", "player", "status", "detail"]
+COLS = ["team", "player_id", "player", "status", "detail", "date"]
+# Logged changes (log_changes): one row per player whose status changed.
+LOG_COLS = ["snapshot_utc", "team", "player_id", "player", "status", "detail",
+            "date"]
+REMOVED = "Removed"       # dropped off the report: cleared to play
 
 
 def _status(it: dict) -> str:
@@ -56,8 +60,45 @@ def parse_injuries(js: dict) -> pd.DataFrame:
             rows.append({"team": team, "player_id": str(ath.get("id", "")),
                          "player": ath.get("displayName", ""),
                          "status": _status(it),
-                         "detail": detail or it.get("shortComment", "") or ""})
+                         "detail": detail or it.get("shortComment", "") or "",
+                         # ESPN's time for the entry: when the news broke,
+                         # closer than our polling interval
+                         "date": str(it.get("date") or "")})
     return pd.DataFrame(rows, columns=COLS)
+
+
+def log_changes(report: pd.DataFrame, path: str, snap: str) -> pd.DataFrame:
+    """Append to `path` every player whose status is new or changed since
+    the last logged state, and every player who dropped off the report
+    (status REMOVED). Returns the changes. The first run logs the whole
+    report; the log is then a complete history of the report at the
+    polling interval.
+
+    Returns an empty frame, and logs nothing, when the report came back
+    empty (a failed fetch must not mark the whole league as cleared)."""
+    import os
+    if report is None or report.empty:
+        return pd.DataFrame(columns=LOG_COLS)
+    rep = report.assign(key=report["team"] + "|" + report["player_id"])
+    rep = rep.drop_duplicates("key", keep="last")
+    if os.path.exists(path):
+        old = pd.read_csv(path, dtype=str).fillna("")
+        old["key"] = old["team"] + "|" + old["player_id"]
+        last = old.drop_duplicates("key", keep="last").set_index("key")
+        last = last[last["status"] != REMOVED]
+    else:
+        last = pd.DataFrame(columns=LOG_COLS).set_index(pd.Index([], name="key"))
+    prev = rep["key"].map(last["status"]) if len(last) else pd.Series(
+        None, index=rep.index, dtype=object)
+    changed = rep[prev.isna() | (prev != rep["status"])]
+    gone = last[~last.index.isin(rep["key"])]
+    gone = gone.reset_index().assign(status=REMOVED, detail="", date="")
+    out = pd.concat([changed, gone], ignore_index=True).assign(snapshot_utc=snap)
+    out = out[LOG_COLS]
+    if len(out):
+        os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
+        out.to_csv(path, mode="a", header=not os.path.exists(path), index=False)
+    return out
 
 
 def fetch_injuries() -> pd.DataFrame:
