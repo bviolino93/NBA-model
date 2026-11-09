@@ -75,6 +75,13 @@ footer{color:var(--mute);font-size:.75rem;margin-top:32px}
 <div class="bar" id="filters"></div>
 <section id="bets"></section>
 
+<section id="daily-wrap">
+  <h2>Daily pick</h2>
+  <p class="sub" id="daily-sub"></p>
+  <section class="kpis" id="daily-kpis"></section>
+  <div class="tablewrap"><table id="daily"></table></div>
+</section>
+
 <h2>Track record</h2>
 <section class="kpis" id="record-kpis"></section>
 <div class="chart" id="chart"><div class="tip" id="tip"></div></div>
@@ -172,8 +179,8 @@ per bet and 8% a night. Win chances are estimates, not guarantees. 21+ where leg
     const shown = picks.filter((b) => filter === "all" || b.market === filter)
       .sort((a, b) => a.commence.localeCompare(b.commence) || b.ev - a.ev);
     if (!shown.length) {
-      box.append(el("div", "empty", "No bets right now. Nothing beats the sharp market by " +
-        "enough, which is the usual answer and the right one."));
+      box.append(el("div", "empty", "No regular bets right now. Nothing beats the sharp market by " +
+        "enough, which is the usual answer. The daily pick is below."));
       return;
     }
     let day = null, grid = null;
@@ -320,6 +327,40 @@ per bet and 8% a night. Win chances are estimates, not guarantees. 21+ where leg
       ]));
   } else {
     $("history").closest(".tablewrap").hidden = true;
+  }
+
+  // ---- daily pick: one flat small bet a day, its own record
+  const DP = D.daily || {bets: [], summary: {}, stake: 0};
+  const DS = DP.summary;
+  $("daily-sub").textContent = `One flat $${DP.stake} bet every day with games: the best-priced ` +
+    "DraftKings or FanDuel line that our model also likes. It is close to a fair bet on price; " +
+    "whether the model's lean adds anything is what this record tests. Kept apart from the " +
+    "regular record, and sized up only if it beats the sharp close." +
+    (DP.bets.length ? "" : " The first one goes out at the first run within 8 hours of tip.");
+  if (!DP.bets.length) {
+    $("daily-kpis").hidden = true;
+    $("daily").closest(".tablewrap").hidden = true;
+  } else {
+    const dk = $("daily-kpis");
+    const dg = DP.bets.filter((b) => b.result).length;
+    kpi(dk, `${DS.wins}-${DS.losses}${DS.pushes ? "-" + DS.pushes : ""}`, "record (W-L-P)");
+    kpi(dk, dg ? signed(DS.profit) : "—", "profit", dg ? (DS.profit >= 0 ? "win" : "loss") : "");
+    kpi(dk, DS.clv_n ? pct(DS.beat_close, 0) : "—",
+        DS.clv_n ? `beat the sharp close (${DS.clv_n})` : "beat the sharp close",
+        DS.clv_n ? (DS.beat_close > 0.5 ? "win" : "loss") : "");
+    kpi(dk, DS.avg_clv_ev == null ? "—" : (DS.avg_clv_ev > 0 ? "+" : "") + pct(DS.avg_clv_ev),
+        "average EV at the close", DS.avg_clv_ev == null ? "" : (DS.avg_clv_ev > 0 ? "win" : "loss"));
+    table("daily", [["Date"], ["Game"], ["Pick"], ["Book"], ["Stake", 1], ["Price vs sharp", 1],
+                    ["Model lean", 1], ["Final"], ["Result"], ["Profit", 1]],
+      DP.bets.slice().sort((a, b) => b.commence.localeCompare(a.commence)).map((b) => [
+        [new Date(b.commence).toLocaleDateString("en-US", {...ET, month: "short", day: "numeric"})],
+        [`${short(b.away)} @ ${short(b.home)}`],
+        [`${label(b)} (${odds(b.price)})`], [b.book],
+        [money(b.stake), "r"], [(b.ev > 0 ? "+" : "") + pct(b.ev), "r"],
+        [b.lean == null ? "—" : (b.lean > 0 ? "+" : "") + b.lean.toFixed(1) + " pts", "r"],
+        [b.final || ""], [b.result || "open", b.result || "open"],
+        [b.profit == null ? "" : signed(b.profit), "r " + (b.result || "")],
+      ]));
   }
 
   // ---- no-money model test
