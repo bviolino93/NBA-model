@@ -76,7 +76,7 @@ footer{color:var(--mute);font-size:.75rem;margin-top:32px}
 <section id="bets"></section>
 
 <section id="daily-wrap">
-  <h2>Daily pick</h2>
+  <h2>Daily picks</h2>
   <p class="sub" id="daily-sub"></p>
   <section class="kpis" id="daily-kpis"></section>
   <div class="tablewrap"><table id="daily"></table></div>
@@ -332,11 +332,11 @@ per bet and 8% a night. Win chances are estimates, not guarantees. 21+ where leg
   // ---- daily pick: one flat small bet a day, its own record
   const DP = D.daily || {bets: [], summary: {}, stake: 0};
   const DS = DP.summary;
-  $("daily-sub").textContent = `One flat $${DP.stake} bet every day with games: the best-priced ` +
-    "DraftKings or FanDuel line that our model also likes. It is close to a fair bet on price; " +
+  $("daily-sub").textContent = `Up to ${DP.per_day} flat $${DP.stake} bets every day with games, one per game: the best-priced ` +
+    "DraftKings or FanDuel lines that our model also likes. It is close to a fair bet on price; " +
     "whether the model's lean adds anything is what this record tests. Kept apart from the " +
     "regular record, and sized up only if it beats the sharp close." +
-    (DP.bets.length ? "" : " The first one goes out at the first run within 8 hours of tip.");
+    (DP.bets.length ? "" : " The first ones go out at the first run within 8 hours of tip.");
   if (!DP.bets.length) {
     $("daily-kpis").hidden = true;
     $("daily").closest(".tablewrap").hidden = true;

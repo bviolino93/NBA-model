@@ -56,7 +56,32 @@ def test_model_lean_does_not_pay_the_full_vig():
     assert new[0]["pick"] == "Boston Celtics" and not new[0]["model_agrees"]
 
 
-def test_one_pick_a_day_and_it_stays():
+def two_games():
+    a = snap()
+    b = snap().assign(event_id="e2", home_team="New York Knicks",
+                      away_team="Miami Heat")
+    b["outcome"] = b["outcome"].replace({"Boston Celtics": "New York Knicks",
+                                         "Philadelphia 76ers": "Miami Heat"})
+    return pd.concat([a, b], ignore_index=True)
+
+
+def test_up_to_three_a_day_one_per_game():
+    new = choose(rows=two_games())
+    assert len(new) == 2
+    assert {b["home"] for b in new} == {"Boston Celtics", "New York Knicks"}
+    pr, fair = priced_fair(two_games())
+    one = daily.choose([], [], pr, fair, {}, ["fanduel"], NOW, 8.0, NAMES,
+                       per_day=1)
+    assert len(one) == 1
+
+
+def test_later_runs_only_top_up():
+    first = choose()                       # one game on the board
+    more = choose(history=first, rows=two_games())
+    assert [b["home"] for b in more] == ["New York Knicks"]
+
+
+def test_one_pick_a_game_and_it_stays():
     first = choose()
     assert choose(history=first) == []
 

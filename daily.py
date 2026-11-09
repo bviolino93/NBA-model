@@ -1,6 +1,6 @@
 """
-The daily pick: one small real bet on every day with games, even when
-nothing clears the regular bar.
+The daily picks: DAILY_PICKS small real bets on every day with games,
+even when nothing clears the regular bar.
 
 Regular bets need a DraftKings / FanDuel line 2% or more off the sharp
 market, and inside 8 hours of tip that almost never happens (replaying
@@ -16,8 +16,9 @@ it never muddies the regular record. Size it up only if it beats the
 sharp close over a few hundred picks.
 
 Rules:
-  - one pick per day (ET date of tip), locked at the first run that finds
-    a candidate; later runs do not swap it
+  - up to DAILY_PICKS a day (ET date of tip), one per game; each is
+    locked when first chosen, and later runs only top the day up
+    (games tipping later come inside the window on later runs)
   - candidates: spreads and totals at your books, tipping within
     ALERT_HOURS, with a sharp quote on the market (selector.price_offers)
   - not a game and market that already has a regular bet
@@ -37,6 +38,7 @@ import ledger
 import selector as sel
 
 DAILY_STAKE = 5.0           # dollars, flat, on the $1,000 bankroll
+DAILY_PICKS = 3             # a day, one per game
 # The model's lean only wins over a better price when its own offer is
 # close to fair: at -110 with no edge an offer is about -4.5%, and an
 # unproven lean is not worth paying the full vig for.
@@ -87,12 +89,12 @@ def _record(r, books_name: dict, run: str) -> dict:
     pw = (float(r.ev_market) + 1.0 - pp) / (b + 1.0)   # at the sharp line
     pt = f"{r.point:+g}" if r.market == "spreads" else f"{r.point:g}"
     if r.agrees:
-        why = (f"Daily pick: today's best-priced line that our model also "
-               f"likes ({r.lean:.1f} pts its way). The price is "
+        why = (f"Daily pick: one of today's best-priced lines that our model "
+               f"also likes ({r.lean:.1f} pts its way). The price is "
                f"{r.ev_market * 100:+.1f}% against the sharp line.")
     else:
-        why = (f"Daily pick: today's best-priced line (none of the sides our "
-               f"model likes is priced near fair today). The price is "
+        why = (f"Daily pick: one of today's best-priced lines (the model's "
+               f"other sides aren't priced near fair today). The price is "
                f"{r.ev_market * 100:+.1f}% against the sharp line.")
     return {
         "away": r.away, "home": r.home, "commence": str(r.commence),
@@ -112,33 +114,41 @@ def _record(r, books_name: dict, run: str) -> dict:
 
 def choose(history: list[dict], regular: list[dict], priced: pd.DataFrame,
            fair: dict, lines: dict, books, now: datetime, hours: float,
-           books_name: dict | None = None) -> list[dict]:
-    """New daily picks for days that don't have one yet (usually 0 or 1)."""
+           books_name: dict | None = None,
+           per_day: int | None = None) -> list[dict]:
+    """New daily picks, topping each day up to `per_day`, one per game."""
+    per_day = DAILY_PICKS if per_day is None else per_day
     c = candidates(priced, fair, lines, books, now, hours)
     if c.empty:
         return []
-    have = {b["day"] for b in history}
+    game = lambda b: (b["away"], b["home"], b["day"])  # noqa: E731
+    count = {}
+    for b in history:
+        count[b["day"]] = count.get(b["day"], 0) + 1
+    used = {game(b) for b in history}
     taken = {ledger._game(b) for b in regular if not b.get("pulled")}
     new = []
     for day, g in c.groupby("day", sort=True):
-        if day in have:
-            continue
         for r in g.itertuples():
-            rec = _record(r, books_name or {}, pd.Timestamp(now).isoformat())
-            if ledger._game(rec) not in taken:
-                new.append(rec)
+            if count.get(day, 0) >= per_day:
                 break
+            rec = _record(r, books_name or {}, pd.Timestamp(now).isoformat())
+            if ledger._game(rec) in taken or game(rec) in used:
+                continue
+            new.append(rec)
+            used.add(game(rec))
+            count[day] = count.get(day, 0) + 1
     return new
 
 
 def render_md(history: list[dict]) -> str:
-    out = ["## Daily pick\n"]
+    out = ["## Daily picks\n"]
     upcoming = [b for b in history if not b.get("result")]
     for b in sorted(upcoming, key=lambda b: b["commence"]):
         out.append(f"**{b['label']} at {b['book']}**, ${b['stake']:,.2f} · "
                    f"{b['away']} @ {b['home']}\n\n{b['why']}\n")
     if not upcoming:
-        out.append("Today's pick goes out at the first run within 8 hours "
+        out.append("Today's picks go out from the first run within 8 hours "
                    "of tip.\n")
     s = ledger.summary(history)
     if s["wins"] + s["losses"] + s["pushes"]:
@@ -149,8 +159,9 @@ def render_md(history: list[dict]) -> str:
         out.append(f" Against the sharp close ({s['clv_n']} picks): "
                    f"{s['beat_close'] * 100:.0f}% beat it, average EV "
                    f"{s['avg_clv_ev'] * 100:+.1f}%.")
-    out.append("\nA flat small bet every day, kept apart from the regular "
-               "record. It gets bigger only if it beats the sharp close.\n")
+    out.append(f"\nUp to {DAILY_PICKS} flat small bets a day, kept apart "
+               "from the regular record. They get bigger only if they beat "
+               "the sharp close.\n")
     return "\n".join(out)
 
 

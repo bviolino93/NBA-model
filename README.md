@@ -14,7 +14,7 @@ the "NBA betting model: plan" doc in the project.
 | `selector.py` | Ported from the NFL repo: de-vig, sharp-weighted fair line, empirical outcome model, offer pricing, Kelly sizing, CLV |
 | `picks.py` | Daily picks: DraftKings/FanDuel lines that are stale against the sharp market, staked and explained; alerts and a graded record on the `picks` branch |
 | `ledger.py` | Every alerted bet, locked at its alerted price, graded from ESPN finals |
-| `daily.py` | The daily pick: one flat $5 bet every game day (the best-priced line our model also likes, else the best price), with its own record and CLV in `daily.json` |
+| `daily.py` | Daily picks: up to 3 flat $5 bets every game day, one per game (the best-priced lines our model also likes, else the best prices), with its own record and CLV in `daily.json` |
 | `nba_props.py` | Player prop projections (minutes x rate x pace), walk-forward vs naive baselines |
 | `log_lines.py` | Snapshots game lines (and props) from The Odds API into `data/lines/`, pregame only; `--close` takes the closing line in the half hour before each tip |
 | `nba_injuries.py` | ESPN's injury report: notes on each pick, and `log_changes`, the change log `close.yml` keeps in `data/injuries/` |
