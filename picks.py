@@ -258,7 +258,7 @@ def render_dropped(bets: list[dict]) -> str:
     return "\n".join(out) + "\n"
 
 
-def load_box_recent(games: pd.DataFrame, seasons: int = 5):
+def load_box_recent(games: pd.DataFrame, seasons: int = 6):
     """Box scores for the last few seasons (cached), or None."""
     try:
         from nba_players import load_box

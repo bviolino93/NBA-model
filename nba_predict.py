@@ -663,7 +663,7 @@ def _match(games: pd.DataFrame, f) -> str | None:
 
 
 def live_lines(games: pd.DataFrame, box: pd.DataFrame, fair: dict,
-               report: pd.DataFrame | None, now=None, seasons: int = 4,
+               report: pd.DataFrame | None, now=None, seasons: int = 6,
                cfg: PredictConfig | None = None) -> dict[str, dict]:
     """Our own margin and total for every priced game tonight, from the
     model fitted on the last `seasons` seasons. No market input: the
