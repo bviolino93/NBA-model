@@ -37,7 +37,22 @@ SUMMARY = ("https://site.api.espn.com/apis/site/v2/sports/basketball/nba/"
 STATS = {"MIN": "min", "PTS": "pts", "REB": "reb", "AST": "ast",
          "+/-": "pm", "3PT": "fg3", "TO": "tov", "STL": "stl", "BLK": "blk"}
 COLS = ["game_id", "team_abbr", "player_id", "player", "starter", "played",
-        "reason", "min", "pts", "reb", "ast", "fg3m", "pm"]
+        "reason", "min", "pts", "reb", "ast", "fg3m", "pm",
+        # shooting and possession stats, for team efficiency and four
+        # factors (nba_predict)
+        "fgm", "fga", "fg3a", "ftm", "fta", "oreb", "dreb", "stl", "blk",
+        "tov", "pf"]
+EXTRA = ("fgm", "fga", "fg3a", "ftm", "fta", "oreb", "dreb", "stl", "blk",
+         "tov", "pf")
+
+
+def _made_att(x) -> tuple[float, float]:
+    """"7-9" -> (7, 9); anything else NaN."""
+    s = str(x or "")
+    if "-" not in s:
+        return float("nan"), float("nan")
+    m, a = s.split("-", 1)
+    return _num(m), _num(a)
 
 
 def _num(x) -> float:
@@ -73,6 +88,16 @@ def parse_box(js: dict, game_id: str) -> list[dict]:
                     return stats[i] if i is not None and i < len(stats) else None
 
                 fg3 = str(get("3PT") or "")
+                fgm, fga = _made_att(get("FG"))
+                _, fg3a = _made_att(fg3)
+                ftm, fta = _made_att(get("FT"))
+                extra = {"fgm": fgm, "fga": fga, "fg3a": fg3a, "ftm": ftm,
+                         "fta": fta, "oreb": _num(get("OREB")),
+                         "dreb": _num(get("DREB")), "stl": _num(get("STL")),
+                         "blk": _num(get("BLK")), "tov": _num(get("TO")),
+                         "pf": _num(get("PF"))}
+                if dnp:
+                    extra = dict.fromkeys(EXTRA, 0.0)
                 rows.append({
                     "game_id": str(game_id), "team_abbr": abbr,
                     "player_id": str(ath.get("id", "")),
@@ -86,6 +111,7 @@ def parse_box(js: dict, game_id: str) -> list[dict]:
                     "ast": 0.0 if dnp else _num(get("AST")),
                     "fg3m": 0.0 if dnp else _num(fg3.split("-")[0]) if fg3 else float("nan"),
                     "pm": 0.0 if dnp else _num(get("+/-")),
+                    **extra,
                 })
     return rows
 

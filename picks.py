@@ -34,6 +34,7 @@ import daily
 import ledger
 import nba_injuries as inj_mod
 import nba_model
+import nba_predict
 import paper
 import selector as sel
 from log_lines import _rows
@@ -257,7 +258,7 @@ def render_dropped(bets: list[dict]) -> str:
     return "\n".join(out) + "\n"
 
 
-def load_box_recent(games: pd.DataFrame, seasons: int = 5):
+def load_box_recent(games: pd.DataFrame, seasons: int = 6):
     """Box scores for the last few seasons (cached), or None."""
     try:
         from nba_players import load_box
@@ -293,6 +294,16 @@ def model_lines(games, fair, box, injuries, now) -> dict:
     except Exception as exc:
         print(f"full model failed, ratings only: {exc}")
         return paper.model_lines(games, fair, now)
+
+
+def own_lines(games, fair, box, injuries, now) -> dict:
+    """Our own line per game with no market input (nba_predict: players,
+    possessions, schedule). Empty if it fails; never blocks the picks."""
+    try:
+        return nba_predict.live_lines(games, box, fair, injuries, now)
+    except Exception as exc:
+        print(f"own model v2 failed: {exc}")
+        return {}
 
 
 def main():
@@ -369,8 +380,17 @@ def main():
         print(f"model test skipped: {exc}")
     paper.save(a.paper, tests)
     picks_day, new_day = ledger.load(a.daily), []
+    own = own_lines(games, fair, box, injuries, now)
+    print(f"own model v2: {len(own)} games projected")
+    for k, v in own.items():
+        f = fair[k]
+        print(f"  {f.away_team} @ {f.home_team}: ours {v['margin']:+.1f} / "
+              f"{v['total']:.1f}, market {f.market_margin:+.1f} / "
+              f"{f.market_total:.1f}")
     try:
-        new_day = daily.choose(picks_day, history, priced, fair, lines, books,
+        # The daily pick leans on our own line where it has one.
+        new_day = daily.choose(picks_day, history, priced, fair,
+                               {**lines, **own}, books,
                                now, ALERT_HOURS, BOOK_NAME)
         picks_day = ledger.grade(picks_day + new_day, games)
         if mm is not None:

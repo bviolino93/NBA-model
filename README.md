@@ -10,6 +10,9 @@ the "NBA betting model: plan" doc in the project.
 | `nba_data.py` | Games, scores and a pregame spread/total per game from ESPN's public scoreboard, cached per day; rest, back-to-back and density features |
 | `nba_ratings.py` | Recency-weighted ridge ratings for margin and total, refitted every game day on earlier games only |
 | `backtest.py` | Scores the ratings and the schedule factors against the close: slope, ATS at an edge, MAE, split tuning / held out |
+| `nba_predict.py` | Our own line with no market input: player impact (game-level adjusted plus-minus) and box value over the players available tonight, pace and efficiency ratings, four factors, rest, travel, time zones, altitude; ridge plus boosted trees. The daily picks lean on it |
+| `tools/model_lab.py` | Tests each set of inputs and model form on held-out seasons: error against final scores, information beyond the close, record against the close and the opener |
+| `tools/open_audit.py` | Checks ESPN's opening lines against our own snapshots (2024-25 and much of 2025-26 are not real openers) |
 | `nba_players.py` | Player box scores from ESPN summaries; each player's expected minutes and value going into a game; missing-player loads per team |
 | `selector.py` | Ported from the NFL repo: de-vig, sharp-weighted fair line, empirical outcome model, offer pricing, Kelly sizing, CLV |
 | `picks.py` | Daily picks: DraftKings/FanDuel lines that are stale against the sharp market, staked and explained; alerts and a graded record on the `picks` branch |
