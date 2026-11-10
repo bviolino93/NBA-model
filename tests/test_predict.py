@@ -120,3 +120,26 @@ def test_tonight_availability_drops_out_players():
     assert "0-0" not in set(av["player_id"])
     assert av.set_index("player_id").loc["1-1", "weight"] == 0.6
     assert len(av) == 19
+
+
+def test_live_lines_for_a_game_not_played_yet():
+    from types import SimpleNamespace
+    g, b = league()
+    t = pd.Timestamp("2026-03-01", tz="UTC")
+    g = pd.concat([g, pd.DataFrame([dict(
+        game_id="new", season=2026, season_type="REG",
+        game_date=(t - pd.Timedelta(hours=5)).date(), commence=t,
+        home_team=TEAMS[0], away_team=TEAMS[1], home_abbr="0", away_abbr="1",
+        home_score=np.nan, away_score=np.nan, spread_line=np.nan,
+        total_line=np.nan, neutral=False, completed=False)])],
+        ignore_index=True)
+    fair = {"e1": SimpleNamespace(home_team=TEAMS[0], away_team=TEAMS[1],
+                                  commence=t)}
+    rep = pd.DataFrame({"team": [TEAMS[0]], "player": ["P0-0"],
+                        "player_id": ["0-0"], "status": ["Out"]})
+    cfg = npr.PredictConfig(min_prior_games=100)
+    cfg.ratings.min_games = 100
+    with_star = npr.live_lines(g, b, fair, None, cfg=cfg, seasons=3)
+    without = npr.live_lines(g, b, fair, rep, cfg=cfg, seasons=3)
+    assert with_star["e1"]["own"]
+    assert with_star["e1"]["margin"] - without["e1"]["margin"] > 0.5

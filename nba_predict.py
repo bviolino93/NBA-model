@@ -186,11 +186,20 @@ def four_factors(g: pd.DataFrame, tb: pd.DataFrame,
     if tb.empty:
         return pd.DataFrame(columns=["game_id", "team"])
     cols = FF + [f"o_{c}" for c in FF]
-    t = tb.merge(g[["game_id", "commence"]], on="game_id")
-    t = t.sort_values(["team", "commence"])
+    # Every team-game, played or not, so a game not played yet gets the
+    # team's latest numbers.
+    base = pd.concat([g[["game_id", "commence", "home_team"]]
+                      .rename(columns={"home_team": "team"}),
+                      g[["game_id", "commence", "away_team"]]
+                      .rename(columns={"away_team": "team"})])
+    t = base.merge(tb[["game_id", "team"] + cols], on=["game_id", "team"],
+                   how="left")
+    t = t.sort_values(["team", "commence"]).reset_index(drop=True)
     ew = (t.groupby("team")[cols]
            .transform(lambda s: s.shift(1).ewm(halflife=half_life,
-                                               min_periods=3).mean()))
+                                               min_periods=3,
+                                               ignore_na=True).mean()
+                      .ffill()))
     ew.columns = [f"ff_{c}" for c in cols]
     return pd.concat([t[["game_id", "team"]], ew], axis=1)
 
@@ -641,3 +650,70 @@ def tonight_availability(box: pd.DataFrame, upcoming: pd.DataFrame,
                     rows.append((str(u.game_id), side, str(p.player_id), w,
                                  p.player))
     return pd.DataFrame(rows, columns=cols)
+
+
+def _match(games: pd.DataFrame, f) -> str | None:
+    """ESPN game_id of a priced game (same teams, tip within a day)."""
+    tip = pd.Timestamp(f.commence)
+    c = games[(games["home_team"] == f.home_team)
+              & (games["away_team"] == f.away_team)
+              & ((pd.to_datetime(games["commence"], utc=True) - tip).abs()
+                 <= pd.Timedelta(hours=30))]
+    return None if c.empty else str(c["game_id"].iloc[0])
+
+
+def live_lines(games: pd.DataFrame, box: pd.DataFrame, fair: dict,
+               report: pd.DataFrame | None, now=None, seasons: int = 4,
+               cfg: PredictConfig | None = None) -> dict[str, dict]:
+    """Our own margin and total for every priced game tonight, from the
+    model fitted on the last `seasons` seasons. No market input: the
+    lines in `fair` are only used to find the games.
+
+    {fair key: {"margin", "total", "own": True, "parts": {...}}}"""
+    cfg = cfg or PredictConfig()
+    now = pd.Timestamp(now or pd.Timestamp.now(tz="UTC"))
+    g = games[games["season_type"].isin(["REG", "PLAYIN", "POST"])].copy()
+    g["game_id"] = g["game_id"].astype(str)
+    last = int(g["season"].max())
+    g = g[g["season"] > last - seasons].reset_index(drop=True)
+    keys = {}
+    for k, f in fair.items():
+        gid = _match(g, f)
+        if gid is not None and not bool(
+                g.loc[g["game_id"] == gid, "completed"].iloc[0]):
+            keys[k] = gid
+    if not keys:
+        return {}
+    b = box[box["season"] > last - seasons] if box is not None else None
+    up = g[g["game_id"].isin(set(keys.values()))]
+    avail = tonight_availability(b, up, report)
+    h = build(g, b, cfg, upcoming=avail, first_season=last - seasons + 2)
+    models = fit_models(h)
+    if not models.margin:
+        return {}
+    print(f"own model v2 fitted on {models.n} games")
+    tonight = h[h["game_id"].isin(set(keys.values()))].set_index("game_id")
+    p = predict_frame(models, tonight)
+    out = {}
+    for k, gid in keys.items():
+        if gid not in p.index or not np.isfinite(p.at[gid, "pred_margin"]):
+            continue
+        r = tonight.loc[gid]
+        out[k] = {"margin": float(p.at[gid, "pred_margin"]),
+                  "total": float(p.at[gid, "pred_total"]), "own": True,
+                  "parts": {"players": _r(r.get("apm_diff")),
+                            "box": _r(r.get("box_diff")),
+                            "possessions": _r(r.get("eff_margin")),
+                            "scores": _r(r.get("model_margin"))},
+                  "total_parts": {"possessions": _r(r.get("eff_total")),
+                                  "pace": _r(r.get("pace_hat")),
+                                  "scores": _r(r.get("model_total"))}}
+    return out
+
+
+def _r(x):
+    try:
+        x = float(x)
+    except (TypeError, ValueError):
+        return None
+    return round(x, 1) if np.isfinite(x) else None
