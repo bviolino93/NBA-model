@@ -1,22 +1,24 @@
 name: Scores
-# Prints ESPN final scores for a date (tools/scores.py), for grading picks.
+# Prints ESPN final scores for a date (tools/scores.py), and the slate
+# for handicapping by hand (tools/slate.py).
 on:
   workflow_dispatch:
     inputs:
       day:
         description: "YYYYMMDD"
-        default: "20261110"
+        default: "20261111"
   push:
     branches: [claude/project-thread-nsu1m8]
-    paths: [tools/scores.py, .github/workflows/scores.yml]
+    paths: [tools/scores.py, tools/slate.py, .github/workflows/scores.yml]
 jobs:
   scores:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: pip install requests
-      - run: python tools/scores.py ${{ inputs.day || '20261110' }}
+      - run: python tools/slate.py nba ${{ inputs.day || '20261111' }}
+      - run: python tools/slate.py mens-college-basketball ${{ inputs.day || '20261111' }}
