@@ -1,6 +1,6 @@
 name: Scores
 # Prints ESPN final scores for a date (tools/scores.py), and the slate
-# for handicapping by hand (tools/slate.py).
+# for handicapping by hand (tools/slate.py). Rerun for late injury news.
 on:
   workflow_dispatch:
     inputs:
