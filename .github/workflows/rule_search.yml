@@ -1,0 +1,45 @@
+name: NBA rule search
+# Held-out per-game predictions (tools/model_lab.py --out), then a pick-rule
+# search chosen on early seasons and confirmed on later ones
+# (tools/rule_search.py), then props vs logged prop lines.
+on:
+  workflow_dispatch:
+  push:
+    branches: [claude/project-thread-uwy0nd]
+    paths: [tools/rule_search.py, tools/model_lab.py, .github/workflows/rule_search.yml]
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Cache ESPN days
+        uses: actions/cache@v4
+        with:
+          path: .cache_nba
+          key: espn-rules-${{ github.run_id }}
+          restore-keys: espn-
+      - run: pip install -r requirements.txt
+      - name: Lab
+        run: python tools/model_lab.py --first 2017 --test 6 --out lab_games.csv | tee lab.txt
+      - name: Rule search
+        run: |
+          python tools/rule_search.py lab_games.csv --split 2025 | tee rules.txt
+          { echo '```'; cat rules.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+      - name: Props vs lines
+        continue-on-error: true
+        run: |
+          python tools/props_vs_lines.py | tee props.txt
+          { echo '```'; cat props.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rules
+          path: |
+            lab_games.csv
+            lab.txt
+            rules.txt
+            props.txt
