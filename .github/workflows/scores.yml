@@ -6,9 +6,9 @@ on:
     inputs:
       day:
         description: "YYYYMMDD"
-        default: "20261111"
+        default: "20261112"
   push:
-    branches: [claude/project-thread-nsu1m8]
+    branches: [claude/project-thread-nsu1m8, claude/project-thread-trh4eb]
     paths: [tools/scores.py, tools/slate.py, .github/workflows/scores.yml]
 jobs:
   scores:
@@ -20,4 +20,4 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install requests
-      - run: python tools/slate.py nba ${{ inputs.day || '20261112' }}
+      - run: python tools/scores.py ${{ inputs.day || '20261112' }}
