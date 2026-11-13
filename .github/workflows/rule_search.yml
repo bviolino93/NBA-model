@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches: [claude/project-thread-uwy0nd]
-    paths: [tools/rule_search.py, tools/model_lab.py, .github/workflows/rule_search.yml]
+    paths: [tools/rule_search.py, tools/model_lab.py, tools/props_vs_lines.py, .github/workflows/rule_search.yml]
 jobs:
   run:
     runs-on: ubuntu-latest

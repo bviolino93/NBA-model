@@ -264,6 +264,56 @@ def betting(m: pd.DataFrame, cuts=EV_CUTS) -> list[str]:
     return out or ["  no bets clear the cuts"]
 
 
+def walk_forward(m: pd.DataFrame, cuts=(0.0, 0.02, 0.04, 0.06), min_train: int = 1500
+                 ) -> list[str]:
+    """The honest version of 3: the raw model overstates its edge, so shrink
+    it with a blend (result ~ market logit + (model - market)) fitted ONLY on
+    earlier days, then bet later days at the first logged price when the
+    blended EV clears the cut. Expanding window, refit each day."""
+    d = m[m["p_model"].notna() & (m["result"] != 0)].copy()
+    d["day"] = d["_tip"].dt.tz_convert("America/New_York").dt.date
+    d["lm"] = _logit(d["p_mkt"])
+    d["dm"] = _logit(d["p_model"]) - d["lm"]
+    d["o"] = (d["result"] > 0).astype(float)
+    days = sorted(d["day"].unique())
+    rows = []
+    for day in days:
+        tr, te = d[d["day"] < day], d[d["day"] == day]
+        if len(tr) < min_train or te.empty:
+            continue
+        b, _ = logistic(tr[["lm", "dm"]].to_numpy(), tr["o"].to_numpy())
+        pb = 1 / (1 + np.exp(-(b[0] + b[1] * te["lm"] + b[2] * te["dm"])))
+        ev_o = pb * te["over"].map(sel.payout) - (1 - pb)
+        ev_u = (1 - pb) * te["under"].map(sel.payout) - pb
+        t = te.assign(ev=np.maximum(ev_o, ev_u), bet_over=ev_o >= ev_u, w_model=b[2])
+        rows.append(t)
+    if not rows:
+        return [f"  not enough days yet (need {min_train} earlier lines)"]
+    t = pd.concat(rows)
+    price = np.where(t["bet_over"], t["over"], t["under"])
+    win = t["result"] * np.where(t["bet_over"], 1, -1)
+    t["profit"] = np.where(win > 0, pd.Series(price, index=t.index).map(sel.payout), -1.0)
+    out = [f"  {t['day'].nunique()} days bet ({t['day'].min()} .. {t['day'].max()}), "
+           f"blend weight on model gap: first {t['w_model'].iloc[0]:+.2f}, "
+           f"last {t['w_model'].iloc[-1]:+.2f}"]
+    for cut in cuts:
+        b = t[t["ev"] > cut]
+        if b.empty:
+            continue
+        se = b["profit"].std(ddof=1) / max(1, np.sqrt(len(b)))
+        per = b.groupby("day").size().mean()
+        out.append(f"  blended EV > {cut:.0%}: {len(b)} bets ({per:.0f}/day), win "
+                   f"{(b['profit'] > 0).mean():.1%}, ROI {b['profit'].mean():+.1%} (se {se:.1%})")
+        for g, x in b.groupby("stat"):
+            out.append(f"      {g:5s} {len(x):5d} bets ROI {x['profit'].mean():+.1%}")
+        if cut == cuts[-1]:
+            for bk in ("draftkings", "fanduel"):
+                x = b[b["book"] == bk]
+                if len(x):
+                    out.append(f"      at {bk}: {len(x)} bets ROI {x['profit'].mean():+.1%}")
+    return out
+
+
 def calibration(m: pd.DataFrame) -> list[str]:
     c = m[(m["result"] != 0) & m["p_model"].notna()]
     o = (c["result"] > 0).astype(float)
@@ -301,6 +351,8 @@ def run(props: pd.DataFrame, proj: pd.DataFrame, ks: dict,
     rep += ["", "Calibration at the close"] + calibration(m)
     rep += ["", "3-4. Betting the model's side at the first logged price"]
     rep += betting(m)
+    rep += ["", "5. Walk-forward: model shrunk by a blend fitted on earlier days only"]
+    rep += walk_forward(m)
     return m, rep
 
 
