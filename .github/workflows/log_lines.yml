@@ -22,6 +22,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: log-lines
@@ -58,3 +59,17 @@ jobs:
             git pull -q --rebase origin main && git push && break
             sleep $((2 ** i))
           done
+      - name: Early-line signals (DK/FD 1+ pts off Pinnacle)
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python tools/early_steam.py --alert early.md | tee -a "$GITHUB_STEP_SUMMARY"
+          if [ -f early.md ]; then
+            n=$(gh issue list --state open --search "NBA picks alerts in:title" \
+                  --json number -q '.[0].number')
+            if [ -n "$n" ]; then
+              { cat early.md; echo; echo "@${{ github.repository_owner }}"; } > early_body.md
+              gh issue comment "$n" --body-file early_body.md
+            fi
+          fi
