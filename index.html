@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJGaWVsZGxpbmUiPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZmwtZyIgeDE9IjAiIHkxPSIxIiB4Mj0iMSIgeTI9IjAiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzIyYzM4ZSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzRmZDZhOCIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJmbC1iIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMTcyNjNmIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMGUxYTJlIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMSIgeT0iMSIgd2lkdGg9IjYyIiBoZWlnaHQ9IjYyIiByeD0iMTUiIGZpbGw9InVybCgjZmwtYikiIHN0cm9rZT0iIzI2MzU0ZCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48cGF0aCBkPSJNMjAgMTQgVjUwIiBzdHJva2U9IiNlYWYwZjgiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTIwIDE2IEg0NiIgc3Ryb2tlPSIjZWFmMGY4IiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik0yMCAzMiBINDAiIHN0cm9rZT0iIzIyYzM4ZSIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNMzAgNDQgVjUwIE0zOCA0NCBWNTAgTTQ2IDQ0IFY1MCIgc3Ryb2tlPSIjM2E0YTYzIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PC9zdmc+">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fieldline NBA Picks</title>
+<!-- Template for the picks dashboard. picks.py replaces the DATA line with
+     this run's bets, fair lines and graded history, so the page needs no
+     server or fetch and works from GitHub Pages or as a saved file. -->
+<style>
+:root{--bg:#0b1120;--panel:#131c31;--panel2:#1a2540;--fg:#e8eef8;--mute:#8b9bb4;
+--line:rgba(139,155,180,.18);--acc:#22c38e;--ok:#2fbf71;--bad:#ef5d5d;--warn:#f0b43c}
+@media (prefers-color-scheme: light){:root{--bg:#f3f5f9;--panel:#fff;--panel2:#eef2f8;
+--fg:#0f172a;--mute:#5b6b82;--line:rgba(15,23,42,.1);--acc:#0f9d6e;--ok:#16924f;--bad:#cf3a3a;--warn:#b7791f}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:980px;margin:0 auto;padding:20px 16px 40px}
+header{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 16px;margin-bottom:18px}
+h1{font-size:1.5rem;margin:0;letter-spacing:-.01em}
+h1 span{color:var(--mute);font-weight:500}
+.brand{display:flex;align-items:center;gap:10px}
+.mascot{width:40px;height:40px;flex:0 0 auto}
+.sub{color:var(--mute);font-size:.85rem}
+h2{font-size:1.05rem;margin:28px 0 10px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.kpi b{display:block;font-size:1.45rem;font-variant-numeric:tabular-nums;line-height:1.2}
+.kpi small{color:var(--mute);font-size:.78rem}
+.bar{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 4px}
+.chip{border:1px solid var(--line);background:var(--panel);color:var(--fg);border-radius:999px;
+padding:5px 12px;font:inherit;font-size:.85rem;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--acc);border-color:var(--acc);color:#fff}
+.day{color:var(--mute);font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;margin:18px 0 8px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:10px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.card .top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+.bet{font-size:1.15rem;font-weight:700;line-height:1.25}
+.pill{font-size:.72rem;background:var(--panel2);border-radius:999px;padding:2px 9px;white-space:nowrap;color:var(--mute)}
+.game{color:var(--mute);font-size:.85rem}
+.nums{display:flex;gap:18px;font-variant-numeric:tabular-nums}
+.nums span{display:flex;flex-direction:column;font-size:.72rem;color:var(--mute)}
+.nums b{font-size:1rem;color:var(--fg)}
+.meter{height:6px;border-radius:3px;background:var(--panel2);overflow:hidden}
+.meter i{display:block;height:100%;background:var(--acc)}
+.why{font-size:.88rem;margin:0}
+.inj{font-size:.82rem;margin:0;color:var(--mute)}
+.inj.watch{color:var(--warn);font-weight:600}
+.empty{background:var(--panel);border:1px dashed var(--line);border-radius:14px;padding:22px;color:var(--mute);text-align:center}
+.chart{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px;margin-top:10px;position:relative}
+.chart svg{display:block;width:100%;height:auto}
+.tip{position:absolute;pointer-events:none;background:var(--panel2);border:1px solid var(--line);border-radius:8px;
+padding:6px 9px;font-size:.78rem;white-space:nowrap;display:none}
+.tablewrap{overflow-x:auto;background:var(--panel);border:1px solid var(--line);border-radius:14px;margin-top:10px}
+table{width:100%;border-collapse:collapse;font-size:.84rem;font-variant-numeric:tabular-nums}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+th{color:var(--mute);font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.04em}
+td.r,th.r{text-align:right}
+tr:last-child td{border-bottom:0}
+.win{color:var(--ok);font-weight:600}.loss{color:var(--bad);font-weight:600}.push,.open{color:var(--mute)}
+details{margin-top:28px}summary{cursor:pointer;font-weight:600}
+footer{color:var(--mute);font-size:.75rem;margin-top:32px}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div class="brand"><svg class="mascot" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Fieldline"><defs><linearGradient id="fl-g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#22c38e"/><stop offset="1" stop-color="#4fd6a8"/></linearGradient><linearGradient id="fl-b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#17263f"/><stop offset="1" stop-color="#0e1a2e"/></linearGradient></defs><rect x="1" y="1" width="62" height="62" rx="15" fill="url(#fl-b)" stroke="#26354d" stroke-width="1.5"/><path d="M20 14 V50" stroke="#eaf0f8" stroke-width="5" stroke-linecap="round"/><path d="M20 16 H46" stroke="#eaf0f8" stroke-width="5" stroke-linecap="round"/><path d="M20 32 H40" stroke="#22c38e" stroke-width="5" stroke-linecap="round"/><path d="M30 44 V50 M38 44 V50 M46 44 V50" stroke="#3a4a63" stroke-width="2.5" stroke-linecap="round"/></svg>
+    <h1>Fieldline <span>NBA</span></h1>
+  </div>
+  <div class="sub" id="updated"></div>
+</header>
+
+<section class="kpis" id="slate-kpis"></section>
+<div class="bar" id="filters"></div>
+<section id="bets"></section>
+
+<section id="daily-wrap">
+  <h2>Daily picks</h2>
+  <p class="sub" id="daily-sub"></p>
+  <section class="kpis" id="daily-kpis"></section>
+  <div class="tablewrap"><table id="daily"></table></div>
+</section>
+
+<h2>Track record</h2>
+<section class="kpis" id="record-kpis"></section>
+<div class="chart" id="chart"><div class="tip" id="tip"></div></div>
+<div class="tablewrap"><table id="history"></table></div>
+
+<section id="paper-wrap">
+  <h2>Model test (no money)</h2>
+  <p class="sub" id="paper-sub"></p>
+  <section class="kpis" id="paper-kpis"></section>
+  <div class="tablewrap"><table id="paper"></table></div>
+</section>
+
+<details>
+  <summary>Market vs model, this run</summary>
+  <div class="tablewrap"><table id="fair"></table></div>
+</details>
+
+<footer>Bets are DraftKings and FanDuel lines that lag the sharp, de-vigged market;
+no NBA model has beaten the closing line yet. Injury notes come from ESPN's report:
+players already out are priced in, and "wait for news" means a rotation player is
+still questionable. Stakes are half quarter-Kelly on the bankroll shown, capped at 1%
+per bet and 8% a night. Win chances are estimates, not guarantees. 21+ where legal;
+1-800-GAMBLER.</footer>
+</main>
+
+<script id="data" type="application/json">{"updated": "Sat Nov 14, 18:47 UTC", "bankroll": 1000.0, "picks": [], "fair": [{"away": "Denver Nuggets", "home": "New Orleans Pelicans", "commence": "2026-11-15T00:10:00Z", "market_margin": -11.75, "market_total": 236.0, "model_margin": -12.437636481781952, "model_total": 234.333733334225, "parts": {"market": -11.8, "ratings": 0.0, "rest": -0.6, "injuries": -0.1}, "missing": {"home": ["Trey Murphy III out", "Dejounte Murray out"], "away": []}}, {"away": "Dallas Mavericks", "home": "Cleveland Cavaliers", "commence": "2026-11-15T00:40:00Z", "market_margin": -4.0, "market_total": 226.5, "model_margin": -4.364648887719292, "model_total": 223.762589351397, "parts": {"market": -4.0, "ratings": 0.0, "rest": -0.5, "injuries": 0.1}, "missing": {"home": ["Peyton Watson day-to-day", "Evan Mobley out", "Jarrett Allen day-to-day", "Donovan Mitchell day-to-day", "James Harden day-to-day"], "away": ["Morez Johnson Jr. day-to-day"]}}, {"away": "Brooklyn Nets", "home": "Memphis Grizzlies", "commence": "2026-11-15T01:10:00Z", "market_margin": 2.0, "market_total": 226.5, "model_margin": 1.4487421935726639, "model_total": 225.2138233233483, "parts": {"market": 2.0, "ratings": 0.0, "rest": -0.6, "injuries": 0.0}, "missing": {"home": ["Zach Edey day-to-day"], "away": ["Nolan Traore day-to-day"]}}, {"away": "Chicago Bulls", "home": "Minnesota Timberwolves", "commence": "2026-11-15T01:10:00Z", "market_margin": 15.25, "market_total": 235.75, "model_margin": 16.05680307937046, "model_total": 234.7379033855604, "parts": {"market": 15.2, "ratings": 0.0, "rest": 0.6, "injuries": 0.2}, "missing": {"home": [], "away": ["Jalen Smith day-to-day", "Norman Powell day-to-day", "Caleb Wilson out"]}}, {"away": "Detroit Pistons", "home": "Miami Heat", "commence": "2026-11-15T01:10:00Z", "market_margin": -4.0, "market_total": 227.5, "model_margin": -4.439468722769183, "model_total": 224.61117494049918, "parts": {"market": -4.0, "ratings": 0.0, "rest": -0.5, "injuries": 0.1}, "missing": {"home": ["Pelle Larsson day-to-day", "Klay Thompson day-to-day", "Giannis Antetokounmpo day-to-day"], "away": []}}], "history": {"summary": {"wins": 1, "losses": 4, "pushes": 0, "staked": 19.81, "profit": -14.14, "roi": -0.7138, "clv_n": 5, "avg_clv_ev": -0.0253, "avg_clv_pts": -0.35, "beat_close": 0.2}, "bets": [{"away": "Atlanta Hawks", "home": "Indiana Pacers", "commence": "2026-11-03T00:40:00Z", "market": "spreads", "pick": "Atlanta Hawks", "point": -5.5, "price": -105, "book": "FanDuel", "stake": 5.0, "win_chance": 0.534934497816594, "ev": 0.044395924308588186, "fair_market": -6.25, "why": "FanDuel has Atlanta Hawks at -5.5 (-105); the sharp market makes it -6.2, so it covers 53.5% of the time it doesn't push.", "first_seen": "2026-11-02T03:29:24.667576+00:00", "first_point": -5.5, "first_price": -105, "last_seen": "2026-11-02T03:29:24.667576+00:00", "result": "loss", "profit": -5.0, "pulled": false, "on_board": false, "final": "108-104", "close_fair": -8.5, "clv_pts": 3.0, "clv_ev": 0.2565, "close_min": 93}, {"away": "Atlanta Hawks", "home": "Indiana Pacers", "commence": "2026-11-03T00:40:00Z", "market": "totals", "pick": "Over", "point": 232.5, "price": -115, "book": "FanDuel", "stake": 3.08, "win_chance": 0.5463609172482552, "ev": 0.02145736702934664, "fair_market": 235.0, "why": "FanDuel has the total at 232.5 (-115); the sharp market's fair total is 235.0, so the over wins 54.6% of the time it doesn't push.", "first_seen": "2026-11-02T03:29:24.667576+00:00", "first_point": 232.5, "first_price": -115, "last_seen": "2026-11-02T03:29:24.667576+00:00", "result": "loss", "profit": -3.08, "pulled": false, "on_board": false, "final": "108-104", "close_fair": 226.0, "clv_pts": -6.5, "clv_ev": -0.2867, "close_min": 93}, {"away": "New Orleans Pelicans", "home": "Memphis Grizzlies", "commence": "2026-11-03T01:10:00Z", "market": "spreads", "pick": "New Orleans Pelicans", "point": 6.5, "price": -110, "book": "DraftKings", "stake": 2.97, "win_chance": 0.5351288056206089, "ev": 0.02160953800298071, "fair_market": 5.75, "why": "DraftKings has New Orleans Pelicans at +6.5 (-110); the sharp market makes it +5.8, so it covers 53.5% of the time it doesn't push.", "first_seen": "2026-11-02T03:29:24.667576+00:00", "first_point": 6.5, "first_price": -110, "last_seen": "2026-11-02T03:42:20.301804+00:00", "result": "win", "profit": 2.7, "pulled": false, "on_board": false, "now_point": 6.5, "now_price": -110, "final": "135-134", "close_fair": 6.0, "clv_pts": 0.5, "clv_ev": -0.0019, "close_min": 123}, {"away": "Portland Trail Blazers", "home": "Denver Nuggets", "commence": "2026-11-03T02:10:00Z", "market": "totals", "pick": "Over", "point": 230.5, "price": -115, "book": "FanDuel", "stake": 5.0, "win_chance": 0.5537190082644629, "ev": 0.035213798059647916, "fair_market": 233.75, "why": "FanDuel has the total at 230.5 (-115); the sharp market's fair total is 233.8, so the over wins 55.4% of the time it doesn't push.", "out": "Ja Morant (Blazers, 21 min)", "watch": "", "first_seen": "2026-11-02T14:32:48.313029+00:00", "first_point": 230.5, "first_price": -115, "last_seen": "2026-11-02T14:32:48.313029+00:00", "result": "loss", "profit": -5.0, "pulled": false, "on_board": false, "final": "118-110", "close_fair": 233.0, "clv_pts": 2.5, "clv_ev": -0.0175, "close_min": 183}, {"away": "Utah Jazz", "home": "Minnesota Timberwolves", "commence": "2026-11-09T00:10:00Z", "market": "totals", "pick": "Over", "point": 223.5, "price": -107, "book": "DraftKings", "stake": 3.76, "win_chance": 0.5314327485380117, "ev": 0.02809886866699457, "fair_market": 224.25, "why": "DraftKings has the total at 223.5 (-107); the sharp market's fair total is 224.2, so the over wins 53.1% of the time it doesn't push.", "out": "", "watch": "Lauri Markkanen (Jazz, 27 min) day-to-day", "first_seen": "2026-11-08T13:36:07.194134+00:00", "first_point": 223.5, "first_price": -107, "last_seen": "2026-11-08T13:36:07.194134+00:00", "result": "loss", "profit": -3.76, "pulled": false, "on_board": false, "final": "100-115", "close_fair": 222.25, "clv_pts": -1.25, "clv_ev": -0.077, "close_min": 269}]}, "daily": {"summary": {"wins": 7, "losses": 8, "pushes": 0, "staked": 75.0, "profit": -7.73, "roi": -0.1031, "clv_n": 12, "avg_clv_ev": -0.0298, "avg_clv_pts": 0.27, "beat_close": 0.1667}, "stake": 5.0, "per_day": 3, "bets": [{"away": "New Orleans Pelicans", "home": "Golden State Warriors", "commence": "2026-11-10T03:10:00Z", "market": "spreads", "pick": "New Orleans Pelicans", "point": 12.5, "price": -120.0, "book": "FanDuel", "stake": 5.0, "win_chance": 0.555, "ev": 0.0175, "fair_market": 11.75, "lean": 0.65, "model_agrees": true, "day": "2026-11-09", "label": "New Orleans Pelicans +12.5 (-120)", "why": "Daily pick: one of today's best-priced lines that our model also likes (0.6 pts its way). The price is +1.7% against the sharp line.", "first_seen": "2026-11-09T22:22:39.109278+00:00", "first_point": 12.5, "first_price": -120.0, "result": "loss", "profit": -5.0, "pulled": false, "final": "87-138"}, {"away": "Cleveland Cavaliers", "home": "Charlotte Hornets", "commence": "2026-11-10T00:10:00Z", "market": "spreads", "pick": "Charlotte Hornets", "point": 8.5, "price": -104.0, "book": "DraftKings", "stake": 5.0, "win_chance": 0.5065, "ev": -0.0065, "fair_market": -8.0, "lean": 0.09, "model_agrees": true, "day": "2026-11-09", "label": "Charlotte Hornets +8.5 (-104)", "why": "Daily pick: one of today's best-priced lines that our model also likes (0.1 pts its way). The price is -0.6% against the sharp line.", "first_seen": "2026-11-09T22:22:39.109278+00:00", "first_point": 8.5, "first_price": -104.0, "result": "win", "profit": 4.81, "pulled": false, "final": "112-124"}, {"away": "Denver Nuggets", "home": "Houston Rockets", "commence": "2026-11-10T01:40:00Z", "market": "spreads", "pick": "Houston Rockets", "point": -4.5, "price": -105.0, "book": "DraftKings", "stake": 5.0, "win_chance": 0.508, "ev": -0.0081, "fair_market": 4.0, "lean": 0.11, "model_agrees": true, "day": "2026-11-09", "label": "Houston Rockets -4.5 (-105)", "why": "Daily pick: one of today's best-priced lines that our model also likes (0.1 pts its way). The price is -0.8% against the sharp line.", "first_seen": "2026-11-09T22:22:39.109278+00:00", "first_point": -4.5, "first_price": -105.0, "result": "win", "profit": 4.76, "pulled": false, "final": "100-110"}, {"away": "Los Angeles Clippers", "home": "Phoenix Suns", "commence": "2026-11-11T02:10:00Z", "market": "totals", "pick": "Under", "point": 224.5, "price": -110.0, "book": "FanDuel", "stake": 5.0, "win_chance": 0.518, "ev": -0.0111, "fair_market": 223.75, "lean": 6.24, "model_agrees": true, "day": "2026-11-10", "label": "Under 224.5 (-110)", "why": "Daily pick: one of today's best-priced lines that our model also likes (6.2 pts its way). The price is -1.1% against the sharp line.", "first_seen": "2026-11-10T20:30:44.003572+00:00", "first_point": 224.5, "first_price": -110.0, "result": "loss", "profit": -5.0, "pulled": false, "final": "110-133", "close_fair": 223.75, "clv_pts": 0.75, "clv_ev": -0.0112, "close_min": 47}, {"away": "Miami Heat", "home": "Utah Jazz", "commence": "2026-11-11T02:10:00Z", "market": "totals", "pick": "Over", "point": 227.5, "price": -108.0, "book": "DraftKings", "stake": 5.0, "win_chance": 0.5121, "ev": -0.0137, "fair_market": 226.5, "lean": 17.82, "model_agrees": true, "day": "2026-11-10", "label": "Over 227.5 (-108)", "why": "Daily pick: one of today's best-priced lines that our model also likes (17.8 pts its way). The price is -1.4% against the sharp line.", "first_seen": "2026-11-10T20:30:44.003572+00:00", "first_point": 227.5, "first_price": -108.0, "result": "loss", "profit": -5.0, "pulled": false, "final": "115-109", "close_fair": 226.0, "clv_pts": -1.5, "clv_ev": -0.0462, "close_min": 47}, {"away": "Orlando Magic", "home": "Sacramento Kings", "commence": "2026-11-11T03:10:00Z", "market": "spreads", "pick": "Sacramento Kings", "point": 6.5, "price": -106.0, "book": "FanDuel", "stake": 5.0, "win_chance": 0.5047, "ev": -0.0191, "fair_market": -6.25, "lean": 5.27, "model_agrees": true, "day": "2026-11-10", "label": "Sacramento Kings +6.5 (-106)", "why": "Daily pick: one of today's best-priced lines that our model also likes (5.3 pts its way). The price is -1.9% against the sharp line.", "first_seen": "2026-11-10T20:30:44.003572+00:00", "first_point": 6.5, "first_price": -106.0, "result": "loss", "profit": -5.0, "pulled": false, "final": "107-100", "close_fair": -5.25, "clv_pts": 1.25, "clv_ev": 0.0646, "close_min": 107}, {"away": "Oklahoma City Thunder", "home": "Portland Trail Blazers", "commence": "2026-11-12T03:10:00Z", "market": "totals", "pick": "Over", "point": 225.5, "price": -107.0, "book": "DraftKings", "stake": 5.0, "win_chance": 0.5063, "ev": -0.0206, "fair_market": 225.25, "lean": 1.37, "model_agrees": true, "day": "2026-11-11", "label": "Over 225.5 (-107)", "why": "Daily pick: one of today's best-priced lines that our model also likes (1.4 pts its way). The price is -2.1% against the sharp line.", "first_seen": "2026-11-11T20:16:32.931401+00:00", "first_point": 225.5, "first_price": -107.0, "result": "win", "profit": 4.67, "pulled": false, "final": "103-123", "close_fair": 224.0, "clv_pts": -1.5, "clv_ev": -0.0919, "close_min": 290}, {"away": "Washington Wizards", "home": "Indiana Pacers", "commence": "2026-11-12T00:10:00Z", "market": "spreads", "pick": "Washington Wizards", "point": 3.5, "price": -115.0, "book": "FanDuel", "stake": 5.0, "win_chance": 0.5306, "ev": -0.008, "fair_market": 2.5, "lean": -2.88, "model_agrees": false, "day": "2026-11-11", "label": "Washington Wizards +3.5 (-115)", "why": "Daily pick: one of today's best-priced lines (our model has no side priced near fair today). The price is -0.8% against the sharp line.", "first_seen": "2026-11-11T20:16:32.931401+00:00", "first_point": 3.5, "first_price": -115.0, "result": "loss", "profit": -5.0, "pulled": false, "close_fair": 2.75, "clv_pts": 0.75, "clv_ev": -0.047, "close_min": 110, "final": "101-114"}, {"away": "Brooklyn Nets", "home": "New Orleans Pelicans", "commence": "2026-11-12T01:10:00Z", "market": "totals", "pick": "Under", "point": 228.5, "price": -110.0, "book": "DraftKings", "stake": 5.0, "win_chance": 0.5154, "ev": -0.016, "fair_market": 226.25, "lean": -1.38, "model_agrees": false, "day": "2026-11-11", "label": "Under 228.5 (-110)", "why": "Daily pick: one of today's best-priced lines (our model has no side priced near fair today). The price is -1.6% against the sharp line.", "first_seen": "2026-11-11T20:16:32.931401+00:00", "first_point": 228.5, "first_price": -110.0, "result": "loss", "profit": -5.0, "pulled": false, "close_fair": 226.5, "clv_pts": 2.0, "clv_ev": -0.0332, "close_min": 170, "final": "145-111"}, {"away": "Detroit Pistons", "home": "Washington Wizards", "commence": "2026-11-13T00:10:00Z", "market": "totals", "pick": "Over", "point": 220.5, "price": -114.0, "book": "FanDuel", "stake": 5.0, "win_chance": 0.5218, "ev": -0.0205, "fair_market": 221.75, "lean": 2.05, "model_agrees": true, "day": "2026-11-12", "label": "Over 220.5 (-114)", "why": "Daily pick: one of today's best-priced lines that our model also likes (2.0 pts its way). The price is -2.1% against the sharp line.", "first_seen": "2026-11-12T20:58:14.406036+00:00", "first_point": 220.5, "first_price": -114.0, "result": "win", "profit": 4.39, "pulled": false, "close_fair": 222.5, "clv_pts": 2.0, "clv_ev": 0.0425, "close_min": 17, "final": "144-140"}, {"away": "Toronto Raptors", "home": "Philadelphia 76ers", "commence": "2026-11-13T00:10:00Z", "market": "spreads", "pick": "Toronto Raptors", "point": 7.5, "price": -114.0, "book": "FanDuel", "stake": 5.0, "win_chance": 0.521, "ev": -0.0219, "fair_market": 7.0, "lean": 5.0, "model_agrees": true, "day": "2026-11-12", "label": "Toronto Raptors +7.5 (-114)", "why": "Daily pick: one of today's best-priced lines that our model also likes (5.0 pts its way). The price is -2.2% against the sharp line.", "first_seen": "2026-11-12T20:58:14.406036+00:00", "first_point": 7.5, "first_price": -114.0, "result": "loss", "profit": -5.0, "pulled": false, "close_fair": 7.25, "clv_pts": 0.25, "clv_ev": -0.0417, "close_min": 17, "final": "112-123"}, {"away": "Dallas Mavericks", "home": "Minnesota Timberwolves", "commence": "2026-11-13T01:10:00Z", "market": "spreads", "pick": "Minnesota Timberwolves", "point": -5.5, "price": -112.0, "book": "FanDuel", "stake": 5.0, "win_chance": 0.5166, "ev": -0.0222, "fair_market": 6.0, "lean": 1.12, "model_agrees": true, "day": "2026-11-12", "label": "Minnesota Timberwolves -5.5 (-112)", "why": "Daily pick: one of today's best-priced lines that our model also likes (1.1 pts its way). The price is -2.2% against the sharp line.", "first_seen": "2026-11-12T20:58:14.406036+00:00", "first_point": -5.5, "first_price": -112.0, "result": "win", "profit": 4.46, "pulled": false, "close_fair": 5.75, "clv_pts": 0.25, "clv_ev": -0.0348, "close_min": 77, "final": "94-133"}, {"away": "Oklahoma City Thunder", "home": "Los Angeles Clippers", "commence": "2026-11-14T03:40:00Z", "market": "spreads", "pick": "Los Angeles Clippers", "point": 7.5, "price": -112.0, "book": "FanDuel", "stake": 5.0, "win_chance": 0.526, "ev": -0.0044, "fair_market": -6.75, "lean": 0.71, "model_agrees": true, "day": "2026-11-13", "label": "Los Angeles Clippers +7.5 (-112)", "why": "Daily pick: one of today's best-priced lines that our model also likes (0.7 pts its way). The price is -0.4% against the sharp line.", "first_seen": "2026-11-13T20:33:15.457277+00:00", "first_point": 7.5, "first_price": -112.0, "result": "win", "profit": 4.46, "pulled": false, "final": "112-113", "close_fair": -6.75, "clv_pts": 0.75, "clv_ev": -0.0023, "close_min": 110}, {"away": "Milwaukee Bucks", "home": "Orlando Magic", "commence": "2026-11-14T00:10:00Z", "market": "totals", "pick": "Under", "point": 223.5, "price": -106.0, "book": "FanDuel", "stake": 5.0, "win_chance": 0.5123, "ev": -0.0044, "fair_market": 222.75, "lean": 4.83, "model_agrees": true, "day": "2026-11-13", "label": "Under 223.5 (-106)", "why": "Daily pick: one of today's best-priced lines that our model also likes (4.8 pts its way). The price is -0.4% against the sharp line.", "first_seen": "2026-11-13T20:33:15.457277+00:00", "first_point": 223.5, "first_price": -106.0, "result": "win", "profit": 4.72, "pulled": false, "close_fair": 222.75, "clv_pts": 0.75, "clv_ev": -0.0044, "close_min": 16, "final": "99-107"}, {"away": "Golden State Warriors", "home": "San Antonio Spurs", "commence": "2026-11-14T02:40:00Z", "market": "totals", "pick": "Over", "point": 217.5, "price": -110.0, "book": "FanDuel", "stake": 5.0, "win_chance": 0.515, "ev": -0.0169, "fair_market": 217.75, "lean": 8.88, "model_agrees": true, "day": "2026-11-13", "label": "Over 217.5 (-110)", "why": "Daily pick: one of today's best-priced lines that our model also likes (8.9 pts its way). The price is -1.7% against the sharp line.", "first_seen": "2026-11-13T20:33:15.457277+00:00", "first_point": 217.5, "first_price": -110.0, "result": "loss", "profit": -5.0, "pulled": false, "final": "85-123", "close_fair": 215.0, "clv_pts": -2.5, "clv_ev": -0.1518, "close_min": 50}, {"away": "Dallas Mavericks", "home": "Cleveland Cavaliers", "commence": "2026-11-15T00:40:00Z", "market": "spreads", "pick": "Cleveland Cavaliers", "point": 4.5, "price": -106.0, "book": "FanDuel", "stake": 5.0, "win_chance": 0.5142, "ev": -0.0008, "fair_market": -4.0, "lean": 3.74, "model_agrees": true, "day": "2026-11-14", "label": "Cleveland Cavaliers +4.5 (-106)", "why": "Daily pick: one of today's best-priced lines that our model also likes (3.7 pts its way). The price is -0.1% against the sharp line.", "first_seen": "2026-11-14T18:47:00.699419+00:00", "first_point": 4.5, "first_price": -106.0, "result": null, "profit": null, "pulled": false}, {"away": "Denver Nuggets", "home": "New Orleans Pelicans", "commence": "2026-11-15T00:10:00Z", "market": "spreads", "pick": "New Orleans Pelicans", "point": 12.5, "price": -105.0, "book": "FanDuel", "stake": 5.0, "win_chance": 0.5166, "ev": 0.0087, "fair_market": -11.75, "lean": -3.25, "model_agrees": false, "day": "2026-11-14", "label": "New Orleans Pelicans +12.5 (-105)", "why": "Daily pick: one of today's best-priced lines (our model has no side priced near fair today). The price is +0.9% against the sharp line.", "first_seen": "2026-11-14T18:47:00.699419+00:00", "first_point": 12.5, "first_price": -105.0, "result": null, "profit": null, "pulled": false}, {"away": "Detroit Pistons", "home": "Miami Heat", "commence": "2026-11-15T01:10:00Z", "market": "spreads", "pick": "Detroit Pistons", "point": -3.5, "price": -115.0, "book": "DraftKings", "stake": 5.0, "win_chance": 0.5249, "ev": -0.0186, "fair_market": -4.0, "lean": -0.83, "model_agrees": false, "day": "2026-11-14", "label": "Detroit Pistons -3.5 (-115)", "why": "Daily pick: one of today's best-priced lines (our model has no side priced near fair today). The price is -1.9% against the sharp line.", "first_seen": "2026-11-14T18:47:00.699419+00:00", "first_point": -3.5, "first_price": -115.0, "result": null, "profit": null, "pulled": false}]}, "paper": {"summary": {"bets": 32, "wins": 18, "losses": 10, "pushes": 0, "win_rate": 0.6429, "avg_clv": 0.1, "beat_close": 0.5714}, "gap": 3.0, "bets": [{"v": 7, "key": "totals|Chicago Bulls|New York Knicks|2026-11-05", "market": "totals", "away": "Chicago Bulls", "home": "New York Knicks", "commence": "2026-11-05T00:40:00Z", "logged": "2026-11-04T23:16:42.227870+00:00", "side": "Over", "point": 234.5, "line": 234.5, "model": 236.5, "parts": {"market": 234.5, "ratings": 1.3, "rest": -0.1, "injuries": -0.1, "slate": 0.9}, "gap": 2.0, "close": 233.5, "clv": -1.0, "result": "win", "final": "105-135"}, {"v": 7, "key": "totals|Indiana Pacers|Memphis Grizzlies|2026-11-05", "market": "totals", "away": "Indiana Pacers", "home": "Memphis Grizzlies", "commence": "2026-11-05T01:10:00Z", "logged": "2026-11-04T23:16:42.227870+00:00", "side": "Under", "point": 227.0, "line": 227.0, "model": 225.0, "parts": {"market": 226.8, "ratings": -2.3, "rest": -0.1, "injuries": -0.3, "slate": 0.9}, "gap": -2.0, "close": 227.5, "clv": -0.5, "result": "win", "final": "107-103"}, {"v": 7, "key": "spreads|Orlando Magic|Phoenix Suns|2026-11-06", "market": "spreads", "away": "Orlando Magic", "home": "Phoenix Suns", "commence": "2026-11-06T02:10:00Z", "logged": "2026-11-05T22:42:08.392864+00:00", "side": "Orlando Magic", "point": 1.0, "line": 1.0, "model": 0.3, "parts": {"market": 1.0, "ratings": 0.0, "rest": -0.6, "injuries": -0.2, "slate": 0.0}, "gap": -0.7, "close": 1.5, "clv": -0.5, "result": "loss", "final": "104-117"}, {"v": 7, "key": "totals|Utah Jazz|Dallas Mavericks|2026-11-07", "market": "totals", "away": "Utah Jazz", "home": "Dallas Mavericks", "commence": "2026-11-07T01:10:00Z", "logged": "2026-11-06T22:09:54.280748+00:00", "side": "Under", "point": 225.0, "line": 225.0, "model": 222.7, "parts": {"market": 225.0, "ratings": -2.7, "rest": -0.1, "injuries": -0.5, "slate": 1.0}, "gap": -2.3, "close": 226.5, "clv": -1.5, "result": "win", "final": "100-112"}, {"v": 7, "key": "totals|San Antonio Spurs|Sacramento Kings|2026-11-07", "market": "totals", "away": "San Antonio Spurs", "home": "Sacramento Kings", "commence": "2026-11-07T03:10:00Z", "logged": "2026-11-07T02:46:16.047865+00:00", "side": "Over", "point": 232.5, "line": 232.5, "model": 234.6, "parts": {"market": 232.5, "ratings": 1.1, "rest": -0.1, "injuries": -0.2, "slate": 1.2}, "gap": 2.1, "close": 231.5, "clv": -1.0, "result": "win", "final": "124-109"}, {"v": 7, "key": "spreads|New York Knicks|Cleveland Cavaliers|2026-11-08", "market": "spreads", "away": "New York Knicks", "home": "Cleveland Cavaliers", "commence": "2026-11-08T01:10:00Z", "logged": "2026-11-07T02:46:16.047865+00:00", "side": "New York Knicks", "point": -4.0, "line": -4.0, "model": -4.7, "parts": {"market": -4.2, "ratings": 0.1, "rest": -0.6, "injuries": -0.1, "slate": 0.1}, "gap": -0.7, "close": -4.8, "clv": 0.8, "result": "win", "final": "109-97", "close_fair": -4.75, "clv_pts": 0.75, "clv_ev": 0.0186, "close_min": 344, "clv_src": "sharp"}, {"v": 7, "key": "spreads|Washington Wizards|Oklahoma City Thunder|2026-11-08", "market": "spreads", "away": "Washington Wizards", "home": "Oklahoma City Thunder", "commence": "2026-11-08T01:10:00Z", "logged": "2026-11-07T02:46:16.047865+00:00", "side": "Washington Wizards", "point": 12.0, "line": 12.0, "model": 11.0, "parts": {"market": 11.8, "ratings": 0.1, "rest": -0.6, "injuries": -0.2, "slate": 0.1}, "gap": -1.0, "close": 12.0, "clv": 0.0, "result": "loss", "final": "75-114", "close_fair": 12.0, "clv_pts": 0.0, "clv_ev": -0.0218, "close_min": 344, "clv_src": "sharp"}, {"v": 7, "key": "spreads|San Antonio Spurs|Portland Trail Blazers|2026-11-08", "market": "spreads", "away": "San Antonio Spurs", "home": "Portland Trail Blazers", "commence": "2026-11-08T03:00:00Z", "logged": "2026-11-07T20:54:40.961049+00:00", "side": "San Antonio Spurs", "point": -5.0, "line": -5.0, "model": -5.7, "parts": {"market": -5.2, "ratings": 0.2, "rest": -0.6, "injuries": 0.0, "slate": 0.1}, "gap": -0.7, "close": -5.5, "clv": 0.5, "result": "win", "final": "125-103", "close_fair": -5.5, "clv_pts": 0.5, "clv_ev": 0.0033, "close_min": 70, "clv_src": "sharp"}, {"v": 7, "key": "spreads|Los Angeles Lakers|Detroit Pistons|2026-11-08", "market": "spreads", "away": "Los Angeles Lakers", "home": "Detroit Pistons", "commence": "2026-11-08T23:10:00Z", "logged": "2026-11-07T20:54:40.961049+00:00", "side": "Detroit Pistons", "point": -1.0, "line": 1.0, "model": 1.6, "parts": {"market": 1.2, "ratings": 0.2, "rest": 0.1, "injuries": 0.0, "slate": 0.1}, "gap": 0.6, "close": 7.0, "clv": 6.0, "result": "loss", "final": "121-116", "close_fair": 7.0, "clv_pts": 6.0, "clv_ev": 0.3544, "close_min": 209, "clv_src": "sharp"}, {"v": 7, "key": "totals|Utah Jazz|Minnesota Timberwolves|2026-11-09", "market": "totals", "away": "Utah Jazz", "home": "Minnesota Timberwolves", "commence": "2026-11-09T00:10:00Z", "logged": "2026-11-08T02:25:39.204225+00:00", "side": "Under", "point": 223.0, "line": 223.0, "model": 220.6, "parts": {"market": 222.8, "ratings": -2.5, "rest": -0.1, "injuries": -0.9, "slate": 1.2}, "gap": -2.4, "close": 222.2, "clv": 0.8, "result": "win", "final": "100-115", "close_fair": 222.25, "clv_pts": 0.75, "clv_ev": -0.0255, "close_min": 269, "clv_src": "sharp"}, {"v": 7, "key": "totals|Los Angeles Lakers|Detroit Pistons|2026-11-08", "market": "totals", "away": "Los Angeles Lakers", "home": "Detroit Pistons", "commence": "2026-11-08T23:10:00Z", "logged": "2026-11-08T21:13:30.132538+00:00", "side": "Under", "point": 217.0, "line": 217.0, "model": 213.9, "parts": {"market": 216.8, "ratings": -2.6, "rest": -0.0, "injuries": -2.5, "slate": 2.3}, "gap": -3.1, "close": 216.5, "clv": 0.5, "result": "loss", "final": "121-116"}, {"v": 7, "key": "totals|Denver Nuggets|Houston Rockets|2026-11-10", "market": "totals", "away": "Denver Nuggets", "home": "Houston Rockets", "commence": "2026-11-10T01:40:00Z", "logged": "2026-11-09T02:39:06.224829+00:00", "side": "Under", "point": 217.0, "line": 217.0, "model": 213.3, "parts": {"market": 217.0, "ratings": -3.2, "rest": -0.0, "injuries": -0.5}, "gap": -3.7, "close": 224.5, "clv": -7.5, "result": "win", "final": "100-110", "clv_src": "espn"}, {"v": 7, "key": "spreads|Indiana Pacers|Dallas Mavericks|2026-11-10", "market": "spreads", "away": "Indiana Pacers", "home": "Dallas Mavericks", "commence": "2026-11-10T01:10:00Z", "logged": "2026-11-09T21:58:03.971714+00:00", "side": "Indiana Pacers", "point": 4.0, "line": 4.0, "model": 3.4, "parts": {"market": 3.8, "ratings": 0.3, "rest": -0.6, "injuries": -0.1, "slate": -0.0}, "gap": -0.6, "close": 4.5, "clv": -0.5, "result": "win", "final": "122-125", "clv_src": "espn"}, {"v": 7, "key": "spreads|New Orleans Pelicans|Golden State Warriors|2026-11-10", "market": "spreads", "away": "New Orleans Pelicans", "home": "Golden State Warriors", "commence": "2026-11-10T03:10:00Z", "logged": "2026-11-09T21:58:03.971714+00:00", "side": "New Orleans Pelicans", "point": 12.0, "line": 12.0, "model": 11.1, "parts": {"market": 11.8, "ratings": -0.4, "rest": 0.0, "injuries": -0.3, "slate": -0.0}, "gap": -0.9, "close": 10.5, "clv": 1.5, "result": "loss", "final": "87-138", "clv_src": "espn"}, {"v": 7, "key": "totals|New Orleans Pelicans|Golden State Warriors|2026-11-10", "market": "totals", "away": "New Orleans Pelicans", "home": "Golden State Warriors", "commence": "2026-11-10T03:10:00Z", "logged": "2026-11-09T21:58:03.971714+00:00", "side": "Under", "point": 227.0, "line": 227.0, "model": 224.3, "parts": {"market": 226.8, "ratings": -3.7, "rest": 0.1, "injuries": 0.0, "slate": 1.2}, "gap": -2.7, "close": 228.5, "clv": -1.5, "result": "win", "final": "87-138", "clv_src": "espn"}, {"v": 7, "key": "spreads|Miami Heat|Utah Jazz|2026-11-11", "market": "spreads", "away": "Miami Heat", "home": "Utah Jazz", "commence": "2026-11-11T02:10:00Z", "logged": "2026-11-10T03:51:28.657180+00:00", "side": "Utah Jazz", "point": 9.0, "line": -9.0, "model": -8.4, "parts": {"market": -8.8, "ratings": 0.3, "rest": 0.1, "injuries": -0.0}, "gap": 0.6, "close": -8.2, "clv": 0.8, "result": "win", "final": "115-109", "clv_src": "sharp", "close_fair": -8.25, "clv_pts": 0.75, "clv_ev": -0.022, "close_min": 47}, {"v": 7, "key": "totals|Miami Heat|Utah Jazz|2026-11-11", "market": "totals", "away": "Miami Heat", "home": "Utah Jazz", "commence": "2026-11-11T02:10:00Z", "logged": "2026-11-10T03:51:28.657180+00:00", "side": "Under", "point": 226.5, "line": 226.5, "model": 220.7, "parts": {"market": 226.5, "ratings": -4.0, "rest": -0.0, "injuries": -1.7}, "gap": -5.8, "close": 226.0, "clv": 0.5, "result": "win", "final": "115-109", "clv_src": "sharp", "close_fair": 226.0, "clv_pts": 0.5, "clv_ev": -0.0762, "close_min": 47}, {"v": 7, "key": "totals|Orlando Magic|Sacramento Kings|2026-11-11", "market": "totals", "away": "Orlando Magic", "home": "Sacramento Kings", "commence": "2026-11-11T03:10:00Z", "logged": "2026-11-10T03:51:28.657180+00:00", "side": "Under", "point": 222.0, "line": 222.0, "model": 219.4, "parts": {"market": 222.0, "ratings": -1.7, "rest": -0.0, "injuries": -0.9}, "gap": -2.6, "close": 222.0, "clv": 0.0, "result": "win", "final": "107-100", "clv_src": "sharp", "close_fair": 222.0, "clv_pts": 0.0, "clv_ev": -0.0541, "close_min": 107}, {"v": 7, "key": "spreads|Los Angeles Clippers|Phoenix Suns|2026-11-11", "market": "spreads", "away": "Los Angeles Clippers", "home": "Phoenix Suns", "commence": "2026-11-11T02:10:00Z", "logged": "2026-11-10T20:30:44.003572+00:00", "side": "Los Angeles Clippers", "point": 4.0, "line": 4.0, "model": 3.0, "parts": {"market": 3.8, "ratings": -0.2, "rest": -0.6, "injuries": 0.0, "slate": -0.0}, "gap": -1.0, "close": 3.5, "clv": 0.5, "result": "loss", "final": "110-133", "clv_src": "sharp", "close_fair": 3.5, "clv_pts": 0.5, "clv_ev": -0.0291, "close_min": 47}, {"v": 7, "key": "spreads|Cleveland Cavaliers|New York Knicks|2026-11-12", "market": "spreads", "away": "Cleveland Cavaliers", "home": "New York Knicks", "commence": "2026-11-12T00:10:00Z", "logged": "2026-11-11T20:16:32.931401+00:00", "side": "Cleveland Cavaliers", "point": 4.0, "line": 4.0, "model": 3.3, "parts": {"market": 3.8, "ratings": 0.1, "rest": -0.5, "injuries": 0.1, "slate": -0.1}, "gap": -0.7, "close": 3.8, "clv": 0.2, "result": "win", "final": "115-107", "close_fair": 3.75, "clv_pts": 0.25, "clv_ev": -0.0474, "close_min": 110, "clv_src": "sharp"}, {"v": 7, "key": "spreads|Los Angeles Lakers|Milwaukee Bucks|2026-11-12", "market": "spreads", "away": "Los Angeles Lakers", "home": "Milwaukee Bucks", "commence": "2026-11-12T01:10:00Z", "logged": "2026-11-11T20:16:32.931401+00:00", "side": "Los Angeles Lakers", "point": -14.0, "line": -14.0, "model": -14.6, "parts": {"market": -14.0, "ratings": 0.1, "rest": -0.5, "injuries": -0.0, "slate": -0.1}, "gap": -0.6, "close": -14.0, "clv": 0.0, "result": "loss", "final": "123-112", "close_fair": -14.0, "clv_pts": 0.0, "clv_ev": -0.0119, "close_min": 170, "clv_src": "sharp"}, {"v": 7, "key": "totals|Orlando Magic|Utah Jazz|2026-11-12", "market": "totals", "away": "Orlando Magic", "home": "Utah Jazz", "commence": "2026-11-12T02:10:00Z", "logged": "2026-11-11T20:16:32.931401+00:00", "side": "Under", "point": 214.5, "line": 214.5, "model": 212.2, "parts": {"market": 214.5, "ratings": -3.8, "rest": 0.2, "injuries": -0.4, "slate": 1.7}, "gap": -2.3, "close": 214.2, "clv": 0.2, "result": "loss", "final": "123-108", "close_fair": 214.25, "clv_pts": 0.25, "clv_ev": -0.0455, "close_min": 230, "clv_src": "sharp"}, {"v": 7, "key": "totals|Golden State Warriors|Houston Rockets|2026-11-12", "market": "totals", "away": "Golden State Warriors", "home": "Houston Rockets", "commence": "2026-11-12T02:40:00Z", "logged": "2026-11-12T01:36:02.559667+00:00", "side": "Under", "point": 220.0, "line": 220.0, "model": 217.9, "parts": {"market": 220.0, "ratings": -1.0, "rest": -0.0, "injuries": -1.0}, "gap": -2.1, "close": 219.5, "clv": 0.5, "result": "loss", "final": "108-115", "clv_src": "espn"}, {"v": 7, "key": "spreads|Detroit Pistons|Washington Wizards|2026-11-13", "market": "spreads", "away": "Detroit Pistons", "home": "Washington Wizards", "commence": "2026-11-13T00:10:00Z", "logged": "2026-11-12T02:32:49.287678+00:00", "side": "Detroit Pistons", "point": -9.0, "line": -9.0, "model": -9.7, "parts": {"market": -9.0, "ratings": -0.1, "rest": -0.6, "injuries": 0.0}, "gap": -0.7, "close": -9.2, "clv": 0.2, "result": "loss", "final": "144-140", "close_fair": -9.25, "clv_pts": 0.25, "clv_ev": 0.0334, "close_min": 17, "clv_src": "sharp"}, {"v": 7, "key": "spreads|Toronto Raptors|Philadelphia 76ers|2026-11-13", "market": "spreads", "away": "Toronto Raptors", "home": "Philadelphia 76ers", "commence": "2026-11-13T00:10:00Z", "logged": "2026-11-12T20:58:14.406036+00:00", "side": "Philadelphia 76ers", "point": -7.0, "line": 7.0, "model": 7.6, "parts": {"market": 7.0, "ratings": -0.2, "rest": 0.6, "injuries": 0.2}, "gap": 0.6, "close": 7.2, "clv": 0.2, "result": "win", "final": "112-123", "close_fair": 7.25, "clv_pts": 0.25, "clv_ev": -0.0299, "close_min": 17, "clv_src": "sharp"}, {"v": 7, "key": "spreads|Milwaukee Bucks|Orlando Magic|2026-11-14", "market": "spreads", "away": "Milwaukee Bucks", "home": "Orlando Magic", "commence": "2026-11-14T00:10:00Z", "logged": "2026-11-12T22:20:39.455485+00:00", "side": "Milwaukee Bucks", "point": 10.0, "line": 10.0, "model": 9.4, "parts": {"market": 9.8, "ratings": -0.0, "rest": 0.1, "injuries": -0.2, "slate": -0.2}, "gap": -0.6, "close": 10.5, "clv": -0.5, "result": "win", "final": "99-107", "close_fair": 10.5, "clv_pts": -0.5, "clv_ev": -0.0157, "close_min": 16, "clv_src": "sharp"}, {"v": 7, "key": "totals|Golden State Warriors|San Antonio Spurs|2026-11-14", "market": "totals", "away": "Golden State Warriors", "home": "San Antonio Spurs", "commence": "2026-11-14T02:40:00Z", "logged": "2026-11-13T00:35:05.586151+00:00", "side": "Under", "point": 219.0, "line": 219.0, "model": 216.9, "parts": {"market": 219.2, "ratings": -2.9, "rest": -0.1, "injuries": -1.0, "slate": 1.6}, "gap": -2.1, "close": 215.0, "clv": 4.0, "result": "win", "final": "85-123", "clv_src": "sharp", "close_fair": 215.0, "clv_pts": 4.0, "clv_ev": 0.1242, "close_min": 50}, {"v": 7, "key": "spreads|Oklahoma City Thunder|Los Angeles Clippers|2026-11-14", "market": "spreads", "away": "Oklahoma City Thunder", "home": "Los Angeles Clippers", "commence": "2026-11-14T03:40:00Z", "logged": "2026-11-13T22:03:01.279072+00:00", "side": "Los Angeles Clippers", "point": 7.0, "line": -7.0, "model": -6.5, "parts": {"market": -6.8, "ratings": -0.0, "rest": 0.2, "injuries": 0.0, "slate": 0.1}, "gap": 0.5, "close": -6.8, "clv": 0.2, "result": "win", "final": "112-113", "clv_src": "sharp", "close_fair": -6.75, "clv_pts": 0.25, "clv_ev": -0.0367, "close_min": 110}, {"v": 7, "key": "totals|Dallas Mavericks|Cleveland Cavaliers|2026-11-15", "market": "totals", "away": "Dallas Mavericks", "home": "Cleveland Cavaliers", "commence": "2026-11-15T00:40:00Z", "logged": "2026-11-14T18:47:00.699419+00:00", "side": "Under", "point": 226.5, "line": 226.5, "model": 223.8, "parts": {"market": 226.5, "ratings": -2.4, "rest": 0.1, "injuries": -0.4}, "gap": -2.7, "close": null, "clv": null, "result": null, "final": null}, {"v": 7, "key": "spreads|Brooklyn Nets|Memphis Grizzlies|2026-11-15", "market": "spreads", "away": "Brooklyn Nets", "home": "Memphis Grizzlies", "commence": "2026-11-15T01:10:00Z", "logged": "2026-11-14T18:47:00.699419+00:00", "side": "Brooklyn Nets", "point": 2.0, "line": 2.0, "model": 1.4, "parts": {"market": 2.0, "ratings": 0.0, "rest": -0.6, "injuries": 0.0}, "gap": -0.6, "close": null, "clv": null, "result": null, "final": null}, {"v": 7, "key": "spreads|Chicago Bulls|Minnesota Timberwolves|2026-11-15", "market": "spreads", "away": "Chicago Bulls", "home": "Minnesota Timberwolves", "commence": "2026-11-15T01:10:00Z", "logged": "2026-11-14T18:47:00.699419+00:00", "side": "Minnesota Timberwolves", "point": -15.0, "line": 15.0, "model": 16.1, "parts": {"market": 15.2, "ratings": 0.0, "rest": 0.6, "injuries": 0.2}, "gap": 1.1, "close": null, "clv": null, "result": null, "final": null}, {"v": 7, "key": "totals|Detroit Pistons|Miami Heat|2026-11-15", "market": "totals", "away": "Detroit Pistons", "home": "Miami Heat", "commence": "2026-11-15T01:10:00Z", "logged": "2026-11-14T18:47:00.699419+00:00", "side": "Under", "point": 227.5, "line": 227.5, "model": 224.6, "parts": {"market": 227.5, "ratings": -2.0, "rest": 0.1, "injuries": -1.0}, "gap": -2.9, "close": null, "clv": null, "result": null, "final": null}]}}</script>
+<script>
+(function () {
+  const D = JSON.parse(document.getElementById("data").textContent);
+  const $ = (id) => document.getElementById(id);
+  const el = (tag, cls, text) => {
+    const n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  };
+  const money = (x) => (x < 0 ? "-$" : "$") + Math.abs(x).toLocaleString(undefined,
+    {minimumFractionDigits: 2, maximumFractionDigits: 2});
+  const signed = (x) => (x > 0 ? "+" : "") + money(x);
+  const pct = (x, d = 1) => (x * 100).toFixed(d) + "%";
+  const odds = (p) => (p > 0 ? "+" : "") + Math.round(p);
+  const ET = {timeZone: "America/New_York"};
+  const kick = (s) => new Date(s).toLocaleString("en-US",
+    {...ET, weekday: "short", hour: "numeric", minute: "2-digit"}) + " ET";
+  const dayOf = (s) => new Date(s).toLocaleDateString("en-US",
+    {...ET, weekday: "long", month: "short", day: "numeric"});
+  const short = (team) => team.split(" ").slice(-1)[0];
+  const label = (b) => {
+    if (b.market === "totals") return `${b.pick} ${b.point}`;
+    if (b.market === "h2h") return `${b.pick} to win`;
+    const pt = b.point > 0 ? "+" + b.point : String(b.point);
+    return `${b.pick} ${pt}`;
+  };
+  const kpi = (box, value, name, cls) => {
+    const k = el("div", "kpi");
+    const v = el("b", cls || "", value);
+    k.append(v, el("small", "", name));
+    box.append(k);
+  };
+
+  $("updated").textContent = `Updated ${D.updated} · $${D.bankroll.toLocaleString()} bankroll`;
+
+  // ---- this slate
+  const picks = D.picks;
+  const slate = $("slate-kpis");
+  const stake = picks.reduce((s, b) => s + b.stake, 0);
+  kpi(slate, String(picks.length), picks.length === 1 ? "bet" : "bets");
+  kpi(slate, money(stake), "total stake");
+  kpi(slate, picks.length ? pct(picks.reduce((s, b) => s + b.win_chance, 0) / picks.length) : "—",
+      "average win chance");
+  kpi(slate, picks.length ? signed(picks.reduce((s, b) => s + b.stake * b.ev, 0)) : "—",
+      "expected profit");
+
+  const markets = {all: "All", totals: "Totals", spreads: "Spreads", h2h: "Underdogs"};
+  const present = new Set(picks.map((b) => b.market));
+  let filter = "all";
+  const bar = $("filters");
+  Object.entries(markets).forEach(([key, name]) => {
+    if (key !== "all" && !present.has(key)) return;
+    const c = el("button", "chip", name);
+    c.type = "button";
+    c.setAttribute("aria-pressed", String(key === filter));
+    c.addEventListener("click", () => {
+      filter = key;
+      bar.querySelectorAll(".chip").forEach((x) => x.setAttribute("aria-pressed", String(x === c)));
+      drawBets();
+    });
+    bar.append(c);
+  });
+  if (present.size < 2) bar.hidden = true;
+
+  function drawBets() {
+    const box = $("bets");
+    box.replaceChildren();
+    const shown = picks.filter((b) => filter === "all" || b.market === filter)
+      .sort((a, b) => a.commence.localeCompare(b.commence) || b.ev - a.ev);
+    if (!shown.length) {
+      box.append(el("div", "empty", "No regular bets right now. Nothing beats the sharp market by " +
+        "enough, which is the usual answer. The daily picks are below."));
+      return;
+    }
+    let day = null, grid = null;
+    shown.forEach((b) => {
+      const d = dayOf(b.commence);
+      if (d !== day) {
+        day = d;
+        box.append(el("div", "day", d));
+        grid = el("div", "cards");
+        box.append(grid);
+      }
+      const c = el("article", "card");
+      const top = el("div", "top");
+      const t = el("div");
+      t.append(el("div", "bet", `${label(b)} (${odds(b.price)})`),
+               el("div", "game", `${short(b.away)} @ ${short(b.home)} · ${kick(b.commence)}`));
+      top.append(t, el("span", "pill", b.book));
+      const nums = el("div", "nums");
+      [[money(b.stake), "stake"], [pct(b.win_chance), "win chance"], [pct(b.ev), "edge"]]
+        .forEach(([v, n]) => {
+          const s = el("span");
+          s.append(el("b", "", v), document.createTextNode(n));
+          nums.append(s);
+        });
+      const m = el("div", "meter");
+      const fill = el("i");
+      fill.style.width = pct(b.win_chance);
+      m.append(fill);
+      c.append(top, nums, m, el("p", "why", b.why));
+      if (b.watch) c.append(el("p", "inj watch", "⚠️ Wait for news: " + b.watch));
+      if (b.out) c.append(el("p", "inj", "Out (priced in): " + b.out));
+      grid.append(c);
+    });
+  }
+  drawBets();
+
+  // ---- track record
+  const H = D.history.bets.filter((b) => !b.pulled);
+  const pulled = D.history.bets.filter((b) => b.pulled);
+  const S = D.history.summary;
+  const rec = $("record-kpis");
+  const graded = H.filter((b) => b.result).sort((a, b) => a.commence.localeCompare(b.commence));
+  kpi(rec, `${S.wins}-${S.losses}${S.pushes ? "-" + S.pushes : ""}`, "record (W-L-P)");
+  kpi(rec, graded.length ? signed(S.profit) : "—", "profit",
+      graded.length ? (S.profit >= 0 ? "win" : "loss") : "");
+  kpi(rec, S.roi == null ? "—" : (S.roi > 0 ? "+" : "") + pct(S.roi), "return on stakes");
+  kpi(rec, String(H.filter((b) => !b.result).length), "bets waiting on a result");
+  kpi(rec, S.clv_n ? pct(S.beat_close, 0) : "—",
+      S.clv_n ? `beat the sharp close (${S.clv_n} bets)` : "beat the sharp close",
+      S.clv_n ? (S.beat_close > 0.5 ? "win" : "loss") : "");
+  kpi(rec, S.avg_clv_ev == null ? "—" : (S.avg_clv_ev > 0 ? "+" : "") + pct(S.avg_clv_ev),
+      "average EV at the close", S.avg_clv_ev == null ? "" : (S.avg_clv_ev > 0 ? "win" : "loss"));
+
+  const chart = $("chart");
+  function drawChart() {
+    chart.querySelectorAll("svg,.empty").forEach((n) => n.remove());
+    if (graded.length < 2) {
+      chart.append(el("div", "empty", graded.length
+        ? "The profit chart starts after the second graded bet."
+        : "Bets are graded automatically once final scores are posted."));
+      return;
+    }
+    let run = 0;
+    const pts = [{i: 0, y: 0}].concat(graded.map((b, i) => ({i: i + 1, y: (run += b.profit), b})));
+    const W = Math.max(300, chart.clientWidth - 24), Hh = 200, P = {l: 52, r: 10, t: 10, b: 22};
+    const ys = pts.map((p) => p.y), lo = Math.min(0, ...ys), hi = Math.max(0, ...ys);
+    const pad = (hi - lo) * 0.1 || 10;
+    const x = (i) => P.l + (i / (pts.length - 1)) * (W - P.l - P.r);
+    const y = (v) => P.t + (1 - (v - (lo - pad)) / (hi - lo + 2 * pad)) * (Hh - P.t - P.b);
+    const NS = "http://www.w3.org/2000/svg";
+    const svg = document.createElementNS(NS, "svg");
+    svg.setAttribute("viewBox", `0 0 ${W} ${Hh}`);
+    svg.setAttribute("width", "100%");
+    svg.setAttribute("role", "img");
+    svg.setAttribute("aria-label", "Cumulative profit by bet");
+    const add = (tag, attrs) => {
+      const n = document.createElementNS(NS, tag);
+      Object.entries(attrs).forEach(([k, v]) => n.setAttribute(k, v));
+      svg.append(n);
+      return n;
+    };
+    const cs = getComputedStyle(document.documentElement);
+    const col = (v) => cs.getPropertyValue(v).trim();
+    [lo - pad, 0, hi + pad].forEach((v) => {
+      add("line", {x1: P.l, x2: W - P.r, y1: y(v), y2: y(v), stroke: col("--line")});
+      add("text", {x: P.l - 6, y: y(v) + 4, "text-anchor": "end", "font-size": 11,
+                   fill: col("--mute")}).textContent = money(Math.round(v));
+    });
+    add("text", {x: W - P.r, y: Hh - 4, "text-anchor": "end", "font-size": 11,
+                 fill: col("--mute")}).textContent = `${graded.length} graded bets`;
+    const last = pts[pts.length - 1].y;
+    add("path", {d: pts.map((p, k) => `${k ? "L" : "M"}${x(p.i)},${y(p.y)}`).join(""),
+                 fill: "none", stroke: col(last >= 0 ? "--ok" : "--bad"), "stroke-width": 2.5,
+                 "stroke-linejoin": "round"});
+    const dot = add("circle", {r: 4, fill: col("--acc"), visibility: "hidden"});
+    const tip = $("tip");
+    svg.addEventListener("pointermove", (e) => {
+      const r = svg.getBoundingClientRect();
+      const i = Math.round(((e.clientX - r.left) * (W / r.width) - P.l) / (W - P.l - P.r) * (pts.length - 1));
+      const p = pts[Math.max(1, Math.min(pts.length - 1, i))];
+      dot.setAttribute("cx", x(p.i)); dot.setAttribute("cy", y(p.y));
+      dot.setAttribute("visibility", "visible");
+      tip.textContent = `${label(p.b)} · ${p.b.result} ${signed(p.b.profit)} · total ${signed(p.y)}`;
+      tip.style.display = "block";
+      const left = (x(p.i) / W) * r.width + 12;
+      tip.style.left = Math.min(left, chart.clientWidth - tip.offsetWidth - 8) + "px";
+      tip.style.top = (y(p.y) / Hh) * r.height - 10 + "px";
+    });
+    svg.addEventListener("pointerleave", () => {
+      tip.style.display = "none";
+      dot.setAttribute("visibility", "hidden");
+    });
+    chart.append(svg);
+  }
+  drawChart();
+  let wait;
+  window.addEventListener("resize", () => { clearTimeout(wait); wait = setTimeout(drawChart, 150); });
+
+  const table = (id, heads, rows) => {
+    const t = $(id);
+    const hr = el("tr");
+    heads.forEach(([h, r]) => hr.append(el("th", r ? "r" : "", h)));
+    t.append(hr);
+    rows.forEach((cells) => {
+      const tr = el("tr");
+      cells.forEach(([v, cls]) => tr.append(el("td", cls || "", v)));
+      t.append(tr);
+    });
+  };
+  const past = H.concat(pulled).sort((a, b) => b.commence.localeCompare(a.commence));
+  if (past.length) {
+    table("history", [["Date"], ["Game"], ["Bet"], ["Book"], ["Stake", 1], ["Win %", 1],
+                      ["Final"], ["Result"], ["Profit", 1]],
+      past.map((b) => [
+        [new Date(b.commence).toLocaleDateString("en-US", {...ET, month: "short", day: "numeric"})],
+        [`${short(b.away)} @ ${short(b.home)}`],
+        [`${label(b)} (${odds(b.price)})`], [b.book],
+        [money(b.stake), "r"], [pct(b.win_chance, 0), "r"],
+        [b.final || ""],
+        b.pulled ? ["pulled (line moved)", "open"]
+          : !b.result && b.on_board === false ? ["open (off the board, still counts)", "open"]
+          : [b.result || "open", b.result || "open"],
+        [b.profit == null ? "" : signed(b.profit), "r " + (b.result || "")],
+      ]));
+  } else {
+    $("history").closest(".tablewrap").hidden = true;
+  }
+
+  // ---- daily pick: one flat small bet a day, its own record
+  const DP = D.daily || {bets: [], summary: {}, stake: 0};
+  const DS = DP.summary;
+  $("daily-sub").textContent = `Up to ${DP.per_day} flat $${DP.stake} bets every day with games, one per game: the best-priced ` +
+    "DraftKings or FanDuel lines that our model also likes. It is close to a fair bet on price; " +
+    "whether the model's lean adds anything is what this record tests. Kept apart from the " +
+    "regular record, and sized up only if it beats the sharp close." +
+    (DP.bets.length ? "" : " The first ones go out at the first run within 8 hours of tip.");
+  if (!DP.bets.length) {
+    $("daily-kpis").hidden = true;
+    $("daily").closest(".tablewrap").hidden = true;
+  } else {
+    const dk = $("daily-kpis");
+    const dg = DP.bets.filter((b) => b.result).length;
+    kpi(dk, `${DS.wins}-${DS.losses}${DS.pushes ? "-" + DS.pushes : ""}`, "record (W-L-P)");
+    kpi(dk, dg ? signed(DS.profit) : "—", "profit", dg ? (DS.profit >= 0 ? "win" : "loss") : "");
+    kpi(dk, DS.clv_n ? pct(DS.beat_close, 0) : "—",
+        DS.clv_n ? `beat the sharp close (${DS.clv_n})` : "beat the sharp close",
+        DS.clv_n ? (DS.beat_close > 0.5 ? "win" : "loss") : "");
+    kpi(dk, DS.avg_clv_ev == null ? "—" : (DS.avg_clv_ev > 0 ? "+" : "") + pct(DS.avg_clv_ev),
+        "average EV at the close", DS.avg_clv_ev == null ? "" : (DS.avg_clv_ev > 0 ? "win" : "loss"));
+    table("daily", [["Date"], ["Game"], ["Pick"], ["Book"], ["Stake", 1], ["Price vs sharp", 1],
+                    ["Model lean", 1], ["Final"], ["Result"], ["Profit", 1]],
+      DP.bets.slice().sort((a, b) => b.commence.localeCompare(a.commence)).map((b) => [
+        [new Date(b.commence).toLocaleDateString("en-US", {...ET, month: "short", day: "numeric"})],
+        [`${short(b.away)} @ ${short(b.home)}`],
+        [`${label(b)} (${odds(b.price)})`], [b.book],
+        [money(b.stake), "r"], [(b.ev > 0 ? "+" : "") + pct(b.ev), "r"],
+        [b.lean == null ? "—" : (b.lean > 0 ? "+" : "") + b.lean.toFixed(1) + " pts", "r"],
+        [b.final || ""], [b.result || "open", b.result || "open"],
+        [b.profit == null ? "" : signed(b.profit), "r " + (b.result || "")],
+      ]));
+  }
+
+  // ---- no-money model test
+  // Our line minus the market's, by input, in the bet side's favour.
+  const whyBet = (b) => {
+    const p = b.parts;
+    if (!p) return "";
+    const sign = b.side === b.home || b.side === "Over" ? 1 : -1;
+    const fmt = (v) => (v > 0 ? "+" : "") + v.toFixed(1);
+    const bits = [];
+    if (p.market != null) bits.push(["market adj.", sign * (p.market - b.line)]);
+    for (const k of ["ratings", "rest", "injuries", "slate"])
+      if (p[k] != null) bits.push([k === "ratings" ? "team form" : k === "slate" ? "night's lean removed" : k, sign * p[k]]);
+    return bits.filter(([, v]) => Math.abs(v) >= 0.1)
+      .map(([k, v]) => `${k} ${fmt(v)}`).join(", ");
+  };
+  const P = D.paper;
+  const Q = P.summary;
+  $("paper-sub").textContent = "Our own line starts from the sharp line and adjusts it for what history says " +
+    "the market under-weights: team ratings from results, rest and back-to-backs, and tonight's injury report " +
+    "weighted by each missing player's minutes and impact. When it moves the spread half a point or more or the total 2+, " +
+    "a test bet is logged on its side. " +
+    "Not staked: it earns real bets only if it beats the closing line over a few hundred games." +
+    (P.bets.length ? "" : " None logged yet.");
+  if (!P.bets.length) {
+    $("paper-kpis").hidden = true;
+    $("paper").closest(".tablewrap").hidden = true;
+  } else {
+    const pk = $("paper-kpis");
+    kpi(pk, String(Q.bets), "test bets logged");
+    kpi(pk, Q.wins + Q.losses ? `${Q.wins}-${Q.losses}${Q.pushes ? "-" + Q.pushes : ""}` : "—",
+        "record");
+    kpi(pk, Q.avg_clv == null ? "—" : (Q.avg_clv > 0 ? "+" : "") + Q.avg_clv.toFixed(2) + " pts",
+        "average line move our way", Q.avg_clv == null ? "" : (Q.avg_clv > 0 ? "win" : "loss"));
+    kpi(pk, Q.beat_close == null ? "—" : pct(Q.beat_close, 0), "beat the closing line");
+    const sp = (x) => (x > 0 ? "+" : "") + x;
+    table("paper", [["Date"], ["Game"], ["Test bet"], ["Market"], ["Model"], ["Gap", 1],
+                    ["Close", 1], ["Moved", 1], ["Final"], ["Result"], ["Why"]],
+      P.bets.slice().sort((a, b) => b.commence.localeCompare(a.commence)).map((b) => {
+        const spread = b.market === "spreads";
+        const fmt = (v) => spread ? (v >= 0 ? `${short(b.home)} by ${Math.abs(v)}`
+                                            : `${short(b.away)} by ${Math.abs(v)}`) : String(v);
+        return [
+          [new Date(b.commence).toLocaleDateString("en-US", {...ET, month: "short", day: "numeric"})],
+          [`${short(b.away)} @ ${short(b.home)}`],
+          [spread ? `${short(b.side)} ${sp(b.point)}` : `${b.side} ${b.point}`],
+          [fmt(b.line)], [fmt(b.model)],
+          [Math.abs(b.gap).toFixed(1), "r"],
+          [b.close == null ? "" : String(b.close), "r"],
+          [b.clv == null ? "" : sp(b.clv), "r " + (b.clv > 0 ? "win" : b.clv < 0 ? "loss" : "")],
+          [b.final || ""], [b.result || "open", b.result || "open"],
+          [whyBet(b)],
+        ];
+      }));
+  }
+  if (D.fair.length) {
+    const num = (v, sign) => v == null || isNaN(v) ? "—" : (sign && v > 0 ? "+" : "") + v.toFixed(1);
+    const why = (f) => {
+      if (!f.parts) return "";
+      const p = f.parts, bits = [];
+      if (p.market != null) bits.push(`market ${num(p.market, true)}`);
+      bits.push(`ratings ${num(p.ratings, true)}`);
+      if (Math.abs(p.rest) >= 0.1) bits.push(`rest ${num(p.rest, true)}`);
+      if (Math.abs(p.injuries) >= 0.1) bits.push(`injuries ${num(p.injuries, true)}`);
+      if (p.slate != null && Math.abs(p.slate) >= 0.1) bits.push(`night's lean ${num(p.slate, true)}`);
+      const miss = [...(f.missing.home || []), ...(f.missing.away || [])];
+      return bits.join(", ") + (miss.length ? ` (missing: ${miss.join("; ")})` : "");
+    };
+    table("fair", [["Game"], ["Tip"], ["Home by (market)", 1], ["Home by (model)", 1],
+                   ["Market total", 1], ["Model total", 1], ["Model's margin, from"]],
+      D.fair.slice().sort((a, b) => a.commence.localeCompare(b.commence)).map((f) => [
+        [`${short(f.away)} @ ${short(f.home)}`], [kick(f.commence)],
+        [num(f.market_margin, true), "r"], [num(f.model_margin, true), "r"],
+        [num(f.market_total), "r"], [num(f.model_total), "r"], [why(f)]]));
+  } else {
+    $("fair").closest("details").hidden = true;
+  }
+})();
+</script>
+</body>
+</html>
