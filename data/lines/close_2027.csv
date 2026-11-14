@@ -699,3 +699,87 @@ snapshot_utc,event_id,commence_time,home_team,away_team,book,market,outcome,play
 2026-11-13T21:41:22Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,betmgm,spreads,Oklahoma City Thunder,,-7.5,-102,2026-11-13T21:40:29Z
 2026-11-13T21:41:22Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,betmgm,totals,Over,,222.5,-110,2026-11-13T21:40:29Z
 2026-11-13T21:41:22Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,betmgm,totals,Under,,222.5,-110,2026-11-13T21:40:29Z
+2026-11-14T01:49:53Z,1fae7f34ec6035dffa74feb148ee26c7,2026-11-14T02:40:00Z,San Antonio Spurs,Golden State Warriors,draftkings,spreads,Golden State Warriors,,12.5,-108,2026-11-14T01:49:18Z
+2026-11-14T01:49:53Z,1fae7f34ec6035dffa74feb148ee26c7,2026-11-14T02:40:00Z,San Antonio Spurs,Golden State Warriors,draftkings,spreads,San Antonio Spurs,,-12.5,-112,2026-11-14T01:49:18Z
+2026-11-14T01:49:53Z,1fae7f34ec6035dffa74feb148ee26c7,2026-11-14T02:40:00Z,San Antonio Spurs,Golden State Warriors,draftkings,totals,Over,,216.5,-108,2026-11-14T01:49:18Z
+2026-11-14T01:49:53Z,1fae7f34ec6035dffa74feb148ee26c7,2026-11-14T02:40:00Z,San Antonio Spurs,Golden State Warriors,draftkings,totals,Under,,216.5,-112,2026-11-14T01:49:18Z
+2026-11-14T01:49:53Z,1fae7f34ec6035dffa74feb148ee26c7,2026-11-14T02:40:00Z,San Antonio Spurs,Golden State Warriors,betonlineag,spreads,Golden State Warriors,,12.0,-110,2026-11-14T01:47:04Z
+2026-11-14T01:49:53Z,1fae7f34ec6035dffa74feb148ee26c7,2026-11-14T02:40:00Z,San Antonio Spurs,Golden State Warriors,betonlineag,spreads,San Antonio Spurs,,-12.0,-110,2026-11-14T01:47:04Z
+2026-11-14T01:49:53Z,1fae7f34ec6035dffa74feb148ee26c7,2026-11-14T02:40:00Z,San Antonio Spurs,Golden State Warriors,betonlineag,totals,Over,,216.0,-110,2026-11-14T01:47:04Z
+2026-11-14T01:49:53Z,1fae7f34ec6035dffa74feb148ee26c7,2026-11-14T02:40:00Z,San Antonio Spurs,Golden State Warriors,betonlineag,totals,Under,,216.0,-110,2026-11-14T01:47:04Z
+2026-11-14T01:49:53Z,1fae7f34ec6035dffa74feb148ee26c7,2026-11-14T02:40:00Z,San Antonio Spurs,Golden State Warriors,lowvig,spreads,Golden State Warriors,,12.5,-103,2026-11-14T01:49:38Z
+2026-11-14T01:49:53Z,1fae7f34ec6035dffa74feb148ee26c7,2026-11-14T02:40:00Z,San Antonio Spurs,Golden State Warriors,lowvig,spreads,San Antonio Spurs,,-12.5,-109,2026-11-14T01:49:38Z
+2026-11-14T01:49:53Z,1fae7f34ec6035dffa74feb148ee26c7,2026-11-14T02:40:00Z,San Antonio Spurs,Golden State Warriors,lowvig,totals,Over,,216.5,-107,2026-11-14T01:49:38Z
+2026-11-14T01:49:53Z,1fae7f34ec6035dffa74feb148ee26c7,2026-11-14T02:40:00Z,San Antonio Spurs,Golden State Warriors,lowvig,totals,Under,,216.5,-107,2026-11-14T01:49:38Z
+2026-11-14T01:49:53Z,1fae7f34ec6035dffa74feb148ee26c7,2026-11-14T02:40:00Z,San Antonio Spurs,Golden State Warriors,fanduel,spreads,Golden State Warriors,,12.5,-110,2026-11-14T01:49:38Z
+2026-11-14T01:49:53Z,1fae7f34ec6035dffa74feb148ee26c7,2026-11-14T02:40:00Z,San Antonio Spurs,Golden State Warriors,fanduel,spreads,San Antonio Spurs,,-12.5,-110,2026-11-14T01:49:38Z
+2026-11-14T01:49:53Z,1fae7f34ec6035dffa74feb148ee26c7,2026-11-14T02:40:00Z,San Antonio Spurs,Golden State Warriors,fanduel,totals,Over,,216.5,-106,2026-11-14T01:49:38Z
+2026-11-14T01:49:53Z,1fae7f34ec6035dffa74feb148ee26c7,2026-11-14T02:40:00Z,San Antonio Spurs,Golden State Warriors,fanduel,totals,Under,,216.5,-114,2026-11-14T01:49:38Z
+2026-11-14T01:49:53Z,1fae7f34ec6035dffa74feb148ee26c7,2026-11-14T02:40:00Z,San Antonio Spurs,Golden State Warriors,williamhill_us,spreads,Golden State Warriors,,12.5,-110,2026-11-14T01:49:19Z
+2026-11-14T01:49:53Z,1fae7f34ec6035dffa74feb148ee26c7,2026-11-14T02:40:00Z,San Antonio Spurs,Golden State Warriors,williamhill_us,spreads,San Antonio Spurs,,-12.5,-110,2026-11-14T01:49:19Z
+2026-11-14T01:49:53Z,1fae7f34ec6035dffa74feb148ee26c7,2026-11-14T02:40:00Z,San Antonio Spurs,Golden State Warriors,williamhill_us,totals,Over,,217.0,-105,2026-11-14T01:49:19Z
+2026-11-14T01:49:53Z,1fae7f34ec6035dffa74feb148ee26c7,2026-11-14T02:40:00Z,San Antonio Spurs,Golden State Warriors,williamhill_us,totals,Under,,217.0,-115,2026-11-14T01:49:19Z
+2026-11-14T01:49:53Z,1fae7f34ec6035dffa74feb148ee26c7,2026-11-14T02:40:00Z,San Antonio Spurs,Golden State Warriors,pinnacle,spreads,Golden State Warriors,,12.5,-108,2026-11-14T01:49:37Z
+2026-11-14T01:49:53Z,1fae7f34ec6035dffa74feb148ee26c7,2026-11-14T02:40:00Z,San Antonio Spurs,Golden State Warriors,pinnacle,spreads,San Antonio Spurs,,-12.5,-102,2026-11-14T01:49:37Z
+2026-11-14T01:49:53Z,1fae7f34ec6035dffa74feb148ee26c7,2026-11-14T02:40:00Z,San Antonio Spurs,Golden State Warriors,pinnacle,totals,Over,,216.5,101,2026-11-14T01:49:37Z
+2026-11-14T01:49:53Z,1fae7f34ec6035dffa74feb148ee26c7,2026-11-14T02:40:00Z,San Antonio Spurs,Golden State Warriors,pinnacle,totals,Under,,216.5,-116,2026-11-14T01:49:37Z
+2026-11-14T01:49:53Z,1fae7f34ec6035dffa74feb148ee26c7,2026-11-14T02:40:00Z,San Antonio Spurs,Golden State Warriors,betmgm,spreads,Golden State Warriors,,12.5,-110,2026-11-14T01:49:37Z
+2026-11-14T01:49:53Z,1fae7f34ec6035dffa74feb148ee26c7,2026-11-14T02:40:00Z,San Antonio Spurs,Golden State Warriors,betmgm,spreads,San Antonio Spurs,,-12.5,-110,2026-11-14T01:49:37Z
+2026-11-14T01:49:53Z,1fae7f34ec6035dffa74feb148ee26c7,2026-11-14T02:40:00Z,San Antonio Spurs,Golden State Warriors,betmgm,totals,Over,,216.5,-110,2026-11-14T01:49:37Z
+2026-11-14T01:49:53Z,1fae7f34ec6035dffa74feb148ee26c7,2026-11-14T02:40:00Z,San Antonio Spurs,Golden State Warriors,betmgm,totals,Under,,216.5,-110,2026-11-14T01:49:37Z
+2026-11-14T01:49:53Z,a51c350318d7570c2b74af08eedb9fcd,2026-11-14T03:10:00Z,Sacramento Kings,Portland Trail Blazers,fanduel,spreads,Portland Trail Blazers,,-10.5,-104,2026-11-14T01:49:38Z
+2026-11-14T01:49:53Z,a51c350318d7570c2b74af08eedb9fcd,2026-11-14T03:10:00Z,Sacramento Kings,Portland Trail Blazers,fanduel,spreads,Sacramento Kings,,10.5,-118,2026-11-14T01:49:38Z
+2026-11-14T01:49:53Z,a51c350318d7570c2b74af08eedb9fcd,2026-11-14T03:10:00Z,Sacramento Kings,Portland Trail Blazers,fanduel,totals,Over,,229.5,-105,2026-11-14T01:49:38Z
+2026-11-14T01:49:53Z,a51c350318d7570c2b74af08eedb9fcd,2026-11-14T03:10:00Z,Sacramento Kings,Portland Trail Blazers,fanduel,totals,Under,,229.5,-115,2026-11-14T01:49:38Z
+2026-11-14T01:49:53Z,a51c350318d7570c2b74af08eedb9fcd,2026-11-14T03:10:00Z,Sacramento Kings,Portland Trail Blazers,lowvig,spreads,Portland Trail Blazers,,-10.0,-108,2026-11-14T01:49:38Z
+2026-11-14T01:49:53Z,a51c350318d7570c2b74af08eedb9fcd,2026-11-14T03:10:00Z,Sacramento Kings,Portland Trail Blazers,lowvig,spreads,Sacramento Kings,,10.0,-104,2026-11-14T01:49:38Z
+2026-11-14T01:49:53Z,a51c350318d7570c2b74af08eedb9fcd,2026-11-14T03:10:00Z,Sacramento Kings,Portland Trail Blazers,lowvig,totals,Over,,229.5,-107,2026-11-14T01:49:38Z
+2026-11-14T01:49:53Z,a51c350318d7570c2b74af08eedb9fcd,2026-11-14T03:10:00Z,Sacramento Kings,Portland Trail Blazers,lowvig,totals,Under,,229.5,-107,2026-11-14T01:49:38Z
+2026-11-14T01:49:53Z,a51c350318d7570c2b74af08eedb9fcd,2026-11-14T03:10:00Z,Sacramento Kings,Portland Trail Blazers,betonlineag,spreads,Portland Trail Blazers,,-10.0,-112,2026-11-14T01:48:03Z
+2026-11-14T01:49:53Z,a51c350318d7570c2b74af08eedb9fcd,2026-11-14T03:10:00Z,Sacramento Kings,Portland Trail Blazers,betonlineag,spreads,Sacramento Kings,,10.0,-108,2026-11-14T01:48:03Z
+2026-11-14T01:49:53Z,a51c350318d7570c2b74af08eedb9fcd,2026-11-14T03:10:00Z,Sacramento Kings,Portland Trail Blazers,betonlineag,totals,Over,,229.5,-110,2026-11-14T01:48:03Z
+2026-11-14T01:49:53Z,a51c350318d7570c2b74af08eedb9fcd,2026-11-14T03:10:00Z,Sacramento Kings,Portland Trail Blazers,betonlineag,totals,Under,,229.5,-110,2026-11-14T01:48:03Z
+2026-11-14T01:49:53Z,a51c350318d7570c2b74af08eedb9fcd,2026-11-14T03:10:00Z,Sacramento Kings,Portland Trail Blazers,williamhill_us,spreads,Portland Trail Blazers,,-10.0,-115,2026-11-14T01:49:19Z
+2026-11-14T01:49:53Z,a51c350318d7570c2b74af08eedb9fcd,2026-11-14T03:10:00Z,Sacramento Kings,Portland Trail Blazers,williamhill_us,spreads,Sacramento Kings,,10.0,-105,2026-11-14T01:49:19Z
+2026-11-14T01:49:53Z,a51c350318d7570c2b74af08eedb9fcd,2026-11-14T03:10:00Z,Sacramento Kings,Portland Trail Blazers,williamhill_us,totals,Over,,229.5,-110,2026-11-14T01:49:19Z
+2026-11-14T01:49:53Z,a51c350318d7570c2b74af08eedb9fcd,2026-11-14T03:10:00Z,Sacramento Kings,Portland Trail Blazers,williamhill_us,totals,Under,,229.5,-110,2026-11-14T01:49:19Z
+2026-11-14T01:49:53Z,a51c350318d7570c2b74af08eedb9fcd,2026-11-14T03:10:00Z,Sacramento Kings,Portland Trail Blazers,draftkings,spreads,Portland Trail Blazers,,-10.5,-105,2026-11-14T01:49:18Z
+2026-11-14T01:49:53Z,a51c350318d7570c2b74af08eedb9fcd,2026-11-14T03:10:00Z,Sacramento Kings,Portland Trail Blazers,draftkings,spreads,Sacramento Kings,,10.5,-115,2026-11-14T01:49:18Z
+2026-11-14T01:49:53Z,a51c350318d7570c2b74af08eedb9fcd,2026-11-14T03:10:00Z,Sacramento Kings,Portland Trail Blazers,draftkings,totals,Over,,229.5,-112,2026-11-14T01:49:18Z
+2026-11-14T01:49:53Z,a51c350318d7570c2b74af08eedb9fcd,2026-11-14T03:10:00Z,Sacramento Kings,Portland Trail Blazers,draftkings,totals,Under,,229.5,-108,2026-11-14T01:49:18Z
+2026-11-14T01:49:53Z,a51c350318d7570c2b74af08eedb9fcd,2026-11-14T03:10:00Z,Sacramento Kings,Portland Trail Blazers,pinnacle,spreads,Portland Trail Blazers,,-10.0,-105,2026-11-14T01:49:37Z
+2026-11-14T01:49:53Z,a51c350318d7570c2b74af08eedb9fcd,2026-11-14T03:10:00Z,Sacramento Kings,Portland Trail Blazers,pinnacle,spreads,Sacramento Kings,,10.0,-105,2026-11-14T01:49:37Z
+2026-11-14T01:49:53Z,a51c350318d7570c2b74af08eedb9fcd,2026-11-14T03:10:00Z,Sacramento Kings,Portland Trail Blazers,pinnacle,totals,Over,,230.0,-103,2026-11-14T01:49:37Z
+2026-11-14T01:49:53Z,a51c350318d7570c2b74af08eedb9fcd,2026-11-14T03:10:00Z,Sacramento Kings,Portland Trail Blazers,pinnacle,totals,Under,,230.0,-109,2026-11-14T01:49:37Z
+2026-11-14T01:49:53Z,a51c350318d7570c2b74af08eedb9fcd,2026-11-14T03:10:00Z,Sacramento Kings,Portland Trail Blazers,betmgm,spreads,Portland Trail Blazers,,-10.5,-105,2026-11-14T01:49:37Z
+2026-11-14T01:49:53Z,a51c350318d7570c2b74af08eedb9fcd,2026-11-14T03:10:00Z,Sacramento Kings,Portland Trail Blazers,betmgm,spreads,Sacramento Kings,,10.5,-115,2026-11-14T01:49:37Z
+2026-11-14T01:49:53Z,a51c350318d7570c2b74af08eedb9fcd,2026-11-14T03:10:00Z,Sacramento Kings,Portland Trail Blazers,betmgm,totals,Over,,229.5,-110,2026-11-14T01:49:37Z
+2026-11-14T01:49:53Z,a51c350318d7570c2b74af08eedb9fcd,2026-11-14T03:10:00Z,Sacramento Kings,Portland Trail Blazers,betmgm,totals,Under,,229.5,-110,2026-11-14T01:49:37Z
+2026-11-14T01:49:53Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,fanduel,spreads,Los Angeles Clippers,,7.5,-112,2026-11-14T01:49:38Z
+2026-11-14T01:49:53Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,fanduel,spreads,Oklahoma City Thunder,,-7.5,-108,2026-11-14T01:49:38Z
+2026-11-14T01:49:53Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,fanduel,totals,Over,,221.5,-110,2026-11-14T01:49:38Z
+2026-11-14T01:49:53Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,fanduel,totals,Under,,221.5,-110,2026-11-14T01:49:38Z
+2026-11-14T01:49:53Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,betonlineag,spreads,Los Angeles Clippers,,7.0,-105,2026-11-14T01:48:03Z
+2026-11-14T01:49:53Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,betonlineag,spreads,Oklahoma City Thunder,,-7.0,-115,2026-11-14T01:48:03Z
+2026-11-14T01:49:53Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,betonlineag,totals,Over,,222.0,-110,2026-11-14T01:48:03Z
+2026-11-14T01:49:53Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,betonlineag,totals,Under,,222.0,-110,2026-11-14T01:48:03Z
+2026-11-14T01:49:53Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,lowvig,spreads,Los Angeles Clippers,,7.0,-101,2026-11-14T01:49:38Z
+2026-11-14T01:49:53Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,lowvig,spreads,Oklahoma City Thunder,,-7.0,-111,2026-11-14T01:49:38Z
+2026-11-14T01:49:53Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,lowvig,totals,Over,,222.0,-107,2026-11-14T01:49:38Z
+2026-11-14T01:49:53Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,lowvig,totals,Under,,222.0,-107,2026-11-14T01:49:38Z
+2026-11-14T01:49:53Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,williamhill_us,spreads,Los Angeles Clippers,,7.0,-105,2026-11-14T01:49:19Z
+2026-11-14T01:49:53Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,williamhill_us,spreads,Oklahoma City Thunder,,-7.0,-115,2026-11-14T01:49:19Z
+2026-11-14T01:49:53Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,williamhill_us,totals,Over,,222.0,-110,2026-11-14T01:49:19Z
+2026-11-14T01:49:53Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,williamhill_us,totals,Under,,222.0,-110,2026-11-14T01:49:19Z
+2026-11-14T01:49:53Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,draftkings,spreads,Los Angeles Clippers,,7.5,-112,2026-11-14T01:49:18Z
+2026-11-14T01:49:53Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,draftkings,spreads,Oklahoma City Thunder,,-7.5,-107,2026-11-14T01:49:18Z
+2026-11-14T01:49:53Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,draftkings,totals,Over,,222.5,-105,2026-11-14T01:49:18Z
+2026-11-14T01:49:53Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,draftkings,totals,Under,,222.5,-115,2026-11-14T01:49:18Z
+2026-11-14T01:49:53Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,pinnacle,spreads,Los Angeles Clippers,,7.0,-105,2026-11-14T01:49:37Z
+2026-11-14T01:49:53Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,pinnacle,spreads,Oklahoma City Thunder,,-7.0,-105,2026-11-14T01:49:37Z
+2026-11-14T01:49:53Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,pinnacle,totals,Over,,222.5,-102,2026-11-14T01:49:37Z
+2026-11-14T01:49:53Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,pinnacle,totals,Under,,222.5,-110,2026-11-14T01:49:37Z
+2026-11-14T01:49:53Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,betmgm,spreads,Los Angeles Clippers,,7.5,-110,2026-11-14T01:49:37Z
+2026-11-14T01:49:53Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,betmgm,spreads,Oklahoma City Thunder,,-7.5,-110,2026-11-14T01:49:37Z
+2026-11-14T01:49:53Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,betmgm,totals,Over,,221.5,-115,2026-11-14T01:49:37Z
+2026-11-14T01:49:53Z,5344669fd560d317ffaee0a1d16be7c8,2026-11-14T03:40:00Z,Los Angeles Clippers,Oklahoma City Thunder,betmgm,totals,Under,,221.5,-105,2026-11-14T01:49:37Z
