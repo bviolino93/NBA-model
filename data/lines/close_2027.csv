@@ -1359,3 +1359,67 @@ snapshot_utc,event_id,commence_time,home_team,away_team,book,market,outcome,play
 2026-11-15T20:37:08Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,draftkings,spreads,Sacramento Kings,,10.5,-105,2026-11-15T20:36:41Z
 2026-11-15T20:37:08Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,draftkings,totals,Over,,223.5,-107,2026-11-15T20:36:41Z
 2026-11-15T20:37:08Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,draftkings,totals,Under,,223.5,-113,2026-11-15T20:36:41Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,fanduel,spreads,Atlanta Hawks,,-8.5,-110,2026-11-16T00:19:00Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,fanduel,spreads,Milwaukee Bucks,,8.5,-110,2026-11-16T00:19:00Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,fanduel,totals,Over,,233.5,-106,2026-11-16T00:19:00Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,fanduel,totals,Under,,233.5,-114,2026-11-16T00:19:00Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,williamhill_us,spreads,Atlanta Hawks,,-8.5,-110,2026-11-16T00:19:00Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,williamhill_us,spreads,Milwaukee Bucks,,8.5,-110,2026-11-16T00:19:00Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,williamhill_us,totals,Over,,233.5,-110,2026-11-16T00:19:00Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,williamhill_us,totals,Under,,233.5,-110,2026-11-16T00:19:00Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,pinnacle,spreads,Atlanta Hawks,,-8.5,-107,2026-11-16T00:19:56Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,pinnacle,spreads,Milwaukee Bucks,,8.5,-103,2026-11-16T00:19:56Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,pinnacle,totals,Over,,233.5,-103,2026-11-16T00:19:56Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,pinnacle,totals,Under,,233.5,-109,2026-11-16T00:19:56Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,matchbook,spreads,Atlanta Hawks,,-8.5,-108,2026-11-16T00:19:41Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,matchbook,spreads,Milwaukee Bucks,,8.5,-101,2026-11-16T00:19:41Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,matchbook,totals,Over,,233.5,-101,2026-11-16T00:19:41Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,matchbook,totals,Under,,233.5,-110,2026-11-16T00:19:41Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,betonlineag,spreads,Atlanta Hawks,,-8.5,-110,2026-11-16T00:19:41Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,betonlineag,spreads,Milwaukee Bucks,,8.5,-110,2026-11-16T00:19:41Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,betonlineag,totals,Over,,233.5,-110,2026-11-16T00:19:41Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,betonlineag,totals,Under,,233.5,-110,2026-11-16T00:19:41Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,lowvig,spreads,Atlanta Hawks,,-8.5,-106,2026-11-16T00:19:28Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,lowvig,spreads,Milwaukee Bucks,,8.5,-106,2026-11-16T00:19:28Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,lowvig,totals,Over,,233.5,-107,2026-11-16T00:19:28Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,lowvig,totals,Under,,233.5,-107,2026-11-16T00:19:28Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,betmgm,spreads,Atlanta Hawks,,-8.5,-110,2026-11-16T00:19:56Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,betmgm,spreads,Milwaukee Bucks,,8.5,-110,2026-11-16T00:19:56Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,betmgm,totals,Over,,233.5,-110,2026-11-16T00:19:56Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,betmgm,totals,Under,,233.5,-110,2026-11-16T00:19:56Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,draftkings,spreads,Atlanta Hawks,,-8.5,-106,2026-11-16T00:19:14Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,draftkings,spreads,Milwaukee Bucks,,8.5,-115,2026-11-16T00:19:14Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,draftkings,totals,Over,,233.5,-106,2026-11-16T00:19:14Z
+2026-11-16T00:19:56Z,b931a21d34e414ee92b1a4b8e63774aa,2026-11-16T01:10:00Z,Milwaukee Bucks,Atlanta Hawks,draftkings,totals,Under,,233.5,-115,2026-11-16T00:19:14Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,fanduel,spreads,Oklahoma City Thunder,,-11.5,-104,2026-11-16T00:19:00Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,fanduel,spreads,Sacramento Kings,,11.5,-118,2026-11-16T00:19:00Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,fanduel,totals,Over,,222.5,-114,2026-11-16T00:19:00Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,fanduel,totals,Under,,222.5,-106,2026-11-16T00:19:00Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,betonlineag,spreads,Oklahoma City Thunder,,-11.0,-115,2026-11-16T00:19:41Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,betonlineag,spreads,Sacramento Kings,,11.0,-105,2026-11-16T00:19:41Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,betonlineag,totals,Over,,223.0,-110,2026-11-16T00:19:41Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,betonlineag,totals,Under,,223.0,-110,2026-11-16T00:19:41Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,pinnacle,spreads,Oklahoma City Thunder,,-11.0,-106,2026-11-16T00:19:56Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,pinnacle,spreads,Sacramento Kings,,11.0,-104,2026-11-16T00:19:56Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,pinnacle,totals,Over,,223.5,-108,2026-11-16T00:19:56Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,pinnacle,totals,Under,,223.5,-104,2026-11-16T00:19:56Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,matchbook,spreads,Oklahoma City Thunder,,-11.0,-103,2026-11-16T00:19:41Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,matchbook,spreads,Sacramento Kings,,11.0,-104,2026-11-16T00:19:41Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,matchbook,totals,Over,,223.5,-101,2026-11-16T00:19:41Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,matchbook,totals,Under,,223.5,-109,2026-11-16T00:19:41Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,lowvig,spreads,Oklahoma City Thunder,,-11.0,-111,2026-11-16T00:19:28Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,lowvig,spreads,Sacramento Kings,,11.0,-101,2026-11-16T00:19:28Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,lowvig,totals,Over,,223.0,-107,2026-11-16T00:19:28Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,lowvig,totals,Under,,223.0,-107,2026-11-16T00:19:28Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,betmgm,spreads,Oklahoma City Thunder,,-11.5,-105,2026-11-16T00:19:56Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,betmgm,spreads,Sacramento Kings,,11.5,-115,2026-11-16T00:19:56Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,betmgm,totals,Over,,223.5,-105,2026-11-16T00:19:56Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,betmgm,totals,Under,,223.5,-115,2026-11-16T00:19:56Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,williamhill_us,spreads,Oklahoma City Thunder,,-11.0,-110,2026-11-16T00:19:00Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,williamhill_us,spreads,Sacramento Kings,,11.0,-110,2026-11-16T00:19:00Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,williamhill_us,totals,Over,,223.5,-110,2026-11-16T00:19:00Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,williamhill_us,totals,Under,,223.5,-110,2026-11-16T00:19:00Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,draftkings,spreads,Oklahoma City Thunder,,-11.5,-108,2026-11-16T00:19:14Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,draftkings,spreads,Sacramento Kings,,11.5,-112,2026-11-16T00:19:14Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,draftkings,totals,Over,,223.5,-110,2026-11-16T00:19:14Z
+2026-11-16T00:19:56Z,f8334b355cf9346d423fa9eb93b425f0,2026-11-16T02:10:00Z,Sacramento Kings,Oklahoma City Thunder,draftkings,totals,Under,,223.5,-110,2026-11-16T00:19:14Z
