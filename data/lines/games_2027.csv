@@ -37145,3 +37145,601 @@ snapshot_utc,event_id,commence_time,home_team,away_team,book,market,outcome,play
 2026-11-16T22:52:47Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betus,spreads,Phoenix Suns,,10.0,-110,2026-11-16T22:51:57Z
 2026-11-16T22:52:47Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betus,totals,Over,,230.0,-110,2026-11-16T22:51:57Z
 2026-11-16T22:52:47Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betus,totals,Under,,230.0,-110,2026-11-16T22:51:57Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,draftkings,h2h,Denver Nuggets,,,-426,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,draftkings,h2h,Phoenix Suns,,,333,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,draftkings,spreads,Denver Nuggets,,-9.5,-114,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,draftkings,spreads,Phoenix Suns,,9.5,-106,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,draftkings,totals,Over,,229.5,-106,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,draftkings,totals,Under,,229.5,-114,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,matchbook,h2h,Denver Nuggets,,,-400,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,matchbook,h2h,Phoenix Suns,,,370,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,matchbook,h2h_lay,Denver Nuggets,,,-370,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,matchbook,h2h_lay,Phoenix Suns,,,390,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,matchbook,spreads,Denver Nuggets,,-10.0,-109,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,matchbook,spreads,Phoenix Suns,,10.0,-102,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,matchbook,totals,Over,,230.5,-111,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,matchbook,totals,Under,,230.5,-101,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betonlineag,h2h,Denver Nuggets,,,-445,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betonlineag,h2h,Phoenix Suns,,,347,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betonlineag,spreads,Denver Nuggets,,-10.0,-115,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betonlineag,spreads,Phoenix Suns,,10.0,-105,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betonlineag,totals,Over,,230.5,-113,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betonlineag,totals,Under,,230.5,-107,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betanysports,h2h,Denver Nuggets,,,-450,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betanysports,h2h,Phoenix Suns,,,340,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betanysports,spreads,Denver Nuggets,,-10.0,-115,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betanysports,spreads,Phoenix Suns,,10.0,-105,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betanysports,totals,Over,,230.5,-110,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betanysports,totals,Under,,230.5,-110,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,nordicbet,h2h,Denver Nuggets,,,-500,2026-11-17T02:05:42Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,nordicbet,h2h,Phoenix Suns,,,315,2026-11-17T02:05:42Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,nordicbet,totals,Over,,230.5,-111,2026-11-17T02:05:42Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,nordicbet,totals,Under,,230.5,-116,2026-11-17T02:05:42Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,lowvig,h2h,Denver Nuggets,,,-439,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,lowvig,h2h,Phoenix Suns,,,353,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,lowvig,spreads,Denver Nuggets,,-10.0,-111,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,lowvig,spreads,Phoenix Suns,,10.0,-101,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,lowvig,totals,Over,,230.5,-110,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,lowvig,totals,Under,,230.5,-104,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,williamhill_us,h2h,Denver Nuggets,,,-455,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,williamhill_us,h2h,Phoenix Suns,,,345,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,williamhill_us,spreads,Denver Nuggets,,-10.0,-115,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,williamhill_us,spreads,Phoenix Suns,,10.0,-105,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,williamhill_us,totals,Over,,230.5,-115,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,williamhill_us,totals,Under,,230.5,-105,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,marathonbet,h2h,Denver Nuggets,,,-500,2026-11-17T02:05:56Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,marathonbet,h2h,Phoenix Suns,,,325,2026-11-17T02:05:56Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,marathonbet,spreads,Denver Nuggets,,-10.5,-111,2026-11-17T02:05:56Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,marathonbet,spreads,Phoenix Suns,,10.5,-122,2026-11-17T02:05:56Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,marathonbet,totals,Over,,228.5,-112,2026-11-17T02:05:56Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,marathonbet,totals,Under,,228.5,-120,2026-11-17T02:05:56Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,coolbet,h2h,Denver Nuggets,,,-417,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,coolbet,h2h,Phoenix Suns,,,325,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,coolbet,spreads,Denver Nuggets,,-10.0,-112,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,coolbet,spreads,Phoenix Suns,,10.0,-104,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,coolbet,totals,Over,,230.0,-108,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,coolbet,totals,Under,,230.0,-110,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,unibet_fr,h2h,Denver Nuggets,,,-714,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,unibet_fr,h2h,Phoenix Suns,,,245,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,sport888,h2h,Denver Nuggets,,,-450,2026-11-17T01:59:20Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,sport888,h2h,Phoenix Suns,,,320,2026-11-17T01:59:20Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,sport888,spreads,Denver Nuggets,,-10.5,-118,2026-11-17T01:59:20Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,sport888,spreads,Phoenix Suns,,10.5,-118,2026-11-17T01:59:20Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,sport888,totals,Over,,229.5,-118,2026-11-17T01:59:20Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,sport888,totals,Under,,229.5,-118,2026-11-17T01:59:20Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,williamhill,h2h,Denver Nuggets,,,-500,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,williamhill,h2h,Phoenix Suns,,,350,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,williamhill,spreads,Denver Nuggets,,-10.5,-110,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,williamhill,spreads,Phoenix Suns,,10.5,-125,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,williamhill,totals,Over,,229.5,-118,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,williamhill,totals,Under,,229.5,-118,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,codere_it,h2h,Denver Nuggets,,,-455,2026-11-17T02:02:10Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,codere_it,h2h,Phoenix Suns,,,330,2026-11-17T02:02:10Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,codere_it,totals,Over,,229.5,-118,2026-11-17T02:02:10Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,codere_it,totals,Under,,229.5,-112,2026-11-17T02:02:10Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,gtbets,h2h,Denver Nuggets,,,-440,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,gtbets,h2h,Phoenix Suns,,,340,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,gtbets,spreads,Denver Nuggets,,-10.0,-109,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,gtbets,spreads,Phoenix Suns,,10.0,-109,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,gtbets,totals,Over,,230.0,-104,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,gtbets,totals,Under,,230.0,-114,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betclic_fr,h2h,Denver Nuggets,,,-625,2026-11-17T02:04:27Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betclic_fr,h2h,Phoenix Suns,,,295,2026-11-17T02:04:27Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,fanduel,h2h,Denver Nuggets,,,-460,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,fanduel,h2h,Phoenix Suns,,,360,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,fanduel,spreads,Denver Nuggets,,-10.5,-105,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,fanduel,spreads,Phoenix Suns,,10.5,-115,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,fanduel,totals,Over,,229.5,-115,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,fanduel,totals,Under,,229.5,-105,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,fanatics,h2h,Denver Nuggets,,,-450,2026-11-17T02:05:25Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,fanatics,h2h,Phoenix Suns,,,340,2026-11-17T02:05:25Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,fanatics,spreads,Denver Nuggets,,-10.0,-110,2026-11-17T02:05:25Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,fanatics,spreads,Phoenix Suns,,10.0,-110,2026-11-17T02:05:25Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,fanatics,totals,Over,,230.5,-110,2026-11-17T02:05:25Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,fanatics,totals,Under,,230.5,-110,2026-11-17T02:05:25Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,winamax_fr,h2h,Denver Nuggets,,,-588,2026-11-17T02:05:54Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,winamax_fr,h2h,Phoenix Suns,,,300,2026-11-17T02:05:54Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,winamax_de,h2h,Denver Nuggets,,,-500,2026-11-17T02:05:55Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,winamax_de,h2h,Phoenix Suns,,,370,2026-11-17T02:05:55Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betmgm,h2h,Denver Nuggets,,,-450,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betmgm,h2h,Phoenix Suns,,,350,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betmgm,spreads,Denver Nuggets,,-10.5,-105,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betmgm,spreads,Phoenix Suns,,10.5,-115,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betmgm,totals,Over,,230.5,-110,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betmgm,totals,Under,,230.5,-110,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betrivers,h2h,Denver Nuggets,,,-530,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betrivers,h2h,Phoenix Suns,,,375,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betrivers,spreads,Denver Nuggets,,-10.5,-108,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betrivers,spreads,Phoenix Suns,,10.5,-114,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betrivers,totals,Over,,231.5,-112,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betrivers,totals,Under,,231.5,-110,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,pmu_fr,h2h,Denver Nuggets,,,-715,2026-11-17T02:06:12Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,pmu_fr,h2h,Phoenix Suns,,,350,2026-11-17T02:06:12Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,pmu_fr,totals,Over,,231.5,-139,2026-11-17T02:06:12Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,pmu_fr,totals,Under,,231.5,-139,2026-11-17T02:06:12Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,unibet_se,h2h,Denver Nuggets,,,-480,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,unibet_se,h2h,Phoenix Suns,,,375,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,unibet_se,spreads,Denver Nuggets,,-10.5,-108,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,unibet_se,spreads,Phoenix Suns,,10.5,-114,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,unibet_nl,h2h,Denver Nuggets,,,-480,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,unibet_nl,h2h,Phoenix Suns,,,375,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,unibet_nl,spreads,Denver Nuggets,,-10.5,-108,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,unibet_nl,spreads,Phoenix Suns,,10.5,-114,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,unibet_nl,totals,Over,,231.5,-112,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,unibet_nl,totals,Under,,231.5,-110,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,leovegas_se,h2h,Denver Nuggets,,,-560,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,leovegas_se,h2h,Phoenix Suns,,,370,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,leovegas_se,spreads,Denver Nuggets,,-10.5,-109,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,leovegas_se,spreads,Phoenix Suns,,10.5,-117,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,bovada,h2h,Denver Nuggets,,,-450,2026-11-17T02:06:00Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,bovada,h2h,Phoenix Suns,,,335,2026-11-17T02:06:00Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,bovada,spreads,Denver Nuggets,,-10.0,-110,2026-11-17T02:06:00Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,bovada,spreads,Phoenix Suns,,10.0,-110,2026-11-17T02:06:00Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,bovada,totals,Over,,231.0,-110,2026-11-17T02:06:00Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,bovada,totals,Under,,231.0,-110,2026-11-17T02:06:00Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,mybookieag,h2h,Denver Nuggets,,,-459,2026-11-17T02:00:15Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,mybookieag,h2h,Phoenix Suns,,,356,2026-11-17T02:00:15Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,mybookieag,spreads,Denver Nuggets,,-10.0,-110,2026-11-17T02:00:15Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,mybookieag,spreads,Phoenix Suns,,10.0,-110,2026-11-17T02:00:15Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,mybookieag,totals,Over,,230.5,-110,2026-11-17T02:00:15Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,mybookieag,totals,Under,,230.5,-110,2026-11-17T02:00:15Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,pinnacle,h2h,Denver Nuggets,,,-422,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,pinnacle,h2h,Phoenix Suns,,,349,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,pinnacle,spreads,Denver Nuggets,,-9.5,-115,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,pinnacle,spreads,Phoenix Suns,,9.5,104,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,pinnacle,totals,Over,,230.0,-114,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,pinnacle,totals,Under,,230.0,101,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,tipico_de,h2h,Denver Nuggets,,,-500,2026-11-17T02:05:55Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,tipico_de,h2h,Phoenix Suns,,,340,2026-11-17T02:05:55Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betfair_ex_eu,h2h,Denver Nuggets,,,-400,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betfair_ex_eu,h2h,Phoenix Suns,,,370,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betfair_ex_eu,h2h_lay,Denver Nuggets,,,-370,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betfair_ex_eu,h2h_lay,Phoenix Suns,,,400,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,everygame,h2h,Denver Nuggets,,,-450,2026-11-17T02:04:42Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,everygame,h2h,Phoenix Suns,,,350,2026-11-17T02:04:42Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,everygame,spreads,Denver Nuggets,,-10.0,-115,2026-11-17T02:04:42Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,everygame,spreads,Phoenix Suns,,10.0,-105,2026-11-17T02:04:42Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,everygame,totals,Over,,230.0,-110,2026-11-17T02:04:42Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,everygame,totals,Under,,230.0,-110,2026-11-17T02:04:42Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betus,h2h,Denver Nuggets,,,-445,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betus,h2h,Phoenix Suns,,,350,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betus,spreads,Denver Nuggets,,-10.0,-115,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betus,spreads,Phoenix Suns,,10.0,-105,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betus,totals,Over,,230.5,-115,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,c2c9d9729305c19d4a453f92c83feae8,2026-11-17T02:10:00Z,Denver Nuggets,Phoenix Suns,betus,totals,Under,,230.5,-105,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,fanduel,h2h,New York Knicks,,,-156,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,fanduel,h2h,Toronto Raptors,,,132,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,fanduel,spreads,New York Knicks,,-3.5,-106,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,fanduel,spreads,Toronto Raptors,,3.5,-114,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,fanduel,totals,Over,,216.5,-106,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,fanduel,totals,Under,,216.5,-114,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,betonlineag,spreads,New York Knicks,,-3.0,-110,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,betonlineag,spreads,Toronto Raptors,,3.0,-110,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,betonlineag,totals,Over,,216.0,-110,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,betonlineag,totals,Under,,216.0,-110,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,lowvig,spreads,New York Knicks,,-3.0,-106,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,lowvig,spreads,Toronto Raptors,,3.0,-106,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,lowvig,totals,Over,,216.0,-107,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,lowvig,totals,Under,,216.0,-107,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,unibet_fr,h2h,New York Knicks,,,-185,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,unibet_fr,h2h,Toronto Raptors,,,105,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,sport888,h2h,New York Knicks,,,-163,2026-11-17T02:06:34Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,sport888,h2h,Toronto Raptors,,,130,2026-11-17T02:06:34Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,sport888,spreads,New York Knicks,,-2.5,-138,2026-11-17T02:06:34Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,sport888,spreads,Toronto Raptors,,2.5,100,2026-11-17T02:06:34Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,sport888,totals,Over,,216.5,-118,2026-11-17T02:06:34Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,sport888,totals,Under,,216.5,-118,2026-11-17T02:06:34Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,betclic_fr,h2h,New York Knicks,,,-175,2026-11-17T02:04:27Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,betclic_fr,h2h,Toronto Raptors,,,110,2026-11-17T02:04:27Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,nordicbet,h2h,New York Knicks,,,-161,2026-11-17T02:05:42Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,nordicbet,h2h,Toronto Raptors,,,125,2026-11-17T02:05:42Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,nordicbet,totals,Over,,216.5,-111,2026-11-17T02:05:42Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,nordicbet,totals,Under,,216.5,-116,2026-11-17T02:05:42Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,williamhill,h2h,New York Knicks,,,-162,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,williamhill,h2h,Toronto Raptors,,,130,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,williamhill,spreads,New York Knicks,,-2.5,-138,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,williamhill,spreads,Toronto Raptors,,2.5,100,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,williamhill,totals,Over,,216.5,-118,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,williamhill,totals,Under,,216.5,-118,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,coolbet,h2h,New York Knicks,,,-154,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,coolbet,h2h,Toronto Raptors,,,130,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,coolbet,spreads,New York Knicks,,-3.0,-108,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,coolbet,spreads,Toronto Raptors,,3.0,-110,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,coolbet,totals,Over,,216.0,-111,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,coolbet,totals,Under,,216.0,-105,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,onexbet,h2h,New York Knicks,,,-153,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,onexbet,h2h,Toronto Raptors,,,132,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,onexbet,spreads,New York Knicks,,-3.5,-102,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,onexbet,spreads,Toronto Raptors,,3.5,-114,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,onexbet,totals,Over,,216.5,-104,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,onexbet,totals,Under,,216.5,-111,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,marathonbet,h2h,New York Knicks,,,-156,2026-11-17T02:05:56Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,marathonbet,h2h,Toronto Raptors,,,130,2026-11-17T02:05:56Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,marathonbet,spreads,New York Knicks,,-3.5,-105,2026-11-17T02:05:56Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,marathonbet,spreads,Toronto Raptors,,3.5,-118,2026-11-17T02:05:56Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,marathonbet,totals,Over,,216.5,-108,2026-11-17T02:05:56Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,marathonbet,totals,Under,,216.5,-115,2026-11-17T02:05:56Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,codere_it,h2h,New York Knicks,,,-169,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,codere_it,h2h,Toronto Raptors,,,113,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,codere_it,totals,Over,,216.5,-120,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,codere_it,totals,Under,,216.5,-125,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,pmu_fr,h2h,New York Knicks,,,-190,2026-11-17T02:06:12Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,pmu_fr,h2h,Toronto Raptors,,,125,2026-11-17T02:06:12Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,pmu_fr,totals,Over,,217.5,-136,2026-11-17T02:06:12Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,pmu_fr,totals,Under,,217.5,-143,2026-11-17T02:06:12Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,leovegas_se,h2h,New York Knicks,,,-175,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,leovegas_se,h2h,Toronto Raptors,,,133,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,leovegas_se,spreads,New York Knicks,,-3.5,-110,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,leovegas_se,spreads,Toronto Raptors,,3.5,-114,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,betrivers,h2h,New York Knicks,,,-167,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,betrivers,h2h,Toronto Raptors,,,135,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,betrivers,spreads,New York Knicks,,-3.5,-109,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,betrivers,spreads,Toronto Raptors,,3.5,-113,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,betrivers,totals,Over,,217.5,-109,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,betrivers,totals,Under,,217.5,-114,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,unibet_se,h2h,New York Knicks,,,-167,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,unibet_se,h2h,Toronto Raptors,,,135,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,unibet_se,spreads,New York Knicks,,-3.5,-109,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,unibet_se,spreads,Toronto Raptors,,3.5,-113,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,unibet_nl,h2h,New York Knicks,,,-167,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,unibet_nl,h2h,Toronto Raptors,,,135,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,unibet_nl,spreads,New York Knicks,,-3.5,-109,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,unibet_nl,spreads,Toronto Raptors,,3.5,-113,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,unibet_nl,totals,Over,,217.5,-109,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,unibet_nl,totals,Under,,217.5,-114,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,matchbook,h2h,New York Knicks,,,-147,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,matchbook,h2h,Toronto Raptors,,,126,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,matchbook,h2h_lay,New York Knicks,,,-125,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,matchbook,h2h_lay,Toronto Raptors,,,148,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,matchbook,spreads,New York Knicks,,-3.0,-111,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,matchbook,spreads,Toronto Raptors,,3.0,-106,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,matchbook,totals,Over,,216.5,-109,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,matchbook,totals,Under,,216.5,-111,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,draftkings,h2h,New York Knicks,,,-152,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,draftkings,h2h,Toronto Raptors,,,128,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,draftkings,spreads,New York Knicks,,-3.5,-110,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,draftkings,spreads,Toronto Raptors,,3.5,-110,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,draftkings,totals,Over,,216.5,-110,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,draftkings,totals,Under,,216.5,-110,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,williamhill_us,h2h,New York Knicks,,,-155,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,williamhill_us,h2h,Toronto Raptors,,,130,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,williamhill_us,spreads,New York Knicks,,-3.0,-110,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,williamhill_us,spreads,Toronto Raptors,,3.0,-110,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,williamhill_us,totals,Over,,216.0,-110,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,williamhill_us,totals,Under,,216.0,-110,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,gtbets,h2h,New York Knicks,,,-150,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,gtbets,h2h,Toronto Raptors,,,130,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,gtbets,spreads,New York Knicks,,-3.5,-109,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,gtbets,spreads,Toronto Raptors,,3.5,-109,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,gtbets,totals,Over,,216.5,-109,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,gtbets,totals,Under,,216.5,-109,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,betmgm,h2h,New York Knicks,,,-155,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,betmgm,h2h,Toronto Raptors,,,125,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,betmgm,spreads,New York Knicks,,-3.5,-105,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,betmgm,spreads,Toronto Raptors,,3.5,-115,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,betmgm,totals,Over,,216.5,-105,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,betmgm,totals,Under,,216.5,-115,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,mybookieag,h2h,New York Knicks,,,-154,2026-11-17T02:00:15Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,mybookieag,h2h,Toronto Raptors,,,125,2026-11-17T02:00:15Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,mybookieag,spreads,New York Knicks,,-3.0,-110,2026-11-17T02:00:15Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,mybookieag,spreads,Toronto Raptors,,3.0,-110,2026-11-17T02:00:15Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,mybookieag,totals,Over,,216.5,-110,2026-11-17T02:00:15Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,mybookieag,totals,Under,,216.5,-110,2026-11-17T02:00:15Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,winamax_fr,h2h,New York Knicks,,,-192,2026-11-17T02:05:54Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,winamax_fr,h2h,Toronto Raptors,,,100,2026-11-17T02:05:54Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,winamax_de,h2h,New York Knicks,,,-152,2026-11-17T02:05:55Z
+2026-11-17T02:06:34Z,5ff20ee6933177d35e4f8c875842a0b4,2026-11-18T00:40:00Z,Toronto Raptors,New York Knicks,winamax_de,h2h,Toronto Raptors,,,125,2026-11-17T02:05:55Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,fanduel,h2h,Detroit Pistons,,,290,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,fanduel,h2h,San Antonio Spurs,,,-360,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,fanduel,spreads,Detroit Pistons,,8.5,-108,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,fanduel,spreads,San Antonio Spurs,,-8.5,-112,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,fanduel,totals,Over,,220.5,-118,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,fanduel,totals,Under,,220.5,-104,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,lowvig,spreads,Detroit Pistons,,8.0,-101,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,lowvig,spreads,San Antonio Spurs,,-8.0,-111,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,lowvig,totals,Over,,221.0,-107,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,lowvig,totals,Under,,221.0,-107,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,betonlineag,spreads,Detroit Pistons,,8.0,-105,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,betonlineag,spreads,San Antonio Spurs,,-8.0,-115,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,betonlineag,totals,Over,,221.0,-110,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,betonlineag,totals,Under,,221.0,-110,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,sport888,h2h,Detroit Pistons,,,260,2026-11-17T02:06:34Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,sport888,h2h,San Antonio Spurs,,,-350,2026-11-17T02:06:34Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,sport888,spreads,Detroit Pistons,,8.5,-118,2026-11-17T02:06:34Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,sport888,spreads,San Antonio Spurs,,-8.5,-118,2026-11-17T02:06:34Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,sport888,totals,Over,,220.5,-118,2026-11-17T02:06:34Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,sport888,totals,Under,,220.5,-118,2026-11-17T02:06:34Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,unibet_fr,h2h,Detroit Pistons,,,215,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,unibet_fr,h2h,San Antonio Spurs,,,-455,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,codere_it,h2h,Detroit Pistons,,,240,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,codere_it,h2h,San Antonio Spurs,,,-417,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,codere_it,totals,Over,,220.5,-125,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,codere_it,totals,Under,,220.5,-119,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,betclic_fr,h2h,Detroit Pistons,,,232,2026-11-17T02:04:27Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,betclic_fr,h2h,San Antonio Spurs,,,-417,2026-11-17T02:04:27Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,williamhill,h2h,Detroit Pistons,,,260,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,williamhill,h2h,San Antonio Spurs,,,-350,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,williamhill,spreads,Detroit Pistons,,8.5,-118,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,williamhill,spreads,San Antonio Spurs,,-8.5,-118,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,williamhill,totals,Over,,220.5,-118,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,williamhill,totals,Under,,220.5,-118,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,onexbet,h2h,Detroit Pistons,,,266,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,onexbet,h2h,San Antonio Spurs,,,-323,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,onexbet,spreads,Detroit Pistons,,8.5,-110,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,onexbet,spreads,San Antonio Spurs,,-8.5,-105,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,onexbet,totals,Over,,220.5,-111,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,onexbet,totals,Under,,220.5,-104,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,nordicbet,h2h,Detroit Pistons,,,260,2026-11-17T02:05:42Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,nordicbet,h2h,San Antonio Spurs,,,-400,2026-11-17T02:05:42Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,nordicbet,totals,Over,,221.5,-114,2026-11-17T02:05:42Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,nordicbet,totals,Under,,221.5,-114,2026-11-17T02:05:42Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,coolbet,h2h,Detroit Pistons,,,280,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,coolbet,h2h,San Antonio Spurs,,,-345,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,coolbet,spreads,Detroit Pistons,,8.5,-108,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,coolbet,spreads,San Antonio Spurs,,-8.5,-110,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,coolbet,totals,Over,,221.0,-108,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,coolbet,totals,Under,,221.0,-110,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,betrivers,h2h,Detroit Pistons,,,285,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,betrivers,h2h,San Antonio Spurs,,,-385,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,betrivers,spreads,Detroit Pistons,,8.5,-109,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,betrivers,spreads,San Antonio Spurs,,-8.5,-114,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,betrivers,totals,Over,,220.5,-114,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,betrivers,totals,Under,,220.5,-108,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,leovegas_se,h2h,Detroit Pistons,,,285,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,leovegas_se,h2h,San Antonio Spurs,,,-400,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,leovegas_se,spreads,Detroit Pistons,,8.5,-110,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,leovegas_se,spreads,San Antonio Spurs,,-8.5,-115,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,unibet_se,h2h,Detroit Pistons,,,285,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,unibet_se,h2h,San Antonio Spurs,,,-385,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,unibet_se,spreads,Detroit Pistons,,8.5,-109,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,unibet_se,spreads,San Antonio Spurs,,-8.5,-114,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,pmu_fr,h2h,Detroit Pistons,,,270,2026-11-17T02:06:12Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,pmu_fr,h2h,San Antonio Spurs,,,-480,2026-11-17T02:06:12Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,pmu_fr,totals,Over,,220.5,-143,2026-11-17T02:06:12Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,pmu_fr,totals,Under,,220.5,-136,2026-11-17T02:06:12Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,unibet_nl,h2h,Detroit Pistons,,,285,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,unibet_nl,h2h,San Antonio Spurs,,,-385,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,unibet_nl,spreads,Detroit Pistons,,8.5,-109,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,unibet_nl,spreads,San Antonio Spurs,,-8.5,-114,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,unibet_nl,totals,Over,,220.5,-114,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,unibet_nl,totals,Under,,220.5,-108,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,williamhill_us,h2h,Detroit Pistons,,,278,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,williamhill_us,h2h,San Antonio Spurs,,,-355,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,williamhill_us,spreads,Detroit Pistons,,8.5,-110,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,williamhill_us,spreads,San Antonio Spurs,,-8.5,-110,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,williamhill_us,totals,Over,,221.0,-110,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,williamhill_us,totals,Under,,221.0,-110,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,draftkings,h2h,Detroit Pistons,,,277,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,draftkings,h2h,San Antonio Spurs,,,-345,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,draftkings,spreads,Detroit Pistons,,8.5,-110,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,draftkings,spreads,San Antonio Spurs,,-8.5,-110,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,draftkings,totals,Over,,220.5,-110,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,draftkings,totals,Under,,220.5,-110,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,betmgm,h2h,Detroit Pistons,,,280,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,betmgm,h2h,San Antonio Spurs,,,-350,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,betmgm,spreads,Detroit Pistons,,8.5,-110,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,betmgm,spreads,San Antonio Spurs,,-8.5,-110,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,betmgm,totals,Over,,220.5,-115,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,betmgm,totals,Under,,220.5,-105,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,gtbets,h2h,Detroit Pistons,,,280,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,gtbets,h2h,San Antonio Spurs,,,-350,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,gtbets,spreads,Detroit Pistons,,8.5,-109,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,gtbets,spreads,San Antonio Spurs,,-8.5,-109,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,gtbets,totals,Over,,220.5,-109,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,gtbets,totals,Under,,220.5,-109,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,marathonbet,h2h,Detroit Pistons,,,264,2026-11-17T02:05:56Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,marathonbet,h2h,San Antonio Spurs,,,-333,2026-11-17T02:05:56Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,marathonbet,spreads,Detroit Pistons,,8.5,-114,2026-11-17T02:05:56Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,marathonbet,spreads,San Antonio Spurs,,-8.5,-109,2026-11-17T02:05:56Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,marathonbet,totals,Over,,220.5,-115,2026-11-17T02:05:56Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,marathonbet,totals,Under,,220.5,-108,2026-11-17T02:05:56Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,matchbook,h2h,Detroit Pistons,,,245,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,matchbook,h2h,San Antonio Spurs,,,-357,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,matchbook,h2h_lay,Detroit Pistons,,,360,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,matchbook,h2h_lay,San Antonio Spurs,,,-244,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,matchbook,spreads,Detroit Pistons,,9.0,-128,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,matchbook,spreads,San Antonio Spurs,,-9.0,-119,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,matchbook,totals,Over,,220.5,-130,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,matchbook,totals,Under,,220.5,-119,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,winamax_fr,h2h,Detroit Pistons,,,205,2026-11-17T02:05:54Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,winamax_fr,h2h,San Antonio Spurs,,,-476,2026-11-17T02:05:54Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,winamax_de,h2h,Detroit Pistons,,,275,2026-11-17T02:05:55Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,winamax_de,h2h,San Antonio Spurs,,,-357,2026-11-17T02:05:55Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,bovada,h2h,Detroit Pistons,,,290,2026-11-17T02:06:00Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,bovada,h2h,San Antonio Spurs,,,-380,2026-11-17T02:06:00Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,bovada,spreads,Detroit Pistons,,8.5,-110,2026-11-17T02:06:00Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,bovada,spreads,San Antonio Spurs,,-8.5,-110,2026-11-17T02:06:00Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,bovada,totals,Over,,221.0,-110,2026-11-17T02:06:00Z
+2026-11-17T02:06:34Z,69f0b70d1185e537c5ae4be43ebf2c9f,2026-11-18T01:10:00Z,San Antonio Spurs,Detroit Pistons,bovada,totals,Under,,221.0,-110,2026-11-17T02:06:00Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,fanduel,h2h,Los Angeles Clippers,,,-230,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,fanduel,h2h,Utah Jazz,,,190,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,fanduel,spreads,Los Angeles Clippers,,-5.5,-115,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,fanduel,spreads,Utah Jazz,,5.5,-105,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,fanduel,totals,Over,,223.5,-110,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,fanduel,totals,Under,,223.5,-110,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,betonlineag,spreads,Los Angeles Clippers,,-6.5,-110,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,betonlineag,spreads,Utah Jazz,,6.5,-110,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,betonlineag,totals,Over,,224.5,-110,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,betonlineag,totals,Under,,224.5,-110,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,lowvig,spreads,Los Angeles Clippers,,-6.5,-106,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,lowvig,spreads,Utah Jazz,,6.5,-106,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,lowvig,totals,Over,,224.5,-107,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,lowvig,totals,Under,,224.5,-107,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,unibet_fr,h2h,Los Angeles Clippers,,,-286,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,unibet_fr,h2h,Utah Jazz,,,145,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,sport888,h2h,Los Angeles Clippers,,,-250,2026-11-17T02:06:34Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,sport888,h2h,Utah Jazz,,,190,2026-11-17T02:06:34Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,sport888,spreads,Los Angeles Clippers,,-6.5,100,2026-11-17T02:06:34Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,sport888,spreads,Utah Jazz,,6.5,-138,2026-11-17T02:06:34Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,sport888,totals,Over,,223.5,-118,2026-11-17T02:06:34Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,sport888,totals,Under,,223.5,-118,2026-11-17T02:06:34Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,betclic_fr,h2h,Los Angeles Clippers,,,-263,2026-11-17T02:04:27Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,betclic_fr,h2h,Utah Jazz,,,158,2026-11-17T02:04:27Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,codere_it,h2h,Los Angeles Clippers,,,-256,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,codere_it,h2h,Utah Jazz,,,160,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,codere_it,totals,Over,,223.5,-125,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,codere_it,totals,Under,,223.5,-119,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,williamhill,h2h,Los Angeles Clippers,,,-250,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,williamhill,h2h,Utah Jazz,,,190,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,williamhill,totals,Over,,223.5,-118,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,williamhill,totals,Under,,223.5,-118,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,nordicbet,h2h,Los Angeles Clippers,,,-238,2026-11-17T02:05:42Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,nordicbet,h2h,Utah Jazz,,,177,2026-11-17T02:05:42Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,nordicbet,totals,Over,,223.5,-116,2026-11-17T02:05:42Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,nordicbet,totals,Under,,223.5,-111,2026-11-17T02:05:42Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,onexbet,h2h,Los Angeles Clippers,,,-228,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,onexbet,h2h,Utah Jazz,,,194,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,onexbet,spreads,Los Angeles Clippers,,-6.5,-103,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,onexbet,spreads,Utah Jazz,,6.5,-112,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,onexbet,totals,Over,,223.5,-112,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,onexbet,totals,Under,,223.5,-104,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,coolbet,h2h,Los Angeles Clippers,,,-227,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,coolbet,h2h,Utah Jazz,,,190,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,coolbet,spreads,Los Angeles Clippers,,-6.0,-105,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,coolbet,spreads,Utah Jazz,,6.0,-111,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,coolbet,totals,Over,,223.5,-108,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,coolbet,totals,Under,,223.5,-110,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,pmu_fr,h2h,Los Angeles Clippers,,,-265,2026-11-17T02:06:12Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,pmu_fr,h2h,Utah Jazz,,,163,2026-11-17T02:06:12Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,pmu_fr,totals,Over,,223.5,-143,2026-11-17T02:06:12Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,pmu_fr,totals,Under,,223.5,-136,2026-11-17T02:06:12Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,unibet_se,h2h,Los Angeles Clippers,,,-225,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,unibet_se,h2h,Utah Jazz,,,175,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,unibet_se,spreads,Los Angeles Clippers,,-5.5,-113,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,unibet_se,spreads,Utah Jazz,,5.5,-110,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,unibet_nl,h2h,Los Angeles Clippers,,,-225,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,unibet_nl,h2h,Utah Jazz,,,175,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,unibet_nl,spreads,Los Angeles Clippers,,-5.5,-113,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,unibet_nl,spreads,Utah Jazz,,5.5,-110,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,unibet_nl,totals,Over,,223.5,-113,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,unibet_nl,totals,Under,,223.5,-109,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,leovegas_se,h2h,Los Angeles Clippers,,,-230,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,leovegas_se,h2h,Utah Jazz,,,175,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,leovegas_se,spreads,Los Angeles Clippers,,-5.5,-114,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,leovegas_se,spreads,Utah Jazz,,5.5,-112,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,betrivers,h2h,Los Angeles Clippers,,,-225,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,betrivers,h2h,Utah Jazz,,,175,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,betrivers,spreads,Los Angeles Clippers,,-5.5,-113,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,betrivers,spreads,Utah Jazz,,5.5,-110,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,betrivers,totals,Over,,223.5,-113,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,betrivers,totals,Under,,223.5,-109,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,williamhill_us,h2h,Los Angeles Clippers,,,-235,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,williamhill_us,h2h,Utah Jazz,,,192,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,williamhill_us,spreads,Los Angeles Clippers,,-6.0,-115,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,williamhill_us,spreads,Utah Jazz,,6.0,-105,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,williamhill_us,totals,Over,,224.0,-110,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,williamhill_us,totals,Under,,224.0,-110,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,draftkings,h2h,Los Angeles Clippers,,,-219,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,draftkings,h2h,Utah Jazz,,,182,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,draftkings,spreads,Los Angeles Clippers,,-5.5,-114,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,draftkings,spreads,Utah Jazz,,5.5,-106,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,draftkings,totals,Over,,223.5,-110,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,draftkings,totals,Under,,223.5,-110,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,betmgm,h2h,Los Angeles Clippers,,,-220,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,betmgm,h2h,Utah Jazz,,,180,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,betmgm,totals,Over,,224.5,-105,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,betmgm,totals,Under,,224.5,-115,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,gtbets,h2h,Los Angeles Clippers,,,-225,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,gtbets,h2h,Utah Jazz,,,185,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,gtbets,spreads,Los Angeles Clippers,,-5.5,-114,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,gtbets,spreads,Utah Jazz,,5.5,-104,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,gtbets,totals,Over,,223.5,-109,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,gtbets,totals,Under,,223.5,-109,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,winamax_fr,h2h,Los Angeles Clippers,,,-294,2026-11-17T02:05:54Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,winamax_fr,h2h,Utah Jazz,,,140,2026-11-17T02:05:54Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,winamax_de,h2h,Los Angeles Clippers,,,-233,2026-11-17T02:05:55Z
+2026-11-17T02:06:34Z,e7343c795f16a5a2a6fd93dbc58499a6,2026-11-18T03:40:00Z,Los Angeles Clippers,Utah Jazz,winamax_de,h2h,Utah Jazz,,,180,2026-11-17T02:05:55Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,fanduel,h2h,Charlotte Hornets,,,315,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,fanduel,h2h,Los Angeles Lakers,,,-400,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,fanduel,spreads,Charlotte Hornets,,8.5,-104,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,fanduel,spreads,Los Angeles Lakers,,-8.5,-118,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,fanduel,totals,Over,,220.5,-105,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,fanduel,totals,Under,,220.5,-115,2026-11-17T02:06:10Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,betclic_fr,h2h,Charlotte Hornets,,,242,2026-11-17T02:04:27Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,betclic_fr,h2h,Los Angeles Lakers,,,-455,2026-11-17T02:04:27Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,sport888,h2h,Charlotte Hornets,,,260,2026-11-17T02:06:34Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,sport888,h2h,Los Angeles Lakers,,,-350,2026-11-17T02:06:34Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,sport888,spreads,Charlotte Hornets,,8.5,-118,2026-11-17T02:06:34Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,sport888,spreads,Los Angeles Lakers,,-8.5,-118,2026-11-17T02:06:34Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,sport888,totals,Over,,219.5,-118,2026-11-17T02:06:34Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,sport888,totals,Under,,219.5,-118,2026-11-17T02:06:34Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,codere_it,h2h,Charlotte Hornets,,,250,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,codere_it,h2h,Los Angeles Lakers,,,-435,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,codere_it,totals,Over,,219.5,-122,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,codere_it,totals,Under,,219.5,-122,2026-11-17T02:05:53Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,williamhill,h2h,Charlotte Hornets,,,260,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,williamhill,h2h,Los Angeles Lakers,,,-350,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,williamhill,spreads,Charlotte Hornets,,8.5,-118,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,williamhill,spreads,Los Angeles Lakers,,-8.5,-118,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,williamhill,totals,Over,,219.5,-118,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,williamhill,totals,Under,,219.5,-118,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,nordicbet,h2h,Charlotte Hornets,,,270,2026-11-17T02:05:42Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,nordicbet,h2h,Los Angeles Lakers,,,-417,2026-11-17T02:05:42Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,nordicbet,spreads,Charlotte Hornets,,8.5,-111,2026-11-17T02:05:42Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,nordicbet,spreads,Los Angeles Lakers,,-8.5,-116,2026-11-17T02:05:42Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,nordicbet,totals,Over,,219.5,-114,2026-11-17T02:05:42Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,nordicbet,totals,Under,,219.5,-114,2026-11-17T02:05:42Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,coolbet,h2h,Charlotte Hornets,,,300,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,coolbet,h2h,Los Angeles Lakers,,,-370,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,coolbet,spreads,Charlotte Hornets,,9.0,-111,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,coolbet,spreads,Los Angeles Lakers,,-9.0,-105,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,coolbet,totals,Over,,219.5,-108,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,coolbet,totals,Under,,219.5,-110,2026-11-17T02:06:24Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,onexbet,h2h,Charlotte Hornets,,,338,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,onexbet,h2h,Los Angeles Lakers,,,-422,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,onexbet,spreads,Charlotte Hornets,,8.5,-104,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,onexbet,spreads,Los Angeles Lakers,,-8.5,-111,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,onexbet,totals,Over,,220.5,-103,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,onexbet,totals,Under,,220.5,-112,2026-11-17T02:06:09Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,draftkings,h2h,Charlotte Hornets,,,302,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,draftkings,h2h,Los Angeles Lakers,,,-381,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,draftkings,spreads,Charlotte Hornets,,8.5,-110,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,draftkings,spreads,Los Angeles Lakers,,-8.5,-110,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,draftkings,totals,Over,,218.5,-114,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,draftkings,totals,Under,,218.5,-106,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,williamhill_us,h2h,Charlotte Hornets,,,310,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,williamhill_us,h2h,Los Angeles Lakers,,,-400,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,williamhill_us,spreads,Charlotte Hornets,,8.5,-105,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,williamhill_us,spreads,Los Angeles Lakers,,-8.5,-115,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,williamhill_us,totals,Over,,220.5,-105,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,williamhill_us,totals,Under,,220.5,-115,2026-11-17T02:05:24Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,betmgm,h2h,Charlotte Hornets,,,310,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,betmgm,h2h,Los Angeles Lakers,,,-400,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,betmgm,spreads,Charlotte Hornets,,8.5,-105,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,betmgm,spreads,Los Angeles Lakers,,-8.5,-115,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,betmgm,totals,Over,,219.5,-110,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,betmgm,totals,Under,,219.5,-110,2026-11-17T02:06:21Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,pmu_fr,h2h,Charlotte Hornets,,,270,2026-11-17T02:06:13Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,pmu_fr,h2h,Los Angeles Lakers,,,-480,2026-11-17T02:06:13Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,pmu_fr,totals,Over,,220.5,-139,2026-11-17T02:06:13Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,pmu_fr,totals,Under,,220.5,-139,2026-11-17T02:06:13Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,betrivers,h2h,Charlotte Hornets,,,285,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,betrivers,h2h,Los Angeles Lakers,,,-385,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,betrivers,spreads,Charlotte Hornets,,8.5,-107,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,betrivers,spreads,Los Angeles Lakers,,-8.5,-115,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,betrivers,totals,Over,,220.5,-112,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,betrivers,totals,Under,,220.5,-112,2026-11-17T02:05:41Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,leovegas_se,h2h,Charlotte Hornets,,,285,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,leovegas_se,h2h,Los Angeles Lakers,,,-400,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,leovegas_se,spreads,Charlotte Hornets,,8.5,-108,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,leovegas_se,spreads,Los Angeles Lakers,,-8.5,-117,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,unibet_se,h2h,Charlotte Hornets,,,285,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,unibet_se,h2h,Los Angeles Lakers,,,-385,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,unibet_se,spreads,Charlotte Hornets,,8.5,-107,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,unibet_se,spreads,Los Angeles Lakers,,-8.5,-115,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,unibet_nl,h2h,Charlotte Hornets,,,285,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,unibet_nl,h2h,Los Angeles Lakers,,,-385,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,unibet_nl,spreads,Charlotte Hornets,,8.5,-107,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,unibet_nl,spreads,Los Angeles Lakers,,-8.5,-115,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,unibet_nl,totals,Over,,220.5,-112,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,unibet_nl,totals,Under,,220.5,-112,2026-11-17T02:06:08Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,gtbets,h2h,Charlotte Hornets,,,310,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,gtbets,h2h,Los Angeles Lakers,,,-400,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,gtbets,spreads,Charlotte Hornets,,8.5,-109,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,gtbets,spreads,Los Angeles Lakers,,-8.5,-109,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,gtbets,totals,Over,,218.5,-114,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,gtbets,totals,Under,,218.5,-104,2026-11-17T02:06:22Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,winamax_fr,h2h,Charlotte Hornets,,,205,2026-11-17T02:05:54Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,winamax_fr,h2h,Los Angeles Lakers,,,-526,2026-11-17T02:05:54Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,winamax_de,h2h,Charlotte Hornets,,,285,2026-11-17T02:05:55Z
+2026-11-17T02:06:34Z,bed6147c75f3706f25e25f5bdfeaf1ec,2026-11-18T04:10:00Z,Los Angeles Lakers,Charlotte Hornets,winamax_de,h2h,Los Angeles Lakers,,,-385,2026-11-17T02:05:55Z
