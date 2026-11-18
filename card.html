@@ -90,6 +90,9 @@ const ln = p => p.market === "spread" ? (p.line > 0 ? "+" : "") + p.line : (p.si
 const pickTxt = p => p.market === "spread" ? `${p.side} ${ln(p)}` : `${p.side} ${p.line}`;
 const pips = c => `<span class="pips" title="confidence ${c}/5"><b>${"●".repeat(c)}</b>${"●".repeat(5 - c)}</span>`;
 const res = p => p.result ? `<span class="badge ${p.result}">${p.result}</span>` : "";
+const tipDate = p => p.commence ? new Date(String(p.commence).replace(" ", "T").replace(/\+00:00$/, "Z")) : null;
+const tip = p => { const d = tipDate(p); return d && !isNaN(d) ? d.toLocaleTimeString("en-US", {hour: "numeric", minute: "2-digit", timeZone: "America/New_York"}) + " ET" : ""; };
+const byTip = (a, b) => (tipDate(a) || 0) - (tipDate(b) || 0);
 const money = x => (x >= 0 ? "+$" : "−$") + Math.abs(x).toFixed(2);
 
 async function list(path) {
@@ -122,16 +125,16 @@ function dayView(j) {
   if (top.length) {
     h += `<h2>Top plays · $5 each</h2><div class="cards">` + top.map(p => `
       <div class="card"><div class="top"><div class="pick">${esc(pickTxt(p))}</div>${res(p)}</div>
-        <div class="game">${esc(p.away)} @ ${esc(p.home)}<span class="tag">${p.sport === "nba" ? "NBA" : "College"}</span></div>
+        <div class="game">${tip(p) ? `<b>${tip(p)}</b> · ` : ""}${esc(p.away)} @ ${esc(p.home)}<span class="tag">${p.sport === "nba" ? "NBA" : "College"}</span></div>
         <div>${pips(p.confidence)}</div>
         <div class="why">${esc(p.why)}</div></div>`).join("") + `</div>`;
   }
   for (const s of ["nba", "cbb"]) {
-    const rows = ps.filter(p => p.sport === s);
+    const rows = ps.filter(p => p.sport === s).sort(byTip);
     if (!rows.length) continue;
     h += `<h2>${s === "nba" ? "NBA" : "College"} · every game <a style="font-size:12px;text-transform:none" target="_blank" href="${SHEET[s](j.date)}">full breakdown ↗</a></h2>
-      <table><tr><th>Game</th><th>Call</th><th>Conf</th><th class="why">Why</th><th></th></tr>` +
-      rows.map(p => `<tr class="${p.stake > 0 ? "money" : ""}"><td>${esc(p.away)} @ ${esc(p.home)}</td>
+      <table><tr><th>Time</th><th>Game</th><th>Call</th><th>Conf</th><th class="why">Why</th><th></th></tr>` +
+      rows.map(p => `<tr class="${p.stake > 0 ? "money" : ""}"><td style="white-space:nowrap">${tip(p)}</td><td>${esc(p.away)} @ ${esc(p.home)}</td>
         <td><b>${esc(pickTxt(p))}</b>${p.stake > 0 ? ' <span class="tag">$5</span>' : ""}</td>
         <td>${pips(p.confidence)}</td><td class="why">${esc(p.why)}</td><td>${res(p)}</td></tr>`).join("") + `</table>`;
   }
