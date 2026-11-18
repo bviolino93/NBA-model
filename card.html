@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Picks · NBA & College</title>
+<style>
+  :root {
+    --bg: #0f1115; --panel: #171a21; --line: #262a33; --text: #e8eaed;
+    --muted: #9aa0a6; --accent: #4f8cff; --win: #2fb36d; --loss: #e5534b;
+    --push: #b0b4ba; --gold: #e0b341;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  header { padding: 20px 16px 8px; max-width: 980px; margin: 0 auto; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  .sub { color: var(--muted); font-size: 13px; }
+  main { max-width: 980px; margin: 0 auto; padding: 0 16px 48px; }
+  .bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 14px 0; }
+  .tab, select { background: var(--panel); color: var(--text); border: 1px solid var(--line);
+                 border-radius: 8px; padding: 7px 12px; font-size: 14px; cursor: pointer; }
+  .tab.on { border-color: var(--accent); color: #fff; background: #1c2840; }
+  .summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+             gap: 10px; margin: 10px 0 18px; }
+  .stat { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px; }
+  .stat .k { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+  .stat .v { font-size: 22px; font-weight: 600; margin-top: 2px; }
+  h2 { font-size: 16px; margin: 22px 0 10px; color: var(--muted); font-weight: 600;
+       text-transform: uppercase; letter-spacing: .05em; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 10px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px; }
+  .card .top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+  .pick { font-size: 18px; font-weight: 700; }
+  .game { color: var(--muted); font-size: 13px; margin: 2px 0 8px; }
+  .why { font-size: 13.5px; }
+  .pips { white-space: nowrap; letter-spacing: 2px; color: var(--line); font-size: 13px; }
+  .pips b { color: var(--gold); font-weight: 400; }
+  .badge { display: inline-block; min-width: 26px; text-align: center; border-radius: 6px;
+           padding: 1px 7px; font-size: 12px; font-weight: 700; }
+  .W { background: rgba(47,179,109,.18); color: var(--win); }
+  .L { background: rgba(229,83,75,.18); color: var(--loss); }
+  .P { background: rgba(176,180,186,.18); color: var(--push); }
+  .tag { font-size: 11px; color: var(--muted); border: 1px solid var(--line); border-radius: 5px;
+         padding: 0 5px; margin-left: 6px; text-transform: uppercase; }
+  table { width: 100%; border-collapse: collapse; background: var(--panel);
+          border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  th, td { padding: 8px 10px; border-bottom: 1px solid var(--line); text-align: left; font-size: 13.5px;
+           vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; }
+  tr:last-child td { border-bottom: 0; }
+  td.why { color: var(--muted); }
+  .money td:first-child { box-shadow: inset 3px 0 0 var(--accent); }
+  .pos { color: var(--win); } .neg { color: var(--loss); }
+  .empty, .err { color: var(--muted); padding: 24px 0; }
+  .filters { display: flex; gap: 8px; flex-wrap: wrap; }
+  a { color: var(--accent); }
+  @media (max-width: 640px) { td.why, th.why { display: none; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Daily Picks</h1>
+  <div class="sub">Game-by-game NBA and college basketball calls. Confidence 1–5 = how many factors
+    agree. <b>$5</b> = top play; the rest are logged leans.</div>
+</header>
+<main>
+  <div class="bar">
+    <button class="tab on" data-view="day">Picks</button>
+    <button class="tab" data-view="record">Record</button>
+    <select id="date"></select>
+    <div class="filters" id="filters">
+      <button class="tab on" data-sport="all">All</button>
+      <button class="tab" data-sport="nba">NBA</button>
+      <button class="tab" data-sport="cbb">College</button>
+    </div>
+  </div>
+  <div id="out"><div class="empty">Loading…</div></div>
+</main>
+<script>
+const REPO = "bviolino93/NBA-model", BRANCH = "breakdowns";
+const RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/`;
+const API = `https://api.github.com/repos/${REPO}/contents/`;
+const SHEET = {nba: d => `https://github.com/bviolino93/NBA-model/blob/breakdowns/nba/${d}.md`,
+               cbb: d => `https://github.com/bviolino93/CBB-model/blob/breakdowns/cbb/${d}.md`};
+let days = [], cache = {}, view = "day", sport = "all";
+
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const ln = p => p.market === "spread" ? (p.line > 0 ? "+" : "") + p.line : (p.side === "Over" ? "o" : "u") + p.line;
+const pickTxt = p => p.market === "spread" ? `${p.side} ${ln(p)}` : `${p.side} ${p.line}`;
+const pips = c => `<span class="pips" title="confidence ${c}/5"><b>${"●".repeat(c)}</b>${"●".repeat(5 - c)}</span>`;
+const res = p => p.result ? `<span class="badge ${p.result}">${p.result}</span>` : "";
+const money = x => (x >= 0 ? "+$" : "−$") + Math.abs(x).toFixed(2);
+
+async function list(path) {
+  const r = await fetch(API + path + "?ref=" + BRANCH);
+  if (!r.ok) return [];
+  return (await r.json()).filter(f => f.name.endsWith(".json")).map(f => f.name.replace(".json", ""));
+}
+async function load(d) {
+  if (cache[d]) return cache[d];
+  let j = null;
+  if (graded.has(d)) j = await fetch(RAW + `picks/graded/${d}.json`).then(r => r.ok ? r.json() : null).catch(() => null);
+  if (!j) j = await fetch(RAW + `picks/${d}.json`).then(r => r.json());
+  return cache[d] = j;
+}
+let graded = new Set();
+
+function dayView(j) {
+  const ps = j.picks.filter(p => sport === "all" || p.sport === sport);
+  if (!ps.length) return `<div class="empty">No picks for this filter.</div>`;
+  const top = ps.filter(p => p.stake > 0).sort((a, b) => b.confidence - a.confidence);
+  const done = ps.filter(p => p.result), w = done.filter(p => p.result === "W").length,
+        l = done.filter(p => p.result === "L").length;
+  const topDone = top.filter(p => p.result), tp = topDone.reduce((s, p) => s + (p.profit || 0), 0);
+  let h = `<div class="summary">
+    <div class="stat"><div class="k">Top plays</div><div class="v">${top.length}</div></div>
+    <div class="stat"><div class="k">All calls</div><div class="v">${ps.length}</div></div>
+    <div class="stat"><div class="k">Graded</div><div class="v">${done.length ? `${w}-${l}` : "—"}</div></div>
+    <div class="stat"><div class="k">Top plays $</div><div class="v ${tp >= 0 ? "pos" : "neg"}">${topDone.length ? money(tp) : "—"}</div></div>
+  </div>`;
+  if (top.length) {
+    h += `<h2>Top plays · $5 each</h2><div class="cards">` + top.map(p => `
+      <div class="card"><div class="top"><div class="pick">${esc(pickTxt(p))}</div>${res(p)}</div>
+        <div class="game">${esc(p.away)} @ ${esc(p.home)}<span class="tag">${p.sport === "nba" ? "NBA" : "College"}</span></div>
+        <div>${pips(p.confidence)}</div>
+        <div class="why">${esc(p.why)}</div></div>`).join("") + `</div>`;
+  }
+  for (const s of ["nba", "cbb"]) {
+    const rows = ps.filter(p => p.sport === s);
+    if (!rows.length) continue;
+    h += `<h2>${s === "nba" ? "NBA" : "College"} · every game <a style="font-size:12px;text-transform:none" target="_blank" href="${SHEET[s](j.date)}">full breakdown ↗</a></h2>
+      <table><tr><th>Game</th><th>Call</th><th>Conf</th><th class="why">Why</th><th></th></tr>` +
+      rows.map(p => `<tr class="${p.stake > 0 ? "money" : ""}"><td>${esc(p.away)} @ ${esc(p.home)}</td>
+        <td><b>${esc(pickTxt(p))}</b>${p.stake > 0 ? ' <span class="tag">$5</span>' : ""}</td>
+        <td>${pips(p.confidence)}</td><td class="why">${esc(p.why)}</td><td>${res(p)}</td></tr>`).join("") + `</table>`;
+  }
+  return h;
+}
+
+async function recordView() {
+  const gs = [...graded].sort();
+  if (!gs.length) return `<div class="empty">Nothing graded yet. Results show up the morning after the first card.</div>`;
+  const all = (await Promise.all(gs.map(load))).flatMap(j => j.picks)
+    .filter(p => p.result && (sport === "all" || p.sport === sport));
+  const agg = (rows) => {
+    const w = rows.filter(p => p.result === "W").length, l = rows.filter(p => p.result === "L").length,
+          pu = rows.filter(p => p.result === "P").length;
+    return {w, l, pu, pct: w + l ? (100 * w / (w + l)).toFixed(1) + "%" : "—",
+            pr: rows.reduce((s, p) => s + (p.stake > 0 ? (p.profit || 0) : 0), 0),
+            flat: rows.reduce((s, p) => s + (p.result === "W" ? 100 / 110 : p.result === "L" ? -1 : 0), 0)};
+  };
+  const groups = [["Top plays ($5)", all.filter(p => p.stake > 0)], ["Every call", all]];
+  for (const s of ["nba", "cbb"]) for (const m of ["spread", "total"])
+    groups.push([`${s === "nba" ? "NBA" : "College"} ${m}s`, all.filter(p => p.sport === s && p.market === m)]);
+  for (let c = 5; c >= 1; c--) groups.push([`Confidence ${c}`, all.filter(p => p.confidence === c)]);
+  const top = agg(groups[0][1]);
+  let h = `<div class="summary">
+    <div class="stat"><div class="k">Top plays</div><div class="v">${top.w}-${top.l}${top.pu ? "-" + top.pu : ""}</div></div>
+    <div class="stat"><div class="k">Win rate</div><div class="v">${top.pct}</div></div>
+    <div class="stat"><div class="k">Profit at $5</div><div class="v ${top.pr >= 0 ? "pos" : "neg"}">${money(top.pr)}</div></div>
+    <div class="stat"><div class="k">Days graded</div><div class="v">${gs.length}</div></div></div>
+    <h2>Breakdown</h2><table><tr><th>Group</th><th>W-L-P</th><th>Win %</th><th>Units (1 per call)</th></tr>`;
+  for (const [name, rows] of groups) {
+    if (!rows.length) continue;
+    const a = agg(rows);
+    h += `<tr><td>${name}</td><td>${a.w}-${a.l}-${a.pu}</td><td>${a.pct}</td>
+      <td class="${a.flat >= 0 ? "pos" : "neg"}">${a.flat >= 0 ? "+" : ""}${a.flat.toFixed(2)}</td></tr>`;
+  }
+  return h + `</table><p class="sub">Break-even at −110 is 52.4%. The confidence rows show whether the higher numbers really win more often.</p>`;
+}
+
+async function render() {
+  const out = document.getElementById("out");
+  document.getElementById("date").style.display = view === "day" ? "" : "none";
+  try {
+    if (view === "day") {
+      const d = document.getElementById("date").value;
+      out.innerHTML = d ? dayView(await load(d)) : `<div class="empty">No picks yet.</div>`;
+    } else out.innerHTML = await recordView();
+  } catch (e) { out.innerHTML = `<div class="err">Couldn't load picks (${esc(e.message)}).</div>`; }
+}
+
+document.querySelectorAll("[data-view]").forEach(b => b.onclick = () => {
+  view = b.dataset.view;
+  document.querySelectorAll("[data-view]").forEach(x => x.classList.toggle("on", x === b));
+  render();
+});
+document.querySelectorAll("[data-sport]").forEach(b => b.onclick = () => {
+  sport = b.dataset.sport;
+  document.querySelectorAll("[data-sport]").forEach(x => x.classList.toggle("on", x === b));
+  render();
+});
+document.getElementById("date").onchange = render;
+
+(async () => {
+  [days, graded] = await Promise.all([list("picks"), list("picks/graded").then(x => new Set(x))]);
+  days.sort().reverse();
+  document.getElementById("date").innerHTML = days.map(d => {
+    const t = new Date(d + "T12:00:00").toLocaleDateString(undefined, {weekday: "short", month: "short", day: "numeric"});
+    return `<option value="${d}">${t}</option>`;
+  }).join("");
+  render();
+})();
+</script>
+</body>
+</html>

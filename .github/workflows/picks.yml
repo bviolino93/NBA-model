@@ -100,6 +100,8 @@ jobs:
           fi
           { cat alert.md; echo; echo "@${{ github.repository_owner }}"; } > alert_body.md
           gh issue comment "$n" --body-file alert_body.md
+      - name: Add the daily picks page
+        run: cp card.html site/card.html
       - uses: actions/upload-pages-artifact@v3
         continue-on-error: true
         with:
