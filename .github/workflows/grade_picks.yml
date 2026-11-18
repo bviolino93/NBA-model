@@ -1,0 +1,51 @@
+name: Grade picks
+
+# Grades the game-by-game NBA and college picks (picks/<date>.json on the
+# `breakdowns` branch) from ESPN final scores, commits picks/graded/ and
+# prints the running record in the run summary.
+
+on:
+  schedule:
+    - cron: "0 12 * 10-12,1-6 *"
+  workflow_dispatch:
+    inputs:
+      regrade:
+        description: "Regrade every day"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: breakdown
+  cancel-in-progress: false
+
+jobs:
+  grade:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Grade
+        run: |
+          git fetch -q origin breakdowns
+          git worktree add -B breakdowns ../bd origin/breakdowns
+          flags=""
+          if [ "${{ inputs.regrade }}" = "true" ]; then flags="--regrade"; fi
+          python tools/grade_picks.py --dir ../bd $flags | tee out.txt
+          { echo '```'; cat out.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          cd ../bd
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add picks
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Graded picks $(date -u +%F)"
+          for i in 1 2 3; do
+            git push origin breakdowns && break
+            git pull -q --rebase origin breakdowns
+          done

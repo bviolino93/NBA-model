@@ -1,0 +1,80 @@
+name: Game breakdown
+
+# Game-by-game breakdown for today's NBA games (tools/breakdown.py): line
+# and line moves, our projected score, matchup, form, rest, injuries.
+# Writes breakdown/nba/<date>.md and .json to the `breakdowns` branch and
+# the run summary. The day's picks are made from that sheet.
+#
+# GitHub starts scheduled runs hours late, so the cron is early: 13:30 UTC.
+
+on:
+  schedule:
+    - cron: "30 13 * 10-12,1-6 *"
+  push:
+    branches: [claude/project-thread-gu6vtk]
+    paths: [.github/workflows/breakdown.yml, tools/breakdown.py]
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Date (YYYY-MM-DD, ET). Empty = today"
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: breakdown
+  cancel-in-progress: false
+
+jobs:
+  breakdown:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Cache ESPN days
+        uses: actions/cache@v4
+        with:
+          path: .cache_nba
+          key: espn-breakdown-${{ github.run_id }}
+          restore-keys: espn-
+      - run: pip install -r requirements.txt
+      - name: Lines from main
+        # the line snapshots are committed to main by log_lines.yml
+        run: |
+          git fetch -q origin main
+          git checkout origin/main -- data/lines || true
+      - name: Breakdown
+        run: |
+          python tools/breakdown.py --date "${{ inputs.date }}" --out breakdown | tee out.txt
+          cat breakdown/nba/*.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Publish to breakdowns branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git ls-remote --exit-code origin breakdowns >/dev/null; then
+            git fetch -q origin breakdowns
+            git worktree add -B breakdowns ../bd origin/breakdowns
+          else
+            git worktree add --orphan -b breakdowns ../bd
+          fi
+          mkdir -p ../bd/nba
+          cp breakdown/nba/* ../bd/nba/
+          cd ../bd
+          git add nba
+          git diff --cached --quiet && exit 0
+          git commit -q -m "NBA breakdown $(ls nba | tail -1 | cut -d. -f1)"
+          for i in 1 2 3; do
+            git push origin breakdowns && break
+            git pull -q --rebase origin breakdowns
+          done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: breakdown
+          path: |
+            out.txt
+            breakdown/
