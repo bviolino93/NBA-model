@@ -10,18 +10,18 @@
    "commence": "2026-11-20 01:00:00+00:00",
    "tip_et": "8:00 PM",
    "line": {
-    "spread": -7.5,
-    "total": 227.5,
+    "spread": -6.5,
+    "total": 225.5,
     "source": "ESPN"
    },
    "projection": {
-    "margin": 3.0,
-    "total": 228.1,
-    "home_pts": 115.5,
-    "away_pts": 112.5,
+    "margin": 2.6,
+    "total": 228.0,
+    "home_pts": 115.3,
+    "away_pts": 112.7,
     "parts": {
-     "players": 4.5,
-     "box": 3.4,
+     "players": 4.0,
+     "box": 3.1,
      "possessions": 2.4,
      "scores": 2.4
     }
@@ -37,8 +37,8 @@
      "ftr": -0.014,
      "3p": -0.013
     },
-    "apm_diff": 4.5,
-    "box_diff": 3.4
+    "apm_diff": 4.0,
+    "box_diff": 3.1
    },
    "form": {
     "home": {
@@ -94,7 +94,7 @@
      },
      {
       "player": "Isaiah Stewart",
-      "status": "Out",
+      "status": "Day-To-Day",
       "mpg": 11.2,
       "detail": "Illness"
      }
@@ -107,8 +107,14 @@
       "detail": "Abdomen Right"
      },
      {
+      "player": "Draymond Green",
+      "status": "Day-To-Day",
+      "mpg": 22.2,
+      "detail": "Rest Not Specified"
+     },
+     {
       "player": "Al Horford",
-      "status": "Out",
+      "status": "Day-To-Day",
       "mpg": 13.0,
       "detail": "Back"
      }
@@ -119,27 +125,28 @@
     "Warriors on a back-to-back after a road game",
     "Grizzlies games 8-2 over/under last 10",
     "Warriors: Stephen Curry (26 min) out",
-    "Our projection is 4.5 pts better for Warriors than the line"
+    "Our projection is 3.9 pts better for Warriors than the line"
    ],
    "call": {
-    "adj_margin": 5.0,
-    "adj_total": 223.1,
+    "adj_margin": 5.1,
+    "adj_total": 223.0,
     "fatigue": [
      "Grizzlies on a back-to-back",
      "Warriors on a back-to-back after a road game",
-     "Warriors without Stephen Curry"
+     "Warriors without Stephen Curry",
+     "Warriors: Draymond Green day-to-day"
     ],
     "spread": {
      "side": "Golden State Warriors",
-     "line": 7.5,
+     "line": 6.5,
      "confidence": 1,
-     "why": "projection Grizzlies +5.0 vs line +7.5; against: recent margins favour the other side; against: other side beating the line lately; against: fatigue/injuries work against our side; caution: Warriors on a back-to-back after a road game; caution: Warriors without Stephen Curry"
+     "why": "projection Grizzlies +5.1 vs line +6.5; against: recent margins favour the other side; against: other side beating the line lately; against: fatigue/injuries work against our side; caution: Warriors on a back-to-back after a road game; caution: Warriors without Stephen Curry; caution: Warriors: Draymond Green day-to-day"
     },
     "total": {
      "side": "Under",
-     "line": 227.5,
-     "confidence": 2,
-     "why": "adjusted total 223.1 (model 228.1); fatigue lowers scoring: Grizzlies on a back-to-back; Warriors on a back-to-back after a road game; Warriors without Stephen Curry"
+     "line": 225.5,
+     "confidence": 1,
+     "why": "adjusted total 223.0 (model 228.0); fatigue lowers scoring: Grizzlies on a back-to-back; Warriors on a back-to-back after a road game; Warriors without Stephen Curry"
     }
    }
   },
@@ -153,17 +160,17 @@
    "tip_et": "8:00 PM",
    "line": {
     "spread": 10.5,
-    "total": 228.5,
+    "total": 229.5,
     "source": "ESPN"
    },
    "projection": {
-    "margin": -18.2,
-    "total": 223.5,
-    "home_pts": 102.7,
-    "away_pts": 120.8,
+    "margin": -18.3,
+    "total": 223.6,
+    "home_pts": 102.6,
+    "away_pts": 121.0,
     "parts": {
-     "players": -10.4,
-     "box": -5.0,
+     "players": -10.8,
+     "box": -4.6,
      "possessions": -12.0,
      "scores": -11.7
     }
@@ -179,8 +186,8 @@
      "ftr": -0.045,
      "3p": -0.063
     },
-    "apm_diff": -10.4,
-    "box_diff": -5.0
+    "apm_diff": -10.8,
+    "box_diff": -4.6
    },
    "form": {
     "home": {
@@ -230,7 +237,7 @@
     "home": [
      {
       "player": "Ryan Rollins",
-      "status": "Out",
+      "status": "Day-To-Day",
       "mpg": 17.8,
       "detail": "Illness"
      }
@@ -266,12 +273,12 @@
     "Bucks on a back-to-back",
     "Blazers: Toumani Camara (31 min) day-to-day",
     "Blazers: Deni Avdija (30 min) day-to-day",
-    "Our projection is 7.7 pts better for Blazers than the line",
-    "Our total is 5.0 under the line"
+    "Our projection is 7.8 pts better for Blazers than the line",
+    "Our total is 5.9 under the line"
    ],
    "call": {
-    "adj_margin": -19.2,
-    "adj_total": 221.5,
+    "adj_margin": -19.3,
+    "adj_total": 221.6,
     "fatigue": [
      "Bucks on a back-to-back",
      "Blazers: Toumani Camara day-to-day, Deni Avdija day-to-day"
@@ -280,13 +287,13 @@
      "side": "Portland Trail Blazers",
      "line": -10.5,
      "confidence": 4,
-     "why": "projection Bucks -19.2 vs line -10.5; recent margins favour our side; beating the line lately; fatigue/injury edge; caution: Blazers: Toumani Camara day-to-day, Deni Avdija day-to-day"
+     "why": "projection Bucks -19.3 vs line -10.5; recent margins favour our side; beating the line lately; fatigue/injury edge; caution: Blazers: Toumani Camara day-to-day, Deni Avdija day-to-day"
     },
     "total": {
      "side": "Under",
-     "line": 228.5,
+     "line": 229.5,
      "confidence": 3,
-     "why": "adjusted total 221.5 (model 223.5); fatigue lowers scoring: Bucks on a back-to-back"
+     "why": "adjusted total 221.6 (model 223.6); fatigue lowers scoring: Bucks on a back-to-back"
     }
    }
   },
@@ -300,7 +307,7 @@
    "tip_et": "8:00 PM",
    "line": {
     "spread": 1.5,
-    "total": 216.5,
+    "total": 215.5,
     "source": "ESPN"
    },
    "projection": {
@@ -400,7 +407,7 @@
     "Timberwolves 8-2 against the spread last 10",
     "Timberwolves: Jonathan Kuminga (27 min) day-to-day",
     "Our projection is 3.8 pts better for Timberwolves than the line",
-    "Our total is 4.5 over the line"
+    "Our total is 5.5 over the line"
    ],
    "call": {
     "adj_margin": 1.8,
@@ -416,7 +423,7 @@
     },
     "total": {
      "side": "Over",
-     "line": 216.5,
+     "line": 215.5,
      "confidence": 2,
      "why": "adjusted total 221.0 (model 221.0)"
     }
@@ -432,7 +439,7 @@
    "tip_et": "8:00 PM",
    "line": {
     "spread": -15.5,
-    "total": 226.5,
+    "total": 225.5,
     "source": "ESPN"
    },
    "projection": {
@@ -541,7 +548,7 @@
     },
     "total": {
      "side": "Under",
-     "line": 226.5,
+     "line": 225.5,
      "confidence": 1,
      "why": "adjusted total 224.7 (model 225.7); fatigue lowers scoring: Spurs without Dylan Harper"
     }
