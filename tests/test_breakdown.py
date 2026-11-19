@@ -97,3 +97,41 @@ def test_markdown():
     md = bd.to_markdown("2026-11-18", [b])
     assert "## Milwaukee Bucks @ Miami Heat" in md
     assert "Heat 123, Bucks 117" in md
+
+
+def _lakers():
+    """11-18: Jazz @ Lakers, both on a b2b, Lakers without Kessler/Reaves."""
+    return {"home": "Los Angeles Lakers", "away": "Utah Jazz",
+            "home_short": "Lakers", "away_short": "Jazz", "tip_et": "10:00 PM",
+            "line": {"spread": -10.5, "total": 228.5, "source": "ESPN"},
+            "projection": {"margin": 11.9, "total": 233.8, "home_pts": 122.9,
+                           "away_pts": 110.9, "parts": {}},
+            "matchup": {}, "notes": [],
+            "form": {"home": {"n": 10, "margin": 6.7, "vs_line": 3.0, "over": 8, "under": 2},
+                     "away": {"n": 10, "margin": -8.9, "vs_line": 0.7, "over": 4, "under": 6}},
+            "schedule": {"home_b2b": 1.0, "away_b2b": 1.0, "away_prev_away": 1.0,
+                         "home_last5": 2.0, "away_last5": 3.0},
+            "injuries": {"home": [{"player": "Walker Kessler", "status": "Out", "mpg": 28.0, "detail": ""},
+                                  {"player": "Austin Reaves", "status": "Out", "mpg": 25.0, "detail": ""}],
+                         "away": [{"player": "Lauri Markkanen", "status": "Out", "mpg": 26.0, "detail": ""}]}}
+
+
+def test_assess_fatigue_lowers_confidence_and_total():
+    c = bd.assess(_lakers())
+    assert any("Lakers on a back-to-back" in w for w in c["fatigue"])
+    assert any("without Walker Kessler, Austin Reaves" in w for w in c["fatigue"])
+    sp = c["spread"]
+    assert "caution" in sp["why"]
+    # the old card had the Over at 3/5; fatigue now pulls the total under
+    assert c["adj_total"] < 228.5 and c["total"]["side"] == "Under"
+    assert "fatigue lowers scoring" in c["total"]["why"]
+
+
+def test_assess_rested_vs_tired_moves_projection():
+    b = _lakers()
+    b["schedule"] = {"home_b2b": 0.0, "away_b2b": 1.0, "away_prev_away": 1.0}
+    b["injuries"] = {"home": [], "away": []}
+    c = bd.assess(b)
+    assert c["adj_margin"] == 11.9 + 3.0
+    assert c["spread"]["side"] == "Los Angeles Lakers"
+    assert "fatigue/injury edge" in c["spread"]["why"]
