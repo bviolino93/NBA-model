@@ -1,0 +1,2779 @@
+{
+ "date": "2026-11-18",
+ "picks": [
+  {
+   "sport": "nba",
+   "home": "Cleveland Cavaliers",
+   "away": "Memphis Grizzlies",
+   "market": "spread",
+   "side": "Cleveland Cavaliers",
+   "line": -5.5,
+   "confidence": 2,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj CLE +6.6; four-factor edges; Mobley out already in; MEM hot but missing Jerome/Stewart",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    121.0,
+    124.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "nba",
+   "home": "Cleveland Cavaliers",
+   "away": "Memphis Grizzlies",
+   "market": "total",
+   "side": "Over",
+   "line": 236.0,
+   "confidence": 2,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj 238; both teams' games going over",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    121.0,
+    124.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "nba",
+   "home": "Indiana Pacers",
+   "away": "Houston Rockets",
+   "market": "spread",
+   "side": "Indiana Pacers",
+   "line": 7.5,
+   "confidence": 2,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj HOU by 6.2; IND 7-3 ATS; Amen Thompson DTD",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    104.0,
+    119.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "nba",
+   "home": "Indiana Pacers",
+   "away": "Houston Rockets",
+   "market": "total",
+   "side": "Over",
+   "line": 225.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj 227 but IND unders 3-7, slow pace; conflicting",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    104.0,
+    119.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "nba",
+   "home": "Miami Heat",
+   "away": "Milwaukee Bucks",
+   "market": "spread",
+   "side": "Miami Heat",
+   "line": -12.5,
+   "confidence": 4,
+   "stake": 5,
+   "price": -110,
+   "why": "Proj MIA +15.9; MIL 0-10, -16.8 margin; MIA W5; risk: Adebayo DTD",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    137.0,
+    130.0
+   ],
+   "result": "L",
+   "profit": -5.0
+  },
+  {
+   "sport": "nba",
+   "home": "Miami Heat",
+   "away": "Milwaukee Bucks",
+   "market": "total",
+   "side": "Under",
+   "line": 236.5,
+   "confidence": 2,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj 235.7; MIL unders 3-7",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    137.0,
+    130.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "nba",
+   "home": "Orlando Magic",
+   "away": "Philadelphia 76ers",
+   "market": "spread",
+   "side": "Orlando Magic",
+   "line": 1.5,
+   "confidence": 2,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj ORL +0.6; Brown out for PHI; PHI 8-2 but thin margins",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    116.0,
+    121.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "nba",
+   "home": "Orlando Magic",
+   "away": "Philadelphia 76ers",
+   "market": "total",
+   "side": "Over",
+   "line": 223.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj 224.6, near the line",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    116.0,
+    121.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "nba",
+   "home": "Brooklyn Nets",
+   "away": "Chicago Bulls",
+   "market": "spread",
+   "side": "Chicago Bulls",
+   "line": 2.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj BKN +1.9 (just inside); CHI defence awful, form says Nets: conflicting",
+   "commence": "2026-11-19 00:30:00+00:00",
+   "final": [
+    107.0,
+    137.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "nba",
+   "home": "Brooklyn Nets",
+   "away": "Chicago Bulls",
+   "market": "total",
+   "side": "Under",
+   "line": 237.0,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj 235.1; fast pace argues over",
+   "commence": "2026-11-19 00:30:00+00:00",
+   "final": [
+    107.0,
+    137.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "nba",
+   "home": "Toronto Raptors",
+   "away": "Washington Wizards",
+   "market": "spread",
+   "side": "Toronto Raptors",
+   "line": -6.5,
+   "confidence": 2,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj TOR +9.1; WAS L8; but TOR b2b and 3-7 ATS",
+   "commence": "2026-11-19 00:30:00+00:00",
+   "final": [
+    99.0,
+    103.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "nba",
+   "home": "Toronto Raptors",
+   "away": "Washington Wizards",
+   "market": "total",
+   "side": "Over",
+   "line": 227.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj 229",
+   "commence": "2026-11-19 00:30:00+00:00",
+   "final": [
+    99.0,
+    103.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "nba",
+   "home": "Oklahoma City Thunder",
+   "away": "Atlanta Hawks",
+   "market": "spread",
+   "side": "Atlanta Hawks",
+   "line": 7.5,
+   "confidence": 2,
+   "stake": 5,
+   "price": -110,
+   "why": "Proj OKC +5.7; OKC only +2.9 margin last 10; McCollum out already in; ATL 2-8 ATS is the worry",
+   "commence": "2026-11-19 01:00:00+00:00",
+   "final": [
+    112.0,
+    117.0
+   ],
+   "result": "W",
+   "profit": 4.55
+  },
+  {
+   "sport": "nba",
+   "home": "Oklahoma City Thunder",
+   "away": "Atlanta Hawks",
+   "market": "total",
+   "side": "Over",
+   "line": 226.0,
+   "confidence": 2,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj 229.1",
+   "commence": "2026-11-19 01:00:00+00:00",
+   "final": [
+    112.0,
+    117.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "nba",
+   "home": "Dallas Mavericks",
+   "away": "Golden State Warriors",
+   "market": "spread",
+   "side": "Golden State Warriors",
+   "line": 4.5,
+   "confidence": 2,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj DAL +2.3; GSW beat line by 4.5 last 10; Curry out in; Green/Horford DTD",
+   "commence": "2026-11-19 01:00:00+00:00",
+   "final": [
+    116.0,
+    94.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "nba",
+   "home": "Dallas Mavericks",
+   "away": "Golden State Warriors",
+   "market": "total",
+   "side": "Over",
+   "line": 222.5,
+   "confidence": 2,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj 225.9",
+   "commence": "2026-11-19 01:00:00+00:00",
+   "final": [
+    116.0,
+    94.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "nba",
+   "home": "New Orleans Pelicans",
+   "away": "Detroit Pistons",
+   "market": "spread",
+   "side": "Detroit Pistons",
+   "line": -6.5,
+   "confidence": 2,
+   "stake": 5,
+   "price": -110,
+   "why": "Proj DET by 7.5; NOP -9.5 margin, losing to line by 6; DET b2b after road game, Robinson out",
+   "commence": "2026-11-19 01:00:00+00:00",
+   "final": [
+    109.0,
+    122.0
+   ],
+   "result": "W",
+   "profit": 4.55
+  },
+  {
+   "sport": "nba",
+   "home": "New Orleans Pelicans",
+   "away": "Detroit Pistons",
+   "market": "total",
+   "side": "Under",
+   "line": 227.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj 225.4; DET tired legs",
+   "commence": "2026-11-19 01:00:00+00:00",
+   "final": [
+    109.0,
+    122.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "nba",
+   "home": "Denver Nuggets",
+   "away": "Boston Celtics",
+   "market": "spread",
+   "side": "Denver Nuggets",
+   "line": 2.5,
+   "confidence": 2,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj DEN +0.8; BOS 8-2 +12.9 but 2,800 km travel to altitude",
+   "commence": "2026-11-19 02:30:00+00:00",
+   "final": [
+    105.0,
+    101.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "nba",
+   "home": "Denver Nuggets",
+   "away": "Boston Celtics",
+   "market": "total",
+   "side": "Under",
+   "line": 219.5,
+   "confidence": 2,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj 219.1; pace 95.5; BOS unders 3-7",
+   "commence": "2026-11-19 02:30:00+00:00",
+   "final": [
+    105.0,
+    101.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "nba",
+   "home": "Los Angeles Lakers",
+   "away": "Utah Jazz",
+   "market": "spread",
+   "side": "Los Angeles Lakers",
+   "line": -10.5,
+   "confidence": 3,
+   "stake": 5,
+   "price": -110,
+   "why": "Proj LAL +11.9; LAL W9; Markkanen out; both b2b; Kessler/Reaves out in",
+   "commence": "2026-11-19 03:00:00+00:00",
+   "final": [
+    97.0,
+    109.0
+   ],
+   "result": "L",
+   "profit": -5.0
+  },
+  {
+   "sport": "nba",
+   "home": "Los Angeles Lakers",
+   "away": "Utah Jazz",
+   "market": "total",
+   "side": "Over",
+   "line": 228.5,
+   "confidence": 3,
+   "stake": 5,
+   "price": -110,
+   "why": "Proj 233.8; LAL overs 8-2",
+   "commence": "2026-11-19 03:00:00+00:00",
+   "final": [
+    97.0,
+    109.0
+   ],
+   "result": "L",
+   "profit": -5.0
+  },
+  {
+   "sport": "nba",
+   "home": "Sacramento Kings",
+   "away": "Phoenix Suns",
+   "market": "spread",
+   "side": "Sacramento Kings",
+   "line": 6.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj PHX by 5.9 (just inside); SAC 1-9, -13.1: form says Suns",
+   "commence": "2026-11-19 03:00:00+00:00",
+   "final": [
+    107.0,
+    128.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "nba",
+   "home": "Sacramento Kings",
+   "away": "Phoenix Suns",
+   "market": "total",
+   "side": "Under",
+   "line": 229.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj 228.7",
+   "commence": "2026-11-19 03:00:00+00:00",
+   "final": [
+    107.0,
+    128.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Baylor Bears",
+   "away": "Jackson State Tigers",
+   "market": "spread",
+   "side": "Jackson State Tigers",
+   "line": 34.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Baylor Bears +25.2 vs line +34.5",
+   "commence": "2026-11-18 17:00:00+00:00",
+   "final": [
+    104.0,
+    55.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Baylor Bears",
+   "away": "Jackson State Tigers",
+   "market": "total",
+   "side": "Over",
+   "line": 156.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 157.0",
+   "commence": "2026-11-18 17:00:00+00:00",
+   "final": [
+    104.0,
+    55.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Notre Dame Fighting Irish",
+   "away": "Rutgers Scarlet Knights",
+   "market": "spread",
+   "side": "Rutgers Scarlet Knights",
+   "line": 4.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Notre Dame Fighting Irish +4.2 vs line +4.5",
+   "commence": "2026-11-18 19:00:00+00:00",
+   "final": [
+    110.0,
+    100.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Notre Dame Fighting Irish",
+   "away": "Rutgers Scarlet Knights",
+   "market": "total",
+   "side": "Over",
+   "line": 149.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 152.5",
+   "commence": "2026-11-18 19:00:00+00:00",
+   "final": [
+    110.0,
+    100.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Florida Gators",
+   "away": "Houston Cougars",
+   "market": "spread",
+   "side": "Florida Gators",
+   "line": -2.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Florida Gators +2.8 vs line +2.5",
+   "commence": "2026-11-18 21:30:00+00:00",
+   "final": [
+    76.0,
+    86.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Florida Gators",
+   "away": "Houston Cougars",
+   "market": "total",
+   "side": "Over",
+   "line": 147.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 148.6",
+   "commence": "2026-11-18 21:30:00+00:00",
+   "final": [
+    76.0,
+    86.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "UNC Asheville Bulldogs",
+   "away": "Tennessee Tech Golden Eagles",
+   "market": "spread",
+   "side": "UNC Asheville Bulldogs",
+   "line": 2.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj UNC Asheville Bulldogs -2.1 vs line -2.5",
+   "commence": "2026-11-18 23:30:00+00:00",
+   "final": [
+    77.0,
+    98.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "UNC Asheville Bulldogs",
+   "away": "Tennessee Tech Golden Eagles",
+   "market": "total",
+   "side": "Over",
+   "line": 162.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 163.6",
+   "commence": "2026-11-18 23:30:00+00:00",
+   "final": [
+    77.0,
+    98.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "South Carolina Upstate Spartans",
+   "away": "Samford Bulldogs",
+   "market": "spread",
+   "side": "South Carolina Upstate Spartans",
+   "line": 7.5,
+   "confidence": 2,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj South Carolina Upstate Spartans +2.5 vs line -7.5",
+   "commence": "2026-11-18 23:30:00+00:00",
+   "final": [
+    64.0,
+    74.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "South Carolina Upstate Spartans",
+   "away": "Samford Bulldogs",
+   "market": "total",
+   "side": "Under",
+   "line": 150.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 147.4",
+   "commence": "2026-11-18 23:30:00+00:00",
+   "final": [
+    64.0,
+    74.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Winthrop Eagles",
+   "away": "Chattanooga Mocs",
+   "market": "spread",
+   "side": "Winthrop Eagles",
+   "line": 3.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Winthrop Eagles -0.4 vs line -3.5",
+   "commence": "2026-11-18 23:30:00+00:00",
+   "final": [
+    79.0,
+    90.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Winthrop Eagles",
+   "away": "Chattanooga Mocs",
+   "market": "total",
+   "side": "Over",
+   "line": 165.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 165.8",
+   "commence": "2026-11-18 23:30:00+00:00",
+   "final": [
+    79.0,
+    90.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Eastern Michigan Eagles",
+   "away": "Detroit Mercy Titans",
+   "market": "spread",
+   "side": "Eastern Michigan Eagles",
+   "line": -10.5,
+   "confidence": 3,
+   "stake": 5,
+   "price": -110,
+   "why": "A rule: proj EMU by 16.6 vs 10.5; Detroit Mercy -9.1 margin; EMU 7 days rest",
+   "commence": "2026-11-18 23:30:00+00:00",
+   "final": [
+    99.0,
+    62.0
+   ],
+   "result": "W",
+   "profit": 4.55
+  },
+  {
+   "sport": "cbb",
+   "home": "Eastern Michigan Eagles",
+   "away": "Detroit Mercy Titans",
+   "market": "total",
+   "side": "Over",
+   "line": 140.5,
+   "confidence": 2,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 146.9",
+   "commence": "2026-11-18 23:30:00+00:00",
+   "final": [
+    99.0,
+    62.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Penn State Nittany Lions",
+   "away": "IU Indianapolis Jaguars",
+   "market": "spread",
+   "side": "IU Indianapolis Jaguars",
+   "line": 17.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Penn State Nittany Lions +9.4 vs line +17.5",
+   "commence": "2026-11-18 23:30:00+00:00",
+   "final": [
+    81.0,
+    74.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Penn State Nittany Lions",
+   "away": "IU Indianapolis Jaguars",
+   "market": "total",
+   "side": "Under",
+   "line": 169.5,
+   "confidence": 2,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 159.1",
+   "commence": "2026-11-18 23:30:00+00:00",
+   "final": [
+    81.0,
+    74.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Georgetown Hoyas",
+   "away": "Navy Midshipmen",
+   "market": "spread",
+   "side": "Navy Midshipmen",
+   "line": 21.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Georgetown Hoyas +16.2 vs line +21.5",
+   "commence": "2026-11-18 23:30:00+00:00",
+   "final": [
+    84.0,
+    53.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Georgetown Hoyas",
+   "away": "Navy Midshipmen",
+   "market": "total",
+   "side": "Over",
+   "line": 139.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 143.0",
+   "commence": "2026-11-18 23:30:00+00:00",
+   "final": [
+    84.0,
+    53.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Holy Cross Crusaders",
+   "away": "Brown Bears",
+   "market": "spread",
+   "side": "Holy Cross Crusaders",
+   "line": 6.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Holy Cross Crusaders -4.3 vs line -6.5",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    63.0,
+    74.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Holy Cross Crusaders",
+   "away": "Brown Bears",
+   "market": "total",
+   "side": "Over",
+   "line": 139.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 142.4",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    63.0,
+    74.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Charleston Southern Buccaneers",
+   "away": "Wofford Terriers",
+   "market": "spread",
+   "side": "Charleston Southern Buccaneers",
+   "line": 2.5,
+   "confidence": 2,
+   "stake": 5,
+   "price": -110,
+   "why": "Proj CSU by 4.2 as a 2.5 home dog; player impact +7.8",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    77.0,
+    79.0
+   ],
+   "result": "W",
+   "profit": 4.55
+  },
+  {
+   "sport": "cbb",
+   "home": "Charleston Southern Buccaneers",
+   "away": "Wofford Terriers",
+   "market": "total",
+   "side": "Under",
+   "line": 161.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 157.9",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    77.0,
+    79.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "South Carolina Gamecocks",
+   "away": "Elon Phoenix",
+   "market": "spread",
+   "side": "Elon Phoenix",
+   "line": 15.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj South Carolina Gamecocks +11.1 vs line +15.5",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    80.0,
+    72.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "South Carolina Gamecocks",
+   "away": "Elon Phoenix",
+   "market": "total",
+   "side": "Over",
+   "line": 136.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 139.0",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    80.0,
+    72.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Long Island University Sharks",
+   "away": "UNC Wilmington Seahawks",
+   "market": "spread",
+   "side": "UNC Wilmington Seahawks",
+   "line": -10.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Long Island University Sharks -11.1 vs line -10.5",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    115.0,
+    114.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Long Island University Sharks",
+   "away": "UNC Wilmington Seahawks",
+   "market": "total",
+   "side": "Over",
+   "line": 147.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 149.0",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    115.0,
+    114.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "North Carolina A&T Aggies",
+   "away": "Morgan State Bears",
+   "market": "spread",
+   "side": "North Carolina A&T Aggies",
+   "line": -7.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj North Carolina A&T Aggies +7.7 vs line +7.5",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    82.0,
+    70.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "North Carolina A&T Aggies",
+   "away": "Morgan State Bears",
+   "market": "total",
+   "side": "Under",
+   "line": 150.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 150.2",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    82.0,
+    70.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "George Mason Patriots",
+   "away": "North Carolina Central Eagles",
+   "market": "spread",
+   "side": "North Carolina Central Eagles",
+   "line": 26.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj George Mason Patriots +18.1 vs line +26.5",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    83.0,
+    60.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "George Mason Patriots",
+   "away": "North Carolina Central Eagles",
+   "market": "total",
+   "side": "Over",
+   "line": 133.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 138.0",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    83.0,
+    60.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Yale Bulldogs",
+   "away": "Vermont Catamounts",
+   "market": "spread",
+   "side": "Vermont Catamounts",
+   "line": 6.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Yale Bulldogs +2.3 vs line +6.5",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    76.0,
+    74.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Yale Bulldogs",
+   "away": "Vermont Catamounts",
+   "market": "total",
+   "side": "Over",
+   "line": 139.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 144.9",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    76.0,
+    74.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Lafayette Leopards",
+   "away": "Binghamton Bearcats",
+   "market": "spread",
+   "side": "Lafayette Leopards",
+   "line": -2.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Lafayette Leopards +7.0 vs line +2.5",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    80.0,
+    65.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Lafayette Leopards",
+   "away": "Binghamton Bearcats",
+   "market": "total",
+   "side": "Over",
+   "line": 132.5,
+   "confidence": 2,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 140.0",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    80.0,
+    65.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Ohio Bobcats",
+   "away": "Morehead State Eagles",
+   "market": "spread",
+   "side": "Ohio Bobcats",
+   "line": -16.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Ohio Bobcats +16.8 vs line +16.5",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    91.0,
+    77.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Ohio Bobcats",
+   "away": "Morehead State Eagles",
+   "market": "total",
+   "side": "Over",
+   "line": 150.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 152.0",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    91.0,
+    77.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Fairleigh Dickinson Knights",
+   "away": "NJIT Highlanders",
+   "market": "spread",
+   "side": "Fairleigh Dickinson Knights",
+   "line": -3.5,
+   "confidence": 3,
+   "stake": 5,
+   "price": -110,
+   "why": "A rule: proj FDU by 12.9 vs 3.5; player impact +16.8",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    78.0,
+    66.0
+   ],
+   "result": "W",
+   "profit": 4.55
+  },
+  {
+   "sport": "cbb",
+   "home": "Fairleigh Dickinson Knights",
+   "away": "NJIT Highlanders",
+   "market": "total",
+   "side": "Over",
+   "line": 136.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 136.8",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    78.0,
+    66.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Longwood Lancers",
+   "away": "VMI Keydets",
+   "market": "spread",
+   "side": "Longwood Lancers",
+   "line": -6.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Longwood Lancers +10.1 vs line +6.5",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    82.0,
+    76.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Longwood Lancers",
+   "away": "VMI Keydets",
+   "market": "total",
+   "side": "Over",
+   "line": 154.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 157.1",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    82.0,
+    76.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "UIC Flames",
+   "away": "Chicago State Cougars",
+   "market": "spread",
+   "side": "Chicago State Cougars",
+   "line": 22.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj UIC Flames +22.3 vs line +22.5",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    60.0,
+    52.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "UIC Flames",
+   "away": "Chicago State Cougars",
+   "market": "total",
+   "side": "Under",
+   "line": 140.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 140.2",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    60.0,
+    52.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Presbyterian Blue Hose",
+   "away": "Mercer Bears",
+   "market": "spread",
+   "side": "Presbyterian Blue Hose",
+   "line": -2.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Presbyterian Blue Hose +2.7 vs line +2.5",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    88.0,
+    84.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Presbyterian Blue Hose",
+   "away": "Mercer Bears",
+   "market": "total",
+   "side": "Over",
+   "line": 153.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 155.9",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    88.0,
+    84.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Radford Highlanders",
+   "away": "Furman Paladins",
+   "market": "spread",
+   "side": "Radford Highlanders",
+   "line": 5.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Radford Highlanders -1.7 vs line -5.5",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    71.0,
+    78.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Radford Highlanders",
+   "away": "Furman Paladins",
+   "market": "total",
+   "side": "Over",
+   "line": 149.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 151.9",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    71.0,
+    78.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "St. John's Red Storm",
+   "away": "Siena Saints",
+   "market": "spread",
+   "side": "Siena Saints",
+   "line": 30.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj St. John's Red Storm +19.9 vs line +30.5",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    119.0,
+    72.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "St. John's Red Storm",
+   "away": "Siena Saints",
+   "market": "total",
+   "side": "Under",
+   "line": 168.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 162.7",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    119.0,
+    72.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Towson Tigers",
+   "away": "James Madison Dukes",
+   "market": "spread",
+   "side": "Towson Tigers",
+   "line": -3.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Towson Tigers +7.4 vs line +3.5",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    52.0,
+    70.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Towson Tigers",
+   "away": "James Madison Dukes",
+   "market": "total",
+   "side": "Over",
+   "line": 139.5,
+   "confidence": 2,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 145.9",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    52.0,
+    70.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Duquesne Dukes",
+   "away": "Howard Bison",
+   "market": "spread",
+   "side": "Howard Bison",
+   "line": 5.5,
+   "confidence": 2,
+   "stake": 5,
+   "price": -110,
+   "why": "Proj Howard to win by 4.9 as a 5.5 dog; Duquesne player impact -5.4",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    74.0,
+    68.0
+   ],
+   "result": "L",
+   "profit": -5.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Duquesne Dukes",
+   "away": "Howard Bison",
+   "market": "total",
+   "side": "Under",
+   "line": 143.5,
+   "confidence": 2,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 136.7",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    74.0,
+    68.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "La Salle Explorers",
+   "away": "Coppin State Eagles",
+   "market": "spread",
+   "side": "Coppin State Eagles",
+   "line": 14.5,
+   "confidence": 2,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj La Salle Explorers +5.9 vs line +14.5",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    88.0,
+    61.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "La Salle Explorers",
+   "away": "Coppin State Eagles",
+   "market": "total",
+   "side": "Under",
+   "line": 142.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 141.1",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    88.0,
+    61.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Merrimack Warriors",
+   "away": "Boston University Terriers",
+   "market": "spread",
+   "side": "Boston University Terriers",
+   "line": 3.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Merrimack Warriors +0.5 vs line +3.5",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    60.0,
+    65.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Merrimack Warriors",
+   "away": "Boston University Terriers",
+   "market": "total",
+   "side": "Over",
+   "line": 133.5,
+   "confidence": 2,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 140.5",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    60.0,
+    65.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Florida Atlantic Owls",
+   "away": "Florida Gulf Coast Eagles",
+   "market": "spread",
+   "side": "Florida Atlantic Owls",
+   "line": -4.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Florida Atlantic Owls +5.6 vs line +4.5",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    86.0,
+    76.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Florida Atlantic Owls",
+   "away": "Florida Gulf Coast Eagles",
+   "market": "total",
+   "side": "Under",
+   "line": 154.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 149.6",
+   "commence": "2026-11-19 00:00:00+00:00",
+   "final": [
+    86.0,
+    76.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Texas Tech Red Raiders",
+   "away": "LSU New Orleans Privateers",
+   "market": "spread",
+   "side": "LSU New Orleans Privateers",
+   "line": 35.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Texas Tech Red Raiders +28.8 vs line +35.5",
+   "commence": "2026-11-19 00:30:00+00:00",
+   "final": [
+    86.0,
+    41.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Texas Tech Red Raiders",
+   "away": "LSU New Orleans Privateers",
+   "market": "total",
+   "side": "Under",
+   "line": 157.5,
+   "confidence": 2,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 150.6",
+   "commence": "2026-11-19 00:30:00+00:00",
+   "final": [
+    86.0,
+    41.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Cincinnati Bearcats",
+   "away": "Youngstown State Penguins",
+   "market": "spread",
+   "side": "Youngstown State Penguins",
+   "line": 27.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Cincinnati Bearcats +24.2 vs line +27.5",
+   "commence": "2026-11-19 00:30:00+00:00",
+   "final": [
+    91.0,
+    54.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Cincinnati Bearcats",
+   "away": "Youngstown State Penguins",
+   "market": "total",
+   "side": "Under",
+   "line": 153.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 152.4",
+   "commence": "2026-11-19 00:30:00+00:00",
+   "final": [
+    91.0,
+    54.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Marquette Golden Eagles",
+   "away": "Northern Illinois Huskies",
+   "market": "spread",
+   "side": "Northern Illinois Huskies",
+   "line": 27.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Marquette Golden Eagles +14.2 vs line +27.5",
+   "commence": "2026-11-19 00:30:00+00:00",
+   "final": [
+    79.0,
+    65.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Marquette Golden Eagles",
+   "away": "Northern Illinois Huskies",
+   "market": "total",
+   "side": "Under",
+   "line": 144.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 138.6",
+   "commence": "2026-11-19 00:30:00+00:00",
+   "final": [
+    79.0,
+    65.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "West Virginia Mountaineers",
+   "away": "Kansas Jayhawks",
+   "market": "spread",
+   "side": "West Virginia Mountaineers",
+   "line": 8.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj West Virginia Mountaineers -5.0 vs line -8.5",
+   "commence": "2026-11-19 00:30:00+00:00",
+   "final": [
+    82.0,
+    86.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "West Virginia Mountaineers",
+   "away": "Kansas Jayhawks",
+   "market": "total",
+   "side": "Under",
+   "line": 152.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 149.3",
+   "commence": "2026-11-19 00:30:00+00:00",
+   "final": [
+    82.0,
+    86.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Stonehill Skyhawks",
+   "away": "New Hampshire Wildcats",
+   "market": "spread",
+   "side": "Stonehill Skyhawks",
+   "line": 1.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Stonehill Skyhawks +0.5 vs line -1.5",
+   "commence": "2026-11-19 01:00:00+00:00",
+   "final": [
+    70.0,
+    90.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Stonehill Skyhawks",
+   "away": "New Hampshire Wildcats",
+   "market": "total",
+   "side": "Over",
+   "line": 133.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 137.2",
+   "commence": "2026-11-19 01:00:00+00:00",
+   "final": [
+    70.0,
+    90.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Oklahoma Sooners",
+   "away": "Campbell Fighting Camels",
+   "market": "spread",
+   "side": "Campbell Fighting Camels",
+   "line": 22.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Oklahoma Sooners +18.5 vs line +22.5",
+   "commence": "2026-11-19 01:00:00+00:00",
+   "final": [
+    87.0,
+    78.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Oklahoma Sooners",
+   "away": "Campbell Fighting Camels",
+   "market": "total",
+   "side": "Over",
+   "line": 146.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 148.9",
+   "commence": "2026-11-19 01:00:00+00:00",
+   "final": [
+    87.0,
+    78.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Harvard Crimson",
+   "away": "Boston College Eagles",
+   "market": "spread",
+   "side": "Boston College Eagles",
+   "line": -3.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Harvard Crimson -3.9 vs line -3.5",
+   "commence": "2026-11-19 01:00:00+00:00",
+   "final": [
+    69.0,
+    74.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Harvard Crimson",
+   "away": "Boston College Eagles",
+   "market": "total",
+   "side": "Under",
+   "line": 128.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 128.4",
+   "commence": "2026-11-19 01:00:00+00:00",
+   "final": [
+    69.0,
+    74.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Loyola Chicago Ramblers",
+   "away": "Wichita State Shockers",
+   "market": "spread",
+   "side": "Loyola Chicago Ramblers",
+   "line": 1.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Loyola Chicago Ramblers +1.6 vs line -1.5",
+   "commence": "2026-11-19 01:00:00+00:00",
+   "final": [
+    75.0,
+    79.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Loyola Chicago Ramblers",
+   "away": "Wichita State Shockers",
+   "market": "total",
+   "side": "Over",
+   "line": 149.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 150.0",
+   "commence": "2026-11-19 01:00:00+00:00",
+   "final": [
+    75.0,
+    79.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Bradley Braves",
+   "away": "Purdue Fort Wayne Mastodons",
+   "market": "spread",
+   "side": "Purdue Fort Wayne Mastodons",
+   "line": 6.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Bradley Braves +4.8 vs line +6.5",
+   "commence": "2026-11-19 01:00:00+00:00",
+   "final": [
+    73.0,
+    78.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Bradley Braves",
+   "away": "Purdue Fort Wayne Mastodons",
+   "market": "total",
+   "side": "Over",
+   "line": 135.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 140.0",
+   "commence": "2026-11-19 01:00:00+00:00",
+   "final": [
+    73.0,
+    78.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Gardner-Webb Runnin' Bulldogs",
+   "away": "UNC Greensboro Spartans",
+   "market": "spread",
+   "side": "UNC Greensboro Spartans",
+   "line": -2.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Gardner-Webb Runnin' Bulldogs -2.5 vs line -2.5",
+   "commence": "2026-11-19 01:00:00+00:00",
+   "final": [
+    72.0,
+    78.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Gardner-Webb Runnin' Bulldogs",
+   "away": "UNC Greensboro Spartans",
+   "market": "total",
+   "side": "Under",
+   "line": 148.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 147.5",
+   "commence": "2026-11-19 01:00:00+00:00",
+   "final": [
+    72.0,
+    78.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "UTSA Roadrunners",
+   "away": "Florida A&M Rattlers",
+   "market": "spread",
+   "side": "UTSA Roadrunners",
+   "line": -15.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj UTSA Roadrunners +19.4 vs line +15.5",
+   "commence": "2026-11-19 01:00:00+00:00",
+   "final": [
+    98.0,
+    78.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "UTSA Roadrunners",
+   "away": "Florida A&M Rattlers",
+   "market": "total",
+   "side": "Under",
+   "line": 150.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 148.7",
+   "commence": "2026-11-19 01:00:00+00:00",
+   "final": [
+    98.0,
+    78.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "LSU Tigers",
+   "away": "UL Monroe Warhawks",
+   "market": "spread",
+   "side": "UL Monroe Warhawks",
+   "line": 36.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj LSU Tigers +30.8 vs line +36.5",
+   "commence": "2026-11-19 01:00:00+00:00",
+   "final": [
+    79.0,
+    67.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "LSU Tigers",
+   "away": "UL Monroe Warhawks",
+   "market": "total",
+   "side": "Over",
+   "line": 159.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 161.5",
+   "commence": "2026-11-19 01:00:00+00:00",
+   "final": [
+    79.0,
+    67.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Syracuse Orange",
+   "away": "Cornell Big Red",
+   "market": "spread",
+   "side": "Cornell Big Red",
+   "line": 20.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Syracuse Orange +15.0 vs line +20.5",
+   "commence": "2026-11-19 01:00:00+00:00",
+   "final": [
+    91.0,
+    82.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Syracuse Orange",
+   "away": "Cornell Big Red",
+   "market": "total",
+   "side": "Under",
+   "line": 157.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 157.3",
+   "commence": "2026-11-19 01:00:00+00:00",
+   "final": [
+    91.0,
+    82.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Arkansas State Red Wolves",
+   "away": "Arkansas-Pine Bluff Golden Lions",
+   "market": "spread",
+   "side": "Arkansas State Red Wolves",
+   "line": -28.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Arkansas State Red Wolves +28.7 vs line +28.5",
+   "commence": "2026-11-19 01:00:00+00:00",
+   "final": [
+    100.0,
+    69.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Arkansas State Red Wolves",
+   "away": "Arkansas-Pine Bluff Golden Lions",
+   "market": "total",
+   "side": "Under",
+   "line": 161.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 156.5",
+   "commence": "2026-11-19 01:00:00+00:00",
+   "final": [
+    100.0,
+    69.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Texas State Bobcats",
+   "away": "Incarnate Word Cardinals",
+   "market": "spread",
+   "side": "Texas State Bobcats",
+   "line": -17.5,
+   "confidence": 3,
+   "stake": 5,
+   "price": -110,
+   "why": "Proj TXST by 30.6 vs 17.5; TXST +13.3 margin, UIW -8.8; player impact +23",
+   "commence": "2026-11-19 01:00:00+00:00",
+   "final": [
+    84.0,
+    51.0
+   ],
+   "result": "W",
+   "profit": 4.55
+  },
+  {
+   "sport": "cbb",
+   "home": "Texas State Bobcats",
+   "away": "Incarnate Word Cardinals",
+   "market": "total",
+   "side": "Over",
+   "line": 142.5,
+   "confidence": 2,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 149.7",
+   "commence": "2026-11-19 01:00:00+00:00",
+   "final": [
+    84.0,
+    51.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Nebraska Cornhuskers",
+   "away": "South Dakota Coyotes",
+   "market": "spread",
+   "side": "South Dakota Coyotes",
+   "line": 32.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Nebraska Cornhuskers +31.7 vs line +32.5",
+   "commence": "2026-11-19 01:30:00+00:00",
+   "final": [
+    73.0,
+    47.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Nebraska Cornhuskers",
+   "away": "South Dakota Coyotes",
+   "market": "total",
+   "side": "Under",
+   "line": 156.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 153.2",
+   "commence": "2026-11-19 01:30:00+00:00",
+   "final": [
+    73.0,
+    47.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Colorado Buffaloes",
+   "away": "Portland Pilots",
+   "market": "spread",
+   "side": "Portland Pilots",
+   "line": 14.5,
+   "confidence": 2,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Colorado Buffaloes +7.4 vs line +14.5",
+   "commence": "2026-11-19 02:00:00+00:00",
+   "final": [
+    74.0,
+    77.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Colorado Buffaloes",
+   "away": "Portland Pilots",
+   "market": "total",
+   "side": "Over",
+   "line": 154.5,
+   "confidence": 2,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 163.7",
+   "commence": "2026-11-19 02:00:00+00:00",
+   "final": [
+    74.0,
+    77.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Missouri Tigers",
+   "away": "Alcorn State Braves",
+   "market": "spread",
+   "side": "Alcorn State Braves",
+   "line": 44.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Missouri Tigers +31.6 vs line +44.5",
+   "commence": "2026-11-19 02:00:00+00:00",
+   "final": [
+    102.0,
+    41.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Missouri Tigers",
+   "away": "Alcorn State Braves",
+   "market": "total",
+   "side": "Over",
+   "line": 153.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 156.1",
+   "commence": "2026-11-19 02:00:00+00:00",
+   "final": [
+    102.0,
+    41.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Creighton Bluejays",
+   "away": "Bethune-Cookman Wildcats",
+   "market": "spread",
+   "side": "Bethune-Cookman Wildcats",
+   "line": 23.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Creighton Bluejays +14.2 vs line +23.5",
+   "commence": "2026-11-19 02:00:00+00:00",
+   "final": [
+    88.0,
+    65.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Creighton Bluejays",
+   "away": "Bethune-Cookman Wildcats",
+   "market": "total",
+   "side": "Under",
+   "line": 152.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 150.2",
+   "commence": "2026-11-19 02:00:00+00:00",
+   "final": [
+    88.0,
+    65.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "San Jos\u00e9 State Spartans",
+   "away": "Fresno State Bulldogs",
+   "market": "spread",
+   "side": "San Jos\u00e9 State Spartans",
+   "line": -6.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj San Jos\u00e9 State Spartans +7.2 vs line +6.5",
+   "commence": "2026-11-19 02:00:00+00:00",
+   "final": [
+    92.0,
+    86.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "San Jos\u00e9 State Spartans",
+   "away": "Fresno State Bulldogs",
+   "market": "total",
+   "side": "Over",
+   "line": 156.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 160.5",
+   "commence": "2026-11-19 02:00:00+00:00",
+   "final": [
+    92.0,
+    86.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Arizona Wildcats",
+   "away": "UConn Huskies",
+   "market": "spread",
+   "side": "Arizona Wildcats",
+   "line": -3.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Arizona Wildcats +4.7 vs line +3.5",
+   "commence": "2026-11-19 02:00:00+00:00",
+   "final": [
+    85.0,
+    79.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Arizona Wildcats",
+   "away": "UConn Huskies",
+   "market": "total",
+   "side": "Over",
+   "line": 148.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 151.6",
+   "commence": "2026-11-19 02:00:00+00:00",
+   "final": [
+    85.0,
+    79.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Utah State Aggies",
+   "away": "Weber State Wildcats",
+   "market": "spread",
+   "side": "Weber State Wildcats",
+   "line": 31.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Utah State Aggies +31.5 vs line +31.5",
+   "commence": "2026-11-19 02:00:00+00:00",
+   "final": [
+    101.0,
+    71.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Utah State Aggies",
+   "away": "Weber State Wildcats",
+   "market": "total",
+   "side": "Under",
+   "line": 170.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 167.0",
+   "commence": "2026-11-19 02:00:00+00:00",
+   "final": [
+    101.0,
+    71.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "BYU Cougars",
+   "away": "Northern Colorado Bears",
+   "market": "spread",
+   "side": "Northern Colorado Bears",
+   "line": 29.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj BYU Cougars +18.3 vs line +29.5",
+   "commence": "2026-11-19 02:00:00+00:00",
+   "final": [
+    98.0,
+    54.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "BYU Cougars",
+   "away": "Northern Colorado Bears",
+   "market": "total",
+   "side": "Under",
+   "line": 162.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 158.8",
+   "commence": "2026-11-19 02:00:00+00:00",
+   "final": [
+    98.0,
+    54.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Arizona State Sun Devils",
+   "away": "Oakland Golden Grizzlies",
+   "market": "spread",
+   "side": "Oakland Golden Grizzlies",
+   "line": 24.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Arizona State Sun Devils +24.4 vs line +24.5",
+   "commence": "2026-11-19 02:00:00+00:00",
+   "final": [
+    68.0,
+    65.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Arizona State Sun Devils",
+   "away": "Oakland Golden Grizzlies",
+   "market": "total",
+   "side": "Over",
+   "line": 148.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 151.3",
+   "commence": "2026-11-19 02:00:00+00:00",
+   "final": [
+    68.0,
+    65.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Colorado State Rams",
+   "away": "North Dakota State Bison",
+   "market": "spread",
+   "side": "North Dakota State Bison",
+   "line": 13.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Colorado State Rams +8.9 vs line +13.5",
+   "commence": "2026-11-19 02:00:00+00:00",
+   "final": [
+    71.0,
+    64.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Colorado State Rams",
+   "away": "North Dakota State Bison",
+   "market": "total",
+   "side": "Over",
+   "line": 147.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 150.6",
+   "commence": "2026-11-19 02:00:00+00:00",
+   "final": [
+    71.0,
+    64.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "San Diego Toreros",
+   "away": "UC Riverside Highlanders",
+   "market": "spread",
+   "side": "San Diego Toreros",
+   "line": -7.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj San Diego Toreros +8.2 vs line +7.5",
+   "commence": "2026-11-19 02:30:00+00:00",
+   "final": [
+    71.0,
+    62.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "San Diego Toreros",
+   "away": "UC Riverside Highlanders",
+   "market": "total",
+   "side": "Over",
+   "line": 149.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 151.6",
+   "commence": "2026-11-19 02:30:00+00:00",
+   "final": [
+    71.0,
+    62.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Auburn Tigers",
+   "away": "UNLV Rebels",
+   "market": "spread",
+   "side": "UNLV Rebels",
+   "line": 8.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Auburn Tigers +7.5 vs line +8.5",
+   "commence": "2026-11-19 03:00:00+00:00",
+   "final": [
+    86.0,
+    71.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Auburn Tigers",
+   "away": "UNLV Rebels",
+   "market": "total",
+   "side": "Under",
+   "line": 161.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 159.1",
+   "commence": "2026-11-19 03:00:00+00:00",
+   "final": [
+    86.0,
+    71.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Nevada Wolf Pack",
+   "away": "Idaho Vandals",
+   "market": "spread",
+   "side": "Idaho Vandals",
+   "line": 18.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Nevada Wolf Pack +15.4 vs line +18.5",
+   "commence": "2026-11-19 03:00:00+00:00",
+   "final": [
+    91.0,
+    74.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Nevada Wolf Pack",
+   "away": "Idaho Vandals",
+   "market": "total",
+   "side": "Over",
+   "line": 145.5,
+   "confidence": 2,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 151.7",
+   "commence": "2026-11-19 03:00:00+00:00",
+   "final": [
+    91.0,
+    74.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "San Diego State Aztecs",
+   "away": "Texas Southern Tigers",
+   "market": "spread",
+   "side": "Texas Southern Tigers",
+   "line": 26.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj San Diego State Aztecs +18.0 vs line +26.5",
+   "commence": "2026-11-19 03:00:00+00:00",
+   "final": [
+    97.0,
+    51.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "San Diego State Aztecs",
+   "away": "Texas Southern Tigers",
+   "market": "total",
+   "side": "Over",
+   "line": 157.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 160.7",
+   "commence": "2026-11-19 03:00:00+00:00",
+   "final": [
+    97.0,
+    51.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Hawai'i Rainbow Warriors",
+   "away": "Washington State Cougars",
+   "market": "spread",
+   "side": "Hawai'i Rainbow Warriors",
+   "line": -1.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj Hawai'i Rainbow Warriors +2.2 vs line +1.5",
+   "commence": "2026-11-19 03:00:00+00:00",
+   "final": [
+    63.0,
+    79.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "Hawai'i Rainbow Warriors",
+   "away": "Washington State Cougars",
+   "market": "total",
+   "side": "Over",
+   "line": 138.5,
+   "confidence": 2,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 151.8",
+   "commence": "2026-11-19 03:00:00+00:00",
+   "final": [
+    63.0,
+    79.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "San Francisco Dons",
+   "away": "Louisiana Ragin' Cajuns",
+   "market": "spread",
+   "side": "Louisiana Ragin' Cajuns",
+   "line": 10.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj San Francisco Dons +7.5 vs line +10.5",
+   "commence": "2026-11-19 03:00:00+00:00",
+   "final": [
+    77.0,
+    56.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "San Francisco Dons",
+   "away": "Louisiana Ragin' Cajuns",
+   "market": "total",
+   "side": "Over",
+   "line": 134.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 134.7",
+   "commence": "2026-11-19 03:00:00+00:00",
+   "final": [
+    77.0,
+    56.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "UCLA Bruins",
+   "away": "Cal State Fullerton Titans",
+   "market": "spread",
+   "side": "Cal State Fullerton Titans",
+   "line": 34.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj UCLA Bruins +21.6 vs line +34.5",
+   "commence": "2026-11-19 03:30:00+00:00",
+   "final": [
+    75.0,
+    71.0
+   ],
+   "result": "W",
+   "profit": 0.0
+  },
+  {
+   "sport": "cbb",
+   "home": "UCLA Bruins",
+   "away": "Cal State Fullerton Titans",
+   "market": "total",
+   "side": "Over",
+   "line": 165.5,
+   "confidence": 1,
+   "stake": 0,
+   "price": -110,
+   "why": "Proj total 167.8",
+   "commence": "2026-11-19 03:30:00+00:00",
+   "final": [
+    75.0,
+    71.0
+   ],
+   "result": "L",
+   "profit": -0.0
+  }
+ ]
+}
