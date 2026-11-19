@@ -10,18 +10,31 @@
    "commence": "2026-11-20 01:00:00+00:00",
    "tip_et": "8:00 PM",
    "line": {
-    "spread": -6.5,
-    "total": 225.5,
-    "source": "ESPN"
+    "spread": -5.5,
+    "total": 224.5,
+    "source": "DK/FD",
+    "bet_spread_open": -5.5,
+    "bet_spread_now": -5.5,
+    "bet_spread_first_snap": "2026-11-19T21:29:44Z",
+    "bet_total_open": 224.5,
+    "bet_total_now": 224.5,
+    "bet_total_first_snap": "2026-11-19T21:29:44Z",
+    "sharp_spread_open": -5.5,
+    "sharp_spread_now": -5.5,
+    "sharp_spread_first_snap": "2026-11-19T21:29:44Z",
+    "sharp_total_open": 224.5,
+    "sharp_total_now": 224.5,
+    "sharp_total_first_snap": "2026-11-19T21:29:44Z",
+    "snapshots": 1
    },
    "projection": {
-    "margin": 2.6,
+    "margin": 1.0,
     "total": 228.0,
-    "home_pts": 115.3,
-    "away_pts": 112.7,
+    "home_pts": 114.5,
+    "away_pts": 113.5,
     "parts": {
-     "players": 4.0,
-     "box": 3.1,
+     "players": 2.0,
+     "box": 1.3,
      "possessions": 2.4,
      "scores": 2.4
     }
@@ -37,8 +50,8 @@
      "ftr": -0.014,
      "3p": -0.013
     },
-    "apm_diff": 4.0,
-    "box_diff": 3.1
+    "apm_diff": 2.0,
+    "box_diff": 1.3
    },
    "form": {
     "home": {
@@ -93,6 +106,12 @@
       "detail": "Hip Right"
      },
      {
+      "player": "Zach Edey",
+      "status": "Out",
+      "mpg": 16.7,
+      "detail": "Ankle"
+     },
+     {
       "player": "Isaiah Stewart",
       "status": "Day-To-Day",
       "mpg": 11.2,
@@ -108,14 +127,14 @@
      },
      {
       "player": "Draymond Green",
-      "status": "Day-To-Day",
+      "status": "Out",
       "mpg": 22.2,
       "detail": "Rest Not Specified"
      },
      {
-      "player": "Al Horford",
+      "player": "LJ Cryer",
       "status": "Day-To-Day",
-      "mpg": 13.0,
+      "mpg": 10.9,
       "detail": "Back"
      }
     ]
@@ -125,26 +144,25 @@
     "Warriors on a back-to-back after a road game",
     "Grizzlies games 8-2 over/under last 10",
     "Warriors: Stephen Curry (26 min) out",
-    "Our projection is 3.9 pts better for Warriors than the line"
+    "Our projection is 4.5 pts better for Warriors than the line"
    ],
    "call": {
-    "adj_margin": 5.1,
+    "adj_margin": 3.0,
     "adj_total": 223.0,
     "fatigue": [
      "Grizzlies on a back-to-back",
      "Warriors on a back-to-back after a road game",
-     "Warriors without Stephen Curry",
-     "Warriors: Draymond Green day-to-day"
+     "Warriors without Stephen Curry"
     ],
     "spread": {
      "side": "Golden State Warriors",
-     "line": 6.5,
+     "line": 5.5,
      "confidence": 1,
-     "why": "projection Grizzlies +5.1 vs line +6.5; against: recent margins favour the other side; against: other side beating the line lately; against: fatigue/injuries work against our side; caution: Warriors on a back-to-back after a road game; caution: Warriors without Stephen Curry; caution: Warriors: Draymond Green day-to-day"
+     "why": "projection Grizzlies +3.0 vs line +5.5; against: recent margins favour the other side; against: other side beating the line lately; against: fatigue/injuries work against our side; caution: Warriors on a back-to-back after a road game; caution: Warriors without Stephen Curry"
     },
     "total": {
      "side": "Under",
-     "line": 225.5,
+     "line": 224.5,
      "confidence": 1,
      "why": "adjusted total 223.0 (model 228.0); fatigue lowers scoring: Grizzlies on a back-to-back; Warriors on a back-to-back after a road game; Warriors without Stephen Curry"
     }
@@ -159,17 +177,30 @@
    "commence": "2026-11-20 01:00:00+00:00",
    "tip_et": "8:00 PM",
    "line": {
-    "spread": 10.5,
-    "total": 229.5,
-    "source": "ESPN"
+    "spread": 11.0,
+    "total": 230.5,
+    "source": "DK/FD",
+    "bet_spread_open": 11.0,
+    "bet_spread_now": 11.0,
+    "bet_spread_first_snap": "2026-11-19T21:29:44Z",
+    "bet_total_open": 230.5,
+    "bet_total_now": 230.5,
+    "bet_total_first_snap": "2026-11-19T21:29:44Z",
+    "sharp_spread_open": 11.0,
+    "sharp_spread_now": 11.0,
+    "sharp_spread_first_snap": "2026-11-19T21:29:44Z",
+    "sharp_total_open": 230.5,
+    "sharp_total_now": 230.5,
+    "sharp_total_first_snap": "2026-11-19T21:29:44Z",
+    "snapshots": 1
    },
    "projection": {
-    "margin": -18.3,
-    "total": 223.6,
-    "home_pts": 102.6,
-    "away_pts": 121.0,
+    "margin": -19.1,
+    "total": 223.7,
+    "home_pts": 102.3,
+    "away_pts": 121.4,
     "parts": {
-     "players": -10.8,
+     "players": -12.1,
      "box": -4.6,
      "possessions": -12.0,
      "scores": -11.7
@@ -186,7 +217,7 @@
      "ftr": -0.045,
      "3p": -0.063
     },
-    "apm_diff": -10.8,
+    "apm_diff": -12.1,
     "box_diff": -4.6
    },
    "form": {
@@ -236,10 +267,16 @@
    "injuries": {
     "home": [
      {
-      "player": "Ryan Rollins",
-      "status": "Day-To-Day",
-      "mpg": 17.8,
-      "detail": "Illness"
+      "player": "Kyle Kuzma",
+      "status": "Out",
+      "mpg": 26.8,
+      "detail": "Shoulder Right Bruise"
+     },
+     {
+      "player": "Myles Turner",
+      "status": "Out",
+      "mpg": 24.1,
+      "detail": "Shoulder Left Bruise"
      }
     ],
     "away": [
@@ -271,29 +308,32 @@
    },
    "notes": [
     "Bucks on a back-to-back",
+    "Bucks: Kyle Kuzma (27 min) out",
+    "Bucks: Myles Turner (24 min) out",
     "Blazers: Toumani Camara (31 min) day-to-day",
     "Blazers: Deni Avdija (30 min) day-to-day",
-    "Our projection is 7.8 pts better for Blazers than the line",
-    "Our total is 5.9 under the line"
+    "Our projection is 8.1 pts better for Blazers than the line",
+    "Our total is 6.8 under the line"
    ],
    "call": {
-    "adj_margin": -19.3,
-    "adj_total": 221.6,
+    "adj_margin": -22.1,
+    "adj_total": 219.7,
     "fatigue": [
      "Bucks on a back-to-back",
+     "Bucks without Kyle Kuzma, Myles Turner",
      "Blazers: Toumani Camara day-to-day, Deni Avdija day-to-day"
     ],
     "spread": {
      "side": "Portland Trail Blazers",
-     "line": -10.5,
+     "line": -11.0,
      "confidence": 4,
-     "why": "projection Bucks -19.3 vs line -10.5; recent margins favour our side; beating the line lately; fatigue/injury edge; caution: Blazers: Toumani Camara day-to-day, Deni Avdija day-to-day"
+     "why": "projection Bucks -22.1 vs line -11.0; recent margins favour our side; beating the line lately; fatigue/injury edge; caution: Blazers: Toumani Camara day-to-day, Deni Avdija day-to-day"
     },
     "total": {
      "side": "Under",
-     "line": 229.5,
+     "line": 230.5,
      "confidence": 3,
-     "why": "adjusted total 221.6 (model 223.6); fatigue lowers scoring: Bucks on a back-to-back"
+     "why": "adjusted total 219.7 (model 223.7); fatigue lowers scoring: Bucks on a back-to-back; Bucks without Kyle Kuzma, Myles Turner"
     }
    }
   },
@@ -307,17 +347,30 @@
    "tip_et": "8:00 PM",
    "line": {
     "spread": 1.5,
-    "total": 215.5,
-    "source": "ESPN"
+    "total": 216.0,
+    "source": "DK/FD",
+    "bet_spread_open": 1.5,
+    "bet_spread_now": 1.5,
+    "bet_spread_first_snap": "2026-11-19T21:29:44Z",
+    "bet_total_open": 216.0,
+    "bet_total_now": 216.0,
+    "bet_total_first_snap": "2026-11-19T21:29:44Z",
+    "sharp_spread_open": 1.0,
+    "sharp_spread_now": 1.0,
+    "sharp_spread_first_snap": "2026-11-19T21:29:44Z",
+    "sharp_total_open": 216.0,
+    "sharp_total_now": 216.0,
+    "sharp_total_first_snap": "2026-11-19T21:29:44Z",
+    "snapshots": 1
    },
    "projection": {
     "margin": 2.3,
-    "total": 221.0,
-    "home_pts": 111.7,
-    "away_pts": 109.3,
+    "total": 220.3,
+    "home_pts": 111.3,
+    "away_pts": 109.0,
     "parts": {
      "players": 2.1,
-     "box": -1.3,
+     "box": -1.4,
      "possessions": 1.2,
      "scores": 1.6
     }
@@ -334,7 +387,7 @@
      "3p": 0.039
     },
     "apm_diff": 2.1,
-    "box_diff": -1.3
+    "box_diff": -1.4
    },
    "form": {
     "home": {
@@ -407,11 +460,11 @@
     "Timberwolves 8-2 against the spread last 10",
     "Timberwolves: Jonathan Kuminga (27 min) day-to-day",
     "Our projection is 3.8 pts better for Timberwolves than the line",
-    "Our total is 5.5 over the line"
+    "Our total is 4.3 over the line"
    ],
    "call": {
     "adj_margin": 1.8,
-    "adj_total": 221.0,
+    "adj_total": 220.3,
     "fatigue": [
      "Timberwolves: Jonathan Kuminga day-to-day"
     ],
@@ -423,9 +476,9 @@
     },
     "total": {
      "side": "Over",
-     "line": 215.5,
+     "line": 216.0,
      "confidence": 2,
-     "why": "adjusted total 221.0 (model 221.0)"
+     "why": "adjusted total 220.3 (model 220.3)"
     }
    }
   },
@@ -439,8 +492,21 @@
    "tip_et": "8:00 PM",
    "line": {
     "spread": -15.5,
-    "total": 225.5,
-    "source": "ESPN"
+    "total": 225.0,
+    "source": "DK/FD",
+    "bet_spread_open": -15.5,
+    "bet_spread_now": -15.5,
+    "bet_spread_first_snap": "2026-11-19T21:29:44Z",
+    "bet_total_open": 225.0,
+    "bet_total_now": 225.0,
+    "bet_total_first_snap": "2026-11-19T21:29:44Z",
+    "sharp_spread_open": -15.5,
+    "sharp_spread_now": -15.5,
+    "sharp_spread_first_snap": "2026-11-19T21:29:44Z",
+    "sharp_total_open": 225.0,
+    "sharp_total_now": 225.0,
+    "sharp_total_first_snap": "2026-11-19T21:29:44Z",
+    "snapshots": 1
    },
    "projection": {
     "margin": 15.0,
@@ -548,7 +614,7 @@
     },
     "total": {
      "side": "Under",
-     "line": 225.5,
+     "line": 225.0,
      "confidence": 1,
      "why": "adjusted total 224.7 (model 225.7); fatigue lowers scoring: Spurs without Dylan Harper"
     }
