@@ -199,6 +199,136 @@ def short(team: str) -> str:
 
 
 # ----------------------------------------------------------------------
+# Situational adjustment and the call (fatigue and missing players)
+# ----------------------------------------------------------------------
+# Points taken off a team's projected margin. Not fitted: the old backtests
+# found the market prices these, so they are deliberate caution, set after
+# 11-18 (Lakers on a b2b without Kessler and Reaves lost by 12 as 10.5 favs).
+B2B = 2.0            # second night of a back-to-back
+B2B_ROAD = 1.0       # extra when the first night was on the road
+DENSE = 1.0          # 4th game in 5 nights or worse
+TRAVEL = 0.5         # 2,500+ km since the last game
+OUT_STAR = 1.0       # each 24+ min player out (beyond the model's roster drop)
+DTD_STAR = 0.5       # each 20+ min player questionable / day-to-day
+TOTAL_B2B = 2.0      # points off the total per team on a back-to-back
+TOTAL_STAR = 1.0     # points off the total per 24+ min player out
+
+UNSURE = ("questionable", "doubtful", "day-to-day", "game time")
+
+
+def situation(b: dict, side: str) -> tuple[float, float, list[str]]:
+    """(margin penalty, total penalty, reasons) for one team."""
+    s, name = b["schedule"], b[f"{side}_short"]
+    pen, tpen, why = 0.0, 0.0, []
+    if s.get(f"{side}_b2b"):
+        pen += B2B
+        tpen += TOTAL_B2B
+        road = bool(s.get(f"{side}_prev_away"))
+        if road:
+            pen += B2B_ROAD
+        why.append(f"{name} on a back-to-back{' after a road game' if road else ''}")
+    if (s.get(f"{side}_last5") or 0) >= 4:
+        pen += DENSE
+        why.append(f"{name} 4th game in 5 nights")
+    if (s.get(f"{side}_km") or 0) >= 2.5:
+        pen += TRAVEL
+        why.append(f"{name} travelled {s[f'{side}_km'] * 1000:,.0f} km")
+    outs = [p for p in b["injuries"][side]
+            if "out" in p["status"].lower() and p["mpg"] >= 24]
+    unsure = [p for p in b["injuries"][side]
+              if any(u in p["status"].lower() for u in UNSURE) and p["mpg"] >= 20]
+    if outs:
+        pen += OUT_STAR * len(outs)
+        tpen += TOTAL_STAR * len(outs)
+        why.append(f"{name} without " + ", ".join(p["player"] for p in outs))
+    if unsure:
+        pen += DTD_STAR * len(unsure)
+        why.append(f"{name}: " + ", ".join(f"{p['player']} {p['status'].lower()}"
+                                             for p in unsure))
+    return pen, tpen, why
+
+
+def _fmt_line(x: float) -> str:
+    return "PK" if abs(x) < 0.01 else f"{x:+g}"
+
+
+def assess(b: dict) -> dict:
+    """The call for one game: adjusted projection, spread and total sides,
+    confidence 1-5 from how many factors back each side, minus fatigue and
+    injury doubts on the side we pick, with the reasons spelled out."""
+    p, ln = b["projection"], b["line"]
+    if p.get("margin") is None or ln.get("spread") is None:
+        return {}
+    hp, htp, hwhy = situation(b, "home")
+    ap, atp, awhy = situation(b, "away")
+    adj_m = p["margin"] - hp + ap                 # + = home
+    adj_t = (p["total"] or 0) - htp - atp
+    hs, as_ = b["home_short"], b["away_short"]
+    home_m = -ln["spread"]                        # market's home margin
+    pick_home = adj_m > home_m
+    side, other = ("home", "away") if pick_home else ("away", "home")
+    sgn = 1 if pick_home else -1
+    fh, fa = b["form"]["home"], b["form"]["away"]
+    backs, against = [], []
+
+    def vote(ok, yes, no):
+        if ok is None:
+            return
+        (backs if ok else against).append(yes if ok else no)
+
+    vote(True, f"projection {hs} {adj_m:+.1f} vs line {home_m:+.1f}", "")
+    if fh.get("n") and fa.get("n"):
+        d = sgn * (fh["margin"] - fa["margin"])
+        vote(d > 3 if abs(d) > 3 else None, "recent margins favour our side",
+             "recent margins favour the other side")
+        if fh.get("vs_line") is not None and fa.get("vs_line") is not None:
+            v = sgn * (fh["vs_line"] - fa["vs_line"])
+            vote(v > 2 if abs(v) > 2 else None, "beating the line lately",
+                 "other side beating the line lately")
+    rest = sgn * ((ap + 0.0) - hp)                # fatigue gap in our favour
+    vote(rest > 0 if abs(rest) >= 1 else None, "fatigue/injury edge",
+         "fatigue/injuries work against our side")
+    mv = None
+    if ln.get("bet_spread_open") is not None and ln.get("bet_spread_now") is not None:
+        mv = -(ln["bet_spread_now"] - ln["bet_spread_open"]) * sgn
+    vote(mv > 0 if mv and abs(mv) >= 1 else None, "line moving our way",
+         "line moving against us")
+    conf = 1 + max(0, len(backs) - 1) - (1 if len(against) >= 2 else 0)
+    gap = abs(adj_m - home_m)
+    if gap >= 4:
+        conf += 1
+    my_why = hwhy if pick_home else awhy
+    caution = []
+    if my_why:
+        conf -= 1
+        caution = my_why
+    conf = int(min(5, max(1, conf)))
+    team = b["home"] if pick_home else b["away"]
+    line = ln["spread"] if pick_home else -ln["spread"]
+    spread = {"side": team, "line": line, "confidence": conf,
+              "why": "; ".join(backs + [f"against: {x}" for x in against]
+                               + [f"caution: {x}" for x in caution])}
+    tot = None
+    if ln.get("total") is not None and p.get("total") is not None:
+        over = adj_t > ln["total"]
+        tc = 1 + (1 if abs(adj_t - ln["total"]) >= 4 else 0)
+        ou = [fh.get("over", 0) - fh.get("under", 0), fa.get("over", 0) - fa.get("under", 0)]
+        if all((x > 0) == over and x != 0 for x in ou):
+            tc += 1
+        tired = [w for w in hwhy + awhy if "back-to-back" in w or "without" in w]
+        if over and tired:
+            tc -= 1
+        tot = {"side": "Over" if over else "Under", "line": ln["total"],
+               "confidence": int(min(5, max(1, tc))),
+               "why": f"adjusted total {adj_t:.1f} (model {p['total']:.1f})"
+                      + (f"; caution: {'; '.join(tired)}" if over and tired else "")
+                      + (f"; fatigue lowers scoring: {'; '.join(tired)}"
+                         if not over and tired else "")}
+    return {"adj_margin": round(adj_m, 1), "adj_total": round(adj_t, 1),
+            "fatigue": hwhy + awhy, "spread": spread, "total": tot}
+
+
+# ----------------------------------------------------------------------
 # Markdown
 # ----------------------------------------------------------------------
 def _form_line(name, f):
@@ -272,6 +402,19 @@ def to_markdown(day, games: list[dict]) -> str:
                 f"{p['player']} {p['status']} ({p['mpg']:.0f} min"
                 + (f", {p['detail']}" if p['detail'] else "") + ")"
                 for p in lst)))
+        c = b.get("call") or {}
+        if c:
+            out.append(f"**Call:** adjusted projection {hs} {c['adj_margin']:+.1f}, "
+                       f"total {c['adj_total']:.1f}"
+                       + (f" (fatigue/injuries: {'; '.join(c['fatigue'])})"
+                          if c["fatigue"] else ""))
+            sp = c["spread"]
+            out.append(f"- Spread: **{sp['side']} {_fmt_line(sp['line'])}** "
+                       f"({sp['confidence']}/5): {sp['why']}")
+            if c.get("total"):
+                t = c["total"]
+                out.append(f"- Total: **{t['side']} {t['line']:g}** "
+                           f"({t['confidence']}/5): {t['why']}")
         if b["notes"]:
             out.append("**Notes:**")
             out += [f"- {n}" for n in b["notes"]]
@@ -366,6 +509,7 @@ def build_day(day, first: int = 2021, lines_path: str | None = None
                           "away": injuries_for(rep, r.away_team)}}
         b["schedule"]["away_prev_away"] = _f(f.get("away_b2b_road"))
         b["notes"] = notes(b)
+        b["call"] = assess(b)
         out.append(b)
     print(f"breakdown done ({time.time() - t0:.0f}s)")
     return out
