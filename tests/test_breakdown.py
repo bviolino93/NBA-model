@@ -134,4 +134,23 @@ def test_assess_rested_vs_tired_moves_projection():
     c = bd.assess(b)
     assert c["adj_margin"] == 11.9 + 3.0
     assert c["spread"]["side"] == "Los Angeles Lakers"
-    assert "fatigue/injury edge" in c["spread"]["why"]
+    assert "fatigue/injury edge (not counted)" in c["spread"]["why"]
+
+
+def test_assess_big_gap_caps_confidence():
+    # 11-19 Blazers @ Bucks: projection Bucks -19.3 vs line -10.5 was a 3/5 top play
+    b = _lakers()
+    b["schedule"], b["injuries"] = {}, {"home": [], "away": []}
+    b["projection"]["margin"] = 20.0
+    c = bd.assess(b)["spread"]
+    assert c["side"] == "Los Angeles Lakers"
+    assert c["confidence"] <= 2
+    assert "from the line" in c["why"]
+
+
+def test_assess_spread_confidence_capped():
+    b = _lakers()
+    b["schedule"], b["injuries"] = {}, {"home": [], "away": []}
+    b["projection"]["margin"] = 13.0
+    b["line"].update(bet_spread_open=-9.0, bet_spread_now=-10.5)
+    assert bd.assess(b)["spread"]["confidence"] <= bd.SPREAD_MAX
