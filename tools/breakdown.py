@@ -252,6 +252,10 @@ def _fmt_line(x: float) -> str:
     return "PK" if abs(x) < 0.01 else f"{x:+g}"
 
 
+BIG_GAP = 8.0       # pts between our margin and the line that caps confidence
+SPREAD_MAX = 3      # NBA spread calls are 10-22 so far; keep them off the top
+
+
 def assess(b: dict) -> dict:
     """The call for one game: adjusted projection, spread and total sides,
     confidence 1-5 from how many factors back each side, minus fatigue and
@@ -286,8 +290,11 @@ def assess(b: dict) -> dict:
             vote(v > 2 if abs(v) > 2 else None, "beating the line lately",
                  "other side beating the line lately")
     rest = sgn * ((ap + 0.0) - hp)                # fatigue gap in our favour
-    vote(rest > 0 if abs(rest) >= 1 else None, "fatigue/injury edge",
-         "fatigue/injuries work against our side")
+    # A tired or short-handed side counts against the pick, but the
+    # opponent being tired no longer adds confidence (11-19: rest-edge
+    # top plays went 0-3 while the tired-team flag held up).
+    vote(False if rest <= -1 else None, "", "fatigue/injuries work against our side")
+    notes = ["note: fatigue/injury edge (not counted)"] if rest >= 1 else []
     mv = None
     if ln.get("bet_spread_open") is not None and ln.get("bet_spread_now") is not None:
         mv = -(ln["bet_spread_now"] - ln["bet_spread_open"]) * sgn
@@ -295,19 +302,23 @@ def assess(b: dict) -> dict:
          "line moving against us")
     conf = 1 + max(0, len(backs) - 1) - (1 if len(against) >= 2 else 0)
     gap = abs(adj_m - home_m)
-    if gap >= 4:
-        conf += 1
     my_why = hwhy if pick_home else awhy
     caution = []
     if my_why:
         conf -= 1
         caution = my_why
-    conf = int(min(5, max(1, conf)))
+    if gap >= BIG_GAP:
+        # A projection this far from the line usually means the model is
+        # missing something (11-19: the big-gap top plays went 0-5). We
+        # still take our side, but never as a top play.
+        conf = min(conf, 2)
+        against.append(f"projection {gap:.1f} pts from the line, model likely missing something")
+    conf = int(min(SPREAD_MAX, max(1, conf)))
     team = b["home"] if pick_home else b["away"]
     line = ln["spread"] if pick_home else -ln["spread"]
     spread = {"side": team, "line": line, "confidence": conf,
               "why": "; ".join(backs + [f"against: {x}" for x in against]
-                               + [f"caution: {x}" for x in caution])}
+                               + [f"caution: {x}" for x in caution] + notes)}
     tot = None
     if ln.get("total") is not None and p.get("total") is not None:
         over = adj_t > ln["total"]
