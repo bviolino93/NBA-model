@@ -13,9 +13,12 @@
    "price": -110,
    "why": "projection Grizzlies +5.1 vs line +6.5; against: recent margins favour the other side; against: other side beating the line lately; against: fatigue/injuries work against our side; caution: Warriors on a back-to-back after a road game; caution: Warriors without Stephen Curry; caution: Warriors: Draymond Green day-to-day",
    "commence": "2026-11-20 01:00:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    126.0,
+    98.0
+   ],
+   "result": "L",
+   "profit": -0.0
   },
   {
    "sport": "nba",
@@ -29,8 +32,11 @@
    "price": -110,
    "why": "adjusted total 223.0 (model 228.0); fatigue lowers scoring: Grizzlies on a back-to-back; Warriors on a back-to-back after a road game; Warriors without Stephen Curry",
    "commence": "2026-11-20 01:00:00+00:00",
-   "final": null,
-   "result": "",
+   "final": [
+    126.0,
+    98.0
+   ],
+   "result": "W",
    "profit": 0.0
   },
   {
@@ -45,9 +51,12 @@
    "price": -110,
    "why": "projection Bucks -19.3 vs line -10.5; recent margins favour our side; beating the line lately; fatigue/injury edge; caution: Blazers: Toumani Camara day-to-day, Deni Avdija day-to-day; held at 3/5 and conditional: only bet if Camara and Avdija are active (check ~7:30 PM)",
    "commence": "2026-11-20 01:00:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    114.0,
+    124.0
+   ],
+   "result": "L",
+   "profit": -5.0
   },
   {
    "sport": "nba",
@@ -61,9 +70,12 @@
    "price": -110,
    "why": "adjusted total 221.6 (model 223.6); fatigue lowers scoring: Bucks on a back-to-back",
    "commence": "2026-11-20 01:00:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    114.0,
+    124.0
+   ],
+   "result": "L",
+   "profit": -5.0
   },
   {
    "sport": "nba",
@@ -77,9 +89,12 @@
    "price": -110,
    "why": "projection Timberwolves +1.8 vs line -1.5; beating the line lately; caution: Timberwolves: Jonathan Kuminga day-to-day",
    "commence": "2026-11-20 01:00:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    99.0,
+    102.0
+   ],
+   "result": "L",
+   "profit": -0.0
   },
   {
    "sport": "nba",
@@ -93,9 +108,12 @@
    "price": -110,
    "why": "adjusted total 221.0 (model 221.0)",
    "commence": "2026-11-20 01:00:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    99.0,
+    102.0
+   ],
+   "result": "L",
+   "profit": -5.0
   },
   {
    "sport": "nba",
@@ -109,8 +127,11 @@
    "price": -110,
    "why": "projection Spurs +14.0 vs line +15.5; fatigue/injury edge; against: recent margins favour the other side; against: other side beating the line lately",
    "commence": "2026-11-20 01:00:00+00:00",
-   "final": null,
-   "result": "",
+   "final": [
+    124.0,
+    112.0
+   ],
+   "result": "W",
    "profit": 0.0
   },
   {
@@ -125,9 +146,12 @@
    "price": -110,
    "why": "adjusted total 224.7 (model 225.7); fatigue lowers scoring: Spurs without Dylan Harper",
    "commence": "2026-11-20 01:00:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    124.0,
+    112.0
+   ],
+   "result": "L",
+   "profit": -0.0
   },
   {
    "sport": "cbb",
@@ -141,9 +165,12 @@
    "price": -110,
    "why": "projection West Virginia Mountaineers -6.6 vs line -9.5; caution: West Virginia Mountaineers played yesterday",
    "commence": "2026-11-19 19:30:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    72.0,
+    85.0
+   ],
+   "result": "L",
+   "profit": -0.0
   },
   {
    "sport": "cbb",
@@ -157,9 +184,12 @@
    "price": -110,
    "why": "adjusted total 142.4 (model 145.4); fatigue lowers scoring: West Virginia Mountaineers played yesterday; Florida Gators played yesterday",
    "commence": "2026-11-19 19:30:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    72.0,
+    85.0
+   ],
+   "result": "L",
+   "profit": -0.0
   },
   {
    "sport": "cbb",
@@ -173,8 +203,11 @@
    "price": -110,
    "why": "projection Auburn Tigers +1.2 vs line +3.5; against: recent margins favour the other side; caution: Notre Dame Fighting Irish played yesterday",
    "commence": "2026-11-19 22:00:00+00:00",
-   "final": null,
-   "result": "",
+   "final": [
+    73.0,
+    78.0
+   ],
+   "result": "W",
    "profit": 0.0
   },
   {
@@ -189,9 +222,12 @@
    "price": -110,
    "why": "adjusted total 154.0 (model 157.0); caution: Auburn Tigers played yesterday; Notre Dame Fighting Irish played yesterday",
    "commence": "2026-11-19 22:00:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    73.0,
+    78.0
+   ],
+   "result": "L",
+   "profit": -0.0
   },
   {
    "sport": "cbb",
@@ -237,8 +273,11 @@
    "price": -110,
    "why": "projection Toledo Rockets +8.0 vs line +6.5",
    "commence": "2026-11-20 00:00:00+00:00",
-   "final": null,
-   "result": "",
+   "final": [
+    83.0,
+    76.0
+   ],
+   "result": "W",
    "profit": 0.0
   },
   {
@@ -253,8 +292,11 @@
    "price": -110,
    "why": "adjusted total 147.1 (model 147.1)",
    "commence": "2026-11-20 00:00:00+00:00",
-   "final": null,
-   "result": "",
+   "final": [
+    83.0,
+    76.0
+   ],
+   "result": "W",
    "profit": 0.0
   },
   {
@@ -269,9 +311,12 @@
    "price": -110,
    "why": "projection High Point Panthers +15.9 vs line +13.5; recent margins favour our side; rest edge",
    "commence": "2026-11-20 00:00:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    85.0,
+    74.0
+   ],
+   "result": "L",
+   "profit": -5.0
   },
   {
    "sport": "cbb",
@@ -285,9 +330,12 @@
    "price": -110,
    "why": "adjusted total 139.8 (model 139.8)",
    "commence": "2026-11-20 00:00:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    85.0,
+    74.0
+   ],
+   "result": "L",
+   "profit": -0.0
   },
   {
    "sport": "cbb",
@@ -301,9 +349,12 @@
    "price": -110,
    "why": "projection Quinnipiac Bobcats +12.3 vs line +11.5",
    "commence": "2026-11-20 00:00:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    67.0,
+    69.0
+   ],
+   "result": "L",
+   "profit": -0.0
   },
   {
    "sport": "cbb",
@@ -317,9 +368,12 @@
    "price": -110,
    "why": "adjusted total 138.6 (model 138.6)",
    "commence": "2026-11-20 00:00:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    67.0,
+    69.0
+   ],
+   "result": "L",
+   "profit": -0.0
   },
   {
    "sport": "cbb",
@@ -333,9 +387,12 @@
    "price": -110,
    "why": "projection Butler Bulldogs +16.1 vs line +15.5; recent margins favour our side; against: less rest",
    "commence": "2026-11-20 00:00:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    84.0,
+    77.0
+   ],
+   "result": "L",
+   "profit": -0.0
   },
   {
    "sport": "cbb",
@@ -349,8 +406,11 @@
    "price": -110,
    "why": "adjusted total 162.5 (model 162.5)",
    "commence": "2026-11-20 00:00:00+00:00",
-   "final": null,
-   "result": "",
+   "final": [
+    84.0,
+    77.0
+   ],
+   "result": "W",
    "profit": 0.0
   },
   {
@@ -365,8 +425,11 @@
    "price": -110,
    "why": "projection St. Bonaventure Bonnies +10.6 vs line +11.5; against: recent margins favour the other side",
    "commence": "2026-11-20 00:00:00+00:00",
-   "final": null,
-   "result": "",
+   "final": [
+    78.0,
+    69.0
+   ],
+   "result": "W",
    "profit": 0.0
   },
   {
@@ -381,8 +444,11 @@
    "price": -110,
    "why": "adjusted total 148.8 (model 148.8)",
    "commence": "2026-11-20 00:00:00+00:00",
-   "final": null,
-   "result": "",
+   "final": [
+    78.0,
+    69.0
+   ],
+   "result": "W",
    "profit": 0.0
   },
   {
@@ -397,9 +463,12 @@
    "price": -110,
    "why": "projection Jacksonville Dolphins +10.3 vs line +1.5; recent margins favour our side; backtested A rule; against: less rest",
    "commence": "2026-11-20 00:00:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    72.0,
+    78.0
+   ],
+   "result": "L",
+   "profit": -5.0
   },
   {
    "sport": "cbb",
@@ -413,8 +482,11 @@
    "price": -110,
    "why": "adjusted total 155.1 (model 155.1)",
    "commence": "2026-11-20 00:00:00+00:00",
-   "final": null,
-   "result": "",
+   "final": [
+    72.0,
+    78.0
+   ],
+   "result": "W",
    "profit": 0.0
   },
   {
@@ -429,9 +501,12 @@
    "price": -110,
    "why": "projection Ohio State Buckeyes +15.9 vs line +31.5; against: big-line underdog",
    "commence": "2026-11-20 00:00:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    101.0,
+    62.0
+   ],
+   "result": "L",
+   "profit": -0.0
   },
   {
    "sport": "cbb",
@@ -445,9 +520,12 @@
    "price": -110,
    "why": "adjusted total 153.8 (model 153.8)",
    "commence": "2026-11-20 00:00:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    101.0,
+    62.0
+   ],
+   "result": "L",
+   "profit": -0.0
   },
   {
    "sport": "cbb",
@@ -461,9 +539,12 @@
    "price": -110,
    "why": "projection Drake Bulldogs -2.3 vs line +1.5; recent margins favour our side",
    "commence": "2026-11-20 00:30:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    86.0,
+    70.0
+   ],
+   "result": "L",
+   "profit": -5.0
   },
   {
    "sport": "cbb",
@@ -477,8 +558,11 @@
    "price": -110,
    "why": "adjusted total 158.9 (model 158.9)",
    "commence": "2026-11-20 00:30:00+00:00",
-   "final": null,
-   "result": "",
+   "final": [
+    86.0,
+    70.0
+   ],
+   "result": "W",
    "profit": 0.0
   },
   {
@@ -493,8 +577,11 @@
    "price": -110,
    "why": "projection Louisiana Tech Bulldogs +4.1 vs line -1.5; recent margins favour our side; against: less rest",
    "commence": "2026-11-20 00:30:00+00:00",
-   "final": null,
-   "result": "",
+   "final": [
+    74.0,
+    67.0
+   ],
+   "result": "W",
    "profit": 0.0
   },
   {
@@ -509,9 +596,12 @@
    "price": -110,
    "why": "adjusted total 144.1 (model 144.1)",
    "commence": "2026-11-20 00:30:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    74.0,
+    67.0
+   ],
+   "result": "L",
+   "profit": -0.0
   },
   {
    "sport": "cbb",
@@ -525,9 +615,12 @@
    "price": -110,
    "why": "projection Houston Christian Huskies +15.6 vs line +3.5; recent margins favour our side; rest edge; backtested A rule",
    "commence": "2026-11-20 01:00:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    79.0,
+    86.0
+   ],
+   "result": "L",
+   "profit": -5.0
   },
   {
    "sport": "cbb",
@@ -541,8 +634,11 @@
    "price": -110,
    "why": "adjusted total 157.4 (model 157.4)",
    "commence": "2026-11-20 01:00:00+00:00",
-   "final": null,
-   "result": "",
+   "final": [
+    79.0,
+    86.0
+   ],
+   "result": "W",
    "profit": 0.0
   },
   {
@@ -557,9 +653,12 @@
    "price": -110,
    "why": "projection TCU Horned Frogs +2.7 vs line -1.5; rest edge",
    "commence": "2026-11-20 01:00:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    92.0,
+    97.0
+   ],
+   "result": "L",
+   "profit": -5.0
   },
   {
    "sport": "cbb",
@@ -573,8 +672,11 @@
    "price": -110,
    "why": "adjusted total 168.1 (model 168.1)",
    "commence": "2026-11-20 01:00:00+00:00",
-   "final": null,
-   "result": "",
+   "final": [
+    92.0,
+    97.0
+   ],
+   "result": "W",
    "profit": 0.0
   },
   {
@@ -589,9 +691,12 @@
    "price": -110,
    "why": "projection St. Thomas Tommies +5.7 vs line +7.5",
    "commence": "2026-11-20 01:00:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    93.0,
+    61.0
+   ],
+   "result": "L",
+   "profit": -0.0
   },
   {
    "sport": "cbb",
@@ -605,8 +710,11 @@
    "price": -110,
    "why": "adjusted total 152.8 (model 152.8)",
    "commence": "2026-11-20 01:00:00+00:00",
-   "final": null,
-   "result": "",
+   "final": [
+    93.0,
+    61.0
+   ],
+   "result": "W",
    "profit": 0.0
   },
   {
@@ -621,8 +729,11 @@
    "price": -110,
    "why": "projection Louisville Cardinals +24.6 vs line +35.5; against: recent margins favour the other side; against: big-line underdog",
    "commence": "2026-11-20 01:00:00+00:00",
-   "final": null,
-   "result": "",
+   "final": [
+    83.0,
+    69.0
+   ],
+   "result": "W",
    "profit": 0.0
   },
   {
@@ -637,8 +748,11 @@
    "price": -110,
    "why": "adjusted total 152.3 (model 152.3)",
    "commence": "2026-11-20 01:00:00+00:00",
-   "final": null,
-   "result": "",
+   "final": [
+    83.0,
+    69.0
+   ],
+   "result": "W",
    "profit": 0.0
   },
   {
@@ -653,8 +767,11 @@
    "price": -110,
    "why": "projection Texas Longhorns +20.0 vs line +38.5; against: big-line underdog",
    "commence": "2026-11-20 01:00:00+00:00",
-   "final": null,
-   "result": "",
+   "final": [
+    92.0,
+    68.0
+   ],
+   "result": "W",
    "profit": 0.0
   },
   {
@@ -669,8 +786,11 @@
    "price": -110,
    "why": "adjusted total 161.8 (model 161.8)",
    "commence": "2026-11-20 01:00:00+00:00",
-   "final": null,
-   "result": "",
+   "final": [
+    92.0,
+    68.0
+   ],
+   "result": "W",
    "profit": 0.0
   },
   {
@@ -685,8 +805,11 @@
    "price": -110,
    "why": "projection Wisconsin Badgers +3.7 vs line +4.5; against: recent margins favour the other side",
    "commence": "2026-11-20 01:30:00+00:00",
-   "final": null,
-   "result": "",
+   "final": [
+    69.0,
+    74.0
+   ],
+   "result": "W",
    "profit": 0.0
   },
   {
@@ -701,8 +824,11 @@
    "price": -110,
    "why": "adjusted total 146.2 (model 146.2)",
    "commence": "2026-11-20 01:30:00+00:00",
-   "final": null,
-   "result": "",
+   "final": [
+    69.0,
+    74.0
+   ],
+   "result": "W",
    "profit": 0.0
   },
   {
@@ -717,9 +843,12 @@
    "price": -110,
    "why": "projection UNLV Rebels -3.3 vs line -3.5; against: recent margins favour the other side; caution: UNLV Rebels played yesterday",
    "commence": "2026-11-20 01:30:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    70.0,
+    89.0
+   ],
+   "result": "L",
+   "profit": -0.0
   },
   {
    "sport": "cbb",
@@ -733,8 +862,11 @@
    "price": -110,
    "why": "adjusted total 156.8 (model 159.8); caution: UNLV Rebels played yesterday; Rutgers Scarlet Knights played yesterday",
    "commence": "2026-11-20 01:30:00+00:00",
-   "final": null,
-   "result": "",
+   "final": [
+    70.0,
+    89.0
+   ],
+   "result": "W",
    "profit": 0.0
   },
   {
@@ -749,9 +881,12 @@
    "price": -110,
    "why": "projection New Mexico State Aggies +2.9 vs line +1.5; against: recent margins favour the other side",
    "commence": "2026-11-20 02:00:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    69.0,
+    84.0
+   ],
+   "result": "L",
+   "profit": -0.0
   },
   {
    "sport": "cbb",
@@ -765,8 +900,11 @@
    "price": -110,
    "why": "adjusted total 135.7 (model 135.7)",
    "commence": "2026-11-20 02:00:00+00:00",
-   "final": null,
-   "result": "",
+   "final": [
+    69.0,
+    84.0
+   ],
+   "result": "W",
    "profit": 0.0
   },
   {
@@ -781,8 +919,11 @@
    "price": -110,
    "why": "projection Washington Huskies +13.9 vs line +18.5; rest edge; against: recent margins favour the other side",
    "commence": "2026-11-20 02:00:00+00:00",
-   "final": null,
-   "result": "",
+   "final": [
+    82.0,
+    69.0
+   ],
+   "result": "W",
    "profit": 0.0
   },
   {
@@ -797,8 +938,11 @@
    "price": -110,
    "why": "adjusted total 156.3 (model 156.3)",
    "commence": "2026-11-20 02:00:00+00:00",
-   "final": null,
-   "result": "",
+   "final": [
+    82.0,
+    69.0
+   ],
+   "result": "W",
    "profit": 0.0
   },
   {
@@ -813,8 +957,11 @@
    "price": -110,
    "why": "projection Oregon Ducks +0.0 vs line +1.5; recent margins favour our side",
    "commence": "2026-11-20 02:00:00+00:00",
-   "final": null,
-   "result": "",
+   "final": [
+    71.0,
+    82.0
+   ],
+   "result": "W",
    "profit": 0.0
   },
   {
@@ -829,9 +976,12 @@
    "price": -110,
    "why": "adjusted total 163.1 (model 163.1)",
    "commence": "2026-11-20 02:00:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    71.0,
+    82.0
+   ],
+   "result": "L",
+   "profit": -0.0
   },
   {
    "sport": "cbb",
@@ -845,9 +995,12 @@
    "price": -110,
    "why": "projection Grambling Tigers -0.3 vs line -1.5; against: recent margins favour the other side",
    "commence": "2026-11-20 02:00:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    100.0,
+    103.0
+   ],
+   "result": "L",
+   "profit": -0.0
   },
   {
    "sport": "cbb",
@@ -861,9 +1014,12 @@
    "price": -110,
    "why": "adjusted total 146.8 (model 146.8)",
    "commence": "2026-11-20 02:00:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    100.0,
+    103.0
+   ],
+   "result": "L",
+   "profit": -0.0
   },
   {
    "sport": "cbb",
@@ -877,9 +1033,12 @@
    "price": -110,
    "why": "projection Pepperdine Waves +1.8 vs line -2.5",
    "commence": "2026-11-20 02:00:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    80.0,
+    88.0
+   ],
+   "result": "L",
+   "profit": -0.0
   },
   {
    "sport": "cbb",
@@ -893,9 +1052,12 @@
    "price": -110,
    "why": "adjusted total 147.0 (model 147.0)",
    "commence": "2026-11-20 02:00:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    80.0,
+    88.0
+   ],
+   "result": "L",
+   "profit": -0.0
   },
   {
    "sport": "cbb",
@@ -909,9 +1071,12 @@
    "price": -110,
    "why": "projection California Golden Bears +8.6 vs line +13.5; against: recent margins favour the other side; against: less rest",
    "commence": "2026-11-20 03:00:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    86.0,
+    54.0
+   ],
+   "result": "L",
+   "profit": -0.0
   },
   {
    "sport": "cbb",
@@ -925,9 +1090,12 @@
    "price": -110,
    "why": "adjusted total 153.6 (model 153.6)",
    "commence": "2026-11-20 03:00:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    86.0,
+    54.0
+   ],
+   "result": "L",
+   "profit": -0.0
   },
   {
    "sport": "cbb",
@@ -941,8 +1109,11 @@
    "price": -110,
    "why": "projection Stanford Cardinal +13.1 vs line +16.5; rest edge; against: recent margins favour the other side",
    "commence": "2026-11-20 03:00:00+00:00",
-   "final": null,
-   "result": "",
+   "final": [
+    78.0,
+    65.0
+   ],
+   "result": "W",
    "profit": 0.0
   },
   {
@@ -957,8 +1128,11 @@
    "price": -110,
    "why": "adjusted total 149.4 (model 149.4)",
    "commence": "2026-11-20 03:00:00+00:00",
-   "final": null,
-   "result": "",
+   "final": [
+    78.0,
+    65.0
+   ],
+   "result": "W",
    "profit": 0.0
   },
   {
@@ -973,9 +1147,12 @@
    "price": -110,
    "why": "projection Santa Clara Broncos +4.4 vs line +2.5",
    "commence": "2026-11-20 03:30:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    77.0,
+    83.0
+   ],
+   "result": "L",
+   "profit": -0.0
   },
   {
    "sport": "cbb",
@@ -989,8 +1166,11 @@
    "price": -110,
    "why": "adjusted total 161.7 (model 161.7)",
    "commence": "2026-11-20 03:30:00+00:00",
-   "final": null,
-   "result": "",
+   "final": [
+    77.0,
+    83.0
+   ],
+   "result": "W",
    "profit": 0.0
   },
   {
@@ -1005,9 +1185,12 @@
    "price": -110,
    "why": "projection Kansas Jayhawks -1.0 vs line -2.5; against: recent margins favour the other side; caution: Kansas Jayhawks played yesterday",
    "commence": "2026-11-20 04:00:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    83.0,
+    92.0
+   ],
+   "result": "L",
+   "profit": -0.0
   },
   {
    "sport": "cbb",
@@ -1021,9 +1204,12 @@
    "price": -110,
    "why": "adjusted total 150.5 (model 153.5); fatigue lowers scoring: Kansas Jayhawks played yesterday; Houston Cougars played yesterday",
    "commence": "2026-11-20 04:00:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    83.0,
+    92.0
+   ],
+   "result": "L",
+   "profit": -0.0
   },
   {
    "sport": "cbb",
@@ -1037,9 +1223,12 @@
    "price": -110,
    "why": "projection USC Trojans +21.6 vs line +26.5; against: big-line underdog",
    "commence": "2026-11-20 04:00:00+00:00",
-   "final": null,
-   "result": "",
-   "profit": 0.0
+   "final": [
+    96.0,
+    51.0
+   ],
+   "result": "L",
+   "profit": -0.0
   },
   {
    "sport": "cbb",
@@ -1053,8 +1242,11 @@
    "price": -110,
    "why": "adjusted total 153.8 (model 153.8)",
    "commence": "2026-11-20 04:00:00+00:00",
-   "final": null,
-   "result": "",
+   "final": [
+    96.0,
+    51.0
+   ],
+   "result": "W",
    "profit": 0.0
   }
  ]
