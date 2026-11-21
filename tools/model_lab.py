@@ -108,6 +108,7 @@ def main():
     ap.add_argument("--apm-half-life", type=float, default=None)
     ap.add_argument("--save", default="")
     ap.add_argument("--load", default="")
+    ap.add_argument("--out", default="", help="write per-game held-out predictions here")
     a, _ = ap.parse_known_args()
     t0 = time.time()
     cfg = npr.PredictConfig()
@@ -278,6 +279,18 @@ def main():
         print("\nLatest fitted ridge weights (points per 1 sd of input)")
         print("  margin:", npr.ridge_weights(weights.margin))
         print("  total: ", npr.ridge_weights(weights.total))
+    if a.out:
+        keep = [c for c in ("game_id", "season", "game_date", "home_team", "away_team",
+                            "home_score", "away_score", "spread_line", "total_line",
+                            "spread_open", "total_open", "rest_diff", "b2b_diff",
+                            "home_b2b", "away_b2b", "early", "month")
+                if c in te.columns]
+        o = te[keep].copy()
+        for name in ("ratings", "+players", "trees"):
+            o[f"{name}_margin"] = P[name]["pred_margin"]
+            o[f"{name}_total"] = P[name]["pred_total"]
+        o.to_csv(a.out, index=False)
+        print(f"wrote {len(o)} games to {a.out}")
     print(f"\ndone in {time.time() - t0:.0f}s")
 
 
