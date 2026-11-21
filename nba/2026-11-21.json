@@ -140,16 +140,22 @@
    "commence": "2026-11-22 00:30:00+00:00",
    "tip_et": "7:30 PM",
    "line": {
-    "spread": -5.5,
-    "total": 218.5,
+    "spread": -3.5,
+    "total": 215.5,
     "source": "DK/FD",
     "bet_spread_open": -5.5,
-    "bet_spread_now": -5.5,
+    "bet_spread_now": -3.5,
     "bet_spread_first_snap": "2026-11-21T00:15:54Z",
     "bet_total_open": 218.5,
-    "bet_total_now": 218.5,
+    "bet_total_now": 215.5,
     "bet_total_first_snap": "2026-11-21T00:15:54Z",
-    "snapshots": 1
+    "sharp_spread_open": -3.5,
+    "sharp_spread_now": -3.5,
+    "sharp_spread_first_snap": "2026-11-21T20:05:40Z",
+    "sharp_total_open": 216.0,
+    "sharp_total_now": 216.0,
+    "sharp_total_first_snap": "2026-11-21T20:05:40Z",
+    "snapshots": 2
    },
    "projection": {
     "margin": 5.9,
@@ -255,7 +261,9 @@
     "Knicks: OG Anunoby (34 min) day-to-day",
     "Knicks: Karl-Anthony Towns (34 min) day-to-day",
     "Blazers: Deni Avdija (27 min) day-to-day",
-    "Our total is 4.9 over the line"
+    "Spread moved 2.0 toward Blazers (-5.5 to -3.5)",
+    "Total moved down 3.0 (218.5 to 215.5)",
+    "Our total is 7.9 over the line"
    ],
    "call": {
     "adj_margin": 5.4,
@@ -265,14 +273,14 @@
      "Blazers: Deni Avdija day-to-day"
     ],
     "spread": {
-     "side": "Portland Trail Blazers",
-     "line": 5.5,
+     "side": "New York Knicks",
+     "line": -3.5,
      "confidence": 1,
-     "why": "projection Knicks +5.4 vs line +5.5; against: recent margins favour the other side; caution: Blazers: Deni Avdija day-to-day"
+     "why": "projection Knicks +5.4 vs line +3.5; recent margins favour our side; against: line moving against us; caution: Knicks: OG Anunoby day-to-day, Karl-Anthony Towns day-to-day"
     },
     "total": {
      "side": "Over",
-     "line": 218.5,
+     "line": 215.5,
      "confidence": 2,
      "why": "adjusted total 223.4 (model 223.4)"
     }
@@ -287,9 +295,22 @@
    "commence": "2026-11-22 01:00:00+00:00",
    "tip_et": "8:00 PM",
    "line": {
-    "spread": -5.5,
+    "spread": -4.5,
     "total": 230.5,
-    "source": "ESPN"
+    "source": "DK/FD",
+    "bet_spread_open": -4.5,
+    "bet_spread_now": -4.5,
+    "bet_spread_first_snap": "2026-11-21T20:05:40Z",
+    "bet_total_open": 230.5,
+    "bet_total_now": 230.5,
+    "bet_total_first_snap": "2026-11-21T20:05:40Z",
+    "sharp_spread_open": -5.0,
+    "sharp_spread_now": -5.0,
+    "sharp_spread_first_snap": "2026-11-21T20:05:40Z",
+    "sharp_total_open": 230.5,
+    "sharp_total_now": 230.5,
+    "sharp_total_first_snap": "2026-11-21T20:05:40Z",
+    "snapshots": 1
    },
    "projection": {
     "margin": 6.0,
@@ -367,7 +388,7 @@
       "player": "P.J. Washington",
       "status": "Day-To-Day",
       "mpg": 29.6,
-      "detail": "Shoulder"
+      "detail": "Illness"
      },
      {
       "player": "Walter Clayton Jr.",
@@ -396,10 +417,10 @@
      "Mavericks: P.J. Washington day-to-day, Walter Clayton Jr. day-to-day"
     ],
     "spread": {
-     "side": "Los Angeles Clippers",
-     "line": 5.5,
+     "side": "Dallas Mavericks",
+     "line": -4.5,
      "confidence": 1,
-     "why": "projection Mavericks +5.0 vs line +5.5; against: recent margins favour the other side; note: fatigue/injury edge (not counted)"
+     "why": "projection Mavericks +5.0 vs line +4.5; recent margins favour our side; against: fatigue/injuries work against our side; caution: Mavericks: P.J. Washington day-to-day, Walter Clayton Jr. day-to-day"
     },
     "total": {
      "side": "Under",
@@ -418,25 +439,31 @@
    "commence": "2026-11-22 01:00:00+00:00",
    "tip_et": "8:00 PM",
    "line": {
-    "spread": -5.5,
-    "total": 228.5,
+    "spread": -6.0,
+    "total": 229.0,
     "source": "DK/FD",
     "bet_spread_open": -5.5,
-    "bet_spread_now": -5.5,
+    "bet_spread_now": -6.0,
     "bet_spread_first_snap": "2026-11-21T00:15:54Z",
     "bet_total_open": 228.5,
-    "bet_total_now": 228.5,
+    "bet_total_now": 229.0,
     "bet_total_first_snap": "2026-11-21T00:15:54Z",
-    "snapshots": 1
+    "sharp_spread_open": -6.0,
+    "sharp_spread_now": -6.0,
+    "sharp_spread_first_snap": "2026-11-21T20:05:40Z",
+    "sharp_total_open": 229.5,
+    "sharp_total_now": 229.5,
+    "sharp_total_first_snap": "2026-11-21T20:05:40Z",
+    "snapshots": 2
    },
    "projection": {
-    "margin": 7.8,
+    "margin": 6.3,
     "total": 231.2,
-    "home_pts": 119.5,
-    "away_pts": 111.7,
+    "home_pts": 118.8,
+    "away_pts": 112.4,
     "parts": {
-     "players": 6.8,
-     "box": 5.6,
+     "players": 6.1,
+     "box": 2.6,
      "possessions": 4.8,
      "scores": 4.9
     }
@@ -452,8 +479,8 @@
      "ftr": -0.001,
      "3p": -0.022
     },
-    "apm_diff": 6.8,
-    "box_diff": 5.6
+    "apm_diff": 6.1,
+    "box_diff": 2.6
    },
    "form": {
     "home": {
@@ -522,12 +549,6 @@
       "detail": "Ankle"
      },
      {
-      "player": "Ty Jerome",
-      "status": "Out",
-      "mpg": 18.7,
-      "detail": "Hip Right"
-     },
-     {
       "player": "Jerami Grant",
       "status": "Out",
       "mpg": 18.6,
@@ -545,20 +566,20 @@
     "Grizzlies: Cameron Boozer (31 min) out"
    ],
    "call": {
-    "adj_margin": 8.8,
+    "adj_margin": 7.3,
     "adj_total": 230.2,
     "fatigue": [
      "Grizzlies without Cameron Boozer"
     ],
     "spread": {
      "side": "Minnesota Timberwolves",
-     "line": -5.5,
+     "line": -6.0,
      "confidence": 1,
-     "why": "projection Timberwolves +8.8 vs line +5.5; against: other side beating the line lately; note: fatigue/injury edge (not counted)"
+     "why": "projection Timberwolves +7.3 vs line +6.0; against: other side beating the line lately; note: fatigue/injury edge (not counted)"
     },
     "total": {
      "side": "Over",
-     "line": 228.5,
+     "line": 229.0,
      "confidence": 1,
      "why": "adjusted total 230.2 (model 231.2); caution: Grizzlies without Cameron Boozer"
     }
@@ -573,18 +594,31 @@
    "commence": "2026-11-22 01:00:00+00:00",
    "tip_et": "8:00 PM",
    "line": {
-    "spread": -18.5,
-    "total": 229.5,
-    "source": "ESPN"
+    "spread": -19.0,
+    "total": 227.5,
+    "source": "DK/FD",
+    "bet_spread_open": -19.0,
+    "bet_spread_now": -19.0,
+    "bet_spread_first_snap": "2026-11-21T20:05:40Z",
+    "bet_total_open": 227.5,
+    "bet_total_now": 227.5,
+    "bet_total_first_snap": "2026-11-21T20:05:40Z",
+    "sharp_spread_open": -19.0,
+    "sharp_spread_now": -19.0,
+    "sharp_spread_first_snap": "2026-11-21T20:05:40Z",
+    "sharp_total_open": 227.5,
+    "sharp_total_now": 227.5,
+    "sharp_total_first_snap": "2026-11-21T20:05:40Z",
+    "snapshots": 1
    },
    "projection": {
-    "margin": 18.6,
-    "total": 234.0,
-    "home_pts": 126.3,
-    "away_pts": 107.7,
+    "margin": 19.4,
+    "total": 234.1,
+    "home_pts": 126.8,
+    "away_pts": 107.3,
     "parts": {
-     "players": 15.3,
-     "box": 5.3,
+     "players": 17.4,
+     "box": 6.7,
      "possessions": 16.6,
      "scores": 16.4
     }
@@ -600,8 +634,8 @@
      "ftr": 0.026,
      "3p": 0.096
     },
-    "apm_diff": 15.3,
-    "box_diff": 5.3
+    "apm_diff": 17.4,
+    "box_diff": 6.7
    },
    "form": {
     "home": {
@@ -668,26 +702,26 @@
    "notes": [
     "Pelicans on a back-to-back after a road game",
     "Spurs: Dylan Harper (28 min) out",
-    "Our total is 4.5 over the line"
+    "Our total is 6.6 over the line"
    ],
    "call": {
-    "adj_margin": 20.6,
-    "adj_total": 231.0,
+    "adj_margin": 21.4,
+    "adj_total": 231.1,
     "fatigue": [
      "Spurs without Dylan Harper",
      "Pelicans on a back-to-back after a road game"
     ],
     "spread": {
      "side": "San Antonio Spurs",
-     "line": -18.5,
+     "line": -19.0,
      "confidence": 2,
-     "why": "projection Spurs +20.6 vs line +18.5; recent margins favour our side; beating the line lately; caution: Spurs without Dylan Harper; note: fatigue/injury edge (not counted)"
+     "why": "projection Spurs +21.4 vs line +19.0; recent margins favour our side; beating the line lately; caution: Spurs without Dylan Harper; note: fatigue/injury edge (not counted)"
     },
     "total": {
      "side": "Over",
-     "line": 229.5,
+     "line": 227.5,
      "confidence": 1,
-     "why": "adjusted total 231.0 (model 234.0); caution: Spurs without Dylan Harper; Pelicans on a back-to-back after a road game"
+     "why": "adjusted total 231.1 (model 234.1); caution: Spurs without Dylan Harper; Pelicans on a back-to-back after a road game"
     }
    }
   },
@@ -702,7 +736,20 @@
    "line": {
     "spread": 13.5,
     "total": 217.5,
-    "source": "ESPN"
+    "source": "DK/FD",
+    "bet_spread_open": 13.5,
+    "bet_spread_now": 13.5,
+    "bet_spread_first_snap": "2026-11-21T20:05:40Z",
+    "bet_total_open": 217.5,
+    "bet_total_now": 217.5,
+    "bet_total_first_snap": "2026-11-21T20:05:40Z",
+    "sharp_spread_open": 13.5,
+    "sharp_spread_now": 13.5,
+    "sharp_spread_first_snap": "2026-11-21T20:05:40Z",
+    "sharp_total_open": 218.0,
+    "sharp_total_now": 218.0,
+    "sharp_total_first_snap": "2026-11-21T20:05:40Z",
+    "snapshots": 1
    },
    "projection": {
     "margin": -11.3,
