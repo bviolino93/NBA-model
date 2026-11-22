@@ -10,25 +10,31 @@
    "commence": "2026-11-22 20:30:00+00:00",
    "tip_et": "3:30 PM",
    "line": {
-    "spread": 2.5,
-    "total": 227.5,
+    "spread": 2.0,
+    "total": 224.0,
     "source": "DK/FD",
     "bet_spread_open": 2.5,
-    "bet_spread_now": 2.5,
+    "bet_spread_now": 2.0,
     "bet_spread_first_snap": "2026-11-21T23:36:11Z",
     "bet_total_open": 227.5,
-    "bet_total_now": 227.5,
+    "bet_total_now": 224.0,
     "bet_total_first_snap": "2026-11-21T23:36:11Z",
-    "snapshots": 1
+    "sharp_spread_open": 2.0,
+    "sharp_spread_now": 2.0,
+    "sharp_spread_first_snap": "2026-11-22T20:19:55Z",
+    "sharp_total_open": 223.0,
+    "sharp_total_now": 223.0,
+    "sharp_total_first_snap": "2026-11-22T20:19:55Z",
+    "snapshots": 2
    },
    "projection": {
-    "margin": -0.3,
+    "margin": -1.4,
     "total": 231.6,
-    "home_pts": 115.6,
-    "away_pts": 116.0,
+    "home_pts": 115.1,
+    "away_pts": 116.5,
     "parts": {
-     "players": -2.2,
-     "box": -1.4,
+     "players": -3.0,
+     "box": -3.3,
      "possessions": -2.7,
      "scores": -2.6
     }
@@ -44,8 +50,8 @@
      "ftr": -0.024,
      "3p": 0.084
     },
-    "apm_diff": -2.2,
-    "box_diff": -1.4
+    "apm_diff": -3.0,
+    "box_diff": -3.3
    },
    "form": {
     "home": {
@@ -98,54 +104,35 @@
       "status": "Out",
       "mpg": 21.1,
       "detail": "Calf Left Strain"
-     },
-     {
-      "player": "Kingston Flemings",
-      "status": "Out",
-      "mpg": 14.1,
-      "detail": "Back Strain"
      }
     ],
     "away": [
-     {
-      "player": "Cade Cunningham",
-      "status": "Day-To-Day",
-      "mpg": 31.8,
-      "detail": "Knee Right Soreness"
-     },
      {
       "player": "Duncan Robinson",
       "status": "Out",
       "mpg": 21.4,
       "detail": "Quadriceps Left Strain"
-     },
-     {
-      "player": "Ronald Holland II",
-      "status": "Out",
-      "mpg": 11.9,
-      "detail": "Knee Left Bruise"
      }
     ]
    },
    "notes": [
-    "Pistons: Cade Cunningham (32 min) day-to-day",
-    "Our total is 4.1 over the line"
+    "Total moved down 3.5 (227.5 to 224.0)",
+    "Pinnacle total 223.0 vs DK/FD 224.0",
+    "Our total is 7.6 over the line"
    ],
    "call": {
-    "adj_margin": 0.2,
+    "adj_margin": -1.4,
     "adj_total": 231.6,
-    "fatigue": [
-     "Pistons: Cade Cunningham day-to-day"
-    ],
+    "fatigue": [],
     "spread": {
      "side": "Atlanta Hawks",
-     "line": 2.5,
+     "line": 2.0,
      "confidence": 1,
-     "why": "projection Hawks +0.2 vs line -2.5; against: recent margins favour the other side; against: other side beating the line lately"
+     "why": "projection Hawks -1.4 vs line -2.0; against: recent margins favour the other side; against: other side beating the line lately"
     },
     "total": {
      "side": "Over",
-     "line": 227.5,
+     "line": 224.0,
      "confidence": 2,
      "why": "adjusted total 231.6 (model 231.6)"
     }
@@ -160,9 +147,22 @@
    "commence": "2026-11-22 23:00:00+00:00",
    "tip_et": "6:00 PM",
    "line": {
-    "spread": -4.5,
+    "spread": -3.5,
     "total": 231.5,
-    "source": "ESPN"
+    "source": "DK/FD",
+    "bet_spread_open": -3.5,
+    "bet_spread_now": -3.5,
+    "bet_spread_first_snap": "2026-11-22T20:19:55Z",
+    "bet_total_open": 231.5,
+    "bet_total_now": 231.5,
+    "bet_total_first_snap": "2026-11-22T20:19:55Z",
+    "sharp_spread_open": -4.0,
+    "sharp_spread_now": -4.0,
+    "sharp_spread_first_snap": "2026-11-22T20:19:55Z",
+    "sharp_total_open": 231.0,
+    "sharp_total_now": 231.0,
+    "sharp_total_first_snap": "2026-11-22T20:19:55Z",
+    "snapshots": 1
    },
    "projection": {
     "margin": 3.0,
@@ -273,9 +273,9 @@
     ],
     "spread": {
      "side": "Oklahoma City Thunder",
-     "line": 4.5,
+     "line": 3.5,
      "confidence": 1,
-     "why": "projection Heat +3.0 vs line +4.5; caution: Thunder: Shai Gilgeous-Alexander day-to-day"
+     "why": "projection Heat +3.0 vs line +3.5; caution: Thunder: Shai Gilgeous-Alexander day-to-day"
     },
     "total": {
      "side": "Over",
@@ -294,18 +294,31 @@
    "commence": "2026-11-23 00:00:00+00:00",
    "tip_et": "7:00 PM",
    "line": {
-    "spread": -1.5,
-    "total": 224.5,
-    "source": "ESPN"
+    "spread": 2.0,
+    "total": 226.0,
+    "source": "DK/FD",
+    "bet_spread_open": 2.0,
+    "bet_spread_now": 2.0,
+    "bet_spread_first_snap": "2026-11-22T20:19:55Z",
+    "bet_total_open": 226.0,
+    "bet_total_now": 226.0,
+    "bet_total_first_snap": "2026-11-22T20:19:55Z",
+    "sharp_spread_open": 1.5,
+    "sharp_spread_now": 1.5,
+    "sharp_spread_first_snap": "2026-11-22T20:19:55Z",
+    "sharp_total_open": 227.0,
+    "sharp_total_now": 227.0,
+    "sharp_total_first_snap": "2026-11-22T20:19:55Z",
+    "snapshots": 1
    },
    "projection": {
-    "margin": -1.7,
-    "total": 237.2,
-    "home_pts": 117.8,
-    "away_pts": 119.4,
+    "margin": -2.0,
+    "total": 237.1,
+    "home_pts": 117.5,
+    "away_pts": 119.5,
     "parts": {
-     "players": -2.5,
-     "box": -6.7,
+     "players": -3.1,
+     "box": -7.3,
      "possessions": -2.6,
      "scores": -2.6
     }
@@ -321,8 +334,8 @@
      "ftr": -0.076,
      "3p": 0.013
     },
-    "apm_diff": -2.5,
-    "box_diff": -6.7
+    "apm_diff": -3.1,
+    "box_diff": -7.3
    },
    "form": {
     "home": {
@@ -383,6 +396,12 @@
       "status": "Day-To-Day",
       "mpg": 26.2,
       "detail": "Illness"
+     },
+     {
+      "player": "Walter Clayton Jr.",
+      "status": "Day-To-Day",
+      "mpg": 21.9,
+      "detail": "Knee Left Tendinitis"
      }
     ]
    },
@@ -390,28 +409,28 @@
     "Mavericks on a back-to-back",
     "Jazz: Lauri Markkanen (26 min) out",
     "Mavericks: P.J. Washington (26 min) day-to-day",
-    "Our projection is 3.2 pts better for Mavericks than the line",
-    "Our total is 12.7 over the line"
+    "Pinnacle total 227.0 vs DK/FD 226.0",
+    "Our total is 11.1 over the line"
    ],
    "call": {
-    "adj_margin": -0.2,
-    "adj_total": 234.2,
+    "adj_margin": 0.0,
+    "adj_total": 234.1,
     "fatigue": [
      "Jazz without Lauri Markkanen",
      "Mavericks on a back-to-back",
-     "Mavericks: P.J. Washington day-to-day"
+     "Mavericks: P.J. Washington day-to-day, Walter Clayton Jr. day-to-day"
     ],
     "spread": {
-     "side": "Dallas Mavericks",
-     "line": 1.5,
+     "side": "Utah Jazz",
+     "line": 2.0,
      "confidence": 1,
-     "why": "projection Jazz -0.2 vs line +1.5; against: other side beating the line lately; against: fatigue/injuries work against our side; caution: Mavericks on a back-to-back; caution: Mavericks: P.J. Washington day-to-day"
+     "why": "projection Jazz +0.0 vs line -2.0; beating the line lately; caution: Jazz without Lauri Markkanen; note: fatigue/injury edge (not counted)"
     },
     "total": {
      "side": "Over",
-     "line": 224.5,
+     "line": 226.0,
      "confidence": 1,
-     "why": "adjusted total 234.2 (model 237.2); caution: Jazz without Lauri Markkanen; Mavericks on a back-to-back"
+     "why": "adjusted total 234.1 (model 237.1); caution: Jazz without Lauri Markkanen; Mavericks on a back-to-back"
     }
    }
   },
@@ -425,17 +444,30 @@
    "tip_et": "7:00 PM",
    "line": {
     "spread": 4.5,
-    "total": 220.5,
-    "source": "ESPN"
+    "total": 220.0,
+    "source": "DK/FD",
+    "bet_spread_open": 4.5,
+    "bet_spread_now": 4.5,
+    "bet_spread_first_snap": "2026-11-22T20:19:55Z",
+    "bet_total_open": 220.0,
+    "bet_total_now": 220.0,
+    "bet_total_first_snap": "2026-11-22T20:19:55Z",
+    "sharp_spread_open": 4.5,
+    "sharp_spread_now": 4.5,
+    "sharp_spread_first_snap": "2026-11-22T20:19:55Z",
+    "sharp_total_open": 220.0,
+    "sharp_total_now": 220.0,
+    "sharp_total_first_snap": "2026-11-22T20:19:55Z",
+    "snapshots": 1
    },
    "projection": {
-    "margin": -6.1,
+    "margin": -5.8,
     "total": 230.6,
-    "home_pts": 112.2,
-    "away_pts": 118.3,
+    "home_pts": 112.4,
+    "away_pts": 118.2,
     "parts": {
-     "players": -6.4,
-     "box": 4.3,
+     "players": -6.2,
+     "box": 4.6,
      "possessions": -4.0,
      "scores": -4.2
     }
@@ -451,8 +483,8 @@
      "ftr": -0.004,
      "3p": -0.021
     },
-    "apm_diff": -6.4,
-    "box_diff": 4.3
+    "apm_diff": -6.2,
+    "box_diff": 4.6
    },
    "form": {
     "home": {
@@ -501,6 +533,12 @@
    "injuries": {
     "home": [
      {
+      "player": "Bub Carrington",
+      "status": "Day-To-Day",
+      "mpg": 13.1,
+      "detail": "Illness"
+     },
+     {
       "player": "Deandre Ayton",
       "status": "Day-To-Day",
       "mpg": 11.0,
@@ -517,21 +555,21 @@
     ]
    },
    "notes": [
-    "Our total is 10.1 over the line"
+    "Our total is 10.6 over the line"
    ],
    "call": {
-    "adj_margin": -6.1,
+    "adj_margin": -5.8,
     "adj_total": 230.6,
     "fatigue": [],
     "spread": {
      "side": "Orlando Magic",
      "line": -4.5,
      "confidence": 3,
-     "why": "projection Wizards -6.1 vs line -4.5; recent margins favour our side; beating the line lately"
+     "why": "projection Wizards -5.8 vs line -4.5; recent margins favour our side; beating the line lately"
     },
     "total": {
      "side": "Over",
-     "line": 220.5,
+     "line": 220.0,
      "confidence": 2,
      "why": "adjusted total 230.6 (model 230.6)"
     }
@@ -546,16 +584,22 @@
    "commence": "2026-11-23 00:00:00+00:00",
    "tip_et": "7:00 PM",
    "line": {
-    "spread": 8.5,
-    "total": 238.5,
+    "spread": 10.0,
+    "total": 236.0,
     "source": "DK/FD",
     "bet_spread_open": 8.5,
-    "bet_spread_now": 8.5,
+    "bet_spread_now": 10.0,
     "bet_spread_first_snap": "2026-11-21T23:36:11Z",
     "bet_total_open": 238.5,
-    "bet_total_now": 238.5,
+    "bet_total_now": 236.0,
     "bet_total_first_snap": "2026-11-21T23:36:11Z",
-    "snapshots": 1
+    "sharp_spread_open": 9.5,
+    "sharp_spread_now": 9.5,
+    "sharp_spread_first_snap": "2026-11-22T20:19:55Z",
+    "sharp_total_open": 236.5,
+    "sharp_total_now": 236.5,
+    "sharp_total_first_snap": "2026-11-22T20:19:55Z",
+    "snapshots": 2
    },
    "projection": {
     "margin": -12.9,
@@ -663,7 +707,9 @@
     "away": []
    },
    "notes": [
-    "Our projection is 4.4 pts better for Nuggets than the line"
+    "Spread moved 1.5 toward Nuggets (+8.5 to +10.0)",
+    "Total moved down 2.5 (238.5 to 236.0)",
+    "Our total is 6.3 over the line"
    ],
    "call": {
     "adj_margin": -13.4,
@@ -673,14 +719,14 @@
     ],
     "spread": {
      "side": "Denver Nuggets",
-     "line": -8.5,
-     "confidence": 2,
-     "why": "projection Bulls -13.4 vs line -8.5; recent margins favour our side; against: other side beating the line lately"
+     "line": -10.0,
+     "confidence": 3,
+     "why": "projection Bulls -13.4 vs line -10.0; recent margins favour our side; line moving our way; against: other side beating the line lately"
     },
     "total": {
      "side": "Over",
-     "line": 238.5,
-     "confidence": 1,
+     "line": 236.0,
+     "confidence": 2,
      "why": "adjusted total 242.3 (model 242.3)"
     }
    }
@@ -694,18 +740,31 @@
    "commence": "2026-11-23 01:00:00+00:00",
    "tip_et": "8:00 PM",
    "line": {
-    "spread": -8.5,
-    "total": 214.5,
-    "source": "ESPN"
+    "spread": -7.5,
+    "total": 213.5,
+    "source": "DK/FD",
+    "bet_spread_open": -7.5,
+    "bet_spread_now": -7.5,
+    "bet_spread_first_snap": "2026-11-22T20:19:55Z",
+    "bet_total_open": 213.5,
+    "bet_total_now": 213.5,
+    "bet_total_first_snap": "2026-11-22T20:19:55Z",
+    "sharp_spread_open": -7.5,
+    "sharp_spread_now": -7.5,
+    "sharp_spread_first_snap": "2026-11-22T20:19:55Z",
+    "sharp_total_open": 213.5,
+    "sharp_total_now": 213.5,
+    "sharp_total_first_snap": "2026-11-22T20:19:55Z",
+    "snapshots": 1
    },
    "projection": {
-    "margin": 10.1,
-    "total": 225.6,
-    "home_pts": 117.8,
-    "away_pts": 107.8,
+    "margin": 10.5,
+    "total": 225.5,
+    "home_pts": 118.0,
+    "away_pts": 107.5,
     "parts": {
-     "players": 11.9,
-     "box": 2.9,
+     "players": 12.6,
+     "box": 3.0,
      "possessions": 12.3,
      "scores": 12.5
     }
@@ -721,8 +780,8 @@
      "ftr": 0.003,
      "3p": -0.026
     },
-    "apm_diff": 11.9,
-    "box_diff": 2.9
+    "apm_diff": 12.6,
+    "box_diff": 3.0
    },
    "form": {
     "home": {
@@ -772,9 +831,9 @@
     "home": [
      {
       "player": "OG Anunoby",
-      "status": "Day-To-Day",
+      "status": "Out",
       "mpg": 30.8,
-      "detail": "Calf"
+      "detail": "Calf Left Soreness"
      },
      {
       "player": "Karl-Anthony Towns",
@@ -800,32 +859,34 @@
    },
    "notes": [
     "Knicks on a back-to-back",
-    "Knicks: OG Anunoby (31 min) day-to-day",
+    "Knicks: OG Anunoby (31 min) out",
     "Knicks: Karl-Anthony Towns (30 min) day-to-day",
     "Pacers: Pascal Siakam (29 min) day-to-day",
     "Pacers: Tyrese Haliburton (27 min) out",
-    "Our total is 11.1 over the line"
+    "Our projection is 3.0 pts better for Knicks than the line",
+    "Our total is 12.0 over the line"
    ],
    "call": {
-    "adj_margin": 8.6,
-    "adj_total": 222.6,
+    "adj_margin": 8.5,
+    "adj_total": 221.5,
     "fatigue": [
      "Knicks on a back-to-back",
-     "Knicks: OG Anunoby day-to-day, Karl-Anthony Towns day-to-day",
+     "Knicks without OG Anunoby",
+     "Knicks: Karl-Anthony Towns day-to-day",
      "Pacers without Tyrese Haliburton",
      "Pacers: Pascal Siakam day-to-day"
     ],
     "spread": {
      "side": "New York Knicks",
-     "line": -8.5,
+     "line": -7.5,
      "confidence": 1,
-     "why": "projection Knicks +8.6 vs line +8.5; recent margins favour our side; against: fatigue/injuries work against our side; caution: Knicks on a back-to-back; caution: Knicks: OG Anunoby day-to-day, Karl-Anthony Towns day-to-day"
+     "why": "projection Knicks +8.5 vs line +7.5; recent margins favour our side; against: fatigue/injuries work against our side; caution: Knicks on a back-to-back; caution: Knicks without OG Anunoby; caution: Knicks: Karl-Anthony Towns day-to-day"
     },
     "total": {
      "side": "Over",
-     "line": 214.5,
+     "line": 213.5,
      "confidence": 1,
-     "why": "adjusted total 222.6 (model 225.6); caution: Knicks on a back-to-back; Pacers without Tyrese Haliburton"
+     "why": "adjusted total 221.5 (model 225.5); caution: Knicks on a back-to-back; Knicks without OG Anunoby; Pacers without Tyrese Haliburton"
     }
    }
   },
@@ -840,7 +901,20 @@
    "line": {
     "spread": 8.5,
     "total": 210.5,
-    "source": "ESPN"
+    "source": "DK/FD",
+    "bet_spread_open": 8.5,
+    "bet_spread_now": 8.5,
+    "bet_spread_first_snap": "2026-11-22T20:19:55Z",
+    "bet_total_open": 210.5,
+    "bet_total_now": 210.5,
+    "bet_total_first_snap": "2026-11-22T20:19:55Z",
+    "sharp_spread_open": 8.5,
+    "sharp_spread_now": 8.5,
+    "sharp_spread_first_snap": "2026-11-22T20:19:55Z",
+    "sharp_total_open": 210.5,
+    "sharp_total_now": 210.5,
+    "sharp_total_first_snap": "2026-11-22T20:19:55Z",
+    "snapshots": 1
    },
    "projection": {
     "margin": -6.2,
