@@ -2383,3 +2383,35 @@ snapshot_utc,event_id,commence_time,home_team,away_team,book,market,outcome,play
 2026-11-21T21:14:48Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,pinnacle,spreads,Sacramento Kings,,11.5,-103,2026-11-21T21:14:44Z
 2026-11-21T21:14:48Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,pinnacle,totals,Over,,216.5,-103,2026-11-21T21:14:44Z
 2026-11-21T21:14:48Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,pinnacle,totals,Under,,216.5,-113,2026-11-21T21:14:44Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,fanduel,spreads,Boston Celtics,,-12.5,-115,2026-11-22T01:19:02Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,fanduel,spreads,Sacramento Kings,,12.5,-105,2026-11-22T01:19:02Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,fanduel,totals,Over,,216.5,-106,2026-11-22T01:19:02Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,fanduel,totals,Under,,216.5,-114,2026-11-22T01:19:02Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,draftkings,spreads,Boston Celtics,,-11.5,-116,2026-11-22T01:18:43Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,draftkings,spreads,Sacramento Kings,,11.5,-104,2026-11-22T01:18:43Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,draftkings,totals,Over,,215.5,-115,2026-11-22T01:18:43Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,draftkings,totals,Under,,215.5,-105,2026-11-22T01:18:43Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,williamhill_us,spreads,Boston Celtics,,-12.5,-105,2026-11-22T01:18:59Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,williamhill_us,spreads,Sacramento Kings,,12.5,-115,2026-11-22T01:18:59Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,williamhill_us,totals,Over,,216.5,-110,2026-11-22T01:18:59Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,williamhill_us,totals,Under,,216.5,-110,2026-11-22T01:18:59Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,matchbook,spreads,Boston Celtics,,-12.5,-102,2026-11-22T01:19:16Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,matchbook,spreads,Sacramento Kings,,12.5,100,2026-11-22T01:19:16Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,matchbook,totals,Over,,217.5,100,2026-11-22T01:19:16Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,matchbook,totals,Under,,217.5,-108,2026-11-22T01:19:16Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,lowvig,spreads,Boston Celtics,,-12.0,-111,2026-11-22T01:19:17Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,lowvig,spreads,Sacramento Kings,,12.0,-101,2026-11-22T01:19:17Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,lowvig,totals,Over,,216.0,-107,2026-11-22T01:19:17Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,lowvig,totals,Under,,216.0,-107,2026-11-22T01:19:17Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,betonlineag,spreads,Boston Celtics,,-12.0,-115,2026-11-22T01:19:02Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,betonlineag,spreads,Sacramento Kings,,12.0,-105,2026-11-22T01:19:02Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,betonlineag,totals,Over,,216.0,-110,2026-11-22T01:19:02Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,betonlineag,totals,Under,,216.0,-110,2026-11-22T01:19:02Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,betmgm,spreads,Boston Celtics,,-12.5,-110,2026-11-22T01:19:16Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,betmgm,spreads,Sacramento Kings,,12.5,-110,2026-11-22T01:19:16Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,betmgm,totals,Over,,216.5,-110,2026-11-22T01:19:16Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,betmgm,totals,Under,,216.5,-110,2026-11-22T01:19:16Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,pinnacle,spreads,Boston Celtics,,-12.0,-110,2026-11-22T01:19:17Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,pinnacle,spreads,Sacramento Kings,,12.0,100,2026-11-22T01:19:17Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,pinnacle,totals,Over,,216.5,-107,2026-11-22T01:19:17Z
+2026-11-22T01:19:27Z,b754a1bf84af81d45d4a3a16398daa44,2026-11-22T03:10:00Z,Sacramento Kings,Boston Celtics,pinnacle,totals,Under,,216.5,-105,2026-11-22T01:19:17Z
