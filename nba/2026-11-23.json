@@ -1,0 +1,1359 @@
+{
+ "date": "2026-11-23",
+ "games": [
+  {
+   "game_id": "401910036",
+   "home": "Charlotte Hornets",
+   "away": "Memphis Grizzlies",
+   "home_short": "Hornets",
+   "away_short": "Grizzlies",
+   "commence": "2026-11-24 00:00:00+00:00",
+   "tip_et": "7:00 PM",
+   "line": {
+    "spread": 2.5,
+    "total": 213.5,
+    "source": "ESPN"
+   },
+   "projection": {
+    "margin": -6.7,
+    "total": 218.1,
+    "home_pts": 105.7,
+    "away_pts": 112.4,
+    "parts": {
+     "players": -6.5,
+     "box": -6.7,
+     "possessions": -5.8,
+     "scores": -5.8
+    }
+   },
+   "matchup": {
+    "pace": 98.5,
+    "home_ortg": 108.6,
+    "away_ortg": 114.5,
+    "four_factors": {
+     "efg": -0.028,
+     "tov": -0.033,
+     "orb": 0.125,
+     "ftr": -0.004,
+     "3p": 0.058
+    },
+    "apm_diff": -6.5,
+    "box_diff": -6.7
+   },
+   "form": {
+    "home": {
+     "n": 10,
+     "w": 1,
+     "l": 9,
+     "margin": -12.2,
+     "pf": 99.4,
+     "pa": 111.6,
+     "cover": 3,
+     "no_cover": 7,
+     "vs_line": -7.9,
+     "over": 6,
+     "under": 4,
+     "streak": "L4"
+    },
+    "away": {
+     "n": 10,
+     "w": 6,
+     "l": 4,
+     "margin": 6.4,
+     "pf": 118.8,
+     "pa": 112.4,
+     "cover": 6,
+     "no_cover": 4,
+     "vs_line": 5.8,
+     "over": 6,
+     "under": 4,
+     "streak": "L1"
+    }
+   },
+   "schedule": {
+    "home_rest": 3.0,
+    "away_rest": 2.0,
+    "home_b2b": 0.0,
+    "away_b2b": 0.0,
+    "home_last5": 1.0,
+    "away_last5": 3.0,
+    "home_km": 0.4,
+    "away_km": 1.5,
+    "home_tz": 0.0,
+    "away_tz": 1.0,
+    "rest_diff": 1.0,
+    "away_prev_away": 0.0
+   },
+   "injuries": {
+    "home": [
+     {
+      "player": "Brandon Miller",
+      "status": "Day-To-Day",
+      "mpg": 23.0,
+      "detail": "Knee Right Bruise"
+     },
+     {
+      "player": "Grayson Allen",
+      "status": "Out",
+      "mpg": 21.2,
+      "detail": "Concussion"
+     },
+     {
+      "player": "Dennis Schroder",
+      "status": "Out",
+      "mpg": 10.7,
+      "detail": "Hamstring Left Strain"
+     }
+    ],
+    "away": [
+     {
+      "player": "Cameron Boozer",
+      "status": "Out",
+      "mpg": 26.8,
+      "detail": "Ankle Right Sprain"
+     },
+     {
+      "player": "Jerami Grant",
+      "status": "Out",
+      "mpg": 16.2,
+      "detail": "Calf Left Not Specified"
+     }
+    ]
+   },
+   "notes": [
+    "Grizzlies: Cameron Boozer (27 min) out",
+    "Our projection is 4.2 pts better for Grizzlies than the line",
+    "Our total is 4.6 over the line"
+   ],
+   "call": {
+    "adj_margin": -6.2,
+    "adj_total": 217.1,
+    "fatigue": [
+     "Hornets: Brandon Miller day-to-day",
+     "Grizzlies without Cameron Boozer"
+    ],
+    "spread": {
+     "side": "Memphis Grizzlies",
+     "line": -2.5,
+     "confidence": 2,
+     "why": "projection Hornets -6.2 vs line -2.5; recent margins favour our side; beating the line lately; caution: Grizzlies without Cameron Boozer"
+    },
+    "total": {
+     "side": "Over",
+     "line": 213.5,
+     "confidence": 1,
+     "why": "adjusted total 217.1 (model 218.1); caution: Grizzlies without Cameron Boozer"
+    }
+   }
+  },
+  {
+   "game_id": "401910037",
+   "home": "Philadelphia 76ers",
+   "away": "Portland Trail Blazers",
+   "home_short": "76ers",
+   "away_short": "Blazers",
+   "commence": "2026-11-24 00:00:00+00:00",
+   "tip_et": "7:00 PM",
+   "line": {
+    "spread": -3.0,
+    "total": 229.0,
+    "source": "DK/FD",
+    "bet_spread_open": -3.0,
+    "bet_spread_now": -3.0,
+    "bet_spread_first_snap": "2026-11-22T23:51:30Z",
+    "bet_total_open": 229.0,
+    "bet_total_now": 229.0,
+    "bet_total_first_snap": "2026-11-22T23:51:30Z",
+    "snapshots": 1
+   },
+   "projection": {
+    "margin": 1.6,
+    "total": 236.2,
+    "home_pts": 118.9,
+    "away_pts": 117.3,
+    "parts": {
+     "players": -2.6,
+     "box": 6.9,
+     "possessions": -2.4,
+     "scores": -2.3
+    }
+   },
+   "matchup": {
+    "pace": 102.2,
+    "home_ortg": 111.3,
+    "away_ortg": 113.7,
+    "four_factors": {
+     "efg": -0.026,
+     "tov": 0.026,
+     "orb": -0.061,
+     "ftr": 0.028,
+     "3p": -0.131
+    },
+    "apm_diff": -2.6,
+    "box_diff": 6.9
+   },
+   "form": {
+    "home": {
+     "n": 10,
+     "w": 8,
+     "l": 2,
+     "margin": 2.3,
+     "pf": 120.3,
+     "pa": 118.0,
+     "cover": 5,
+     "no_cover": 5,
+     "vs_line": -2.3,
+     "over": 7,
+     "under": 3,
+     "streak": "W5"
+    },
+    "away": {
+     "n": 10,
+     "w": 5,
+     "l": 5,
+     "margin": 2.8,
+     "pf": 113.7,
+     "pa": 110.9,
+     "cover": 6,
+     "no_cover": 4,
+     "vs_line": 1.9,
+     "over": 4,
+     "under": 6,
+     "streak": "L1"
+    }
+   },
+   "schedule": {
+    "home_rest": 2.0,
+    "away_rest": 2.0,
+    "home_b2b": 0.0,
+    "away_b2b": 0.0,
+    "home_last5": 2.0,
+    "away_last5": 2.0,
+    "home_km": 0.0,
+    "away_km": 0.1,
+    "home_tz": 0.0,
+    "away_tz": 0.0,
+    "rest_diff": 0.0,
+    "away_prev_away": 0.0
+   },
+   "injuries": {
+    "home": [
+     {
+      "player": "Joel Embiid",
+      "status": "Day-To-Day",
+      "mpg": 27.3,
+      "detail": "Illness"
+     },
+     {
+      "player": "Jaylen Brown",
+      "status": "Day-To-Day",
+      "mpg": 26.6,
+      "detail": "Hamstring Left Not Specified"
+     },
+     {
+      "player": "Dean Wade",
+      "status": "Day-To-Day",
+      "mpg": 20.8,
+      "detail": "Hamstring Left Soreness"
+     }
+    ],
+    "away": [
+     {
+      "player": "Ja Morant",
+      "status": "Out",
+      "mpg": 20.0,
+      "detail": "Hamstring Left Not Specified"
+     }
+    ]
+   },
+   "notes": [
+    "76ers: Joel Embiid (27 min) day-to-day",
+    "76ers: Jaylen Brown (27 min) day-to-day",
+    "Our total is 7.2 over the line"
+   ],
+   "call": {
+    "adj_margin": 0.1,
+    "adj_total": 236.2,
+    "fatigue": [
+     "76ers: Joel Embiid day-to-day, Jaylen Brown day-to-day, Dean Wade day-to-day"
+    ],
+    "spread": {
+     "side": "Portland Trail Blazers",
+     "line": 3.0,
+     "confidence": 2,
+     "why": "projection 76ers +0.1 vs line +3.0; beating the line lately; note: fatigue/injury edge (not counted)"
+    },
+    "total": {
+     "side": "Over",
+     "line": 229.0,
+     "confidence": 2,
+     "why": "adjusted total 236.2 (model 236.2)"
+    }
+   }
+  },
+  {
+   "game_id": "401910040",
+   "home": "Minnesota Timberwolves",
+   "away": "Brooklyn Nets",
+   "home_short": "Timberwolves",
+   "away_short": "Nets",
+   "commence": "2026-11-24 00:30:00+00:00",
+   "tip_et": "7:30 PM",
+   "line": {
+    "spread": -11.5,
+    "total": 223.5,
+    "source": "ESPN"
+   },
+   "projection": {
+    "margin": 13.3,
+    "total": 228.7,
+    "home_pts": 121.0,
+    "away_pts": 107.7,
+    "parts": {
+     "players": 14.3,
+     "box": 5.2,
+     "possessions": 15.9,
+     "scores": 16.0
+    }
+   },
+   "matchup": {
+    "pace": 101.4,
+    "home_ortg": 117.2,
+    "away_ortg": 101.5,
+    "four_factors": {
+     "efg": 0.081,
+     "tov": 0.004,
+     "orb": 0.034,
+     "ftr": 0.011,
+     "3p": -0.004
+    },
+    "apm_diff": 14.3,
+    "box_diff": 5.2
+   },
+   "form": {
+    "home": {
+     "n": 10,
+     "w": 8,
+     "l": 2,
+     "margin": 8.6,
+     "pf": 111.3,
+     "pa": 102.7,
+     "cover": 7,
+     "no_cover": 3,
+     "vs_line": 3.3,
+     "over": 2,
+     "under": 8,
+     "streak": "W1"
+    },
+    "away": {
+     "n": 10,
+     "w": 3,
+     "l": 7,
+     "margin": -6.4,
+     "pf": 111.2,
+     "pa": 117.6,
+     "cover": 6,
+     "no_cover": 4,
+     "vs_line": -1.1,
+     "over": 6,
+     "under": 4,
+     "streak": "L4"
+    }
+   },
+   "schedule": {
+    "home_rest": 2.0,
+    "away_rest": 3.0,
+    "home_b2b": 0.0,
+    "away_b2b": 0.0,
+    "home_last5": 2.0,
+    "away_last5": 2.0,
+    "home_km": 0.0,
+    "away_km": 1.6,
+    "home_tz": 0.0,
+    "away_tz": -1.0,
+    "rest_diff": -1.0,
+    "away_prev_away": 0.0
+   },
+   "injuries": {
+    "home": [
+     {
+      "player": "Anthony Edwards",
+      "status": "Out",
+      "mpg": 13.0,
+      "detail": "Knee Right Surgery"
+     },
+     {
+      "player": "Jaylen Clark",
+      "status": "Out",
+      "mpg": 10.8,
+      "detail": "Hamstring Right Not Specified"
+     }
+    ],
+    "away": [
+     {
+      "player": "Nolan Traore",
+      "status": "Out",
+      "mpg": 21.6,
+      "detail": "Hamstring Right Strain"
+     }
+    ]
+   },
+   "notes": [
+    "Timberwolves games 2-8 over/under last 10",
+    "Our total is 5.2 over the line"
+   ],
+   "call": {
+    "adj_margin": 13.3,
+    "adj_total": 228.7,
+    "fatigue": [],
+    "spread": {
+     "side": "Minnesota Timberwolves",
+     "line": -11.5,
+     "confidence": 3,
+     "why": "projection Timberwolves +13.3 vs line +11.5; recent margins favour our side; beating the line lately"
+    },
+    "total": {
+     "side": "Over",
+     "line": 223.5,
+     "confidence": 2,
+     "why": "adjusted total 228.7 (model 228.7)"
+    }
+   }
+  },
+  {
+   "game_id": "401910038",
+   "home": "Indiana Pacers",
+   "away": "Oklahoma City Thunder",
+   "home_short": "Pacers",
+   "away_short": "Thunder",
+   "commence": "2026-11-24 00:30:00+00:00",
+   "tip_et": "7:30 PM",
+   "line": {
+    "spread": 4.5,
+    "total": 221.5,
+    "source": "ESPN"
+   },
+   "projection": {
+    "margin": -2.2,
+    "total": 232.3,
+    "home_pts": 115.1,
+    "away_pts": 117.2,
+    "parts": {
+     "players": -4.6,
+     "box": 2.3,
+     "possessions": -8.6,
+     "scores": -8.7
+    }
+   },
+   "matchup": {
+    "pace": 102.1,
+    "home_ortg": 105.2,
+    "away_ortg": 113.6,
+    "four_factors": {
+     "efg": -0.029,
+     "tov": -0.032,
+     "orb": -0.042,
+     "ftr": 0.004,
+     "3p": 0.077
+    },
+    "apm_diff": -4.6,
+    "box_diff": 2.3
+   },
+   "form": {
+    "home": {
+     "n": 10,
+     "w": 3,
+     "l": 7,
+     "margin": -3.8,
+     "pf": 110.8,
+     "pa": 114.6,
+     "cover": 6,
+     "no_cover": 4,
+     "vs_line": 2.3,
+     "over": 4,
+     "under": 6,
+     "streak": "L4"
+    },
+    "away": {
+     "n": 10,
+     "w": 5,
+     "l": 5,
+     "margin": 6.0,
+     "pf": 116.5,
+     "pa": 110.5,
+     "cover": 4,
+     "no_cover": 6,
+     "vs_line": 0.8,
+     "over": 8,
+     "under": 2,
+     "streak": "L1"
+    }
+   },
+   "schedule": {
+    "home_rest": 1.0,
+    "away_rest": 1.0,
+    "home_b2b": 1.0,
+    "away_b2b": 1.0,
+    "home_last5": 3.0,
+    "away_last5": 3.0,
+    "home_km": 1.0,
+    "away_km": 1.7,
+    "home_tz": 0.0,
+    "away_tz": 0.0,
+    "rest_diff": 0.0,
+    "away_prev_away": 1.0
+   },
+   "injuries": {
+    "home": [
+     {
+      "player": "Tyrese Haliburton",
+      "status": "Out",
+      "mpg": 27.0,
+      "detail": "Hamstring Left Strain"
+     }
+    ],
+    "away": [
+     {
+      "player": "Shai Gilgeous-Alexander",
+      "status": "Day-To-Day",
+      "mpg": 30.1,
+      "detail": "Back Bruise"
+     },
+     {
+      "player": "Aday Mara",
+      "status": "Day-To-Day",
+      "mpg": 23.1,
+      "detail": "Lower Leg Right Bruise"
+     },
+     {
+      "player": "Alex Caruso",
+      "status": "Day-To-Day",
+      "mpg": 15.5,
+      "detail": "Hip Right Soreness"
+     }
+    ]
+   },
+   "notes": [
+    "Pacers on a back-to-back",
+    "Thunder on a back-to-back after a road game",
+    "Pacers: Tyrese Haliburton (27 min) out",
+    "Thunder games 8-2 over/under last 10",
+    "Thunder: Shai Gilgeous-Alexander (30 min) day-to-day",
+    "Our total is 10.8 over the line"
+   ],
+   "call": {
+    "adj_margin": -1.2,
+    "adj_total": 227.3,
+    "fatigue": [
+     "Pacers on a back-to-back",
+     "Pacers without Tyrese Haliburton",
+     "Thunder on a back-to-back after a road game",
+     "Thunder: Shai Gilgeous-Alexander day-to-day, Aday Mara day-to-day"
+    ],
+    "spread": {
+     "side": "Indiana Pacers",
+     "line": 4.5,
+     "confidence": 1,
+     "why": "projection Pacers -1.2 vs line -4.5; against: recent margins favour the other side; caution: Pacers on a back-to-back; caution: Pacers without Tyrese Haliburton; note: fatigue/injury edge (not counted)"
+    },
+    "total": {
+     "side": "Over",
+     "line": 221.5,
+     "confidence": 1,
+     "why": "adjusted total 227.3 (model 232.3); caution: Pacers on a back-to-back; Pacers without Tyrese Haliburton; Thunder on a back-to-back after a road game"
+    }
+   }
+  },
+  {
+   "game_id": "401910039",
+   "home": "Toronto Raptors",
+   "away": "Milwaukee Bucks",
+   "home_short": "Raptors",
+   "away_short": "Bucks",
+   "commence": "2026-11-24 00:30:00+00:00",
+   "tip_et": "7:30 PM",
+   "line": {
+    "spread": -10.5,
+    "total": 222.5,
+    "source": "ESPN"
+   },
+   "projection": {
+    "margin": 10.3,
+    "total": 228.6,
+    "home_pts": 119.5,
+    "away_pts": 109.1,
+    "parts": {
+     "players": 7.7,
+     "box": 2.5,
+     "possessions": 10.5,
+     "scores": 10.9
+    }
+   },
+   "matchup": {
+    "pace": 99.8,
+    "home_ortg": 118.8,
+    "away_ortg": 108.3,
+    "four_factors": {
+     "efg": 0.015,
+     "tov": 0.059,
+     "orb": 0.014,
+     "ftr": 0.009,
+     "3p": -0.079
+    },
+    "apm_diff": 7.7,
+    "box_diff": 2.5
+   },
+   "form": {
+    "home": {
+     "n": 10,
+     "w": 3,
+     "l": 7,
+     "margin": -4.4,
+     "pf": 107.6,
+     "pa": 112.0,
+     "cover": 4,
+     "no_cover": 6,
+     "vs_line": -2.7,
+     "over": 4,
+     "under": 6,
+     "streak": "W1"
+    },
+    "away": {
+     "n": 10,
+     "w": 0,
+     "l": 10,
+     "margin": -11.9,
+     "pf": 108.1,
+     "pa": 120.0,
+     "cover": 6,
+     "no_cover": 4,
+     "vs_line": -1.0,
+     "over": 4,
+     "under": 6,
+     "streak": "L10"
+    }
+   },
+   "schedule": {
+    "home_rest": 3.0,
+    "away_rest": 2.0,
+    "home_b2b": 0.0,
+    "away_b2b": 0.0,
+    "home_last5": 2.0,
+    "away_last5": 3.0,
+    "home_km": 0.3,
+    "away_km": 0.5,
+    "home_tz": 0.0,
+    "away_tz": 0.0,
+    "rest_diff": 1.0,
+    "away_prev_away": 0.0
+   },
+   "injuries": {
+    "home": [
+     {
+      "player": "RJ Barrett",
+      "status": "Out",
+      "mpg": 28.7,
+      "detail": "Hamstring Right Strain"
+     },
+     {
+      "player": "Collin Murray-Boyles",
+      "status": "Day-To-Day",
+      "mpg": 21.5,
+      "detail": "Concussion"
+     },
+     {
+      "player": "Kawhi Leonard",
+      "status": "Out",
+      "mpg": 11.3,
+      "detail": "Knee Left Inflammation"
+     }
+    ],
+    "away": []
+   },
+   "notes": [
+    "Raptors: RJ Barrett (29 min) out",
+    "Our total is 6.1 over the line"
+   ],
+   "call": {
+    "adj_margin": 8.8,
+    "adj_total": 227.6,
+    "fatigue": [
+     "Raptors without RJ Barrett",
+     "Raptors: Collin Murray-Boyles day-to-day"
+    ],
+    "spread": {
+     "side": "Milwaukee Bucks",
+     "line": 10.5,
+     "confidence": 1,
+     "why": "projection Raptors +8.8 vs line +10.5; against: recent margins favour the other side; note: fatigue/injury edge (not counted)"
+    },
+    "total": {
+     "side": "Over",
+     "line": 222.5,
+     "confidence": 1,
+     "why": "adjusted total 227.6 (model 228.6); caution: Raptors without RJ Barrett"
+    }
+   }
+  },
+  {
+   "game_id": "401910041",
+   "home": "Chicago Bulls",
+   "away": "Cleveland Cavaliers",
+   "home_short": "Bulls",
+   "away_short": "Cavaliers",
+   "commence": "2026-11-24 01:00:00+00:00",
+   "tip_et": "8:00 PM",
+   "line": {
+    "spread": 8.5,
+    "total": 241.5,
+    "source": "ESPN"
+   },
+   "projection": {
+    "margin": -12.6,
+    "total": 246.7,
+    "home_pts": 117.0,
+    "away_pts": 129.7,
+    "parts": {
+     "players": -6.9,
+     "box": -6.3,
+     "possessions": -5.4,
+     "scores": -5.6
+    }
+   },
+   "matchup": {
+    "pace": 105.6,
+    "home_ortg": 113.4,
+    "away_ortg": 118.6,
+    "four_factors": {
+     "efg": -0.032,
+     "tov": -0.01,
+     "orb": -0.037,
+     "ftr": -0.001,
+     "3p": 0.017
+    },
+    "apm_diff": -6.9,
+    "box_diff": -6.3
+   },
+   "form": {
+    "home": {
+     "n": 10,
+     "w": 3,
+     "l": 7,
+     "margin": -3.2,
+     "pf": 118.5,
+     "pa": 121.7,
+     "cover": 6,
+     "no_cover": 4,
+     "vs_line": 5.5,
+     "over": 5,
+     "under": 5,
+     "streak": "L2"
+    },
+    "away": {
+     "n": 10,
+     "w": 5,
+     "l": 5,
+     "margin": 1.5,
+     "pf": 118.2,
+     "pa": 116.7,
+     "cover": 5,
+     "no_cover": 5,
+     "vs_line": 1.3,
+     "over": 7,
+     "under": 3,
+     "streak": "W1"
+    }
+   },
+   "schedule": {
+    "home_rest": 1.0,
+    "away_rest": 3.0,
+    "home_b2b": 1.0,
+    "away_b2b": 0.0,
+    "home_last5": 3.0,
+    "away_last5": 2.0,
+    "home_km": 0.0,
+    "away_km": 0.5,
+    "home_tz": 0.0,
+    "away_tz": -1.0,
+    "rest_diff": -2.0,
+    "away_prev_away": 0.0
+   },
+   "injuries": {
+    "home": [
+     {
+      "player": "Norman Powell",
+      "status": "Out",
+      "mpg": 20.4,
+      "detail": "Hamstring Right Strain"
+     },
+     {
+      "player": "Nic Claxton",
+      "status": "Day-To-Day",
+      "mpg": 12.4,
+      "detail": "Illness"
+     },
+     {
+      "player": "Caleb Wilson",
+      "status": "Out",
+      "mpg": 10.3,
+      "detail": "Hand Right"
+     }
+    ],
+    "away": [
+     {
+      "player": "Evan Mobley",
+      "status": "Out",
+      "mpg": 15.5,
+      "detail": "Toe Left Sprain"
+     }
+    ]
+   },
+   "notes": [
+    "Bulls on a back-to-back",
+    "Cavaliers has 2 more days of rest",
+    "Our projection is 4.1 pts better for Cavaliers than the line",
+    "Our total is 5.2 over the line"
+   ],
+   "call": {
+    "adj_margin": -14.6,
+    "adj_total": 244.7,
+    "fatigue": [
+     "Bulls on a back-to-back"
+    ],
+    "spread": {
+     "side": "Cleveland Cavaliers",
+     "line": -8.5,
+     "confidence": 2,
+     "why": "projection Bulls -14.6 vs line -8.5; recent margins favour our side; against: other side beating the line lately; note: fatigue/injury edge (not counted)"
+    },
+    "total": {
+     "side": "Over",
+     "line": 241.5,
+     "confidence": 1,
+     "why": "adjusted total 244.7 (model 246.7); caution: Bulls on a back-to-back"
+    }
+   }
+  },
+  {
+   "game_id": "401910042",
+   "home": "New Orleans Pelicans",
+   "away": "Phoenix Suns",
+   "home_short": "Pelicans",
+   "away_short": "Suns",
+   "commence": "2026-11-24 01:00:00+00:00",
+   "tip_et": "8:00 PM",
+   "line": {
+    "spread": 3.5,
+    "total": 233.5,
+    "source": "ESPN"
+   },
+   "projection": {
+    "margin": -3.6,
+    "total": 229.1,
+    "home_pts": 112.8,
+    "away_pts": 116.3,
+    "parts": {
+     "players": -7.2,
+     "box": 0.8,
+     "possessions": -4.9,
+     "scores": -4.9
+    }
+   },
+   "matchup": {
+    "pace": 101.3,
+    "home_ortg": 112.6,
+    "away_ortg": 117.5,
+    "four_factors": {
+     "efg": -0.044,
+     "tov": -0.024,
+     "orb": 0.005,
+     "ftr": 0.063,
+     "3p": -0.096
+    },
+    "apm_diff": -7.2,
+    "box_diff": 0.8
+   },
+   "form": {
+    "home": {
+     "n": 10,
+     "w": 1,
+     "l": 9,
+     "margin": -16.7,
+     "pf": 108.4,
+     "pa": 125.1,
+     "cover": 3,
+     "no_cover": 7,
+     "vs_line": -10.2,
+     "over": 5,
+     "under": 5,
+     "streak": "L3"
+    },
+    "away": {
+     "n": 10,
+     "w": 7,
+     "l": 3,
+     "margin": 4.0,
+     "pf": 114.7,
+     "pa": 110.7,
+     "cover": 6,
+     "no_cover": 4,
+     "vs_line": 4.8,
+     "over": 4,
+     "under": 6,
+     "streak": "W3"
+    }
+   },
+   "schedule": {
+    "home_rest": 2.0,
+    "away_rest": 3.0,
+    "home_b2b": 0.0,
+    "away_b2b": 0.0,
+    "home_last5": 3.0,
+    "away_last5": 2.0,
+    "home_km": 0.8,
+    "away_km": 2.3,
+    "home_tz": 0.0,
+    "away_tz": 1.0,
+    "rest_diff": -1.0,
+    "away_prev_away": 0.0
+   },
+   "injuries": {
+    "home": [
+     {
+      "player": "Zion Williamson",
+      "status": "Day-To-Day",
+      "mpg": 25.5,
+      "detail": "Thigh Left Bruise"
+     },
+     {
+      "player": "Dejounte Murray",
+      "status": "Out",
+      "mpg": 13.5,
+      "detail": "Ankle"
+     }
+    ],
+    "away": [
+     {
+      "player": "Ryan Dunn",
+      "status": "Day-To-Day",
+      "mpg": 18.2,
+      "detail": "Quadriceps Right Soreness"
+     }
+    ]
+   },
+   "notes": [
+    "Pelicans: Zion Williamson (26 min) day-to-day",
+    "Our total is 4.4 under the line"
+   ],
+   "call": {
+    "adj_margin": -4.1,
+    "adj_total": 229.1,
+    "fatigue": [
+     "Pelicans: Zion Williamson day-to-day"
+    ],
+    "spread": {
+     "side": "Phoenix Suns",
+     "line": -3.5,
+     "confidence": 3,
+     "why": "projection Pelicans -4.1 vs line -3.5; recent margins favour our side; beating the line lately"
+    },
+    "total": {
+     "side": "Under",
+     "line": 233.5,
+     "confidence": 2,
+     "why": "adjusted total 229.1 (model 229.1)"
+    }
+   }
+  },
+  {
+   "game_id": "401910043",
+   "home": "Houston Rockets",
+   "away": "Los Angeles Clippers",
+   "home_short": "Rockets",
+   "away_short": "Clippers",
+   "commence": "2026-11-24 01:30:00+00:00",
+   "tip_et": "8:30 PM",
+   "line": {
+    "spread": -13.0,
+    "total": 226.0,
+    "source": "DK/FD",
+    "bet_spread_open": -13.0,
+    "bet_spread_now": -13.0,
+    "bet_spread_first_snap": "2026-11-22T23:51:30Z",
+    "bet_total_open": 226.0,
+    "bet_total_now": 226.0,
+    "bet_total_first_snap": "2026-11-22T23:51:30Z",
+    "snapshots": 1
+   },
+   "projection": {
+    "margin": 14.7,
+    "total": 223.4,
+    "home_pts": 119.0,
+    "away_pts": 104.4,
+    "parts": {
+     "players": 11.5,
+     "box": 12.9,
+     "possessions": 10.6,
+     "scores": 10.8
+    }
+   },
+   "matchup": {
+    "pace": 97.8,
+    "home_ortg": 120.9,
+    "away_ortg": 110.0,
+    "four_factors": {
+     "efg": 0.012,
+     "tov": -0.004,
+     "orb": 0.108,
+     "ftr": -0.002,
+     "3p": -0.04
+    },
+    "apm_diff": 11.5,
+    "box_diff": 12.9
+   },
+   "form": {
+    "home": {
+     "n": 10,
+     "w": 6,
+     "l": 4,
+     "margin": 4.3,
+     "pf": 116.5,
+     "pa": 112.2,
+     "cover": 5,
+     "no_cover": 5,
+     "vs_line": -2.1,
+     "over": 6,
+     "under": 4,
+     "streak": "L1"
+    },
+    "away": {
+     "n": 10,
+     "w": 3,
+     "l": 7,
+     "margin": -6.5,
+     "pf": 114.0,
+     "pa": 120.5,
+     "cover": 5,
+     "no_cover": 5,
+     "vs_line": -2.6,
+     "over": 8,
+     "under": 2,
+     "streak": "L3"
+    }
+   },
+   "schedule": {
+    "home_rest": 3.0,
+    "away_rest": 2.0,
+    "home_b2b": 0.0,
+    "away_b2b": 0.0,
+    "home_last5": 2.0,
+    "away_last5": 2.0,
+    "home_km": 1.4,
+    "away_km": 0.4,
+    "home_tz": 1.0,
+    "away_tz": 0.0,
+    "rest_diff": 1.0,
+    "away_prev_away": 0.0
+   },
+   "injuries": {
+    "home": [],
+    "away": [
+     {
+      "player": "Bradley Beal",
+      "status": "Out",
+      "mpg": 15.5,
+      "detail": "Knee Right Inflammation"
+     }
+    ]
+   },
+   "notes": [
+    "Clippers games 8-2 over/under last 10"
+   ],
+   "call": {
+    "adj_margin": 14.7,
+    "adj_total": 223.4,
+    "fatigue": [],
+    "spread": {
+     "side": "Houston Rockets",
+     "line": -13.0,
+     "confidence": 2,
+     "why": "projection Rockets +14.7 vs line +13.0; recent margins favour our side"
+    },
+    "total": {
+     "side": "Under",
+     "line": 226.0,
+     "confidence": 1,
+     "why": "adjusted total 223.4 (model 223.4)"
+    }
+   }
+  },
+  {
+   "game_id": "401910044",
+   "home": "Los Angeles Lakers",
+   "away": "Utah Jazz",
+   "home_short": "Lakers",
+   "away_short": "Jazz",
+   "commence": "2026-11-24 03:00:00+00:00",
+   "tip_et": "10:00 PM",
+   "line": {
+    "spread": -13.5,
+    "total": 224.5,
+    "source": "ESPN"
+   },
+   "projection": {
+    "margin": 13.8,
+    "total": 229.5,
+    "home_pts": 121.7,
+    "away_pts": 107.8,
+    "parts": {
+     "players": 7.8,
+     "box": 10.0,
+     "possessions": 9.7,
+     "scores": 9.9
+    }
+   },
+   "matchup": {
+    "pace": 101.3,
+    "home_ortg": 118.3,
+    "away_ortg": 108.6,
+    "four_factors": {
+     "efg": 0.035,
+     "tov": 0.027,
+     "orb": -0.019,
+     "ftr": 0.081,
+     "3p": -0.036
+    },
+    "apm_diff": 7.8,
+    "box_diff": 10.0
+   },
+   "form": {
+    "home": {
+     "n": 10,
+     "w": 9,
+     "l": 1,
+     "margin": 6.8,
+     "pf": 119.8,
+     "pa": 113.0,
+     "cover": 6,
+     "no_cover": 4,
+     "vs_line": 1.1,
+     "over": 7,
+     "under": 3,
+     "streak": "W1"
+    },
+    "away": {
+     "n": 10,
+     "w": 2,
+     "l": 8,
+     "margin": -3.8,
+     "pf": 109.3,
+     "pa": 113.1,
+     "cover": 6,
+     "no_cover": 4,
+     "vs_line": 4.8,
+     "over": 4,
+     "under": 6,
+     "streak": "L2"
+    }
+   },
+   "schedule": {
+    "home_rest": 3.0,
+    "away_rest": 1.0,
+    "home_b2b": 0.0,
+    "away_b2b": 1.0,
+    "home_last5": 2.0,
+    "away_last5": 3.0,
+    "home_km": 0.0,
+    "away_km": 0.9,
+    "home_tz": 0.0,
+    "away_tz": -1.0,
+    "rest_diff": 2.0,
+    "away_prev_away": 0.0
+   },
+   "injuries": {
+    "home": [
+     {
+      "player": "Austin Reaves",
+      "status": "Out",
+      "mpg": 17.1,
+      "detail": "Heel Left Bruise"
+     }
+    ],
+    "away": [
+     {
+      "player": "Lauri Markkanen",
+      "status": "Out",
+      "mpg": 26.0,
+      "detail": "Hand Right Fracture"
+     },
+     {
+      "player": "Jaxson Hayes",
+      "status": "Day-To-Day",
+      "mpg": 18.2,
+      "detail": "Knee Left Not Specified"
+     }
+    ]
+   },
+   "notes": [
+    "Jazz on a back-to-back",
+    "Lakers has 2 more days of rest",
+    "Jazz: Lauri Markkanen (26 min) out",
+    "Our total is 5.0 over the line"
+   ],
+   "call": {
+    "adj_margin": 16.8,
+    "adj_total": 226.5,
+    "fatigue": [
+     "Jazz on a back-to-back",
+     "Jazz without Lauri Markkanen"
+    ],
+    "spread": {
+     "side": "Los Angeles Lakers",
+     "line": -13.5,
+     "confidence": 2,
+     "why": "projection Lakers +16.8 vs line +13.5; recent margins favour our side; against: other side beating the line lately; note: fatigue/injury edge (not counted)"
+    },
+    "total": {
+     "side": "Over",
+     "line": 224.5,
+     "confidence": 1,
+     "why": "adjusted total 226.5 (model 229.5); caution: Jazz on a back-to-back; Jazz without Lauri Markkanen"
+    }
+   }
+  },
+  {
+   "game_id": "401910045",
+   "home": "Sacramento Kings",
+   "away": "San Antonio Spurs",
+   "home_short": "Kings",
+   "away_short": "Spurs",
+   "commence": "2026-11-24 03:00:00+00:00",
+   "tip_et": "10:00 PM",
+   "line": {
+    "spread": 10.5,
+    "total": 223.5,
+    "source": "ESPN"
+   },
+   "projection": {
+    "margin": -14.8,
+    "total": 231.0,
+    "home_pts": 108.1,
+    "away_pts": 122.9,
+    "parts": {
+     "players": -14.1,
+     "box": -7.7,
+     "possessions": -15.8,
+     "scores": -16.0
+    }
+   },
+   "matchup": {
+    "pace": 100.4,
+    "home_ortg": 103.7,
+    "away_ortg": 119.5,
+    "four_factors": {
+     "efg": -0.078,
+     "tov": -0.023,
+     "orb": -0.026,
+     "ftr": -0.08,
+     "3p": -0.073
+    },
+    "apm_diff": -14.1,
+    "box_diff": -7.7
+   },
+   "form": {
+    "home": {
+     "n": 10,
+     "w": 2,
+     "l": 8,
+     "margin": -8.3,
+     "pf": 105.3,
+     "pa": 113.6,
+     "cover": 5,
+     "no_cover": 5,
+     "vs_line": 2.9,
+     "over": 3,
+     "under": 7,
+     "streak": "W1"
+    },
+    "away": {
+     "n": 10,
+     "w": 9,
+     "l": 1,
+     "margin": 13.8,
+     "pf": 117.1,
+     "pa": 103.3,
+     "cover": 4,
+     "no_cover": 6,
+     "vs_line": 0.6,
+     "over": 3,
+     "under": 7,
+     "streak": "W2"
+    }
+   },
+   "schedule": {
+    "home_rest": 2.0,
+    "away_rest": 2.0,
+    "home_b2b": 0.0,
+    "away_b2b": 0.0,
+    "home_last5": 3.0,
+    "away_last5": 2.0,
+    "home_km": 0.0,
+    "away_km": 2.3,
+    "home_tz": 0.0,
+    "away_tz": -2.0,
+    "rest_diff": 0.0,
+    "away_prev_away": 0.0
+   },
+   "injuries": {
+    "home": [],
+    "away": [
+     {
+      "player": "Victor Wembanyama",
+      "status": "Day-To-Day",
+      "mpg": 29.6,
+      "detail": "Back"
+     },
+     {
+      "player": "De'Aaron Fox",
+      "status": "Day-To-Day",
+      "mpg": 25.0,
+      "detail": "Lower Leg Right Bruise"
+     },
+     {
+      "player": "Dylan Harper",
+      "status": "Out",
+      "mpg": 24.8,
+      "detail": "Hip Soreness"
+     }
+    ]
+   },
+   "notes": [
+    "Spurs: Victor Wembanyama (30 min) day-to-day",
+    "Spurs: De'Aaron Fox (25 min) day-to-day",
+    "Spurs: Dylan Harper (25 min) out",
+    "Our projection is 4.3 pts better for Spurs than the line",
+    "Our total is 7.5 over the line"
+   ],
+   "call": {
+    "adj_margin": -12.8,
+    "adj_total": 230.0,
+    "fatigue": [
+     "Spurs without Dylan Harper",
+     "Spurs: Victor Wembanyama day-to-day, De'Aaron Fox day-to-day"
+    ],
+    "spread": {
+     "side": "San Antonio Spurs",
+     "line": -10.5,
+     "confidence": 1,
+     "why": "projection Kings -12.8 vs line -10.5; recent margins favour our side; against: other side beating the line lately; against: fatigue/injuries work against our side; caution: Spurs without Dylan Harper; caution: Spurs: Victor Wembanyama day-to-day, De'Aaron Fox day-to-day"
+    },
+    "total": {
+     "side": "Over",
+     "line": 223.5,
+     "confidence": 1,
+     "why": "adjusted total 230.0 (model 231.0); caution: Spurs without Dylan Harper"
+    }
+   }
+  }
+ ]
+}
