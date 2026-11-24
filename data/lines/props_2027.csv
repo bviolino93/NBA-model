@@ -72283,3 +72283,216 @@ snapshot_utc,event_id,commence_time,home_team,away_team,book,market,outcome,play
 2026-11-22T23:51:30Z,db2311c331296d3328d71b842167dea4,2026-11-24T01:40:00Z,Houston Rockets,Los Angeles Clippers,fanatics,player_points,Under,Darius Garland,18.5,-110,2026-11-22T23:48:54Z
 2026-11-22T23:51:30Z,db2311c331296d3328d71b842167dea4,2026-11-24T01:40:00Z,Houston Rockets,Los Angeles Clippers,fanatics,player_rebounds,Over,Rui Hachimura,4.5,-115,2026-11-22T23:48:54Z
 2026-11-22T23:51:30Z,db2311c331296d3328d71b842167dea4,2026-11-24T01:40:00Z,Houston Rockets,Los Angeles Clippers,fanatics,player_rebounds,Under,Rui Hachimura,4.5,-115,2026-11-22T23:48:54Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_assists,Over,Cade Cunningham,8.5,-106,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_assists,Under,Cade Cunningham,8.5,-125,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_assists,Over,Jalen Suggs,3.5,-148,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_assists,Under,Jalen Suggs,3.5,112,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_assists,Over,Anthony Black,4.5,-146,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_assists,Under,Anthony Black,4.5,110,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_assists,Over,Franz Wagner,6.5,-136,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_assists,Under,Franz Wagner,6.5,102,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_assists,Over,Wendell Carter Jr,1.5,100,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_assists,Under,Wendell Carter Jr,1.5,-132,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_assists,Over,Ausar Thompson,4.5,120,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_assists,Under,Ausar Thompson,4.5,-160,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_assists,Over,Desmond Bane,2.5,-144,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_assists,Under,Desmond Bane,2.5,108,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_assists,Over,Tristan da Silva,1.5,102,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_assists,Under,Tristan da Silva,1.5,-136,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_assists,Over,Daniss Jenkins,4.5,-138,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_assists,Under,Daniss Jenkins,4.5,104,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_assists,Over,Kevin Huerter,2.5,-144,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_assists,Under,Kevin Huerter,2.5,108,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_points,Over,Isaiah Joe,9.5,-130,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_points,Under,Isaiah Joe,9.5,-102,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_points,Over,Paul Reed Jr,9.5,-120,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_points,Under,Paul Reed Jr,9.5,-110,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_points,Over,Anthony Black,14.5,-106,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_points,Under,Anthony Black,14.5,-125,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_points,Over,Franz Wagner,22.5,-130,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_points,Under,Franz Wagner,22.5,-102,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_points,Over,Tristan da Silva,10.5,-114,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_points,Under,Tristan da Silva,10.5,-114,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_points,Over,Ausar Thompson,10.5,-108,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_points,Under,Ausar Thompson,10.5,-122,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_points,Over,Jalen Suggs,11.5,-102,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_points,Under,Jalen Suggs,11.5,-130,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_points,Over,Daniss Jenkins,15.5,-110,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_points,Under,Daniss Jenkins,15.5,-120,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_points,Over,John Collins,10.5,-112,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_points,Under,John Collins,10.5,-118,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_points,Over,Cade Cunningham,24.5,-112,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_points,Under,Cade Cunningham,24.5,-118,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_points,Over,Kevin Huerter,11.5,-130,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_points,Under,Kevin Huerter,11.5,-102,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_points,Over,Desmond Bane,17.5,-112,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_points,Under,Desmond Bane,17.5,-118,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_points,Over,Wendell Carter Jr,10.5,-122,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_points,Under,Wendell Carter Jr,10.5,-108,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_rebounds,Over,Paul Reed Jr,6.5,-152,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_rebounds,Under,Paul Reed Jr,6.5,114,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_rebounds,Over,Cade Cunningham,5.5,116,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_rebounds,Under,Cade Cunningham,5.5,-154,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_rebounds,Over,Jalen Suggs,4.5,120,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_rebounds,Under,Jalen Suggs,4.5,-160,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_rebounds,Over,Ausar Thompson,7.5,-138,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_rebounds,Under,Ausar Thompson,7.5,104,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_rebounds,Over,Kevin Huerter,3.5,-118,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_rebounds,Under,Kevin Huerter,3.5,-112,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_rebounds,Over,Tristan da Silva,3.5,-138,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_rebounds,Under,Tristan da Silva,3.5,104,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_rebounds,Over,John Collins,5.5,-130,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_rebounds,Under,John Collins,5.5,-102,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_rebounds,Over,Desmond Bane,3.5,-162,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_rebounds,Under,Desmond Bane,3.5,122,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_rebounds,Over,Franz Wagner,6.5,114,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_rebounds,Under,Franz Wagner,6.5,-152,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_rebounds,Over,Daniss Jenkins,3.5,-166,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_rebounds,Under,Daniss Jenkins,3.5,124,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_rebounds,Over,Anthony Black,4.5,-125,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_rebounds,Under,Anthony Black,4.5,-106,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_rebounds,Over,Wendell Carter Jr,7.5,-136,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_rebounds,Under,Wendell Carter Jr,7.5,102,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_threes,Over,Jalen Suggs,1.5,-132,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_threes,Under,Jalen Suggs,1.5,100,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_threes,Over,Anthony Black,1.5,-102,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_threes,Under,Anthony Black,1.5,-130,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_threes,Over,Daniss Jenkins,2.5,162,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_threes,Under,Daniss Jenkins,2.5,-220,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_threes,Over,Kevin Huerter,1.5,-182,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_threes,Under,Kevin Huerter,1.5,136,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_threes,Over,Desmond Bane,3.5,114,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_threes,Under,Desmond Bane,3.5,-152,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_threes,Over,John Collins,1.5,182,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_threes,Under,John Collins,1.5,-250,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_threes,Over,Wendell Carter Jr,0.5,-166,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_threes,Under,Wendell Carter Jr,0.5,124,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_threes,Over,Franz Wagner,1.5,116,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_threes,Under,Franz Wagner,1.5,-154,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_threes,Over,Isaiah Joe,1.5,-205,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_threes,Under,Isaiah Joe,1.5,152,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_threes,Over,Tristan da Silva,2.5,106,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_threes,Under,Tristan da Silva,2.5,-140,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_threes,Over,Cade Cunningham,2.5,142,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanduel,player_threes,Under,Cade Cunningham,2.5,-192,2026-11-24T04:05:15Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_assists,Over,Cade Cunningham,8.5,100,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_assists,Under,Cade Cunningham,8.5,-131,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_assists,Over,Daniss Jenkins,5.5,122,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_assists,Under,Daniss Jenkins,5.5,-161,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_assists,Over,Ausar Thompson,3.5,-162,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_assists,Under,Ausar Thompson,3.5,122,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_assists,Over,Kevin Huerter,2.5,-159,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_assists,Under,Kevin Huerter,2.5,121,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_points,Over,Cade Cunningham,24.5,-110,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_points,Under,Cade Cunningham,24.5,-116,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_points,Over,Daniss Jenkins,15.5,-108,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_points,Under,Daniss Jenkins,15.5,-117,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_points,Over,Kevin Huerter,11.5,-119,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_points,Under,Kevin Huerter,11.5,-107,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_points,Over,John Collins,10.5,-112,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_points,Under,John Collins,10.5,-113,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_points,Over,Ausar Thompson,9.5,-131,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_points,Under,Ausar Thompson,9.5,102,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_points,Over,Paul Reed Jr,9.5,-126,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_points,Under,Paul Reed Jr,9.5,-101,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_points,Over,Isaiah Joe,9.5,-123,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_points,Under,Isaiah Joe,9.5,-104,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_rebounds,Over,Ausar Thompson,7.5,-126,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_rebounds,Under,Ausar Thompson,7.5,-105,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_rebounds,Over,Paul Reed Jr,7.5,107,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_rebounds,Under,Paul Reed Jr,7.5,-141,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_rebounds,Over,John Collins,5.5,-138,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_rebounds,Under,John Collins,5.5,105,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_rebounds,Over,Cade Cunningham,5.5,109,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_rebounds,Under,Cade Cunningham,5.5,-144,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_rebounds,Over,Daniss Jenkins,4.5,105,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_rebounds,Under,Daniss Jenkins,4.5,-139,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_rebounds,Over,Kevin Huerter,3.5,-135,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_rebounds,Under,Kevin Huerter,3.5,102,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_threes,Over,Cade Cunningham,2.5,141,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_threes,Under,Cade Cunningham,2.5,-187,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_threes,Over,Daniss Jenkins,2.5,146,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_threes,Under,Daniss Jenkins,2.5,-195,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_threes,Over,Kevin Huerter,2.5,146,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_threes,Under,Kevin Huerter,2.5,-194,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_threes,Over,Isaiah Joe,1.5,-181,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_threes,Under,Isaiah Joe,1.5,137,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_threes,Over,John Collins,1.5,178,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,draftkings,player_threes,Under,John Collins,1.5,-238,2026-11-24T04:05:53Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_assists,Over,Jalen Suggs,3.5,-152,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_assists,Under,Jalen Suggs,3.5,113,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_assists,Over,Desmond Bane,2.5,-148,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_assists,Over,Wendell Carter Jr,1.5,-102,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_assists,Over,Ausar Thompson,4.5,118,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_assists,Under,Ausar Thompson,4.5,-159,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_assists,Over,Daniss Jenkins,4.5,-150,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_assists,Under,Daniss Jenkins,4.5,112,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_points,Over,Daniss Jenkins,15.5,-113,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_points,Under,Daniss Jenkins,15.5,-118,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_points,Over,John Collins,10.5,-117,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_points,Under,John Collins,10.5,-115,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_points,Over,Wendell Carter Jr,10.5,-124,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_points,Under,Wendell Carter Jr,10.5,-108,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_points,Over,Jalen Suggs,11.5,-108,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_points,Under,Jalen Suggs,11.5,-124,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_points,Over,Kevin Huerter,11.5,-127,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_points,Under,Kevin Huerter,11.5,-106,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_points,Over,Cade Cunningham,24.5,-113,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_points,Under,Cade Cunningham,24.5,-118,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_points,Over,Paul Reed Jr,9.5,-124,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_points,Under,Paul Reed Jr,9.5,-108,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_points,Over,Desmond Bane,17.5,-117,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_points,Under,Desmond Bane,17.5,-114,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_points,Over,Ausar Thompson,10.5,-108,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_points,Under,Ausar Thompson,10.5,-124,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_points,Over,Isaiah Joe,9.5,-129,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_points,Under,Isaiah Joe,9.5,-104,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_points,Over,Tristan da Silva,10.5,-118,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_points,Under,Tristan da Silva,10.5,-114,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_rebounds,Over,John Collins,5.5,-132,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_rebounds,Under,John Collins,5.5,-102,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_rebounds,Over,Daniss Jenkins,4.5,118,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_rebounds,Under,Daniss Jenkins,4.5,-157,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_rebounds,Over,Cade Cunningham,5.5,110,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_rebounds,Under,Cade Cunningham,5.5,-145,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_rebounds,Over,Tristan da Silva,3.5,-137,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_rebounds,Under,Tristan da Silva,3.5,103,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_rebounds,Over,Desmond Bane,3.5,-159,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_rebounds,Under,Desmond Bane,3.5,119,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_rebounds,Over,Kevin Huerter,3.5,-125,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_rebounds,Under,Kevin Huerter,3.5,-107,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_rebounds,Over,Paul Reed Jr,7.5,108,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_rebounds,Under,Paul Reed Jr,7.5,-143,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_threes,Over,Anthony Black,1.5,-107,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_threes,Under,Anthony Black,1.5,-125,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_threes,Over,Desmond Bane,3.5,109,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_threes,Under,Desmond Bane,3.5,-145,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_threes,Over,Tristan da Silva,2.5,103,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_threes,Under,Tristan da Silva,2.5,-137,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_threes,Over,Kevin Huerter,1.5,-190,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_threes,Under,Kevin Huerter,1.5,139,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_threes,Over,Franz Wagner,1.5,115,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_threes,Under,Franz Wagner,1.5,-154,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_threes,Over,Cade Cunningham,2.5,140,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_threes,Under,Cade Cunningham,2.5,-190,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_threes,Over,Daniss Jenkins,1.5,-197,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_threes,Under,Daniss Jenkins,1.5,145,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_threes,Over,Jalen Suggs,1.5,-134,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_threes,Under,Jalen Suggs,1.5,100,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,williamhill_us,player_threes,Over,Wendell Carter Jr,0.5,-157,2026-11-24T04:05:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanatics,player_assists,Over,John Collins,1.5,155,2026-11-24T04:04:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanatics,player_assists,Under,John Collins,1.5,-250,2026-11-24T04:04:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanatics,player_points,Over,John Collins,10.5,-115,2026-11-24T04:04:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanatics,player_points,Under,John Collins,10.5,-115,2026-11-24T04:04:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanatics,player_rebounds,Over,Kevin Huerter,3.5,-115,2026-11-24T04:04:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanatics,player_rebounds,Under,Kevin Huerter,3.5,-115,2026-11-24T04:04:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanatics,player_threes,Over,John Collins,0.5,-250,2026-11-24T04:04:13Z
+2026-11-24T04:05:58Z,42f48a4769eab3d1472d76aac0fd0fa7,2026-11-25T00:11:00Z,Orlando Magic,Detroit Pistons,fanatics,player_threes,Under,John Collins,0.5,155,2026-11-24T04:04:13Z
+2026-11-24T04:05:58Z,3167a4072c65c9314c71d0fe49be8e28,2026-11-25T01:10:00Z,Washington Wizards,Boston Celtics,fanatics,player_assists,Over,Trae Young,8.5,100,2026-11-24T03:55:47Z
+2026-11-24T04:05:58Z,3167a4072c65c9314c71d0fe49be8e28,2026-11-25T01:10:00Z,Washington Wizards,Boston Celtics,fanatics,player_assists,Under,Trae Young,8.5,-130,2026-11-24T03:55:47Z
+2026-11-24T04:05:58Z,3167a4072c65c9314c71d0fe49be8e28,2026-11-25T01:10:00Z,Washington Wizards,Boston Celtics,fanatics,player_points,Over,Payton Pritchard,12.5,-120,2026-11-24T03:55:47Z
+2026-11-24T04:05:58Z,3167a4072c65c9314c71d0fe49be8e28,2026-11-25T01:10:00Z,Washington Wizards,Boston Celtics,fanatics,player_points,Under,Payton Pritchard,12.5,-110,2026-11-24T03:55:47Z
+2026-11-24T04:05:58Z,3167a4072c65c9314c71d0fe49be8e28,2026-11-25T01:10:00Z,Washington Wizards,Boston Celtics,fanatics,player_rebounds,Over,Anthony Davis,10.5,105,2026-11-24T03:55:47Z
+2026-11-24T04:05:58Z,3167a4072c65c9314c71d0fe49be8e28,2026-11-25T01:10:00Z,Washington Wizards,Boston Celtics,fanatics,player_rebounds,Under,Anthony Davis,10.5,-140,2026-11-24T03:55:47Z
+2026-11-24T04:05:58Z,3167a4072c65c9314c71d0fe49be8e28,2026-11-25T01:10:00Z,Washington Wizards,Boston Celtics,fanatics,player_threes,Over,Trae Young,2.5,120,2026-11-24T03:55:47Z
+2026-11-24T04:05:58Z,3167a4072c65c9314c71d0fe49be8e28,2026-11-25T01:10:00Z,Washington Wizards,Boston Celtics,fanatics,player_threes,Under,Trae Young,2.5,-165,2026-11-24T03:55:47Z
