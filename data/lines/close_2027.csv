@@ -2607,3 +2607,67 @@ snapshot_utc,event_id,commence_time,home_team,away_team,book,market,outcome,play
 2026-11-22T21:20:54Z,b8c5bdb50209c7d050400c7d28c32e30,2026-11-23T01:40:00Z,Golden State Warriors,Boston Celtics,pinnacle,spreads,Golden State Warriors,,8.0,-112,2026-11-22T21:20:51Z
 2026-11-22T21:20:54Z,b8c5bdb50209c7d050400c7d28c32e30,2026-11-23T01:40:00Z,Golden State Warriors,Boston Celtics,pinnacle,totals,Over,,209.5,-109,2026-11-22T21:20:51Z
 2026-11-22T21:20:54Z,b8c5bdb50209c7d050400c7d28c32e30,2026-11-23T01:40:00Z,Golden State Warriors,Boston Celtics,pinnacle,totals,Under,,209.5,-105,2026-11-22T21:20:51Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,fanduel,spreads,Los Angeles Lakers,,-13.5,-110,2026-11-24T02:37:57Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,fanduel,spreads,Utah Jazz,,13.5,-110,2026-11-24T02:37:57Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,fanduel,totals,Over,,225.5,-108,2026-11-24T02:37:57Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,fanduel,totals,Under,,225.5,-112,2026-11-24T02:37:57Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,draftkings,spreads,Los Angeles Lakers,,-13.5,-103,2026-11-24T02:37:56Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,draftkings,spreads,Utah Jazz,,13.5,-117,2026-11-24T02:37:56Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,draftkings,totals,Over,,225.5,-106,2026-11-24T02:37:56Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,draftkings,totals,Under,,225.5,-115,2026-11-24T02:37:56Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,betmgm,spreads,Los Angeles Lakers,,-13.5,-105,2026-11-24T02:37:26Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,betmgm,spreads,Utah Jazz,,13.5,-115,2026-11-24T02:37:26Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,betmgm,totals,Over,,225.5,-105,2026-11-24T02:37:26Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,betmgm,totals,Under,,225.5,-115,2026-11-24T02:37:26Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,williamhill_us,spreads,Los Angeles Lakers,,-13.0,-115,2026-11-24T02:37:56Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,williamhill_us,spreads,Utah Jazz,,13.0,-105,2026-11-24T02:37:56Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,williamhill_us,totals,Over,,225.5,-110,2026-11-24T02:37:56Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,williamhill_us,totals,Under,,225.5,-110,2026-11-24T02:37:56Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,matchbook,spreads,Los Angeles Lakers,,-13.0,-101,2026-11-24T02:38:10Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,matchbook,spreads,Utah Jazz,,13.0,-104,2026-11-24T02:38:10Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,matchbook,totals,Over,,225.5,-101,2026-11-24T02:38:10Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,matchbook,totals,Under,,225.5,-103,2026-11-24T02:38:10Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,lowvig,spreads,Los Angeles Lakers,,-13.0,-106,2026-11-24T02:37:41Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,lowvig,spreads,Utah Jazz,,13.0,-106,2026-11-24T02:37:41Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,lowvig,totals,Over,,225.0,-109,2026-11-24T02:37:41Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,lowvig,totals,Under,,225.0,-105,2026-11-24T02:37:41Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,betonlineag,spreads,Los Angeles Lakers,,-13.0,-110,2026-11-24T02:37:41Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,betonlineag,spreads,Utah Jazz,,13.0,-110,2026-11-24T02:37:41Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,betonlineag,totals,Over,,225.0,-112,2026-11-24T02:37:41Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,betonlineag,totals,Under,,225.0,-108,2026-11-24T02:37:41Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,pinnacle,spreads,Los Angeles Lakers,,-13.0,-107,2026-11-24T02:38:09Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,pinnacle,spreads,Utah Jazz,,13.0,-105,2026-11-24T02:38:09Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,pinnacle,totals,Over,,225.5,-102,2026-11-24T02:38:09Z
+2026-11-24T02:38:14Z,3e9dc52cb055c0154839c4aec417955b,2026-11-24T03:10:00Z,Los Angeles Lakers,Utah Jazz,pinnacle,totals,Under,,225.5,-112,2026-11-24T02:38:09Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,fanduel,spreads,Sacramento Kings,,8.5,-112,2026-11-24T02:37:57Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,fanduel,spreads,San Antonio Spurs,,-8.5,-108,2026-11-24T02:37:57Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,fanduel,totals,Over,,223.5,-110,2026-11-24T02:37:57Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,fanduel,totals,Under,,223.5,-110,2026-11-24T02:37:57Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,williamhill_us,spreads,Sacramento Kings,,8.0,-105,2026-11-24T02:37:56Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,williamhill_us,spreads,San Antonio Spurs,,-8.0,-115,2026-11-24T02:37:56Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,williamhill_us,totals,Over,,223.0,-115,2026-11-24T02:37:56Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,williamhill_us,totals,Under,,223.0,-105,2026-11-24T02:37:56Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,draftkings,spreads,Sacramento Kings,,8.5,-115,2026-11-24T02:37:56Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,draftkings,spreads,San Antonio Spurs,,-8.5,-105,2026-11-24T02:37:56Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,draftkings,totals,Over,,222.5,-115,2026-11-24T02:37:56Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,draftkings,totals,Under,,222.5,-105,2026-11-24T02:37:56Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,betmgm,spreads,Sacramento Kings,,8.5,-115,2026-11-24T02:37:26Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,betmgm,spreads,San Antonio Spurs,,-8.5,-105,2026-11-24T02:37:26Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,betmgm,totals,Over,,223.5,-110,2026-11-24T02:37:26Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,betmgm,totals,Under,,223.5,-110,2026-11-24T02:37:26Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,matchbook,spreads,Sacramento Kings,,8.0,-102,2026-11-24T02:38:10Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,matchbook,spreads,San Antonio Spurs,,-8.0,-105,2026-11-24T02:38:10Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,matchbook,totals,Over,,222.5,-104,2026-11-24T02:38:10Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,matchbook,totals,Under,,222.5,100,2026-11-24T02:38:10Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,lowvig,spreads,Sacramento Kings,,8.0,-101,2026-11-24T02:37:41Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,lowvig,spreads,San Antonio Spurs,,-8.0,-111,2026-11-24T02:37:41Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,lowvig,totals,Over,,223.0,-107,2026-11-24T02:37:41Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,lowvig,totals,Under,,223.0,-107,2026-11-24T02:37:41Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,betonlineag,spreads,Sacramento Kings,,8.0,-105,2026-11-24T02:37:41Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,betonlineag,spreads,San Antonio Spurs,,-8.0,-115,2026-11-24T02:37:41Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,betonlineag,totals,Over,,223.0,-110,2026-11-24T02:37:41Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,betonlineag,totals,Under,,223.0,-110,2026-11-24T02:37:41Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,pinnacle,spreads,Sacramento Kings,,8.5,-111,2026-11-24T02:38:09Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,pinnacle,spreads,San Antonio Spurs,,-8.5,101,2026-11-24T02:38:09Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,pinnacle,totals,Over,,223.0,-105,2026-11-24T02:38:09Z
+2026-11-24T02:38:14Z,17f31499f145cd9d3232819395d29448,2026-11-24T03:10:00Z,Sacramento Kings,San Antonio Spurs,pinnacle,totals,Under,,223.0,-107,2026-11-24T02:38:09Z
