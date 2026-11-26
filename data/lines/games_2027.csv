@@ -57649,3 +57649,343 @@ snapshot_utc,event_id,commence_time,home_team,away_team,book,market,outcome,play
 2026-11-25T22:29:35Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,everygame,spreads,San Antonio Spurs,,-3.5,-110,2026-11-25T22:27:51Z
 2026-11-25T22:29:35Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,everygame,totals,Over,,225.0,-110,2026-11-25T22:27:51Z
 2026-11-25T22:29:35Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,everygame,totals,Under,,225.0,-110,2026-11-25T22:27:51Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,draftkings,h2h,Golden State Warriors,,,-324,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,draftkings,h2h,Sacramento Kings,,,261,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,draftkings,spreads,Golden State Warriors,,-8.5,-115,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,draftkings,spreads,Sacramento Kings,,8.5,-105,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,draftkings,totals,Over,,216.5,-107,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,draftkings,totals,Under,,216.5,-113,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,winamax_fr,h2h,Golden State Warriors,,,-385,2026-11-26T01:56:23Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,winamax_fr,h2h,Sacramento Kings,,,230,2026-11-26T01:56:23Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,winamax_de,h2h,Golden State Warriors,,,-323,2026-11-26T01:56:45Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,winamax_de,h2h,Sacramento Kings,,,270,2026-11-26T01:56:45Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,pinnacle,h2h,Golden State Warriors,,,-315,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,pinnacle,h2h,Sacramento Kings,,,278,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,pinnacle,spreads,Golden State Warriors,,-9.0,-102,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,pinnacle,spreads,Sacramento Kings,,9.0,-109,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,pinnacle,totals,Over,,215.5,-115,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,pinnacle,totals,Under,,215.5,102,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,sport888,h2h,Golden State Warriors,,,-400,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,sport888,h2h,Sacramento Kings,,,300,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,sport888,spreads,Golden State Warriors,,-8.5,-110,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,sport888,spreads,Sacramento Kings,,8.5,-110,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,sport888,totals,Over,,215.5,-110,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,sport888,totals,Under,,215.5,-110,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,onexbet,h2h,Golden State Warriors,,,-321,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,onexbet,h2h,Sacramento Kings,,,264,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,onexbet,spreads,Golden State Warriors,,-8.5,-113,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,onexbet,spreads,Sacramento Kings,,8.5,-102,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,onexbet,totals,Over,,216.5,-105,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,onexbet,totals,Under,,216.5,-110,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betonlineag,h2h,Golden State Warriors,,,-320,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betonlineag,h2h,Sacramento Kings,,,260,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betonlineag,spreads,Golden State Warriors,,-8.5,-115,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betonlineag,spreads,Sacramento Kings,,8.5,-105,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betonlineag,totals,Over,,216.0,-110,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betonlineag,totals,Under,,216.0,-110,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,williamhill,h2h,Golden State Warriors,,,-400,2026-11-26T01:55:59Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,williamhill,h2h,Sacramento Kings,,,300,2026-11-26T01:55:59Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,williamhill,spreads,Golden State Warriors,,-8.5,-110,2026-11-26T01:55:59Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,williamhill,spreads,Sacramento Kings,,8.5,-110,2026-11-26T01:55:59Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,williamhill,totals,Over,,215.5,-110,2026-11-26T01:55:59Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,williamhill,totals,Under,,215.5,-110,2026-11-26T01:55:59Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,circasports,h2h,Golden State Warriors,,,-320,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,circasports,h2h,Sacramento Kings,,,265,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,circasports,spreads,Golden State Warriors,,-9.0,-110,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,circasports,spreads,Sacramento Kings,,9.0,-110,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,circasports,totals,Over,,215.5,-110,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,circasports,totals,Under,,215.5,-110,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,lowvig,h2h,Golden State Warriors,,,-317,2026-11-26T01:56:22Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,lowvig,h2h,Sacramento Kings,,,263,2026-11-26T01:56:22Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,lowvig,spreads,Golden State Warriors,,-8.5,-111,2026-11-26T01:56:22Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,lowvig,spreads,Sacramento Kings,,8.5,-101,2026-11-26T01:56:22Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,lowvig,totals,Over,,216.0,-107,2026-11-26T01:56:22Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,lowvig,totals,Under,,216.0,-107,2026-11-26T01:56:22Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,gtbets,h2h,Golden State Warriors,,,-330,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,gtbets,h2h,Sacramento Kings,,,265,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,gtbets,spreads,Golden State Warriors,,-8.5,-114,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,gtbets,spreads,Sacramento Kings,,8.5,-104,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,gtbets,totals,Over,,216.0,-109,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,gtbets,totals,Under,,216.0,-109,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,nordicbet,h2h,Golden State Warriors,,,-385,2026-11-26T01:56:24Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,nordicbet,h2h,Sacramento Kings,,,250,2026-11-26T01:56:24Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,nordicbet,spreads,Golden State Warriors,,-8.5,-114,2026-11-26T01:56:24Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,nordicbet,spreads,Sacramento Kings,,8.5,-114,2026-11-26T01:56:24Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,nordicbet,totals,Over,,216.5,-114,2026-11-26T01:56:24Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,nordicbet,totals,Under,,216.5,-114,2026-11-26T01:56:24Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,bovada,h2h,Golden State Warriors,,,-330,2026-11-26T01:56:49Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,bovada,h2h,Sacramento Kings,,,265,2026-11-26T01:56:49Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,bovada,spreads,Golden State Warriors,,-9.0,-105,2026-11-26T01:56:49Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,bovada,spreads,Sacramento Kings,,9.0,-115,2026-11-26T01:56:49Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,bovada,totals,Over,,216.5,-110,2026-11-26T01:56:49Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,bovada,totals,Under,,216.5,-110,2026-11-26T01:56:49Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betclic_fr,h2h,Golden State Warriors,,,-400,2026-11-26T01:55:48Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betclic_fr,h2h,Sacramento Kings,,,247,2026-11-26T01:55:48Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betsson,h2h,Golden State Warriors,,,-385,2026-11-26T01:56:23Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betsson,h2h,Sacramento Kings,,,250,2026-11-26T01:56:23Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betsson,spreads,Golden State Warriors,,-8.5,-114,2026-11-26T01:56:23Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betsson,spreads,Sacramento Kings,,8.5,-114,2026-11-26T01:56:23Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betsson,totals,Over,,216.5,-114,2026-11-26T01:56:23Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betsson,totals,Under,,216.5,-114,2026-11-26T01:56:23Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betmgm,h2h,Golden State Warriors,,,-325,2026-11-26T01:56:50Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betmgm,h2h,Sacramento Kings,,,260,2026-11-26T01:56:50Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betmgm,spreads,Golden State Warriors,,-8.5,-115,2026-11-26T01:56:50Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betmgm,spreads,Sacramento Kings,,8.5,-105,2026-11-26T01:56:50Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betmgm,totals,Over,,215.5,-118,2026-11-26T01:56:50Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betmgm,totals,Under,,215.5,-110,2026-11-26T01:56:50Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,unibet_fr,h2h,Golden State Warriors,,,-435,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,unibet_fr,h2h,Sacramento Kings,,,205,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,tipico_de,h2h,Golden State Warriors,,,-370,2026-11-26T01:56:22Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,tipico_de,h2h,Sacramento Kings,,,270,2026-11-26T01:56:22Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,tipico_de,spreads,Golden State Warriors,,-8.5,-115,2026-11-26T01:56:22Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,tipico_de,spreads,Sacramento Kings,,8.5,-120,2026-11-26T01:56:22Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,tipico_de,totals,Over,,215.5,-125,2026-11-26T01:56:22Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,tipico_de,totals,Under,,215.5,-111,2026-11-26T01:56:22Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,mybookieag,h2h,Golden State Warriors,,,-319,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,mybookieag,h2h,Sacramento Kings,,,260,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,mybookieag,spreads,Golden State Warriors,,-9.0,-110,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,mybookieag,spreads,Sacramento Kings,,9.0,-110,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,mybookieag,totals,Over,,215.5,-110,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,mybookieag,totals,Under,,215.5,-110,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,fanatics,h2h,Golden State Warriors,,,-350,2026-11-26T01:55:35Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,fanatics,h2h,Sacramento Kings,,,275,2026-11-26T01:55:35Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,fanatics,spreads,Golden State Warriors,,-8.5,-115,2026-11-26T01:55:35Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,fanatics,spreads,Sacramento Kings,,8.5,-105,2026-11-26T01:55:35Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,fanatics,totals,Over,,216.0,-110,2026-11-26T01:55:35Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,fanatics,totals,Under,,216.0,-110,2026-11-26T01:55:35Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,williamhill_us,h2h,Golden State Warriors,,,-350,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,williamhill_us,h2h,Sacramento Kings,,,270,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,williamhill_us,spreads,Golden State Warriors,,-8.5,-113,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,williamhill_us,spreads,Sacramento Kings,,8.5,-105,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,williamhill_us,totals,Over,,215.5,-112,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,williamhill_us,totals,Under,,215.5,-108,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,marathonbet,h2h,Golden State Warriors,,,-357,2026-11-26T01:56:04Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,marathonbet,h2h,Sacramento Kings,,,280,2026-11-26T01:56:04Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,marathonbet,spreads,Golden State Warriors,,-8.5,-116,2026-11-26T01:56:04Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,marathonbet,spreads,Sacramento Kings,,8.5,-106,2026-11-26T01:56:04Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,marathonbet,totals,Over,,215.5,-116,2026-11-26T01:56:04Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,marathonbet,totals,Under,,215.5,-106,2026-11-26T01:56:04Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betus,h2h,Golden State Warriors,,,-320,2026-11-26T01:55:59Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betus,h2h,Sacramento Kings,,,260,2026-11-26T01:55:59Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betus,spreads,Golden State Warriors,,-8.5,-115,2026-11-26T01:55:59Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betus,spreads,Sacramento Kings,,8.5,-105,2026-11-26T01:55:59Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betus,totals,Over,,216.0,-110,2026-11-26T01:55:59Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betus,totals,Under,,216.0,-110,2026-11-26T01:55:59Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,fanduel,h2h,Golden State Warriors,,,-355,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,fanduel,h2h,Sacramento Kings,,,285,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,fanduel,spreads,Golden State Warriors,,-8.5,-118,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,fanduel,spreads,Sacramento Kings,,8.5,-104,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,fanduel,totals,Over,,215.5,-112,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,fanduel,totals,Under,,215.5,-108,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,codere_it,h2h,Golden State Warriors,,,-333,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,codere_it,h2h,Sacramento Kings,,,260,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,codere_it,totals,Over,,215.5,-118,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,codere_it,totals,Under,,215.5,-112,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betrivers,h2h,Golden State Warriors,,,-335,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betrivers,h2h,Sacramento Kings,,,260,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betrivers,spreads,Golden State Warriors,,-8.5,-106,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betrivers,spreads,Sacramento Kings,,8.5,-117,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betrivers,totals,Over,,214.5,-121,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betrivers,totals,Under,,214.5,-109,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,leovegas_se,h2h,Golden State Warriors,,,-345,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,leovegas_se,h2h,Sacramento Kings,,,260,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,leovegas_se,spreads,Golden State Warriors,,-8.5,-108,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,leovegas_se,spreads,Sacramento Kings,,8.5,-118,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,pmu_fr,h2h,Golden State Warriors,,,-420,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,pmu_fr,h2h,Sacramento Kings,,,245,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,pmu_fr,totals,Over,,214.5,-148,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,pmu_fr,totals,Under,,214.5,-132,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,unibet_se,h2h,Golden State Warriors,,,-335,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,unibet_se,h2h,Sacramento Kings,,,265,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,unibet_se,spreads,Golden State Warriors,,-8.5,-106,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,unibet_se,spreads,Sacramento Kings,,8.5,-117,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,unibet_nl,h2h,Golden State Warriors,,,-335,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,unibet_nl,h2h,Sacramento Kings,,,265,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,unibet_nl,spreads,Golden State Warriors,,-8.5,-106,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,unibet_nl,spreads,Sacramento Kings,,8.5,-117,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,unibet_nl,totals,Over,,214.5,-121,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,unibet_nl,totals,Under,,214.5,-109,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betanysports,h2h,Golden State Warriors,,,-330,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betanysports,h2h,Sacramento Kings,,,260,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betanysports,spreads,Golden State Warriors,,-9.0,-110,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betanysports,spreads,Sacramento Kings,,9.0,-110,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betanysports,totals,Over,,216.0,-110,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betanysports,totals,Under,,216.0,-110,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betfair_ex_eu,h2h,Golden State Warriors,,,-294,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betfair_ex_eu,h2h,Sacramento Kings,,,290,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betfair_ex_eu,h2h_lay,Golden State Warriors,,,-286,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,betfair_ex_eu,h2h_lay,Sacramento Kings,,,295,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,everygame,h2h,Golden State Warriors,,,-320,2026-11-26T01:55:34Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,everygame,h2h,Sacramento Kings,,,260,2026-11-26T01:55:34Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,everygame,spreads,Golden State Warriors,,-8.5,-115,2026-11-26T01:55:34Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,everygame,spreads,Sacramento Kings,,8.5,-105,2026-11-26T01:55:34Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,everygame,totals,Over,,215.5,-110,2026-11-26T01:55:34Z
+2026-11-26T01:56:58Z,e6df92326adb480e427bb7c10f445c60,2026-11-26T03:10:00Z,Golden State Warriors,Sacramento Kings,everygame,totals,Under,,215.5,-110,2026-11-26T01:55:34Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,draftkings,h2h,Portland Trail Blazers,,,130,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,draftkings,h2h,San Antonio Spurs,,,-155,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,draftkings,spreads,Portland Trail Blazers,,3.5,-117,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,draftkings,spreads,San Antonio Spurs,,-3.5,-103,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,draftkings,totals,Over,,226.5,-112,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,draftkings,totals,Under,,226.5,-108,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,onexbet,h2h,Portland Trail Blazers,,,132,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,onexbet,h2h,San Antonio Spurs,,,-153,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,onexbet,spreads,Portland Trail Blazers,,3.5,-115,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,onexbet,spreads,San Antonio Spurs,,-3.5,-101,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,onexbet,totals,Over,,226.5,-109,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,onexbet,totals,Under,,226.5,-106,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betonlineag,h2h,Portland Trail Blazers,,,135,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betonlineag,h2h,San Antonio Spurs,,,-155,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betonlineag,spreads,Portland Trail Blazers,,3.0,-110,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betonlineag,spreads,San Antonio Spurs,,-3.0,-110,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betonlineag,totals,Over,,227.0,-110,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betonlineag,totals,Under,,227.0,-110,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,lowvig,h2h,Portland Trail Blazers,,,136,2026-11-26T01:56:22Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,lowvig,h2h,San Antonio Spurs,,,-155,2026-11-26T01:56:22Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,lowvig,spreads,Portland Trail Blazers,,3.0,-106,2026-11-26T01:56:22Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,lowvig,spreads,San Antonio Spurs,,-3.0,-106,2026-11-26T01:56:22Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,lowvig,totals,Over,,227.0,-107,2026-11-26T01:56:22Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,lowvig,totals,Under,,227.0,-107,2026-11-26T01:56:22Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,sport888,h2h,Portland Trail Blazers,,,120,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,sport888,h2h,San Antonio Spurs,,,-150,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,sport888,spreads,Portland Trail Blazers,,3.5,-138,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,sport888,spreads,San Antonio Spurs,,-3.5,100,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,sport888,totals,Over,,226.5,-125,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,sport888,totals,Under,,226.5,-105,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,unibet_fr,h2h,Portland Trail Blazers,,,115,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,unibet_fr,h2h,San Antonio Spurs,,,-172,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,williamhill,h2h,Portland Trail Blazers,,,120,2026-11-26T01:55:59Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,williamhill,h2h,San Antonio Spurs,,,-150,2026-11-26T01:55:59Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,williamhill,spreads,Portland Trail Blazers,,3.5,-138,2026-11-26T01:55:59Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,williamhill,spreads,San Antonio Spurs,,-3.5,100,2026-11-26T01:55:59Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,williamhill,totals,Over,,226.5,-125,2026-11-26T01:55:59Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,williamhill,totals,Under,,226.5,-105,2026-11-26T01:55:59Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betclic_fr,h2h,Portland Trail Blazers,,,122,2026-11-26T01:55:48Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betclic_fr,h2h,San Antonio Spurs,,,-179,2026-11-26T01:55:48Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,codere_it,h2h,Portland Trail Blazers,,,127,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,codere_it,h2h,San Antonio Spurs,,,-156,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,codere_it,totals,Over,,227.5,-111,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,codere_it,totals,Under,,227.5,-119,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,winamax_fr,h2h,Portland Trail Blazers,,,120,2026-11-26T01:56:23Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,winamax_fr,h2h,San Antonio Spurs,,,-185,2026-11-26T01:56:23Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,winamax_de,h2h,Portland Trail Blazers,,,135,2026-11-26T01:56:45Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,winamax_de,h2h,San Antonio Spurs,,,-161,2026-11-26T01:56:45Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,williamhill_us,h2h,Portland Trail Blazers,,,135,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,williamhill_us,h2h,San Antonio Spurs,,,-160,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,williamhill_us,spreads,Portland Trail Blazers,,3.0,-105,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,williamhill_us,spreads,San Antonio Spurs,,-3.0,-115,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,williamhill_us,totals,Over,,227.0,-105,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,williamhill_us,totals,Under,,227.0,-115,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,bovada,h2h,Portland Trail Blazers,,,135,2026-11-26T01:56:49Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,bovada,h2h,San Antonio Spurs,,,-160,2026-11-26T01:56:49Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,bovada,spreads,Portland Trail Blazers,,3.0,-105,2026-11-26T01:56:49Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,bovada,spreads,San Antonio Spurs,,-3.0,-115,2026-11-26T01:56:49Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,bovada,totals,Over,,226.5,-110,2026-11-26T01:56:49Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,bovada,totals,Under,,226.5,-110,2026-11-26T01:56:49Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,pinnacle,h2h,Portland Trail Blazers,,,135,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,pinnacle,h2h,San Antonio Spurs,,,-156,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,pinnacle,spreads,Portland Trail Blazers,,3.0,-102,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,pinnacle,spreads,San Antonio Spurs,,-3.0,-112,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,pinnacle,totals,Over,,227.5,101,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,pinnacle,totals,Under,,227.5,-117,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,gtbets,h2h,Portland Trail Blazers,,,130,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,gtbets,h2h,San Antonio Spurs,,,-150,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,gtbets,spreads,Portland Trail Blazers,,3.0,-109,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,gtbets,spreads,San Antonio Spurs,,-3.0,-109,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,gtbets,totals,Over,,227.0,-109,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,gtbets,totals,Under,,227.0,-109,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,nordicbet,h2h,Portland Trail Blazers,,,125,2026-11-26T01:56:24Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,nordicbet,h2h,San Antonio Spurs,,,-161,2026-11-26T01:56:24Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,nordicbet,totals,Over,,227.5,-108,2026-11-26T01:56:24Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,nordicbet,totals,Under,,227.5,-120,2026-11-26T01:56:24Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betsson,h2h,Portland Trail Blazers,,,125,2026-11-26T01:56:23Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betsson,h2h,San Antonio Spurs,,,-161,2026-11-26T01:56:23Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betsson,totals,Over,,227.5,-108,2026-11-26T01:56:23Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betsson,totals,Under,,227.5,-120,2026-11-26T01:56:23Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,circasports,h2h,Portland Trail Blazers,,,130,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,circasports,h2h,San Antonio Spurs,,,-150,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,circasports,spreads,Portland Trail Blazers,,3.0,-115,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,circasports,spreads,San Antonio Spurs,,-3.0,-105,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,circasports,totals,Over,,227.5,-110,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,circasports,totals,Under,,227.5,-110,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betmgm,h2h,Portland Trail Blazers,,,135,2026-11-26T01:56:50Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betmgm,h2h,San Antonio Spurs,,,-160,2026-11-26T01:56:50Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betmgm,spreads,Portland Trail Blazers,,3.5,-115,2026-11-26T01:56:50Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betmgm,spreads,San Antonio Spurs,,-3.5,-105,2026-11-26T01:56:50Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betmgm,totals,Over,,226.5,-118,2026-11-26T01:56:50Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betmgm,totals,Under,,226.5,-110,2026-11-26T01:56:50Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,mybookieag,h2h,Portland Trail Blazers,,,132,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,mybookieag,h2h,San Antonio Spurs,,,-155,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,mybookieag,spreads,Portland Trail Blazers,,3.0,-110,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,mybookieag,spreads,San Antonio Spurs,,-3.0,-110,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,mybookieag,totals,Over,,227.0,-110,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,mybookieag,totals,Under,,227.0,-110,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,tipico_de,h2h,Portland Trail Blazers,,,135,2026-11-26T01:56:22Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,tipico_de,h2h,San Antonio Spurs,,,-175,2026-11-26T01:56:22Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,tipico_de,spreads,Portland Trail Blazers,,3.5,-115,2026-11-26T01:56:22Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,tipico_de,spreads,San Antonio Spurs,,-3.5,-120,2026-11-26T01:56:22Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,tipico_de,totals,Over,,226.5,-118,2026-11-26T01:56:22Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,tipico_de,totals,Under,,226.5,-118,2026-11-26T01:56:22Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,fanatics,h2h,Portland Trail Blazers,,,130,2026-11-26T01:55:35Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,fanatics,h2h,San Antonio Spurs,,,-155,2026-11-26T01:55:35Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,fanatics,spreads,Portland Trail Blazers,,3.5,-115,2026-11-26T01:55:35Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,fanatics,spreads,San Antonio Spurs,,-3.5,-105,2026-11-26T01:55:35Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,fanatics,totals,Over,,227.0,-110,2026-11-26T01:55:35Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,fanatics,totals,Under,,227.0,-110,2026-11-26T01:55:35Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betus,h2h,Portland Trail Blazers,,,134,2026-11-26T01:55:59Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betus,h2h,San Antonio Spurs,,,-155,2026-11-26T01:55:59Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betus,spreads,Portland Trail Blazers,,3.0,-110,2026-11-26T01:55:59Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betus,spreads,San Antonio Spurs,,-3.0,-110,2026-11-26T01:55:59Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betus,totals,Over,,227.0,-110,2026-11-26T01:55:59Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betus,totals,Under,,227.0,-110,2026-11-26T01:55:59Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,marathonbet,h2h,Portland Trail Blazers,,,132,2026-11-26T01:56:04Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,marathonbet,h2h,San Antonio Spurs,,,-159,2026-11-26T01:56:04Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,marathonbet,spreads,Portland Trail Blazers,,2.5,100,2026-11-26T01:56:04Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,marathonbet,spreads,San Antonio Spurs,,-2.5,-123,2026-11-26T01:56:04Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,marathonbet,totals,Over,,227.5,-110,2026-11-26T01:56:04Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,marathonbet,totals,Under,,227.5,-112,2026-11-26T01:56:04Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betanysports,h2h,Portland Trail Blazers,,,135,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betanysports,h2h,San Antonio Spurs,,,-155,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betanysports,spreads,Portland Trail Blazers,,3.0,-110,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betanysports,spreads,San Antonio Spurs,,-3.0,-110,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betanysports,totals,Over,,227.0,-110,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betanysports,totals,Under,,227.0,-110,2026-11-26T01:56:43Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,fanduel,h2h,Portland Trail Blazers,,,132,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,fanduel,h2h,San Antonio Spurs,,,-156,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,fanduel,spreads,Portland Trail Blazers,,3.5,-114,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,fanduel,spreads,San Antonio Spurs,,-3.5,-106,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,fanduel,totals,Over,,227.5,-106,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,fanduel,totals,Under,,227.5,-114,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betrivers,h2h,Portland Trail Blazers,,,143,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betrivers,h2h,San Antonio Spurs,,,-175,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betrivers,spreads,Portland Trail Blazers,,3.5,-109,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betrivers,spreads,San Antonio Spurs,,-3.5,-114,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betrivers,totals,Over,,228.5,-113,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betrivers,totals,Under,,228.5,-117,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,leovegas_se,h2h,Portland Trail Blazers,,,138,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,leovegas_se,h2h,San Antonio Spurs,,,-177,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,leovegas_se,spreads,Portland Trail Blazers,,3.5,-110,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,leovegas_se,spreads,San Antonio Spurs,,-3.5,-115,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,unibet_se,h2h,Portland Trail Blazers,,,143,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,unibet_se,h2h,San Antonio Spurs,,,-175,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,unibet_se,spreads,Portland Trail Blazers,,3.5,-109,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,unibet_se,spreads,San Antonio Spurs,,-3.5,-114,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,unibet_nl,h2h,Portland Trail Blazers,,,143,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,unibet_nl,h2h,San Antonio Spurs,,,-175,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,unibet_nl,spreads,Portland Trail Blazers,,3.5,-109,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,unibet_nl,spreads,San Antonio Spurs,,-3.5,-114,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,unibet_nl,totals,Over,,228.5,-113,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,unibet_nl,totals,Under,,228.5,-117,2026-11-26T01:56:21Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,pmu_fr,h2h,Portland Trail Blazers,,,130,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,pmu_fr,h2h,San Antonio Spurs,,,-200,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,pmu_fr,totals,Over,,228.5,-137,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,pmu_fr,totals,Under,,228.5,-141,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betfair_ex_eu,h2h,Portland Trail Blazers,,,142,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betfair_ex_eu,h2h,San Antonio Spurs,,,-145,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betfair_ex_eu,h2h_lay,Portland Trail Blazers,,,146,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,betfair_ex_eu,h2h_lay,San Antonio Spurs,,,-143,2026-11-26T01:56:44Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,everygame,h2h,Portland Trail Blazers,,,135,2026-11-26T01:55:34Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,everygame,h2h,San Antonio Spurs,,,-155,2026-11-26T01:55:34Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,everygame,spreads,Portland Trail Blazers,,3.0,-110,2026-11-26T01:55:34Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,everygame,spreads,San Antonio Spurs,,-3.0,-110,2026-11-26T01:55:34Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,everygame,totals,Over,,227.0,-110,2026-11-26T01:55:34Z
+2026-11-26T01:56:58Z,9aa9f220709533d70d11f85fae886771,2026-11-26T03:10:00Z,Portland Trail Blazers,San Antonio Spurs,everygame,totals,Under,,227.0,-110,2026-11-26T01:55:34Z
