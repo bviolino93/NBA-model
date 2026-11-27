@@ -405,6 +405,9 @@ def merge_lines(g: pd.DataFrame, lines: pd.DataFrame) -> pd.DataFrame:
 # ----------------------------------------------------------------------
 def team_games(g: pd.DataFrame) -> pd.DataFrame:
     """One row per team per game, with rest computed from its schedule."""
+    # A game listed twice (e.g. an NBA Cup game also on the regular schedule) breaks
+    # the per-team index below, so keep one row per game_id.
+    g = g.drop_duplicates("game_id", keep="last")
     cols = ["game_id", "season", "game_date", "commence"]
     home = g[cols].assign(team=g["home_team"], opp=g["away_team"], home=1)
     away = g[cols].assign(team=g["away_team"], opp=g["home_team"], home=0)
@@ -426,6 +429,7 @@ def team_games(g: pd.DataFrame) -> pd.DataFrame:
 def schedule_features(g: pd.DataFrame) -> pd.DataFrame:
     """Per game: rest difference, back-to-back flags, road b2b, density."""
     t = team_games(g).set_index(["game_id", "team"])
+    t = t[~t.index.duplicated(keep="last")]
     out = g.copy()
 
     def pick(side, col):
