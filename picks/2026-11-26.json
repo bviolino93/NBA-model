@@ -12,7 +12,8 @@
    "stake": 5,
    "price": -110,
    "why": "projection Maryland Terrapins +1.1 vs line +4.5; recent margins favour our side",
-   "commence": "2026-11-26T18:00:00+00:00"
+   "commence": "2026-11-26T18:00:00+00:00",
+   "manual_result": "W"
   },
   {
    "sport": "cbb",
