@@ -434,6 +434,10 @@ def build(games: pd.DataFrame, box: pd.DataFrame,
     player_id, weight), from tonight_availability. Completed games use
     the players who played."""
     cfg = cfg or PredictConfig()
+    # Placeholder games (e.g. NBA Cup knockout "TBD" vs "TBD") and repeated
+    # rows break the per-team indexes below.
+    games = games[games["home_team"] != games["away_team"]]
+    games = games.drop_duplicates("game_id", keep="last").reset_index(drop=True)
     g = schedule_features(games)
     g = travel_features(g)
     g["b2b_sum"] = g["home_b2b"].fillna(0) + g["away_b2b"].fillna(0)
