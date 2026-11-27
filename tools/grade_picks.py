@@ -6,7 +6,8 @@ Picks live on the `breakdowns` branch as picks/<date>.json:
         {"sport": "nba" | "cbb", "home": "...", "away": "...",
          "market": "spread" | "total", "side": "<team>" | "Over" | "Under",
          "line": 12.5,        # the side's spread (+ = getting points) or the total
-         "confidence": 1-5, "stake": 5, "why": "..."}]}
+         "confidence": 1-5, "stake": 5, "why": "...",
+         "manual_result": "W" | "L" | "P"   # optional, overrides ESPN}]}
 Team names are ESPN display names (as in the breakdown sheets).
 
 This fetches the final scores from ESPN's scoreboard, writes
@@ -88,7 +89,8 @@ def grade_day(path: str, out_dir: str, fetch=finals) -> dict:
             cache[key] = fetch(key, day["date"])
         sc = cache[key].get((p["home"], p["away"]))
         p["final"] = None if sc is None else list(sc)
-        p["result"] = grade(p, sc)
+        # A hand-entered result (e.g. a neutral-site game ESPN lists the other way round) wins.
+        p["result"] = p.get("manual_result") or grade(p, sc)
         p["profit"] = round(profit(p["result"], float(p.get("stake", 5)),
                                    int(p.get("price", -110))), 2)
     os.makedirs(out_dir, exist_ok=True)
