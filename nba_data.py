@@ -429,6 +429,7 @@ def team_games(g: pd.DataFrame) -> pd.DataFrame:
 def schedule_features(g: pd.DataFrame) -> pd.DataFrame:
     """Per game: rest difference, back-to-back flags, road b2b, density."""
     t = team_games(g).set_index(["game_id", "team"])
+    t = t[~t.index.duplicated(keep="last")]
     out = g.copy()
 
     def pick(side, col):
